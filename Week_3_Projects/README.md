@@ -32,7 +32,9 @@ A Floating action bar
 A responsive details section
 
 Large Screen View
+
 ![Responsive Table](./Project_3/project_3_responsive_table.png)
 
 Small Screen View
+
 ![Responsive Table](./Project_3/project_3_responsive_table_small.png)
