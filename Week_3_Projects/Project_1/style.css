@@ -1,0 +1,171 @@
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: purple;
+    display: flex;
+    height: 100vh;
+    margin: 0;
+}
+
+.main-container{
+    display: flex;
+    max-width: 750px;
+    background-color: white;
+    padding: 10px 40px 10px 30px;
+    border-radius: 2px;
+    box-shadow: 70px 65px 20px rgba(0, 0, 0, 0.2);
+    margin: auto;
+
+}
+
+.navigation-bar{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #999;
+    font-size: 8px;
+    padding: 0px 0px 0px 10px;
+    
+    ccbackground-color: green;
+    
+}
+
+.chevron-1{
+    line-height: 1px;
+}
+
+
+.chevron-2{
+    line-height: 1px;
+}
+
+.nav-game-title{
+    color: black;
+}
+    
+.main-img{
+    padding: 10px 0px 0px 10px;
+    display: block;
+    ccbackground-color: green;
+}
+
+.container-left, .container-right{
+    flex: 1;
+
+}
+
+.img-slide{
+    display: flex;
+    gap: 20px; 
+    padding: 6px 0px 0px 10px;
+    ccbackground-color: orange;
+}
+
+.rating{
+    display: flex;
+    align-items: center;
+    font-size: 8px;
+    gap: 8px;
+    padding: 9px 0px 0px 10px;
+    ccbackground: red;
+}
+
+.container-right{
+    ccmargin-right: 100px;
+}
+
+.console-name{
+    font-size: 10px;
+    padding: 18px 0px 0px 36px;
+}
+
+.main-title{
+    ccbackground-color: red;
+    font-size: 18px;
+    margin: 10px 80px 0px 36px;
+}
+
+.product-select{
+    padding: 2px 0px 0px 36px;
+    font-size: 8px;
+}
+
+.product-type-select{
+    margin: 10px 0px 0px 36px;
+    border: solid black 2px; 
+    box-shadow: 0px 0px 7px #999;
+    border-radius: 3px; 
+    display: flex; 
+    ccjustify-content: space-between;
+    align-items: center;
+}
+
+.check-icon{
+    padding: 11px 10px 10px 8px;
+}
+
+
+
+.digital-type{
+    font-size: 13px;
+}
+
+.digital-title{
+    padding: 4px 0px 3px 0px;
+    font-size: 9px;
+    flex: 1;
+}
+
+.digital-price{
+    padding-right: 10px;
+    font-size: 13px;
+}
+
+.main-price{
+    margin: 20px 0px 10px 36px;
+    font-size: 19px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.gold-points{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 8px 10px 15px 36px;
+}
+
+.coin-image{
+    line-height: 2px;
+}
+
+.eligible-points{
+    font-size: 10px;
+}
+
+.download-container{
+    display: flex;
+    margin: 10px 0px 0px 36px;
+    gap: 8px;
+    background-color: #c32026;
+    padding: 7px 0px 4px 0px;
+    border-radius: 2px;
+    justify-content: center;
+    color: white;
+}
+
+.download-icon{
+    filter: invert(2);
+}
+
+.download-info{
+    font-size: 9px;
+    margin: 10px 0px 0px 36px;
+}
+
+.bold{
+    font-weight: bolder;
+}
+
+.grey-font{
+    color:#444;
+}
