@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project_2</title>
+</head>
+<body>
+    
+    <div class="header">Media</div>
+
+    <div class="nav_container">
+        <button class="button clicked">SCREENSHOTS</button>
+        <button class="button">TRAILERS</button>
+        <button class="button">WALLPAPERS</button>
+    </div>
+
+    
+        <div class="images_line_1">
+            <div class="frame">    
+                <div class="img_1 img"></div>
+            </div>
+            <div class="frame">    
+                <div class="img_2 img"></div>
+            </div>
+            <div class="frame">    
+                <div class="img_3 img"></div>
+            </div>
+            <div class="frame">    
+                <div class="img_4 img"></div>
+            </div>
+        </div>
+        <div class="images_line_1">
+            <div class="frame">    
+                <div class="img_4 img"></div>
+            </div>
+            <div class="frame">    
+                <div class="img_1 img"></div>
+            </div>
+            <div class="frame">    
+                <div class="img_2 img"></div>
+            </div>
+            <div class="frame">    
+                <div class="img_3 img"></div>
+            </div>
+        </div>
+    
+        <!--javascript example inside html-->
+        <script>
+            
+            var buttons = document.querySelectorAll(".button")
+            var count = 0
+            while(count < buttons.length) {
+                var button = buttons[count]
+                button.addEventListener("click", clicked_button)
+                console.log(count, button)
+                count = count + 1 
+            }
+            
+            //for(var button of buttons){
+                //button.addEventListener("click", clicked_button)
+                //}
+            function clicked_button(data_from_event_listener){
+                // remove clicked class
+                var currently_clicked = document.querySelector(".clicked")
+                currently_clicked.classList.remove("clicked")
+
+                // add clicked class
+    
+                data_from_event_listener.target.classList.add("clicked")
+            }
+                
+            
+        </script>
+</body>
+</html>

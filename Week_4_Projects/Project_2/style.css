@@ -1,0 +1,88 @@
+html{
+    font-size: 12px;
+}
+
+@media screen and (max-width: 600px){
+    html{
+        font-size:8px;
+    }
+}
+
+body{
+    background: #222;
+    padding: 100px ;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.header{
+    color: white;
+    font-size: 6rem;
+    font-weight: bolder;
+    padding-bottom: 20px;
+}
+
+.nav_container{
+    display: flex;
+    gap: 12px;
+}
+
+.button{
+    padding: 0.75rem 5rem 0.75rem 5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #2e1b2a;
+    border: 1px solid #6c345b;
+    font-weight: 500;
+}
+
+.button.clicked{
+    background-color: #883a65;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.button:hover{
+    background-color: #773964;
+}
+
+.frame{
+    height: 10rem;
+    min-width: 215px;
+    overflow: hidden;
+}
+
+.images_line_1{     
+    display: flex;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+
+.img{
+    width:100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.img:hover{
+    transform: scale(1.2);
+}
+
+.images_line_1 .img_1{
+    background-image: url(./images/image_1.jpg);
+   
+}
+.images_line_1 .img_2{
+    background-image: url(./images/image_2.jpg);
+   
+}
+
+.images_line_1 .img_3{
+    background-image: url(./images/image_3.jpg);
+   
+}
+
+.images_line_1 .img_4{
+    background-image: url(./images/images_4.jpg);
+   
+}

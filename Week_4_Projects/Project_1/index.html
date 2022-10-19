@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body>
+    <div class="main_container">
+
+        <div class="nav_bar">
+            <div class="videos">
+                <div class="info_0">VIDEOS</div>
+            </div>
+            <div class="directory">
+                <div class="info underline_text">All</div>
+                <div class="info">Community</div>
+                <div class="info">Horizon</div>
+                <div class="info">Motorsports</div>
+                <div class="info">Gameplay</div>
+                <div class="info">Streeaming</div> 
+            </div>
+        </div>
+        
+        <div class="pages"></div>
+        <div class="loader"></div>
+
+        <template class="cards_template">
+            <div class="main_cards_container">
+                <div class="cards_container flip"></div>
+                <div class="cards_container"></div>
+            </div>
+        </template>
+
+               
+        <template class="card_template">
+            <div class="card">
+                <div class="image"></div>
+                <div class="content">
+                    <div class="date">11 October, 2022</div>
+                    <div class="title">Forza monthly | october 2022</div>
+                    <div class="discripiton">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempora dolores ratione nemo corrupti ea ad architecto perferend
+                    </div>
+                </div>
+            </div>
+        </template>
+
+
+        <div class="page_select">
+            <div class="double_arrow">&lt;&lt;</div>
+            <div class="single_arrow">&lt;</div>
+            <div class="page_num">
+                <div class="num" data-page="1"><a href="#">1</a></div>
+                <div class="num" data-page="2"><a href="#">2</a></div>
+                <div class="num" data-page="3"><a href="#">3</a></div>
+                <div class="num" data-page="4"><a href="#">4</a></div>
+                <div class="num" data-page="5"><a href="#">5</a></div>
+            </div>
+            <div class="single_arrow">&gt;</div>
+            <div class="double_arrow">&gt;&gt;</div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
+

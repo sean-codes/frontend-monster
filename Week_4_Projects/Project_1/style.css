@@ -1,0 +1,255 @@
+body{
+    font-family: sans-serif;
+    background: #222;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/*----------------------------------------------------*/
+/*----------------| utilities |-----------------------*/
+/*----------------------------------------------------*/
+.underline_text{
+    border-bottom: 2px solid white;    
+}
+
+.border_pink{
+    border-color:#e94a8e!important;
+}
+
+.border_yellow{
+    border-color:#feb11b!important;
+}
+
+
+/*----------------------------------------------------*/
+/*---------------------| main |-----------------------*/
+/*----------------------------------------------------*/
+.main_container{
+    margin: 0 auto;
+    max-width: 950px;
+    padding: 20px 30px;
+    background-color: #222;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+}
+
+
+/*----------------------------------------------------*/
+/*----------------| navigation |----------------------*/
+/*----------------------------------------------------*/
+
+.nav_bar{
+    display: flex;
+    color: white;
+}
+
+.info{
+    padding-bottom: 5px;
+}
+
+.videos{
+    flex: 1;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.directory{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 10px;
+    padding-left: 20px;
+}
+
+
+/*----------------------------------------------------*/
+/*---------------------| cards |----------------------*/
+/*----------------------------------------------------*/
+
+.main_cards_container{
+    display: flex;
+    gap: 15px;
+    display: none;
+}
+
+.main_cards_container.show{
+    display: flex;
+}
+
+.cards_container{
+    width:500px;
+}
+
+.card_horizontal{
+    display: flex;
+    gap: 15px;
+}
+
+.cards_container.flip {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.card{
+    background-color: #444;
+    border-left: 8px solid #d22;
+    border-radius: 2px 0px 18px 2px;
+    margin-top: 15px;
+}
+
+.card .image{
+    height: 140px;
+    background: url("./images/project_image.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.content{
+    padding: 10px;
+    padding-top: 20px;
+    min-height: 150px;
+}
+
+.card_horizontal .content{
+    min-height: 120px;
+}
+
+.card .content .date{
+    font-size: 10px;
+    color: #bbb;
+    
+}
+
+.card .content .title{
+    font-size: 16px;
+    color: #fff;
+    padding-top: 10px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.card .content .discripiton{
+    font-size: 12px;
+    color: #bbb;
+    padding-top: 10px;    
+}
+
+/*----------------------------------------------------*/
+/*----------------| page number|----------------------*/
+/*----------------------------------------------------*/
+
+.page_select{
+    display: flex;
+    gap: 12px;
+    color: white;
+    justify-content: center;
+    padding: 20px;
+    font-weight: bolder;
+    font-size: 10px;
+}
+
+.page_num{
+    display: flex;
+    gap: 15px;
+    color: #999;
+}
+
+.num:hover{
+    color: white;
+    cursor: pointer;
+}
+
+.num a:focus{
+    border-bottom: 2px solid white;
+    color: white;
+}
+
+.page_num a{
+    color: #999;
+    text-decoration: none;
+}
+
+.loader {
+    color: white;
+    width: 100px;
+    height: 100px;
+    border: 5px solid white;
+    border-radius: 100%;
+    position: relative;    
+    animation: spin 1s infinite linear;
+    ccmargin: 100px;
+    margin:273px auto;
+}
+
+.loader:after{
+    content: '';
+    width: 75px;
+    height: 75px;
+    background: red;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    transform: rotate(45deg);
+    background: #222;
+}
+@keyframes spin {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+@media screen and (max-width:700px) {
+    /*----------------------------------------------------*/
+    /*----------------| navigation |----------------------*/
+    /*----------------------------------------------------*/
+    
+    .main_container{
+        max-width: 500px;
+    }
+    .nav_bar{
+        display: block;
+    }
+
+    .directory{
+        justify-content: flex-start;
+        padding: 0;
+    }
+
+    .videos{
+        padding-bottom: 15px;
+    }
+
+    /*----------------------------------------------------*/
+    /*---------------------| cards |----------------------*/
+    /*----------------------------------------------------*/
+
+    .main_cards_container.show{
+        display: block;
+    }
+
+    .cards_container{
+        width: 100%;
+    }
+
+    .card_horizontal{
+        display: block;
+    }
+
+    .content{
+        height: 100px;
+    }
+}
+
+
+
+
+
+
+
+
+
