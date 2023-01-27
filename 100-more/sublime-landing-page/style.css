@@ -1,0 +1,239 @@
+/* Colors */
+:root {
+   /* best color */
+   --color-sublime: #FFA724; 
+   --font: "Heebo", sans-serif;
+   --font-2: "IBM Plex Sans", sans-serif;
+
+   /* Utils */
+   --width-c1: 90rem;
+   --width-c2: 70rem;
+
+   --space-25: 0.25rem;
+   --space-half: 0.5rem;
+   --space-75: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+}
+
+
+/* Reset */
+html, body {
+   padding: 0;
+   margin: 0;
+   background: var(--color-bg-1);
+   font-family: var(--font);
+}
+
+* {
+   box-sizing: border-box;
+   letter-spacing: 0.05rem;
+}
+
+body.ready, body.ready * {
+   transition: all 0.75s;
+}
+
+body {
+   /* Dark Theme */
+   --color-bg-1: #202d3f;
+   --color-bg-2: #182538;
+   --color-bg-toggle: #37465c;
+   --color-text: #FFF;
+   --color-text-light: #8595AE;
+   --color-link: #FFCF7B;
+   --color-icon: #8d8a8a;
+}
+
+body.light {
+   /* Light Theme */
+   --color-bg-1: #E9EDF3;
+   --color-bg-2: #fff;
+   --color-bg-toggle: #e0e5ed;
+   --color-text: #182538;
+   --color-text-light: #6B7A90;
+   --color-link: #FFA724;
+   --color-icon: #8d8a8a;
+}
+
+
+/*----------------------------------------------------
+| Main Container
+----------------------------------------------------*/
+.container {
+   box-shadow: 0 16px 48px rgb(0 0 0 / 20%);
+   max-width: var(--width-c1);
+   margin: auto;
+   background: var(--color-bg-2);
+   color: var(--color-text-light);
+   min-height: 100%;
+}
+
+
+/*----------------------------------------------------
+| Card
+----------------------------------------------------*/
+.cards {
+   padding-top: var(--space-3);
+   border-bottom: 1px solid var(--color-sublime);
+   padding-bottom: 5rem;
+   margin: auto;
+   max-width: var(--width-c2);
+}
+
+.card {
+   margin: auto;
+   max-width: 40rem;
+   display: flex;
+   padding-bottom: var(--space-5);
+   opacity: 0;
+   animation: fade-in 0.75s forwards;
+}
+
+.card:nth-of-type(1) { animation-delay: 0.1s; }
+.card:nth-of-type(2) { animation-delay: 0.3s; }
+.card:nth-of-type(3) { animation-delay: 0.5s; }
+@keyframes fade-in {
+   0% { opacity: 0; transform: translateY(5rem); }
+   50% { opacity: 0.8; transform: translateY(0); }
+   100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Mode */
+@media (max-width: 500px) {
+   .card {
+      flex-direction: column;
+      text-align: center;
+      padding: var(--space-2);
+   }
+
+   .card hr {
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
+
+.card .left {
+   padding:var(--space-half) var(--space-2);
+}
+
+.card .left .app-icon {
+   width: 3.75rem;
+}
+
+.card .right {
+   flex: 1;
+}
+
+.card .right .text {
+   max-width: 28rem;
+}
+
+/*----------------------------------------------------
+| Text
+----------------------------------------------------*/
+a {
+   color: var(--color-link);
+   text-decoration: none;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+.text {
+   font-weight: 300;
+   line-height: 1.75rem;
+}
+
+.h2 {
+   font-size: 1.45rem;
+   color: var(--color-text);
+   font-family: var(--font-2);
+}
+
+hr {
+   border: none;
+   border-bottom: 0.15rem solid var(--color-sublime);
+   width: 2rem;
+   margin: var(--space-75) 0 var(--space-1) 0;
+   text-align: left;
+}
+
+/*----------------------------------------------------
+| Icons
+----------------------------------------------------*/
+i {
+   width: 1.5rem;
+   height: 1.5rem;
+   display: inline-block;
+   background-size: cover;
+   opacity: 0.5;
+   transition: all 0.5s;
+}
+
+i.sun {
+   background-image: url('./assets/icon-light-mode.svg');
+}
+
+i.moon {
+   background-image: url('./assets/icon-dark-mode.svg');
+}
+
+
+/*----------------------------------------------------
+| Fancy Switch
+----------------------------------------------------*/
+.toggle-container {
+   padding: var(--space-2);
+   max-width: var(--width-c2);
+   margin: auto;
+   padding-top: var(--space-4);
+}
+
+.toggle {
+   width: 4.25rem;
+   height: 2.25rem;
+   background: var(--color-bg-toggle);
+   border-radius: 2rem;
+   padding: var(--space-25);
+   cursor: pointer;
+   position: relative;
+   border: none;
+}
+
+.toggle .icon {
+   position: absolute;
+   top: 0.45rem;
+   transform: translateX(0rem);
+}
+
+/* Hold off transitions until theme ready */
+body.ready .icon {
+   transition: all 0.25s;
+}
+
+.toggle .icon i {
+   position: absolute;
+   left: 0;
+}
+
+.toggle .icon .on {
+   opacity: 0;
+}
+
+.toggle.on .icon {
+   transform: translateX(2.2rem);
+}
+
+.toggle.on .icon .on {
+   opacity: 0.5;
+   filter: invert(1);
+}
+
+.toggle.on .icon .off {
+   opacity: 0;
+}
