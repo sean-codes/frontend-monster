@@ -1,0 +1,13 @@
+html, body {
+   margin: 0;
+   padding: 0;
+   background: #222;
+}
+
+canvas {
+   width: 100%;
+   height: 100%;
+   background: #222;
+   filter: blur(3px) contrast(2) invert(1);
+
+}
