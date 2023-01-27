@@ -1,0 +1,283 @@
+:root {
+   --color-tan: #f3f1c9;
+   --color-pink: #e8c9a9;
+   --color-black: #000;
+   --color-black-2: #444;
+   --color-white: #FFF;
+   --color-red: #c02a28;
+
+   --space-25: 0.25rem;
+   --space-half: 0.5rem;
+   --space-75: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+
+   --border-size: 4px;
+   --font-title: 'Montserrat', sans-serif;
+}
+
+html, body {
+   background: #222;
+   color: #FFF;
+   font-family: 'Questrial', sans-serif;
+   text-transform: uppercase;
+}
+.components {
+   max-width: 60rem;
+}
+
+.component-label {
+   margin-top: var(--space-4);
+   padding-bottom: var(--space-half);
+   padding-left: var(--space-1);
+   margin-bottom: var(--space-1);
+   font-weight: bolder;
+   font-size: 1.25rem;
+   border-bottom: 3px solid #FFF;
+   border-left: 3px solid #FFF;
+   max-width: 30rem;
+}
+
+
+/*-----------------------------------------------------
+| Table 1
+-----------------------------------------------------*/
+
+.table-1 {
+
+}
+
+/*-----------------------------------------------------
+| HOGWARTS HEADER
+-----------------------------------------------------*/
+.h1 {
+   color: var(--color-tan);
+   background: var(--color-black);
+   font-size: 2.5rem;
+   padding: var(--space-75);
+   font-family: var(--font-title);
+   letter-spacing: 0.25rem;
+}
+
+
+/*-----------------------------------------------------
+| Fields
+-----------------------------------------------------*/
+.main.fields {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+   grid-template-rows: 1fr 1fr 1fr;
+   background: var(--color-black);
+   color: var(--color-black);
+   gap: var(--border-size);
+   padding: var(--border-size);
+}
+
+.main .field {
+   padding: var(--space-half);
+   background: var(--color-tan);
+}
+
+.main .field .label {
+}
+
+.main .field .text {
+   font: 700 20px/1 'Jura';
+}
+
+.main.fields .passenger {  
+   grid-row: 1;
+   grid-column: 1/7;
+}
+
+.main.fields .depart {
+   grid-row: 2;
+   grid-column: 1/4;
+}
+
+.main.fields .arrive {
+   grid-row: 2;
+   grid-column: 4/7;
+}
+
+.main.fields .date {
+   grid-row: 3;
+   grid-column: 1/3;
+}
+
+.main.fields .time {
+   grid-row: 3;
+   grid-column: 3/5;
+}
+
+.main.fields .car {
+   grid-row: 3;
+   grid-column: 5;
+}
+
+.main.fields .seat {
+   grid-row: 3;
+   grid-column: 6;
+}
+
+
+/*-----------------------------------------------------
+| DEPART 9 3/4
+-----------------------------------------------------*/
+.nine-three {
+   background: var(--color-red);
+   width: 9rem;
+   font-size: calc(100vw * 0.01);
+   padding: var(--space-1);
+   font-family: 'Montserrat';
+   font-weight: bolder;
+   border: var(--border-size) solid var(--color-black);
+}
+
+.part-d {
+   width: 10rem;
+   font-size: 2rem;
+}
+.part-f {
+   font-size: 2.7rem;
+   line-height: 2.1rem;
+}
+.part-p {
+   font-weight: 900;
+   font-size: 1.45rem;
+   line-height: 2.1rem;
+}
+.part-9 {
+   padding-right: var(--space-half);
+   padding-top: var(--space-half);
+   font-family:'Old Standard TT';
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: var(--space-1);
+   font-weight: bolder;
+}
+.part-9 .nine {
+   font-size: 6rem;
+}
+.part-9 .fraction {
+   font-size: 3rem;
+}
+.part-9 .three {
+   line-height: 2.7rem;
+   border-bottom: 2px solid var(--color-white);
+}
+
+
+/*-----------------------------------------------------
+| BORDING INFO
+-----------------------------------------------------*/
+.bording {
+   background: var(--color-tan);
+   color: var(--color-black);
+   max-width: 33rem;
+   padding: var(--space-1);
+   font-weight: 500;
+   font-family: 'Inconsolata';;
+}
+
+.bording .top {
+   font-size: 1.2rem;
+   text-align: justify;
+   border-bottom: 2px dotted var(--color-black);
+   padding-bottom: var(--space-half);
+}
+
+.bording .bottom {
+   padding-top: var(--space-half);
+   font-size: 1rem;
+   font-weight: 500;
+}
+
+/*-----------------------------------------------------
+| CART COMPONENT
+-----------------------------------------------------*/
+.cart {
+   background: var(--color-black);
+   display: inline-block;
+   border-radius: 0.5rem;
+}
+
+.cart svg {
+   fill: var(--color-tan);
+   padding: var(--space-half) var(--space-1);
+}
+
+/*-----------------------------------------------------
+| BARCODE
+-----------------------------------------------------*/
+.barcode {
+   display: inline-block;
+   background: var(--color-tan);
+   fill: var(--color-black-2);
+   padding: var(--space-1);
+}
+.barcode .code {
+   transform: scaleY(1.4) scaleX(1.15) translateX(6%);
+   height: 3rem;
+}
+.barcode .text {
+   color: var(--color-red);
+   letter-spacing: 0.3rem;
+   font-family: 'Jura';
+   font-weight: 900;
+   font-size: 1.5rem;
+}
+
+
+
+/*-----------------------------------------------------
+| Side Table
+-----------------------------------------------------*/
+.side-table {
+   background: var(--color-pink);
+   max-width: 30rem;
+}
+
+.side-table .title {
+   background: var(--color-red);
+   color: var(--color-white);
+   font-family: var(--font-title);
+   font-size: 1.5rem;
+   padding: var(--space-half);
+   padding-top: var(--space-75);
+}
+
+.side-table .fields {
+   background: var(--color-red);
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   grid-template-rows: 1fr 1fr;
+   gap: var(--space-25);
+   font-weight: 600;
+   border: var(--border-size) solid var(--color-red);
+}
+
+.side-table .fields .field {
+   background: var(--color-pink);
+   padding: var(--space-half);
+}
+.side-table .fields .field .label {
+   color: var(--color-red);
+}
+.side-table .fields .field .text {
+   padding-top: var(--space-25);
+   color: var(--color-black);
+}
+
+
+
+
+/*-----------------------------------------------------
+| UTILS
+-----------------------------------------------------*/
+.m-t-1 {
+   margin-top: var(--space-1);
+}
