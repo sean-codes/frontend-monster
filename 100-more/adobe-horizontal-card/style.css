@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+:root {
+   --color-pink: #c0ddff;
+   --color-orange: #76e1a1;
+   --color-white: #FFF;
+   --color-black: #000;
+   --color-black-light: #444;
+
+   --space-1: 1rem;
+   --space-2: 2rem;
+
+   --size-1: 1rem;
+   --size-2: 1.25rem;
+
+   --image-mountains: url("../_assets/images/background-vector-mountains.jpg");
+}
+
+html, body {
+   background: #222;
+   font-family: monospace;
+   font-family: 'Montserrat', sans-serif;
+   background: linear-gradient(to right, var(--color-pink), var(--color-orange));
+   font-size: 12px;
+   height: 100%;
+}
+
+body {
+   display: flex;
+}
+.container {
+   flex: 1;
+   max-width: 60rem;
+   background: var(--color-white);
+   margin: auto;
+   height: 20rem;
+   display: flex;
+}
+
+.container .left  {
+   flex: 1;
+   height: 100%;
+   background-image: var(--image-mountains);
+   background-size: cover;
+}
+.container .right {
+   padding: 0 5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-width: 14rem;
+}
+
+/*-------------------------------------------------
+| Utility
+-------------------------------------------------*/
+.space-t-1 {
+   margin-top: var(--space-1);
+}
+
+.text {
+   font-size: var(--size-2);
+}
+.text-light {
+   font-size: var(--size-1);
+   color: var(--color-black-light);
+}
+
+.bold {
+   font-weight: bolder;
+}
