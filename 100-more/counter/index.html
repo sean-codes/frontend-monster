@@ -1,0 +1,29 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Counter</title>
+   <style>
+      html, body {
+         background: #222;
+         color: #FFF;
+         font-family: monospace;
+      }
+   </style>
+</head>
+<body>
+   <!-- Initial UI -->
+   <div>Seconds: <span class="counter">0</span></div>
+
+   <!-- Code -->
+   <script>
+      var count = 0
+      setInterval(render, 1000)
+      function render() {
+         count += 1
+         document.querySelector('.counter').innerHTML = count
+      }
+   </script>
+
+</body>
+</html>
