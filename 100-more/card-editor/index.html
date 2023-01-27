@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</head>
+<body>
+
+   <div class="container">
+      <div class="h1 space-b-2">Payment Details</div>
+      <div class="h2 space-b-2 color-purple">Your saved payment methods</div>
+
+      <div class="cards">
+         <template class="templateCard">
+            <div class="card">
+               <div class="icon">
+                  <img src="/images/icon-mastercard.png" />
+               </div>
+               <div class="info">
+                  <div class="number">**** **** **** 4329<span class="primary">Primary</span></div>
+                  <div class="exp space-t-1">Expiration: 09/26</div>
+               </div>
+               <div class="actions">
+                  <div class="action">
+                     <button class="button">
+                        <div class="icon material-symbols-outlined">edit_note</div>
+                        <div class="text">Edit</div>
+                     </button>
+                  </div>
+                  <div class="action">
+                     <button class="button red deleteButton">
+                        <div class="icon material-symbols-outlined">delete_forever</div>
+                        <div class="text">Delete</div>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </template>
+      </div>
+
+      <button class="button primary space-t-2 addPayment">
+         <div class="icon material-symbols-outlined">add</div>
+         <div class="text">Add new payment method</div>
+      </button>
+   </div>
+
+
+
+   <!-- <img src="/card-editor/example-image.png" width="80%"> -->
+   <script src="/card-editor/script.js"></script>
+</body>
+</html>

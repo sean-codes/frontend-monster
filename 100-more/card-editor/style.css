@@ -1,0 +1,164 @@
+:root {
+   --color-purple: #636ae9;
+   --color-purple-hover: hsl(237, 75%, 75%);
+   --color-red: #bc4944;
+   --color-red-hover: rgba(188, 73, 68, 0.1);
+   --color-grey: #0d0f18;
+   --color-grey2: #161821;
+   --color-green: #5ac169;
+   --color-white: #FFF;
+   --color-transparent-hover: rgba(255, 255, 255, 0.1);
+   --color-white2: rgba(255, 255, 255, 0.65);
+   --space-25: 0.25rem;
+   --space-half: 0.5rem;
+   --space-75: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --border-radius: 0.35rem;
+}
+
+
+html, body {
+   background: var(--color-grey);
+   color: var(--color-white);
+}
+
+* {
+   font-family: monospace;
+   box-sizing: border-box;
+}
+
+.container {
+   max-width: 60rem;
+   margin: 5rem auto;
+}
+
+/*------------------------------------------------
+| Cards
+------------------------------------------------*/
+.cards {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-1);
+}
+.card {
+   display: flex;
+   gap: var(--space-1);
+   align-items: center;
+   background: var(--color-grey2);
+   padding: var(--space-1) var(--space-2);
+   border-radius: var(--border-radius);
+}
+
+@media (max-width: 700px) {
+   .card {
+      text-align: center;
+      flex-direction: column;
+   }
+
+   .card > * {
+      margin: auto;
+      margin-bottom: var(--space-1);
+   }
+}
+
+.card > .icon {
+   width: 8rem;
+   padding: var(--space-1);
+}
+.card .icon img {
+   width: 100%;
+}
+.card .info {
+   flex: 1;
+}
+.card .info .number {
+   font-weight: bolder;
+}
+.card .info .number .primary {
+   background: var(--color-green);
+   padding: var(--space-25);
+   border-radius: var(--border-radius);
+   margin-left: var(--space-half);
+   font-weight: 300;
+}
+.card .info .exp {
+   color: var(--color-white2);
+}
+.card .actions {
+   display: flex;
+   gap: var(--space-1);
+}
+
+/*------------------------------------------------
+| Utility
+------------------------------------------------*/
+/* Spacing */
+.space-b-1 {
+   margin-bottom: var(--space-1);
+}
+.space-b-2 {
+   margin-bottom: var(--space-2);
+}
+.space-t-1 {
+   margin-top: var(--space-1);
+}
+.space-t-2 {
+   margin-top: var(--space-2);
+}
+
+/* Text colors */
+.color-purple {
+   color: var(--color-purple);
+}
+.color-red {
+   color: var(--color-red);
+}
+
+.hide {
+   display: none;
+}
+/* Text */
+.h1 {
+   font-size: 2.25rem;
+   font-weight: bolder;
+}
+.h2 {
+   font-size: 1.5rem;
+}
+/* Buttons */
+button {
+   display: flex;
+   gap: var(--space-half);
+   background: transparent;
+   border: 1px solid var(--color-white);
+   border-radius: var(--border-radius);
+   padding: var(--space-75) var(--space-1);
+   align-items: center;
+   color: var(--color-white);
+   cursor: pointer;
+   font-weight: bolder;
+}
+.button:hover {
+   background: var(--color-transparent-hover);
+}
+#test, .button .icon {
+   width: 2rem;
+   color: var(--color-white);
+}
+.button.primary {
+   background: var(--color-purple);
+   border: none;
+}
+.button.primary:hover {
+   background: var(--color-purple-hover);
+}
+.button.red {
+   border-color: var(--color-red);
+}
+.button.red * {
+   color: var(--color-red);
+}
+.button.red:hover {
+   background: var(--color-red-hover);
+}
