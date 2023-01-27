@@ -1,0 +1,133 @@
+:root {
+   --space-25: 0.25rem;
+   --space-half: 0.5rem;
+   --space-75: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+
+   --color-white: #FFF;
+   --color-black: #222;
+   --color-hr: rgba(0, 0, 0, 0.25);
+
+   --size-h2: 2rem;
+   --size-label: 1.25rem;
+   --icon-size: 4rem;
+}
+
+
+html, body {
+   background: var(--color-white);
+   color: var(--color-black);
+   font-family: monospace;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.component-heading {
+   border-left: 2px solid var(--color-black);
+   border-bottom: 2px solid var(--color-black);
+   max-width: 30rem;
+   padding: var(--space-1) var(--space-1);
+   margin-top: var(--space-3);
+   margin-bottom: var(--space-1);
+   font-weight: bolder;
+   background: rgba(0, 0, 0, 0.1);
+   font-size: 1.25rem;
+}
+
+/*--------------------------------------------------------------
+| Title
+--------------------------------------------------------------*/
+.title {
+   font-weight: bolder;
+   font-size: var(--size-h2);
+   border-bottom: 1px solid var(--color-hr);
+   padding-bottom: var(--space-1);
+}
+
+
+/*--------------------------------------------------------------
+| Item
+--------------------------------------------------------------*/
+.item {
+   display: flex;
+   align-items: center;
+   gap: var(--space-1);
+   cursor: pointer;
+   max-width: 25rem;
+   padding: var(--space-half);
+   border-radius: 0.5rem;
+}
+.item .image {
+   width: var(--icon-size);
+   height: var(--icon-size);
+   border-radius: 50%;
+   overflow: hidden;
+   overflow: hidden;
+}
+.item .image img{
+   transition: all 0.25s;
+}
+.item .image:hover img{
+   transform: scale(1.5);
+}
+
+.item:hover {
+   background: rgba(0, 0, 0, 0.05);
+}
+.item .image img {
+   width: 100%;
+   height: auto;
+}
+
+.item .text {
+   border-top: 2px solid transparent;
+   border-bottom: 2px solid transparent;
+   ccfont-weight: bold;
+   font-size: var(--size-label);
+}
+.item:hover .text {
+   border-bottom: 2px solid var(--color-black);
+}
+
+/*--------------------------------------------------------------
+| Grid
+--------------------------------------------------------------*/
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--space-1);
+}
+
+.grid .item {
+   min-height: 3rem;
+}
+
+.grid.demo .item{
+   border: 1px solid grey;
+}
+
+@media (max-width: 600px) {
+   .grid {
+      grid-template-columns: 1fr;
+   }
+}
+
+
+/*--------------------------------------------------------------
+| Utils
+--------------------------------------------------------------*/
+.m-t-2 {
+   margin-top: var(--space-2);
+}
+
+.center {
+   max-width: 60rem;
+   margin: 1rem auto;
+   padding: var(--space-2);
+   padding-bottom: 30rem;
+}

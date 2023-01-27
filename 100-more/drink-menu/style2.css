@@ -1,0 +1,125 @@
+/*----------------------------------------
+| Setup
+----------------------------------------*/
+:root {
+   --color-peach: #f5c5a1;
+   --color-white: #DDD;
+   --color-black: #222;
+   --color-black-2: #333;
+   --size-h2: 1.75rem;
+   --space-25: 0.25rem;
+   --space-half: 0.5rem;
+   --space-75: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+}
+
+html, body {
+   background: var(--color-white);
+   font-family: monospace;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.component-heading {
+   max-width: 30rem;
+   font-size: 1.25rem;
+   border-left: 3px solid var(--color-black);
+   border-bottom: 3px solid var(--color-black);
+   padding: var(--space-half);
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+   font-weight: bolder;
+}
+
+
+/*----------------------------------------
+| Heading
+----------------------------------------*/
+.h2 {
+   font-size: var(--size-h2);
+   font-weight: bold;
+}
+
+
+/*----------------------------------------
+| Paragraph
+----------------------------------------*/
+.p {
+   color: var(--color-black-2);
+}
+
+/*----------------------------------------
+| Button
+----------------------------------------*/
+.button {
+   background: none;
+   border: 1px solid var(--color-black);
+   border-radius: 3rem;
+   padding: var(--space-half) var(--space-1);
+   cursor: pointer;
+   ccfont-weight: bold;
+}
+
+.button:hover {
+   background: rgba(0, 0, 0, 0.25);
+}
+
+/*----------------------------------------
+| Card Images
+----------------------------------------*/
+.card-image {
+   max-width: 30rem;
+   height: 24rem;
+   position: relative;
+}
+.card-image img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   top: 0;
+   left: 0;
+}
+.card-image img.top {
+   object-fit: contain;
+   padding: var(--space-2);
+}
+
+/*----------------------------------------
+| Card Content
+----------------------------------------*/
+.card-content {
+   background: var(--color-peach);
+   padding: var(--space-2);
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: var(--space-2);
+   height: 18rem;
+   ccpadding: var(--space-3) var(--space-2);
+}
+
+/*----------------------------------------
+| Card 
+----------------------------------------*/
+.card {
+   max-width: 30rem;
+}
+
+/*----------------------------------------
+| Grid
+----------------------------------------*/
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--space-1);
+}
+

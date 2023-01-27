@@ -1,0 +1,142 @@
+/*-------------------------------------------------------
+| Variables
+-------------------------------------------------------*/
+:root {
+   --color-border: #aaa;
+   --color-button: #444;
+   --space-25: 0.25rem;
+   --space-half: 0.5rem;
+   --space-75: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --border-radius: 0.75rem;
+   --box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.5);
+   --button-size: 4rem;
+}
+
+html, body {
+   background: #222;
+   color: #FFF;
+   font-family: monospace;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.component-heading {
+   margin-top: var(--space-2);
+   margin-bottom: var(--space-1);
+   border-bottom: 2px solid var(--color-border);
+   border-left: 2px solid var(--color-border);
+   padding: var(--space-half);
+   max-width: 25rem;
+}
+
+/*-------------------------------------------------------
+| Card
+-------------------------------------------------------*/
+.card {
+   border: 1px solid var(--color-border);
+   padding: var(--space-1);
+   border-radius: var(--border-radius);
+   max-width: 20rem;
+}
+
+.card .image {
+   padding-bottom: var(--space-1);
+}
+
+.card .image img {
+   width: 100%;
+}
+
+
+
+/*-------------------------------------------------------
+| Button
+-------------------------------------------------------*/
+.button {
+   width: var(--button-size);
+   height: var(--button-size);
+   border-radius: 50%;
+   border: none;
+   background: var(--color-button);
+   box-shadow: var(--box-shadow);
+}
+
+.button img {
+   width: 80%;
+   height: auto;
+   filter: invert(1);
+}
+.button img.left {
+   transform: scale(-1);
+}
+
+/*-------------------------------------------------------
+| Slide
+-------------------------------------------------------*/
+.slide-container {
+   width: 100%;
+   position: relative;
+   overflow: hidden;
+}
+
+.slide-container .slides {
+   height: 15rem;
+   display: flex;
+   gap: var(--space-1);
+   transition: all 0.5s;
+}
+
+.slide-container .slides .slide {
+   min-width: 40%;
+   ccborder: 1px solid #444;
+}
+
+.slide-container .right-button,
+.slide-container .left-button {
+   width: var(--button-size);
+   height: var(--button-size);
+   position: absolute;
+   ccbackground: rgba(0, 0, 0, 0.5);
+   top: 50%;
+   right: var(--space-1);
+   transform: translateY(-50%);
+}
+.slide-container .left-button {
+   right: unset;
+   left: var(--space-1);
+}
+
+.slide-container .hide {
+   display: none;
+}
+
+/* Control the movement */
+.slide-container .slides.move-0 {
+   ccbackground: #555;
+}
+.slide-container .slides.move-1 {
+   ccbackground: #666;
+   transform: translateX(-40%);
+}
+.slide-container .slides.move-2 {
+   ccbackground: #777;
+   transform: translateX(-80%);
+}
+.slide-container .slides.move-3 {
+   transform: translateX(-120%);
+   ccbackground: #888;
+}
+.slide-container .slides.move-4 {
+   ccbackground: #999;
+   transform: translateX(-160%);
+}
+.slide-container .slides.move-5 {
+   ccbackground: #aaa;
+   transform: translateX(-200%);
+}
