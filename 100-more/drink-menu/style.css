@@ -17,7 +17,8 @@
 }
 
 
-html, body {
+html,
+body {
    background: var(--color-white);
    color: var(--color-black);
    font-family: monospace;
@@ -62,6 +63,7 @@ html, body {
    padding: var(--space-half);
    border-radius: 0.5rem;
 }
+
 .item .image {
    width: var(--icon-size);
    height: var(--icon-size);
@@ -69,16 +71,19 @@ html, body {
    overflow: hidden;
    overflow: hidden;
 }
-.item .image img{
+
+.item .image img {
    transition: all 0.25s;
 }
-.item .image:hover img{
+
+.item .image:hover img {
    transform: scale(1.5);
 }
 
 .item:hover {
    background: rgba(0, 0, 0, 0.05);
 }
+
 .item .image img {
    width: 100%;
    height: auto;
@@ -90,6 +95,7 @@ html, body {
    ccfont-weight: bold;
    font-size: var(--size-label);
 }
+
 .item:hover .text {
    border-bottom: 2px solid var(--color-black);
 }
@@ -107,7 +113,7 @@ html, body {
    min-height: 3rem;
 }
 
-.grid.demo .item{
+.grid.demo .item {
    border: 1px solid grey;
 }
 
