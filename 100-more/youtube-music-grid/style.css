@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+   --color-black: #000;
+   --color-white: #fff;
+   --color-white-2: #bbb;
+   --color-white-3: #999;
+   --size-h2: 1.5rem;
+   --btn-circle-size: 3rem;
+   --btn-thumb-size: 3rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-half: 0.5rem;
+   --song-height: 4rem;
+   --song-width: 40rem;
+}
+
+html, body {
+   background: var(--color-black);
+   font-family: 'Poppins', sans-serif
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.component-header {
+   font-size: 1.25rem;
+   color: #FFF;
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: 0.5rem;
+   margin-bottom: 1rem;
+   margin-top: 2rem;
+}
+.component-header:first-of-type {
+   margin-top: 0;
+}
+
+.app {
+   max-width: 80rem;
+   margin: 5rem auto;
+}
+
+/*-------------------------------------------------------
+| Text
+-------------------------------------------------------*/
+.text {
+   color: var(--color-white-2);
+}
+.h2 {
+   color: var(--color-white);
+   font-size: var(--size-h2);
+}
+.upper {
+   text-transform: uppercase;
+}
+.bold {
+   font-weight: bolder;
+}
+.white {
+   color: var(--color-white);
+}
+
+/*-------------------------------------------------------
+| Circle button
+-------------------------------------------------------*/
+.btn-circle {
+   width: var(--btn-circle-size);
+   height: var(--btn-circle-size);
+   background: transparent;
+   border: 1px solid var(--color-white-2);
+   border-radius: 50%;
+   margin: 0;
+   padding: 0;
+   cursor: pointer;
+}
+.btn-circle img {
+   filter: invert(1);
+   width: 75%;
+   height: 75%;
+   opacity: 0.7;
+}
+.btn-circle.left img {
+   transform: scale(-1, 1);
+}
+.btn-circle:hover {
+   background: rgba(255, 255, 255, 0.1);
+}
+
+
+/*-------------------------------------------------------
+| Thumbs button group
+-------------------------------------------------------*/
+.thumbs {
+   display: flex;
+}
+
+.thumbs .thumb {
+   background: none;
+   border: none;
+   width: var(--btn-thumb-size);
+   height: var(--btn-thumb-size);
+   cursor: pointer;
+}
+.thumbs .thumb img {
+   width: 75%;
+   filter: invert(1);
+   opacity: 0.7;
+}
+.thumbs .thumb:hover img {
+   opacity: 1;
+}
+
+
+/*-------------------------------------------------------
+| Song with title
+-------------------------------------------------------*/
+.song-image {
+   width: var(--song-height);
+   max-width: 100%;
+   max-height: 100%;
+   display: grid;
+   grid-template-columns: 1;
+   grid-template-rows: 1;
+}
+.song-image .image,
+.song-image .play {
+   grid-row: 1;
+   grid-column: 1;
+}
+.song-image img {
+   width: 100%;
+}
+.song-image .play {
+   background: rgba(0, 0, 0, 0.75);
+   display: flex;
+   opacity: 0;
+   transition: 0.15s;
+}
+.song-image .play img {
+   width: 40;
+   height: 40;
+   margin: auto;
+   filter: invert(1);
+}
+.song-image:hover .play{
+   opacity: 1;
+}
+
+/*-------------------------------------------------------
+| Song
+-------------------------------------------------------*/
+.song {
+   height: calc(var(--song-height) + var(--space-1));
+   display: flex;
+   align-items: center;
+   gap: var(--space-1);
+   padding: var(--space-1) var(--space-half);
+   cursor: pointer;
+   border-radius: 0.25rem;
+   overflow: hidden;
+}
+/* Demo Styles */
+.song.demo {
+   max-width: var(--song-width);
+   background: #333;
+}
+.song.demo .left,
+.song.demo .right {
+   ccbackground: #999;
+}
+.song .left {
+   width: var(--song-height);
+   border-radius: 0.25rem;
+   overflow: hidden;
+}
+.song .right {
+   flex: 1;
+   overflow: hidden;
+}
+.song .text {
+   white-space: nowrap;
+   overflow: hidden;
+   width: 100%;
+   text-overflow: ellipsis;
+/*   max-width: 10rem;*/
+}
+.song .center {
+   width: 100%;
+   display: flex;
+   gap: var(--space-1);
+}
+.song .center .one {
+   overflow: hidden;
+   align-self: center;
+   flex: 1;
+}
+.song .center .two {
+   display: none;
+}
+.song:hover .center .two {
+   display: block;
+}
+.song:hover {
+   background: rgba(255, 255, 255, 0.1);
+}
+
+/*-------------------------------------------------------
+| Song grid
+-------------------------------------------------------*/
+.song-grid {
+   background: var(--color-black);
+   display: flex;
+   grid-template-columns: 1fr 1fr 1fr;
+   flex-wrap: wrap;
+   margin-right: calc(-1 * var(--space-1));
+}
+.song-grid.demo .item {
+   background: #999;
+}
+.song-grid .item {
+   width: calc(33.333% - var(--space-1));
+}
+
+@media (max-width: 800px) {
+   .song-grid .item{
+      width: calc(50% - var(--space-1));
+   }
+}
+@media (max-width: 600px) {
+   .song-grid .item{
+      width: calc(100% - var(--space-1));
+   }
+}
+
+
+.m-t-h {
+   margin-top: var(--space-half);
+}
+.m-t-1 {
+   margin-top: var(--space-1);
+}
+.m-t-2 {
+   margin-top: var(--space-2);
+}
