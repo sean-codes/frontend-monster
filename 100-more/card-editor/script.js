@@ -2,12 +2,12 @@
 
 var myArray = [
    {
-      icon: "/images/icon-mastercard.png",
+      icon: "../_assets/images/icon-mastercard.png",
       expiration: '09/26',
       primary: true
    },
    {
-      icon: "/images/icon-visa.png",
+      icon: "../_assets/images/icon-visa.png",
       expiration: '08/28'
    }
 ]
@@ -22,8 +22,8 @@ function onClickAddPayment() {
    console.log('test')
 
    var icon = [
-      "/images/icon-visa.png",
-      "/images/icon-mastercard.png",
+      "../_assets/images/icon-visa.png",
+      "../_assets/images/icon-mastercard.png",
    ][Math.floor(Math.random()*2)]
 
    myArray.push({

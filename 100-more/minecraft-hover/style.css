@@ -1,0 +1,183 @@
+:root {
+   --color-white: #FFF;
+   --color-black: #111;
+   --color-white-2: #DDD;
+   --color-green: #3c8426;
+   --color-green-2: #6cc349;
+   --color-green-3: #29631c;
+   --font: monospace;
+   --size-h2: 1.35rem;
+   --size-p: 1rem;
+
+   --space-half: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+}
+
+html, body {
+   background: var(--color-white-2);
+}
+
+* {
+   font-family: var(--font);
+}
+
+.component-header {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: 0.5rem;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+
+.app {
+   margin: 5rem auto;
+}
+
+/*-------------------------------------------------------
+| Text
+-------------------------------------------------------*/
+.h2 {
+   font-weight: 600;
+   font-size: var(--size-h2);
+}
+
+.p {
+   font-size: var(--size-p);
+}
+
+.center {
+   text-align: center;
+}
+
+.m-t-1 {
+   margin-top: 1rem;
+}
+.m-t-2 {
+   margin-top: 2rem;
+}
+
+.center-serious {
+   display: flex;
+   justify-content: center;
+}
+
+/*-------------------------------------------------------
+| Button
+-------------------------------------------------------*/
+.btn-no-bg {
+   background: none;
+   border: none;
+   margin: 0;
+   padding: 0;
+   display: flex;
+   align-items: center;
+   text-transform: uppercase;
+}
+.btn-no-bg .text {
+   font-weight: bolder;
+}
+
+.btn-no-bg .icon {
+   width: 2rem;
+   height: 2rem;
+}
+
+.btn-no-bg .icon img{
+   width: 100%;
+}
+
+.btn-load-more {
+   border: none;
+   background: var(--color-green);
+   color: var(--color-white);
+   font-weight: bolder;
+   border-top: 2px solid var(--color-green-2);
+   border-bottom: 2px solid var(--color-green-3);
+   padding: var(--space-1) var(--space-2);
+   box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.25);
+   text-transform: uppercase;
+}
+
+
+
+/*-------------------------------------------------------
+| Box
+-------------------------------------------------------*/
+.box {
+   background: #333;
+   padding-top: 100%;
+   position: relative;
+   overflow: hidden;
+}
+
+.bg-1 {
+   background-image: url('../_assets/images/background-vector-mountains.jpg');
+   background-size: cover;
+}
+
+.bg-2 {
+   background-image: url('../_assets/images/background-vector-mountains.jpg');
+   background-size: cover;
+}
+
+.bg-3 {
+   background-image: url('../_assets/images/placeholder-orange.png');
+   background-size: cover;
+}
+
+.bg-4 {
+   background-image: url('../_assets/images/hero-forza-1.png');
+   background-size: cover;
+}
+
+.box .content {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   width: 100%;
+   text-align: center;
+   background: rgba(0, 0, 0, 0.25);
+   color: var(--color-white);
+   cursor: pointer;
+   transition: all 0.25s;
+}
+
+.box .content .title {
+   background: var(--color-white-2);
+   display: inline-block;
+   padding: var(--space-half) var(--space-1);
+   color: var(--color-black);
+   text-transform: uppercase;
+   margin-top: -1rem;
+}
+.box .content .info {
+   padding: var(--space-1);
+}
+
+.box .content .info {
+
+}
+.box .content .info .bottom {
+   padding-top: 2rem;
+   margin-bottom: -3rem;
+}
+
+.box:hover .content {
+   padding-bottom: 5rem;
+}
+
+/*-------------------------------------------------------
+| Grid
+-------------------------------------------------------*/
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: var(--space-1);
+}
+
+@media (max-width: 800px) {
+   .grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}

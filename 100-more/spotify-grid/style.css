@@ -1,0 +1,149 @@
+:root {
+   --color-black: #111;
+   --color-black-2: #222;
+   --color-black-3: #333;
+   --color-white: #fff;
+   --color-white-2: #aaa;
+   --color-green: #1ddf63;
+   --font: monospace;
+   --size-h2: 1.35rem;
+   --size-p: 1rem;
+   --size-play: 3rem;
+   --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --border-radius: 0.5rem;
+}
+
+html, body {
+   background: var(--color-black);
+   color: var(--color-white);
+   font-family: var(--font);
+}
+
+.component-header {
+   border-bottom: 2px solid #fff;
+   border-left: 2px solid #fff;
+   padding: 0.5rem;
+   color: var(--color-white);
+   margin-bottom: 1rem;
+   margin-top: 2rem;
+}
+
+.app {
+   max-width: 70rem;
+   margin: 5rem auto;
+}
+
+/*---------------------------------------------------
+| Text
+---------------------------------------------------*/
+.h2 {
+   font-size: var(--size-h2);
+}
+
+.p {
+   font-size: var(--size-p);
+}
+
+.p.darker {
+   color: var(--color-white-2);
+}
+
+.m-t-1 {
+   margin-top: var(--space-1);
+}
+
+.m-t-2 {
+   margin-top: var(--space-2);
+}
+
+/*---------------------------------------------------
+| Play button
+---------------------------------------------------*/
+.play-button {
+   width: var(--size-play);
+   height: var(--size-play);
+   background: var(--color-green);
+   border-radius: 50%;
+   position: relative;
+   box-shadow: var(--box-shadow);
+}
+.play-button img {
+   width: 65%;
+   height: 65%;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+}
+
+
+/*---------------------------------------------------
+| Song Image
+---------------------------------------------------*/
+.song-image {
+   padding-top: calc(100%);
+   position: relative;
+   background: #999;
+   border-radius: var(--border-radius);
+}
+
+.song-image .action{
+   bottom: var(--space-1);
+   right: var(--space-1);
+   position: absolute;
+   opacity: 0;
+   transition: all 0.15s;
+}
+.song-image:hover .action{
+   opacity: 1;
+}
+
+.bg-1 {
+   background: url('../_assets/images/background-vector-mountains.jpg');
+   background-size: cover;
+}
+
+/*---------------------------------------------------
+| Card
+---------------------------------------------------*/
+.card {
+   background: var(--color-black-2);
+   padding: var(--space-1);
+   border-radius: var(--border-radius);
+   cursor: pointer;
+}
+.card:hover {
+   background: var(--color-black-3);
+}
+.card .bottom{
+   padding-top: var(--space-1);
+}
+
+/*---------------------------------------------------
+| Grid
+---------------------------------------------------*/
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+   gap: var(--space-1);
+}
+
+@media (max-width: 1100px) {
+   .grid {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+   }
+}
+
+@media (max-width: 800px) {
+   .grid {
+      grid-template-columns: 1fr 1fr 1fr;
+   }
+}
+
+@media (max-width: 500px) {
+   .grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
