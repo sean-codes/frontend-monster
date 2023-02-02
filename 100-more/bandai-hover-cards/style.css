@@ -1,0 +1,147 @@
+:root {
+   --font: monospace;
+   --color-black: #111;
+   --color-white: #ddd;
+   --color-white-2: #fff;
+   --size-h2: 1.35rem;
+   --space-025: 0.25rem;
+   --space-05: 0.5rem;
+   --space-075: 0.75rem;
+   --space-1: 1rem;
+   --space-15: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --card-height: 18rem;
+   --border-radius: 0.35rem;
+   --max-width: 70rem;
+   --box-shadow: 0px 3px 16px rgba(0, 0, 0, 0.5);
+}
+
+
+html, body {
+    background: var(--color-white);
+}
+
+* {
+   font-family: var(--font);
+}
+
+.component-header {
+   border-bottom: 2px solid black;
+   border-left: 2px solid black;
+   padding: 0.5rem;
+   margin-bottom: 1rem;
+   margin-top: 2rem;
+}
+
+.app {
+   padding: var(--space-2);
+   max-width: var(--max-width);
+   margin: 5rem auto;
+}
+
+/*-----------------------------------------------
+| Text / Utilities
+-----------------------------------------------*/
+.h2 {
+   font-size: var(--size-h2);
+   font-weight: bolder;
+}
+
+.p {
+   font-size: var(--size-p);
+}
+
+.white {
+   color: var(--color-white-2);
+}
+
+.bold {
+   font-weight: bolder;
+}
+
+.uppercase {
+   text-transform: uppercase;
+}
+
+.m-t-1 {
+   margin-top: 1rem;
+}
+
+
+
+/*-----------------------------------------------
+| Card
+-----------------------------------------------*/
+.card {
+   max-width: 30rem;
+   height: var(--card-height);
+   background: 
+      #777 
+      linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+   position: relative;
+   transition: all 0.25s;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   background-size: cover;
+}
+
+
+.card .content {
+   position: absolute;
+   bottom: 0;
+   padding: var(--space-1);
+   color: var(--color-white);
+   opacity: 0;
+   transition: all 0.15s;
+}
+.card:hover {
+   box-shadow: var(--box-shadow);
+}
+.card:hover .content {
+   opacity: 1;
+}
+
+.card:hover {
+   transform: scale(1.1);
+}
+
+.bg-1 { 
+   background-image: 
+      linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
+      url('../_assets/images/bg_game_1.png');
+}
+.bg-2 { 
+   background-image: 
+      linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
+      url('../_assets/images/bg_game_2.png'); 
+}
+.bg-3 { 
+   background-image:
+      linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
+      url('../_assets/images/bg_game_3.png'); 
+}
+.bg-4 { 
+   background-image:
+      linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75)),
+      url('../_assets/images/bg_game_4.png'); 
+}
+
+
+/*-----------------------------------------------
+| Grid
+-----------------------------------------------*/
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr 1fr;
+   gap: var(--space-05);
+}
+
+@media (max-width: 800px) {
+   .grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
