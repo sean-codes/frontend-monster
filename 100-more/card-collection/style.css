@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+   --font: 'Lato', sans-serif;
+   --color-black: #111;
+   --color-black-2: #222;
+   --color-white: #DDD;
+   --color-white-2: #aaa;
+   --color-white-3: #999;
+   --color-blue: #636ae9;
+   --color-red: #de534c;
+   --size-p: 1rem;
+   --size-h2: 1.55rem;
+   --size-h3: 1.35rem;
+   --color-border: rgba(255, 255, 255, 0.25);
+   --border-radius: 0.35rem;
+   --space-05: 0.5rem;
+   --space-075: 0.75rem;
+   --space-1: 1rem;
+   --space-15: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+}
+
+html, body {
+   font-size: 14px;
+   background: var(--color-black);
+}
+
+* {
+   font-family: var(--font);
+   color: var(--color-white);
+}
+
+.component-header {
+   padding: 0.5rem;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+}
+
+.app {
+   max-width: 60rem;
+   margin: 5rem auto;
+   padding: var(--space-1);
+}
+
+
+/*----------------------------------------------
+| Text / Utilities
+----------------------------------------------*/
+.h2 {
+   font-size: var(--size-h2);
+}
+
+.h3 {
+   font-size: var(--size-h3);
+}
+
+.p {
+   font-size: var(--size-p);
+}
+
+.light {
+   color: var(--color-white-2);
+}
+
+
+/*----------------------------------------------
+| Dropdown
+----------------------------------------------*/
+select {
+   background: none;
+   border: 1px solid var(--color-white-3);
+   border-radius: var(--border-radius);
+   padding: var(--space-075) var(--space-1);
+   color: var(--color-white);
+   cursor: pointer;
+}
+select:hover {
+   background: rgba(255, 255, 255, 0.1);
+}
+   
+/*----------------------------------------------
+| Buttons
+----------------------------------------------*/
+.button {
+   display: flex;
+   background: none;
+   align-items: center;
+   gap: var(--space-1);
+   margin: 0;
+   padding: var(--space-075) var(--space-15);
+   border: 1px solid var(--color-white-3);
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   position: relative;
+}
+.button .icon {
+   width: var(--space-2);
+   ccheight: 16px;
+   color: var(--color-white);
+   ccmargin-top: -5px;
+   line-height: 0px;
+}
+.button .icon img {
+   filter: invert(1);
+   width: 100%;
+}
+.button .text {
+   color: var(--color-white);
+}
+
+.button:hover {
+   background: rgba(255, 255, 255, 0.1);
+}
+.button.blue,
+.button.blue .icon,
+.button.blue .text {
+   border-color: var(--color-blue);
+   color: var(--color-blue);
+}
+
+.button.red,
+.button.red .icon,
+.button.red .text {
+   border-color: var(--color-red);
+   color: var(--color-red);
+}
+
+/*----------------------------------------------
+| Card Image
+----------------------------------------------*/
+.card-image {
+}
+.card-image.demo {
+   width: 15rem;
+}
+
+.card-image .img {
+   width: 100%;
+   padding-top: 100%;
+   background: green;
+   background: url('../_assets/images/background-vector-mountains.jpg');
+   background-size: cover;
+}
+/*----------------------------------------------
+| Card
+----------------------------------------------*/
+.card {
+   background: var(--color-black-2);
+   display: flex;
+   border-radius: var(--border-radius);
+   overflow: hidden;
+}
+
+.card .left {
+   min-width: 17rem;
+}
+.card .right {
+   flex: 1;
+}
+
+@media (max-width: 750px) {
+   .card {
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .card .left {
+      width: 100%;
+
+   }
+   .card .right {
+      text-align: center;
+   }
+}
+
+
+/*----------------------------------------------
+| Utilities
+----------------------------------------------*/
+.m-t-1 { margin-top: var(--space-1); }
+.m-t-2 { margin-top: var(--space-2); }
+.m-t-3 { margin-top: var(--space-3); }
+.m-t-4 { margin-top: var(--space-4); }
+.m-t-5 { margin-top: var(--space-5); }
+.p-1 { padding: var(--space-1) }
+.p-2 { padding: var(--space-2) }
+
+.bold { font-weight: bold }
+/*----------------------------------------------
+| Flex
+----------------------------------------------*/
+.flex {
+   display: flex;
+   gap: 1rem;
+}
+
+.flex.wrap {
+   flex-wrap: wrap;
+}
+
+.flex.between {
+   justify-content: space-between;
+   align-items: flex-end;
+}
+.flex-v {
+   display: flex;
+   justify-content: space-between;
+   flex-direction: column;
+   height: 100%;
+}
+.flex-v.demo {
+   height: 300px;
+}
