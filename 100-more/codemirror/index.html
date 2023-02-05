@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+
+   <!-- codemirror -->
+   <link rel="stylesheet" href="./codemirror-5.65.11/lib/codemirror.css">
+   <link rel="stylesheet" href="./codemirror-5.65.11/theme/dracula.css">
+   <script src="./codemirror-5.65.11/lib/codemirror.js"></script>
+   <script src="./codemirror-5.65.11/mode/javascript/javascript.js"></script>
+   <script src="./codemirror-5.65.11/mode/css/css.js"></script>
+   <script src="./codemirror-5.65.11/mode/xml/xml.js"></script>
+   <script src="./codemirror-5.65.11/mode/htmlmixed/htmlmixed.js"></script>
+
+   <!-- user -->
+   <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+   <div class="nav">
+      <div class="logo">
+         Codemirror
+      </div>
+   </div>
+
+   <div class="editors">
+      <div class="grabber"></div>
+      <div class="editor" id="editor-html">
+         <div class="title">html</div>
+         <!-- html editor -->
+         <textarea>
+<div class="test">test</div>
+         </textarea>         
+      </div>
+
+      <div class="grabber"></div>
+      <div class="editor"  id="editor-css">
+         <div class="title">css</div>
+         <!-- css editor -->
+         <textarea>
+.test { 
+   background: red
+}
+         </textarea>
+      </div>
+      
+      <div class="grabber"></div>
+      <div class="editor" id="editor-js">
+         <div class="title">js</div>
+         <!-- js editor -->
+         <textarea>
+function myScript(){
+   return 100;
+}
+         </textarea>
+      </div>
+   </div>
+
+
+   <script>
+      // Html Editor
+      var editorHtml = document.querySelector('#editor-html textarea')
+      var editor = CodeMirror.fromTextArea(editorHtml, {
+         lineNumbers: true,
+         theme: 'dracula',
+         mode:  "htmlmixed"
+      }) 
+
+
+      // CSS Editor
+      var editorCss = document.querySelector('#editor-css textarea')
+      var editor = CodeMirror.fromTextArea(editorCss, {
+         lineNumbers: true,
+         theme: 'dracula',
+         mode:  "css"
+      }) 
+
+      // JS Editor
+      var editorJs = document.querySelector('#editor-js textarea')
+      var editor = CodeMirror.fromTextArea(editorJs, {
+         lineNumbers: true,
+         theme: 'dracula',
+         mode:  "javascript"
+      })
+   </script>
+   <script src="./script.js"></script>
+</body>
+</html>

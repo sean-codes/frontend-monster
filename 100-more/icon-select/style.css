@@ -1,0 +1,126 @@
+:root {
+   --font: monospace;
+   --color-white: #fff;
+   --color-blue: #1090db;
+   --color-black: #111;
+
+
+
+   --space-05: 0.5rem;
+   --space-075: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --size-h2: 1.25rem;
+}
+
+html, body {
+   background: var(--color-black);
+}
+
+* {
+   color: var(--color-white);
+   font-family: var(--font);
+}
+
+.component-header {
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   max-width: 50rem;
+   margin: 5rem auto;
+}
+
+/*---------------------------------------------------
+| Text
+---------------------------------------------------*/
+.text {
+   font-size: var(--size-h2);
+}
+
+/*---------------------------------------------------
+| Icon
+---------------------------------------------------*/
+.icon {
+   max-width: 15rem;
+}
+
+.icon img {
+   width: 100%;
+}
+
+
+/*---------------------------------------------------
+| Card
+---------------------------------------------------*/
+.card {
+   max-width: 20rem;
+   text-align: center;
+   cursor: pointer;
+}
+
+.card .bottom {
+   margin-top: var(--space-2);
+}
+
+.card .top {
+   transition: all 0.5s;
+   transform-origin: 50% 0;
+}
+
+.card:hover .top {
+   transform: rotate(0deg) translateY(-1rem);
+}
+
+.card.pinned .top {
+   animation: 
+      shake 2s linear;
+}
+.card.pinned-out .top {
+   animation: 
+      shake 2s linear;
+}
+
+@keyframes shake-start {
+   0% {
+      transform: rotate(0deg) translateY(-1rem);
+   }
+   100% {
+      transform: rotate(-10deg) translateY(-1rem);
+   }
+
+}
+@keyframes shake {
+   0% {
+      transform: rotate(0deg) translateY(-1rem);
+   }
+   25% {
+      transform: rotate(-10deg) translateY(-1rem);
+   }
+   75% {
+      transform: rotate(10deg) translateY(-1rem);
+   }
+   100% {
+      transform: rotate(0deg) translateY(-1rem);
+   }
+    
+}
+
+
+/*---------------------------------------------------
+| Flex
+---------------------------------------------------*/
+.flex {
+   display: flex;
+   justify-content: space-around;
+   background: var(--color-blue);
+   padding: var(--space-5) 0;
+   border-radius: 0.2rem
+}
