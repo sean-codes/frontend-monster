@@ -27,8 +27,9 @@ html, body {
 }
 
 .editors .editor {
+   width: 100%;
    ccflex: 1;
-   width: calc(33.333333% - 1rem);
+   ccwidth: calc(33.333333% - 1rem);
 /*   max-width: calc(33.333333% - 1rem);*/
 /*   min-width: calc(33.333333% - 1rem);*/
 }
