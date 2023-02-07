@@ -11,8 +11,12 @@
 html, body {
    margin: 0;
    padding: 0;
-   font-family: monospace;
    color: var(--color-white);
+}
+
+* {
+   font-family: monospace;
+   box-sizing: border-box;
 }
 
 .nav {
@@ -37,18 +41,41 @@ html, body {
 .editors .editor .title {
    background: var(--color-black-2);
    padding: var(--space-05);
+   height: var(--space-2);
 }
 
 .editors .editor {
    position: relative;
 }
+
 .editors .grabber {
    z-index: 1;
    ccposition: absolute;
    cctop: var(--space-2);
+   width: 1rem;
    min-width: 1rem;
-   min-height: 100%;
+   ccmin-height: 100%;
    background: var(--color-black-2);
    cursor: col-resize;
+   position: relative;
 }
 
+.editors .grabber .text {
+   position: absolute;
+   top: 0;
+   line-height: var(--space-2);
+   left: var(--space-05);
+   transform-origin: 0 100%;
+   transition: all 0.2s;
+}
+
+.editors .grabber.closed .text {
+   transform: rotate(90deg);
+   line-height: 1rem;
+   left: 0;
+}
+
+
+.info {
+   color: #000;
+}

@@ -11,16 +11,18 @@ console.log(editors)
 
 var grabbed = undefined
 var grabbedPos = { x: 0, y: 0 }
+var totalWidth = htmlEditors.getBoundingClientRect().width
+
 var grabbers = [...document.querySelectorAll('.grabber')].map((html, i) => {
    var grabberSize = html.getBoundingClientRect()
    var editor = editors[i]
    var editorSize = editor.getBoundingClientRect()
    html.onmousedown = onEditorMouseDown
    // console.log(editorSize)
-
    var width = editorSize.width - grabberSize.width
    // console.log(width)
-   var widthPercent = ((htmlEditors.getBoundingClientRect().width / 3) - grabberSize.width) / htmlEditors.getBoundingClientRect().width
+   var widthPercent = ((totalWidth / 3) - (grabberSize.width)) / totalWidth
+   console.log(totalWidth, grabberSize)
    editor.style.width = 100* widthPercent + '%'
    // console.log(widthPercent)
    return {
@@ -34,6 +36,8 @@ var grabbers = [...document.querySelectorAll('.grabber')].map((html, i) => {
       }
    }
 })
+
+updateInfo()
 
 htmlEditors.addEventListener('mousemove', onEditorsMouseMove)
 htmlEditors.addEventListener('mouseup', onEditorsMouseUp)
@@ -113,12 +117,18 @@ function onEditorsMouseMove(e) {
       // update all widths
       for (var grabber of grabbers) {
          grabber.editor.style.width = grabber.widthPercent*100 + '%'
+
+         // toggle label if width less than 90
+         var toggleLabel = grabber.size().width < 90
+         grabber.html.classList.toggle('closed', toggleLabel)
       }
 
 
       // update last grab point
       grabbedPos.x = e.clientX
    }
+
+   updateInfo()
 }
 
 function onEditorMouseDown(e) {
@@ -131,4 +141,19 @@ function onEditorMouseDown(e) {
 
 }
 
+
+function updateInfo() {
+   var totalEditorsWidth = grabbers.reduce((sum, num) => {
+      var width = num.widthPercent
+      return sum + width
+   }, 0)
+
+   var htmlInfo = document.querySelector('.info')
+   var htmlWidthTotal = htmlInfo.querySelector('.widthTotal')
+   htmlWidthTotal.innerHTML = totalEditorsWidth
+
+   var totalWidthCalc = 1 - grabbers[0].html.getBoundingClientRect().width*3 / htmlEditors.getBoundingClientRect().width
+   var htmlWidthCalc = htmlInfo.querySelector('.widthTotalCalc')
+   htmlWidthCalc.innerHTML = totalWidthCalc
+}
 console.log(grabbers)

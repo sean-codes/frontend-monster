@@ -24,18 +24,18 @@
    </div>
 
    <div class="editors">
-      <div class="grabber"></div>
+      <div class="grabber"><div class="text">html</div></div>
       <div class="editor" id="editor-html">
-         <div class="title">html</div>
+         <div class="title"></div>
          <!-- html editor -->
          <textarea>
 <div class="test">test</div>
          </textarea>         
       </div>
 
-      <div class="grabber"></div>
+      <div class="grabber"><div class="text">css</div></div>
       <div class="editor"  id="editor-css">
-         <div class="title">css</div>
+         <div class="title"></div>
          <!-- css editor -->
          <textarea>
 .test { 
@@ -44,9 +44,9 @@
          </textarea>
       </div>
       
-      <div class="grabber"></div>
+      <div class="grabber"><div class="text">javascript</div></div>
       <div class="editor" id="editor-js">
-         <div class="title">js</div>
+         <div class="title"></div>
          <!-- js editor -->
          <textarea>
 function myScript(){
@@ -55,7 +55,13 @@ function myScript(){
          </textarea>
       </div>
    </div>
-
+   <div class="info">
+      <div>actual width total: <span class="widthTotalCalc">0</span></siv>
+      <div>width total: <span class="widthTotal">0</span></siv>
+      <div class="widthHTML">0</div>
+      <div class="widthCSS">0</div>
+      <div class="widthJS">0</div>
+   </div>
 
    <script>
       // Html Editor

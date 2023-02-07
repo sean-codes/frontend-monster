@@ -1,0 +1,223 @@
+:root {
+   --color-black: #222;
+   --color-black-2: #444;
+   --color-white: #fff;
+   --color-white-2: #ddd;
+   --color-blue: #0061fe;
+   --color-blue-hover: #8aa2ca;
+   --font: sans-serif;
+   --size-h2: 1.25rem;
+   --space-half: 0.5rem;
+   --space-025: 0.25rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+}
+
+
+html, body {
+   background: var(--color-black);
+}
+
+* {
+   font-family: var(--font);
+}
+
+.component-header {
+   color: #FFF;
+   padding: 0.5rem;
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+
+.app {
+   margin: 10rem auto 20rem auto;
+   max-width: 800px;
+   padding: var(--space-2);
+}
+
+/*---------------------------------------------------
+| icon
+---------------------------------------------------*/
+.icon {
+   padding-top: 100%;
+   position: relative;
+   width: 100%;
+}
+.icon.demo {
+   background: var(--color-blue);
+}
+
+.icon img {
+   filter: invert(1);
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   width: 100%;
+   height: 100%;
+}
+
+
+/*---------------------------------------------------
+| h2
+---------------------------------------------------*/
+.h2 {
+   font-size: var(--size-h2);
+   font-weight: bold;
+}
+
+
+/*---------------------------------------------------
+| buttons
+---------------------------------------------------*/
+button {
+   cursor: pointer;
+}
+button.login {
+   background: transparent;
+   border: none;
+   padding: var(--space-half);
+}
+button.login:hover {
+   background: rgba(0, 0, 0, 0.1);
+}
+
+button.primary {
+   display: flex;
+   background: var(--color-blue);
+   color: var(--color-white);
+   border: none;
+   padding: var(--space-half);
+   font-weight: bolder;
+   gap: var(--space-1);
+}
+
+button.primary .right {
+   width: 1rem;
+}
+
+button.primary:hover {
+   background: var(--color-blue-hover);
+}
+
+
+/*---------------------------------------------------
+| menu
+---------------------------------------------------*/
+.menu-button {
+   max-width: 5rem;
+   filter: invert(1);
+}
+
+
+.menu-button .close {
+   display: none;
+}
+
+.menu-button.is-opened .open{
+   display: none;
+}
+
+.menu-button.is-opened .close {
+   display: block;
+}
+
+/*---------------------------------------------------
+| toolbar
+---------------------------------------------------*/
+.toolbar {
+   background: var(--color-white);
+   display: flex;
+   justify-content: space-between;
+}
+
+.toolbar .left {
+   display: flex;
+   gap: var(--space-1);
+   align-items: center;
+}
+
+.toolbar .right {
+   display: flex;
+   gap: var(--space-1);
+   align-items: center;
+}
+
+.toolbar .toolbar-icon {
+   width: var(--space-2);
+   background: var(--color-blue);
+   padding: var(--space-half);
+}
+
+.toolbar .toolbar-menu {
+   width: var(--space-2);
+   padding-right: var(--space-half);
+}
+
+/*---------------------------------------------------
+| dropdown
+---------------------------------------------------*/
+.dropdown-wrapper {
+   position: relative;
+}
+.dropdown {
+   background: var(--color-white-2);
+   padding: var(--space-1) 0;
+/*   animation: slideDown 2s;*/
+/*   animation-fill-mode: forwards;*/
+/*   display: none;*/
+   position: absolute;
+   width: 100%;
+   max-height: 0;
+   padding-top: 0;
+   padding-bottom: 0;
+   overflow: hidden;
+   transition: all 0.25s;
+}
+
+.dropdown.show {
+   max-height: 1000px;
+   padding-top: var(--space-1);
+   padding-bottom: var(--space-1);
+}
+
+
+.dropdown .link {
+   color: var(--color-black-2);
+   padding: var(--space-1) var(--space-2);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   opacity: 0;
+   animation: fadeIn 0.5s;
+   animation-fill-mode: forwards;
+   display: none;
+}
+.dropdown.show .link{
+   display: flex;
+}
+
+.dropdown .link:nth-of-type(2) {animation-delay: 0.25s;} 
+.dropdown .link:nth-of-type(3) {animation-delay: 0.5s;}
+.dropdown .link:nth-of-type(4) {animation-delay: 0.75s;}
+
+.dropdown .link:hover {
+   background: rgba(0, 0, 0, 0.1);
+   cursor: pointer;
+}
+
+.dropdown .link .right {
+   width: var(--space-2);
+   filter: invert(1);
+}
+
+@keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+}
+
+@keyframes slideDown {
+   0% { max-height: 0 }
+   100% { max-height: 1000px }
+}

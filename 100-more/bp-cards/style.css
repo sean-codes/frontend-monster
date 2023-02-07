@@ -1,0 +1,107 @@
+:root {
+   --font: monospace;
+   --color-white: #FFF;
+   --color-black: #222;
+   --color-blue: #4d9bd0;
+   --size-h2: 1.55rem;
+   --size-p: 1rem;
+   --size-tag: 0.9rem;
+   --space-05: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+}
+
+
+html, body {
+   background: var(--color-white);
+}
+
+* {
+   font-family: var(--font);
+   color: var(--color-black);
+}
+
+
+.component-header {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: 0.5rem;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+
+.app {
+   max-width: 80rem;
+   margin: 5rem auto;
+   padding: 0 var(--space-2);
+}
+/*-------------------------------------------------
+| Utility
+-------------------------------------------------*/
+.m-t-05 { margin-top: 0.5rem; }
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+
+/*-------------------------------------------------
+| Text
+-------------------------------------------------*/
+.tag {
+   color: var(--color-blue);
+   text-transform: uppercase;
+   font-weight: bolder;
+}
+
+.h2 {
+   font-size: var(--size-h2);
+}
+
+/*-------------------------------------------------
+| Image
+-------------------------------------------------*/
+.image {
+   padding-top: calc(100% * (9/16));
+   position: relative;
+   overflow: hidden;
+}
+
+.image img {
+   top: 0;
+   left: 0;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+.image .cutout {
+   position: absolute;
+   bottom: -6.25rem;
+   right: -6.25rem;
+   background: var(--color-white);
+   width: 10rem;
+   height: 10rem;
+   transform: rotate(45deg);
+}
+
+/*-------------------------------------------------
+| Grid
+-------------------------------------------------*/
+.grid {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   gap: var(--space-2);
+}
+
+@media (max-width: 800px) {
+   .grid {
+      grid-template-columns: 1fr 1fr;
+   }
+}
+@media (max-width: 600px) {
+   .grid {
+      grid-template-columns: 1fr;
+   }
+}
