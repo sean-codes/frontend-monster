@@ -6,42 +6,55 @@ var editorHTML = htmlEditors.querySelector('#editor-html')
 var editorCSS = htmlEditors.querySelector('#editor-css')
 var editorJS = htmlEditors.querySelector('#editor-js')
 var editors = [editorHTML, editorCSS, editorJS]
-console.log(editors)
-
 
 var grabbed = undefined
 var grabbedPos = { x: 0, y: 0 }
+var grabbedOffset = { x: 0, y: 0 }
 var totalWidth = htmlEditors.getBoundingClientRect().width
+var grabbers = generateGrabbers()
 
-var grabbers = [...document.querySelectorAll('.grabber')].map((html, i) => {
-   var grabberSize = html.getBoundingClientRect()
-   var editor = editors[i]
-   var editorSize = editor.getBoundingClientRect()
-   html.onmousedown = onEditorMouseDown
-   // console.log(editorSize)
-   var width = editorSize.width - grabberSize.width
-   // console.log(width)
-   var widthPercent = ((totalWidth / 3) - (grabberSize.width)) / totalWidth
-   console.log(totalWidth, grabberSize)
-   editor.style.width = 100* widthPercent + '%'
-   // console.log(widthPercent)
-   return {
-      html: html,
-      editor: editors[i],
-      width: editorSize.width,
-      widthPercent: widthPercent,
-      x: grabberSize.x,
-      size: function() {
-         return this.editor.getBoundingClientRect()
-      }
+window.onresize = function () {
+   var totalWidth = htmlEditors.getBoundingClientRect().width
+
+   var grabberWidth = grabbers[0].html.getBoundingClientRect().width
+   var totalPercent = grabbers.reduce((s, n) => s + n.widthPercent, 0)
+
+   for (var grabber of grabbers) {
+      var percentOfTotal = grabber.widthPercent / totalPercent
+      var newTotalPercent = (totalWidth - (grabberWidth * 3)) / totalWidth
+      var widthPercent = percentOfTotal * newTotalPercent
+      grabber.widthPercent = widthPercent
+      grabber.editor.style.width = 100 * widthPercent + '%'
    }
-})
+   updateGrabberLabels()
+   updateInfo()
+}
 
 updateInfo()
 
 htmlEditors.addEventListener('mousemove', onEditorsMouseMove)
 htmlEditors.addEventListener('mouseup', onEditorsMouseUp)
 
+function generateGrabbers() {
+   return [...document.querySelectorAll('.grabber')].map((html, i) => {
+      html.onmousedown = onEditorMouseDown
+
+      var grabberSize = html.getBoundingClientRect()
+      var widthPercent = ((totalWidth / 3) - (grabberSize.width)) / totalWidth
+
+      var editor = editors[i]
+      editor.style.width = 100 * widthPercent + '%'
+
+      return {
+         html: html,
+         editor: editor,
+         widthPercent: widthPercent,
+         size: function () {
+            return this.editor.getBoundingClientRect()
+         }
+      }
+   })
+}
 
 
 function onEditorsMouseUp(e) {
@@ -59,7 +72,7 @@ function onEditorsMouseMove(e) {
       var grabberWidth = grabbers[0].html.getBoundingClientRect().width
 
       var change = e.clientX - grabbedPos.x
-
+      var changed = false
       // console.log(changePercent)
 
       // there is some recurse way to do this :<
@@ -73,6 +86,8 @@ function onEditorsMouseMove(e) {
             var spaceLeft = Math.max(next.size().width, grabbed.size().width)
             change = Math.min(Math.abs(change), spaceLeft) * Math.sign(change)
          }
+
+         if (change) changed = true
 
          var changePercent = change / totalWidth
 
@@ -103,33 +118,41 @@ function onEditorsMouseMove(e) {
             change = Math.min(Math.abs(change), spaceLeft) * Math.sign(change)
          }
 
+         if (change) changed = true
          var changePercent = change / totalWidth
 
          grabbed.widthPercent -= changePercent
          before.widthPercent += changePercent
 
-         if (before && before.widthPercent < 0) {
+         if (before && before.widthPercent < 0 && beforeBefore) {
             beforeBefore.widthPercent += before.widthPercent
             before.widthPercent = 0
          }
       }  
 
-      // update all widths
-      for (var grabber of grabbers) {
-         grabber.editor.style.width = grabber.widthPercent*100 + '%'
-
-         // toggle label if width less than 90
-         var toggleLabel = grabber.size().width < 90
-         grabber.html.classList.toggle('closed', toggleLabel)
-      }
-
+      
+      updateGrabberLabels()
 
       // update last grab point
-      grabbedPos.x = e.clientX
+      // if (changed) {
+         grabbedPos.x = e.clientX
+      // }
    }
 
    updateInfo()
 }
+
+function updateGrabberLabels() {
+   // update all widths
+   for (var grabber of grabbers) {
+      grabber.editor.style.width = (grabber.widthPercent * 100) + '%'
+
+      // toggle label if width less than 90
+      var toggleLabel = grabber.size().width < 90
+      grabber.html.classList.toggle('closed', toggleLabel)
+   }
+}
+
 
 function onEditorMouseDown(e) {
    e.preventDefault()
@@ -137,8 +160,10 @@ function onEditorMouseDown(e) {
    var grabber = grabbers.find(g => g.html === e.target)
    grabbed = grabber
    grabbedPos = { x: e.clientX, y: e.clientY } 
+   grabberRect = grabber.html.getBoundingClientRect()
+   grabbedOffset.x = grabberRect.x - e.clientX
+   console.log(grabbedOffset.x)
    console.log('grabbing', grabber, e.clientX, e.clientY)
-
 }
 
 
@@ -152,7 +177,7 @@ function updateInfo() {
    var htmlWidthTotal = htmlInfo.querySelector('.widthTotal')
    htmlWidthTotal.innerHTML = totalEditorsWidth
 
-   var totalWidthCalc = 1 - grabbers[0].html.getBoundingClientRect().width*3 / htmlEditors.getBoundingClientRect().width
+   var totalWidthCalc = 1 - grabbers[0].html.getBoundingClientRect().width * 3 / htmlEditors.getBoundingClientRect().width
    var htmlWidthCalc = htmlInfo.querySelector('.widthTotalCalc')
    htmlWidthCalc.innerHTML = totalWidthCalc
 }

@@ -52,7 +52,7 @@ html, body {
    z-index: 1;
    ccposition: absolute;
    cctop: var(--space-2);
-   width: 1rem;
+   width: 1.5rem;
    min-width: 1rem;
    ccmin-height: 100%;
    background: var(--color-black-2);
