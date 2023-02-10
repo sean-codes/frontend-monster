@@ -1,0 +1,202 @@
+:root {
+   --font:'Roboto', sans-serif;;
+   --size-p: 1rem;
+   --space-half: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --color-link: #4774df;
+   --color-text: #333;
+   --color-input-bg: #FEFEFE;
+   --color-input-border: rgba(0, 0, 0, 0.1);
+   --color-button-bg: rgb(230, 0, 18);
+   --color-button-text: #eee;
+   --border-radius-button: 2rem;
+   --border-radius: 0.45rem;
+   --size-checkbox: 2rem;
+   --color-hr: rgba(0, 0, 0, 0.1);
+   --color-bg: #f2f2f2;
+   --color-app-border: #FFF;
+   --app-border-radius: 1rem;
+}
+
+
+html, body {
+   background: var(--color-bg);
+}
+
+* {
+   font-family: var(--font);
+   color: var(--color-text);
+}
+
+input, button {
+   background: none;
+   border: none;
+}
+
+.component-header {
+   border-bottom: 4px solid black;
+   border-left: 4px solid black;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   margin: 5rem auto;
+   max-width: 50rem;
+   border: 1rem solid var(--color-app-border);
+   padding: 4rem;
+   border-radius: var(----app-border-radius);
+}
+
+hr {
+   border: none;
+   border-top: 1px solid var(--color-hr);
+   width: 100%;
+}
+
+/*----------------------------------------------------
+| Text
+----------------------------------------------------*/
+.info {
+   font-size: var(--size-p);
+}
+
+.label {
+   border-left: 5px solid var(--color-text);
+   padding-left: var(--space-half);
+   line-height: 0.8rem;
+}
+
+a {
+   color: var(--color-link);
+}
+
+.m-t-half { margin-top: 0.5rem; }
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+.m-t-5 { margin-top: 5rem; }
+.center { text-align: center }
+
+
+/*----------------------------------------------------
+| Input - Text
+----------------------------------------------------*/
+.input {
+   position: relative;
+}
+.input input,
+.input select {
+   width: 100%;
+   background: var(--color-input-bg);
+   padding: var(--space-1);
+   border: 3px solid var(--color-input-border);
+   border-radius: var(--border-radius);
+   -webkit-appearance: none;
+}
+
+
+/*----------------------------------------------------
+| Input - Password
+----------------------------------------------------*/
+.input .icon {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 0;
+}
+
+.input .icon img {
+   width: 60%;
+   height: 60%;
+}
+
+/*----------------------------------------------------
+| Select grid
+----------------------------------------------------*/
+.select-grid {
+   display: flex;
+   gap: var(--space-half);
+}
+.select-grid .input{
+   flex: 1;
+}
+
+
+/*----------------------------------------------------
+| Input - Checkbox
+----------------------------------------------------*/
+.checkbox {
+   display: flex;
+   gap: var(--space-half);
+   align-items: center;
+}
+.checkbox .icon {
+   width: var(--size-checkbox);
+}
+.checkbox .icon img {
+   width: 100%;
+}
+.checkbox .text {
+   flex: 1;
+}
+
+.checkbox input[type="checkbox"] {
+   display: none;
+}
+.checkbox .icon img:nth-of-type(2){
+   display: none;
+}
+.checkbox input[type="checkbox"]:checked ~ .icon img:nth-of-type(1){
+   display: none;
+}
+.checkbox input[type="checkbox"]:checked ~ .icon img:nth-of-type(2){
+   display: block;
+}
+
+/*----------------------------------------------------
+| Button
+----------------------------------------------------*/
+.button {
+   background: var(--color-button-bg);
+   margin: 0;
+   color: var(--color-button-text);
+   padding: var(--space-1) var(--space-4);
+   border-radius: var(--border-radius-button);
+   margin: auto;
+}
+
+
+/*----------------------------------------------------
+| Grid
+----------------------------------------------------*/
+.grid {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-3);
+}
+
+.grid .row {
+   display: grid;
+   grid-template-columns: 1fr 2fr;
+   ccalign-items: center;
+}
+
+@media (max-width: 700px) {
+   .grid {
+      gap: var(--space-1);
+   }
+
+   .grid .row {
+      grid-template-columns: 1fr;
+   }
+
+   .grid .row {
+      gap: var(--space-half);
+   }
+}

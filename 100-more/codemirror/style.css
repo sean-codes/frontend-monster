@@ -6,6 +6,7 @@
    --space-05: 0.5rem;
    --space-1: 1rem;
    --space-2: 2rem;
+   --grabber-size: 1.5rem;
 }
 
 html, body {
@@ -52,8 +53,8 @@ html, body {
    z-index: 1;
    ccposition: absolute;
    cctop: var(--space-2);
-   width: 1.5rem;
-   min-width: 1rem;
+   width: var(--grabber-size);
+   min-width: var(--grabber-size);
    ccmin-height: 100%;
    background: var(--color-black-2);
    cursor: col-resize;
