@@ -14,7 +14,7 @@ var totalWidth = htmlEditors.getBoundingClientRect().width
 var grabbers = generateGrabbers()
 updateInfo()
 
-// duplicate 
+// duplicate
 window.onresize = function () {
    var totalWidth = htmlEditors.getBoundingClientRect().width
    console.log(totalWidth)
@@ -72,52 +72,38 @@ function onEditorsMouseMove(e) {
       var grabberWidth = grabberRect.width
 
       var change = e.clientX - (grabberRect.left - grabbedOffset.x)
+      var changeP = change / totalWidth
       var changed = false
 
-      // there is some recurse way to do this :<
-
+      
       // going right
       if (change > 0) {
-         var before = grabbers[index - 1]
-         var next = grabbers[index + 1]
+         var nexts = grabbers.slice(index, grabbers.length)
+         var before = grabbers[index-1]
 
-         // if (next) {
-            var spaceLeft = Math.max(next ? next.size().width : 0, grabbed.size().width)
-            change = Math.min(Math.abs(change), spaceLeft) * Math.sign(change)
-            console.log(change)
-         // }
+         var totalChange = Math.abs(changeP)
+         var totalSpace = nexts.reduce((s, n) => s + n.widthPercent, 0)
+         
+         var changeIt = Math.min(totalSpace, totalChange)
+         
+          // why this still feel wrong!!! :<
+         grabbed.widthPercent -= changeIt * Math.sign(change)
+         before.widthPercent += changeIt * Math.sign(change)
 
-         if (change) changed = true
-
-         var changePercent = change / totalWidth
-
-         grabbed.widthPercent -= changePercent
-         before.widthPercent += changePercent
-
-         if (grabbed.widthPercent < 0) {
-            if (next) {
-               next.widthPercent += grabbed.widthPercent
-            } else {
-               before.widthPerscent += grabbed.widthPercent
-            }
-            grabbed.widthPercent = 0
-
-            if (next && next.widthPercent < 0) {
-               before.widthPerscent -= next.widthPercent
+         nexts.forEach((next, i) => {
+            var nextNext = nexts[i+1]
+            if (next.widthPercent < 0) {
+               if (nextNext) {
+                  nextNext.widthPercent += next.widthPercent
+               }
                next.widthPercent = 0
             }
-         }
+         })
       }
 
       // going left
       if (change < 0) {
-         // var before = grabbers[index - 1]
-         // var beforeBefore = grabbers[index - 2]
-         // var next = grabbers[index + 1]
          var befores = grabbers.slice(0, index).reverse()
-
-         // var spaceLeft = Math.max(...befores.map(b => b.size().width))
-         // if (spaceLeft) changed = true
 
          var totalChange = Math.abs(change)
 
@@ -135,28 +121,9 @@ function onEditorsMouseMove(e) {
                totalChange -= changeIn
             }
          }
+      }
 
 
-         // if (before) {
-         //    change = Math.min(Math.abs(change), spaceLeft) * Math.sign(change)
-         //    console.log(change)
-         // }
-
-         // var changePercent = change / totalWidth
-
-         // grabbed.widthPercent -= changePercent
-         // before.widthPercent += changePercent
-
-
-         // // broken
-         // if (before && before.widthPercent < 0) {
-         //    // beforeBefore.widthPercent += before.widthPercent
-         //    grabbed.widthPercent += before.widthPercent
-         //    before.widthPercent = 0
-         // }
-      }  
-
-      
       updateGrabberLabels()
 
       // update last grab point
@@ -185,7 +152,7 @@ function onEditorMouseDown(e) {
 
    var grabber = grabbers.find(g => g.html === e.target)
    grabbed = grabber
-   grabbedPos = { x: e.clientX, y: e.clientY } 
+   grabbedPos = { x: e.clientX, y: e.clientY }
    grabberRect = grabber.html.getBoundingClientRect()
    grabbedOffset.x = grabberRect.x - e.clientX
    console.log(grabbedOffset.x)

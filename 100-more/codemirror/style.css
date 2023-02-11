@@ -33,10 +33,6 @@ html, body {
 
 .editors .editor {
    width: 100%;
-   ccflex: 1;
-   ccwidth: calc(33.333333% - 1rem);
-/*   max-width: calc(33.333333% - 1rem);*/
-/*   min-width: calc(33.333333% - 1rem);*/
 }
 
 .editors .editor .title {
@@ -73,10 +69,13 @@ html, body {
 .editors .grabber.closed .text {
    transform: rotate(90deg);
    line-height: 1rem;
-   left: 0;
+   left: 0.25rem;
 }
 
 
 .info {
-   color: #000;
+   background: #222;
+   color: #FFF;
+   height: 100%;
+   padding: 1rem;
 }
