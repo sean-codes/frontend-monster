@@ -1,6 +1,6 @@
-console.log('meow')
-
-
+/*---------------------------------------------------------------
+| Editor Horizontal Resizers
+---------------------------------------------------------------*/
 var htmlEditors = document.querySelector('.editors')
 var editorHTML = htmlEditors.querySelector('#editor-html')
 var editorCSS = htmlEditors.querySelector('#editor-css')
@@ -17,7 +17,6 @@ updateInfo()
 // duplicate
 window.onresize = function () {
    var totalWidth = htmlEditors.getBoundingClientRect().width
-   console.log(totalWidth)
    var grabberWidth = grabbers[0].html.getBoundingClientRect().width
    var totalPercent = grabbers.reduce((s, n) => s + n.widthPercent, 0)
 
@@ -75,7 +74,7 @@ function onEditorsMouseMove(e) {
       var changeP = change / totalWidth
       var changed = false
 
-      
+      // why this still feel wrong!!! :<
       // going right
       if (change > 0) {
          var nexts = grabbers.slice(index, grabbers.length)
@@ -86,7 +85,7 @@ function onEditorsMouseMove(e) {
          
          var changeIt = Math.min(totalSpace, totalChange)
          
-          // why this still feel wrong!!! :<
+         // force move. next with fix up
          grabbed.widthPercent -= changeIt * Math.sign(change)
          before.widthPercent += changeIt * Math.sign(change)
 
@@ -112,7 +111,6 @@ function onEditorsMouseMove(e) {
             var spaceLeft = before.size().width
             var changeIn = Math.min(totalChange, spaceLeft)
 
-            console.log('changeIn', changeIn)
             if (changeIn) {
                var changePercent = changeIn / totalWidth
                grabbed.widthPercent += changePercent
@@ -126,10 +124,7 @@ function onEditorsMouseMove(e) {
 
       updateGrabberLabels()
 
-      // update last grab point
-      // if (changed) {
-         grabbedPos.x = e.clientX
-      // }
+      grabbedPos.x = e.clientX
    }
 
    updateInfo()
@@ -155,8 +150,6 @@ function onEditorMouseDown(e) {
    grabbedPos = { x: e.clientX, y: e.clientY }
    grabberRect = grabber.html.getBoundingClientRect()
    grabbedOffset.x = grabberRect.x - e.clientX
-   console.log(grabbedOffset.x)
-   console.log('grabbing', grabber, e.clientX, e.clientY)
 }
 
 
@@ -166,7 +159,7 @@ function updateInfo() {
       return sum + width
    }, 0)
 
-   var htmlInfo = document.querySelector('.info')
+   var htmlInfo = document.querySelector('.debug')
    var htmlWidthTotal = htmlInfo.querySelector('.widthTotal')
    htmlWidthTotal.innerHTML = totalEditorsWidth
 
@@ -174,4 +167,94 @@ function updateInfo() {
    var htmlWidthCalc = htmlInfo.querySelector('.widthTotalCalc')
    htmlWidthCalc.innerHTML = totalWidthCalc
 }
-console.log(grabbers)
+
+
+/*---------------------------------------------------------------
+| Editor Vertical Resize
+---------------------------------------------------------------*/
+// should reuse grabber code from above but all experimental :]
+
+var htmlVGrabber = document.querySelector('.v-grabber') 
+htmlVGrabber.onmousedown = onVGrabberMouseDown
+var editorsHeight = 350
+// console.log(htmlVGrabber)
+var vGrabbed = undefined
+var vGrabbedPos = 0
+var vGrabbedOffset = 0
+
+
+function onVGrabberMouseDown(e) {
+   e.preventDefault()
+   document.body.classList.add('grabbed')
+   console.log('grabbing', this.getBoundingClientRect().y - e.clientY)
+   vGrabbed = this
+   vGrabbedPos = e.clientY
+   vGrabbedOffset = this.getBoundingClientRect().y - e.clientY
+}
+
+document.addEventListener('mousemove', (e) => {
+   if (vGrabbed) {
+      var change = vGrabbedPos - e.clientY
+      editorsHeight -= change
+      htmlEditors.style.height = editorsHeight + 'px'
+
+      vGrabbedPos = e.clientY
+   }
+})
+
+document.addEventListener('mouseup', (e) => {
+   document.body.classList.remove('grabbed')
+   vGrabbed = null
+})
+
+
+/*---------------------------------------------------------------
+| Display Iframe
+---------------------------------------------------------------*/
+var iframe = document.querySelector('iframe')
+var displayTimeout = undefined
+var displayTimeoutTime = 1000
+
+cmEditorHtml.on('change', updateDisplayTimeout)
+cmEditorCss.on('change', updateDisplayTimeout)
+cmEditorJs.on('change', updateDisplayTimeout)
+
+
+updateDisplay()
+
+
+
+function updateDisplayTimeout() {
+   clearTimeout(displayTimeout)
+
+   displayTimeout = setTimeout(() => {
+      updateDisplay()  
+   }, displayTimeoutTime)
+}
+function updateDisplay() {
+      var html = `
+         <style>
+            ${cmEditorCss.getValue()}
+         </style>
+         ${cmEditorHtml.getValue()}
+
+         <script type="text/javascript">
+            ${cmEditorJs.getValue()}
+         </script>
+
+      `
+      // console.log(html)
+
+      iframe.contentDocument.open()
+      iframe.contentDocument.write(html)
+      iframe.contentDocument.close()
+}
+
+
+
+
+
+
+
+
+

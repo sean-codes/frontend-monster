@@ -24,66 +24,121 @@
    </div>
 
    <div class="editors">
+      <!-- html editor -->
       <div class="grabber"><div class="text">html</div></div>
       <div class="editor" id="editor-html">
          <div class="title"></div>
-         <!-- html editor -->
-         <textarea>
-<div class="test">test</div>
-         </textarea>         
+<textarea>
+<div class="container">
+  <div class="card">
+    Card 1
+  </div>
+  
+  <div class="card">
+    Card 1
+  </div>
+  
+  <div class="card">
+    Card 1
+  </div>
+  
+  <div class="card">
+    Card 1
+  </div>
+</div>
+</textarea>
       </div>
 
+      <!-- css editor -->
       <div class="grabber"><div class="text">css</div></div>
       <div class="editor"  id="editor-css">
          <div class="title"></div>
-         <!-- css editor -->
-         <textarea>
-.test { 
-   background: red
+<textarea>
+:root {
+  --color-card: #FEFEFE;
+  --color-card-hover: #66d9ef;
+  --space-1: 1rem;
+  --border-radius: 0.2rem;
+  --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-         </textarea>
+
+html, body {
+  background: #222;
+  font-family: monospace;
+}
+
+.container {
+  max-width: 20rem;
+  width: 100%;
+  margin: 5rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+
+.card {
+  background: var(--color-card);
+  padding: var(--space-1);
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  border: 4px solid transparent;
+}
+
+.card:hover {
+  border: 4px dashed var(--color-card-hover);
+}
+</textarea>
       </div>
-      
+
+      <!-- js editor -->
       <div class="grabber"><div class="text">javascript</div></div>
       <div class="editor" id="editor-js">
          <div class="title"></div>
-         <!-- js editor -->
-         <textarea>
-function myScript(){
-   return 100;
+<textarea>
+function helloWorld(){
+   console.log('hello world!')
 }
-         </textarea>
+
+helloWorld()
+</textarea>
       </div>
    </div>
-   <div class="info">
-      <div>width total: <span class="widthTotal">0</span></siv>
-      <div>actual width total: <span class="widthTotalCalc">0</span></siv>
+   <div class="v-grabber"></div>
+
+   <div class="debug">
+      <div>width total: <span class="widthTotal">0</span></div>
+      <div>actual width total: <span class="widthTotalCalc">0</span></div>
       <div class="widthHTML">0</div>
       <div class="widthCSS">0</div>
       <div class="widthJS">0</div>
    </div>
 
+
+   <div class="display">
+      <iframe></iframe>
+   </div>
+
    <script>
-      // Html Editor
+      // HTML Editor
       var editorHtml = document.querySelector('#editor-html textarea')
-      var editor = CodeMirror.fromTextArea(editorHtml, {
+      var cmEditorHtml = CodeMirror.fromTextArea(editorHtml, {
          lineNumbers: true,
          theme: 'dracula',
          mode:  "htmlmixed"
-      }) 
-
+      })
 
       // CSS Editor
       var editorCss = document.querySelector('#editor-css textarea')
-      var editor = CodeMirror.fromTextArea(editorCss, {
+      var cmEditorCss = CodeMirror.fromTextArea(editorCss, {
          lineNumbers: true,
          theme: 'dracula',
          mode:  "css"
-      }) 
+      })
 
       // JS Editor
       var editorJs = document.querySelector('#editor-js textarea')
-      var editor = CodeMirror.fromTextArea(editorJs, {
+      var cmEditorJs = CodeMirror.fromTextArea(editorJs, {
          lineNumbers: true,
          theme: 'dracula',
          mode:  "javascript"
