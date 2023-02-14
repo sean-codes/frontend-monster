@@ -24,10 +24,10 @@
    --space-6: 6rem;
    --space-10: 10rem;
 
-   --size-h2: 1.45rem;
-   --size-p: 1rem;
-   --size-runescape-icon: 3rem;
-   --size-runescape-icon-center: 6rem;
+   --size-h2: 2.0rem;
+   --size-p: 1.2rem;
+   --size-runescape-icon: 2.75rem;
+   --size-runescape-icon-center: 4.5rem;
    --height-input: 4rem;
    --border-radius: 0.5rem;
    --outline-space: 4px;
@@ -59,7 +59,7 @@ body {
 
 
 .app {
-   max-width: 500px;
+   max-width: 600px;
    background: var(--color-blue-dark-dark);
    padding: var(--space-3);
    margin: auto;
@@ -68,6 +68,7 @@ body {
 }
 
 .bg-runescape {
+   min-height: 100vh;
    padding: var(--space-10) var(--space-2);
    background: url('../_assets/images/background_runescape.jpg');
    background-size: cover;
@@ -77,7 +78,9 @@ body {
 /*--------------------------------------------------------
 | Text / Utilities
 --------------------------------------------------------*/
-
+a, p, button {
+   font-size: var(--size-p);
+}
 h2 {
    font-size: var(--size-h2);
 }
@@ -153,6 +156,9 @@ hr {
    outline: none;
    font-size: 1rem;
 }
+/*
+   Failed to learn about outline-offset :<
+*/
 .input-group .outline {
    position: absolute;  
    top: calc(-1 * var(--outline-space));
