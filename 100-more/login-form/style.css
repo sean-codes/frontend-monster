@@ -1,0 +1,230 @@
+:root {
+   --font: 'Roboto', sans-serif;
+   --color-black: #222;
+   --color-bg: #d3d0df;
+   --color-bg-grey: #EEE;
+   --color-purple: #7e57d9;
+   --color-purple-hover: #5b409a;
+   --color-white: #FEFEFE;
+   --color-white-hover: #EEEEEE;
+   --color-text-light: rgba(0, 0, 0, 0.5);
+   --size-h2: 1.45rem;
+   --size-h3: 1.25rem;
+   --size-p: 1rem;
+   --icon-size-button: 2rem;
+   --input-height: 4rem;
+   --space-half: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --border-radius: 0.5rem;
+   --color-input-border: rgba(0, 0, 0, 0.1);
+   --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   --space-form: 8rem;
+}
+
+
+html, body {
+   background: var(--color-bg);
+   padding: var(--space-1);
+}
+
+* {
+   font-family: var(--font);
+   margin: 0;
+   padding: 0;
+}
+
+
+.component-header {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   color: #222;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+}
+
+
+/*------------------------------------------------------------
+| Text / Utilities
+------------------------------------------------------------*/
+.h2 {
+   font-size: var(--size-h2);
+   font-weight: bold;
+}
+
+.p {
+   font-size: var(--size-p);
+}
+
+.link {
+   color: var(--color-purple);
+   font-weight: bold;
+   text-decoration: none;
+}
+
+label {
+   display: block;
+   font-weight: 400;
+}
+
+.light {
+   color: var(--color-text-light);
+}
+
+.title {
+   display: flex;
+   gap: var(--space-half);
+   align-items: center;
+}
+.title .circle {
+   width: 0.75rem;
+   height: 0.75rem;
+   border-radius: 50%;
+   background: var(--color-black);
+}
+.title .text {
+   font-size: var(--size-h3);
+   font-weight: bolder;
+}
+
+.m-t-half { margin-top: 0.5rem; }
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+.m-t-5 { margin-top: 5rem; }
+
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+.p-4 { padding: 4rem; }
+.p-5 { padding: 5rem; }
+
+.form-center {
+   margin-left: auto;
+   margin-right: auto;
+   margin: var(--space-form) auto var(--space-form) auto;
+   max-width: 400px;
+}
+/*------------------------------------------------------------
+| Buttons
+------------------------------------------------------------*/
+.button {
+   display: flex;
+   align-items: center;
+   height: var(--input-height);
+   width: 100%;
+   justify-content: center;
+   gap: var(--space-1);
+   border-radius: var(--border-radius);
+   background: none;
+   border: 2px solid var(--color-input-border);
+   font-weight: 500;
+}
+.button.primary {
+   background: var(--color-purple);
+   color: var(--color-white);
+}
+.button .icon {
+   width: var(--icon-size-button);
+}
+.button .icon img{
+   width: 100%;
+}
+
+.button:hover {
+   background: var(--color-white-hover);
+}
+.button.primary:hover {
+   background: var(--color-purple-hover);
+}
+
+
+/*------------------------------------------------------------
+| Inputs
+------------------------------------------------------------*/
+.input {
+   background: none;
+   border: 2px solid var(--color-input-border);
+   height: var(--input-height);
+   width: 100%;
+   border-radius: var(--border-radius);
+   padding: 0 var(--space-1);
+}
+
+
+/*------------------------------------------------------------
+| Checkbox
+------------------------------------------------------------*/
+.checkbox {
+   display: flex;
+   gap: var(--space-half);
+}
+
+.checkbox label {
+   flex: 1;
+   user-select: none;
+}
+
+
+/*------------------------------------------------------------
+| Flex
+------------------------------------------------------------*/
+.flex {
+   display: flex;
+   align-items: center;
+}
+
+.flex-space {
+   justify-content: space-between;
+}
+
+
+/*------------------------------------------------------------
+| background
+------------------------------------------------------------*/
+.bg {
+   width: 100%;
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+    object-fit: cover;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+/*------------------------------------------------------------
+| page layout
+------------------------------------------------------------*/
+.layout {
+   display: flex;
+   box-shadow: var(--box-shadow);
+   border-radius: var(--border-radius);
+   overflow: hidden;
+   background: var(--color-white)
+}
+
+.layout .left {
+   flex: 1;
+   height: 100%;
+}
+
+.layout .right {
+   position: relative;
+   flex: 1;
+   background: var(--color-bg-grey);
+}
+
+@media (max-width: 800px) {
+   .right {
+      display: none;
+   }
+}
+
+

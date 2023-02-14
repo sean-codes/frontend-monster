@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
+:root {
+   --font: 'Lato', sans-serif;
+   --color-bg: #222;
+   --color-white: #fefefe;
+   --color-gray: #212736;
+   --color-gray-light: rgba(255, 255, 255, 0.5);
+   --color-blue: #39adff;
+   --color-blue-hover: hsl(205, 100%, 71%);
+   --color-blue-disabled: #12426b;
+   --color-blue-dark: #12426b;
+   --color-blue-dark-dark: #0b111a;
+   --color-input-label: var(--color-white);
+   --space-025: 0.25rem;
+   --space-half: 0.5rem;
+   --space-075: 0.75rem;
+   --space-1: 1rem;
+   --space-15: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --space-6: 6rem;
+   --space-10: 10rem;
+
+   --size-h2: 1.45rem;
+   --size-p: 1rem;
+   --size-runescape-icon: 3rem;
+   --size-runescape-icon-center: 6rem;
+   --height-input: 4rem;
+   --border-radius: 0.5rem;
+   --outline-space: 4px;
+}
+
+
+html, body {
+   background: var(--color-bg);
+}
+
+body {
+   ccpadding: var(--space-1);
+}
+
+* {
+   font-family: var(--font);
+   color: var(--color-white);
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.component-header {
+   border-bottom: 3px solid #FFF;
+   border-left: 3px solid #FFF;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+}
+
+
+.app {
+   max-width: 500px;
+   background: var(--color-blue-dark-dark);
+   padding: var(--space-3);
+   margin: auto;
+   border-radius: var(--border-radius);
+   box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.25);
+}
+
+.bg-runescape {
+   padding: var(--space-10) var(--space-2);
+   background: url('../_assets/images/background_runescape.jpg');
+   background-size: cover;
+   background-position: center;
+}
+
+/*--------------------------------------------------------
+| Text / Utilities
+--------------------------------------------------------*/
+
+h2 {
+   font-size: var(--size-h2);
+}
+
+a {
+   color: var(--color-blue);
+   text-decoration: none;
+}
+
+hr {
+   border: none;
+   border-top: 1px solid var(--color-gray-light);
+
+}
+
+.m-t-half { margin-top: 0.5rem; }
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+.m-t-5 { margin-top: 5rem; }
+
+.center {
+   text-align: center;
+}
+/*--------------------------------------------------------
+| Runescape Icon Group
+--------------------------------------------------------*/
+.runescape-icons {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: var(--space-1);
+}
+.runescape-icons .icon {
+   width: var(--size-runescape-icon);
+   height: var(--size-runescape-icon);
+}
+.runescape-icons .icon:nth-of-type(2) {
+   width: var(--size-runescape-icon-center);
+   height: var(--size-runescape-icon-center);
+}
+
+.runescape-icons .icon img {
+   width: 100%;
+   height: 100%;
+}
+
+/*--------------------------------------------------------
+| Input
+--------------------------------------------------------*/
+.input-group {
+   height: var(--height-input);
+   position: relative;
+}
+.input-group label {
+   position: absolute;
+   left: var(--space-1);
+   top: var(--space-1);
+   transform: translateY(30%);
+   font-size: 1rem;
+   color: var(--color-input-label);
+   transition: all 0.1s;
+}
+.input-group input {
+   background: none;
+   width: 100%;
+   height: 100%;
+   border: 2px solid var(--color-blue);
+   padding-top: var(--space-1);
+   padding-left: var(--space-1);
+   border-radius: var(--border-radius);
+   outline: none;
+   font-size: 1rem;
+}
+.input-group .outline {
+   position: absolute;  
+   top: calc(-1 * var(--outline-space));
+   left: calc(-1 * var(--outline-space));
+   width: calc(100% + var(--outline-space)*2);
+   height: calc(100% + var(--outline-space)*2);
+   border: 2px dashed #FEFEFE;
+   border-radius: calc(var(--border-radius) * 1.5);
+   display: none;
+}
+.input-group input:focus ~ .outline {
+   display: block;
+}
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group input:focus ~ label {
+   left: var(--space-1);
+   top: var(--space-half);
+   font-size: 0.85rem;
+   transform: translateY(0);
+}
+
+
+/*--------------------------------------------------------
+| Buttons
+--------------------------------------------------------*/
+button {
+   height: var(--height-input);
+   width: 100%;
+   background: var(--color-blue);
+   border: none;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+}
+
+button:hover {
+   background: var(--color-blue-hover);
+}
+
+button:disabled {
+   background: var(--color-blue-disabled);
+   cursor: not-allowed;
+}
+
+
+/*--------------------------------------------------------
+| Login Button Group
+--------------------------------------------------------*/
+.login-button-group {
+   display: flex;
+   gap: var(--space-1);
+   align-items: center;
+   justify-content: center;
+}
+.login-button-group .button {
+   width: var(--height-input);
+   height: var(--height-input);
+   background: var(--color-gray);
+   padding: var(--space-1);
+   border-radius: var(--border-radius);
+}
+.login-button-group .button img {
+   width: 100%;
+   height: 100%;
+}
+
+
+
+
+
