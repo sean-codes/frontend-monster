@@ -1,0 +1,142 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Stream Labs Login</title>
+   <link rel="stylesheet" href="./style.css">
+   <style>
+      @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Roboto:wght@300;400;500;700;900&display=swap');
+   </style>
+</head>
+
+<body>
+   <div class="app" id="page-login">
+      <div class="center">
+         <div class="title-icon">
+            <img src="../_assets/images/icon_streamlabs.png" alt="">
+         </div>
+         <h1 class="m-t-2">Log In</h1>
+         <p class="m-t-2">Log in to <b>Streamlabs</b> with <b>Streamlabs ID</b></p>
+      </div>
+      <div class="input-group m-t-2" id="username">
+         <input type="text" placeholder="Username">
+         <div class="error">Error text</div>
+      </div>   
+      <div class="input-group m-t-2"  id="password">
+         <input type="password" placeholder="Password">
+         <div class="icon">
+            <img src="../_assets/images/icon_eye_filled.png" alt="">
+         </div>
+         <div class="error">Error text</div>
+      </div>   
+      <button class="m-t-2">
+         <div class="text">Disabled</div>
+         <div class="icon">
+            <img src="../_assets/images/icon_arrow_right.png" alt="">
+         </div>
+      </button>
+      <div class="center">
+         <p class="m-t-2 light"><a href="#">Forgot password?</a></p>
+         <p class="m-t-3 light">Don't have an account yet? <a href="#">Sign Up</a></p>
+         <p class="hand center m-t-3">Powered by Streamlabs</p>
+      </div>
+   </div>
+
+   <div class="app" id="page-register">
+      <div class="center">
+         <div class="title-icon">
+            <img src="../_assets/images/icon_streamlabs.png" alt="">
+         </div>
+         <h1 class="m-t-2">Registration</h1>
+      </div>
+      <div class="input-group m-t-2" id="username">
+         <input type="text" placeholder="Username">
+         <div class="error">Error text</div>
+      </div>   
+      <div class="input-group m-t-2"  id="password">
+         <input type="password" placeholder="Password">
+         <div class="icon">
+            <img src="../_assets/images/icon_eye_filled.png" alt="">
+         </div>
+         <div class="error">Error text</div>
+      </div>   
+      <div class="input-group m-t-2"  id="password2">
+         <input type="password" placeholder="Retype Password">
+         <div class="icon">
+            <img src="../_assets/images/icon_eye_filled.png" alt="">
+         </div>
+         <div class="error">Error text</div>
+      </div>   
+      <button class="m-t-2">
+         <div class="text">Register</div>
+         <div class="icon">
+            <img src="../_assets/images/icon_arrow_right.png" alt="">
+         </div>
+      </button>
+      <div class="center">
+         <p class="hand center m-t-3">Powered by Streamlabs</p>
+      </div>
+   </div>
+
+
+
+   <div class="component-header">Title Icon</div>
+   <div class="title-icon">
+      <img src="../_assets/images/icon_streamlabs.png" alt="">
+   </div>
+
+
+   <div class="component-header">Text</div>
+   <h1>Heading 1</h1>
+   <p>Paragraph text</p>
+   <p>Paragraph text with <b>bold</b></p>
+   <p class="light">Paragraph text light</p>
+   <a href="#">Links</a>
+   <p class="hand">Text handwritten</p>
+   <p class="hand center">Text handwritten center</p>
+
+
+   <div class="component-header">Input</div>
+   <div class="input-group">
+      <input type="text" placeholder="Email">
+   </div>
+
+   <div class="input-group">
+      <input type="password" placeholder="Password">
+      <div class="icon">
+         <img src="../_assets/images/icon_eye_filled.png" alt="">
+      </div>
+   </div>
+
+   <div class="input-group error">
+      <input type="text" placeholder="Error">
+      <div class="error">Error text</div>
+   </div>
+
+
+   <div class="component-header">Button</div>
+   <button>
+      <div class="text">Normal</div>
+      <div class="icon">
+         <img src="../_assets/images/icon_arrow_right.png" alt="">
+      </div>
+   </button>
+
+   <button disabled>
+      <div class="text">Disabled</div>
+      <div class="icon">
+         <img src="../_assets/images/icon_arrow_right.png" alt="">
+      </div>
+   </button>
+
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <!-- <img src="./example.png" alt="" width="70%"> -->
+   <script src="./script.js"></script>
+</body>
+
+</html>
