@@ -53,10 +53,14 @@ html, body {
 /*------------------------------------------------------
 | Draggable
 ------------------------------------------------------*/
-.folders .held {
+/*.folders .held {*/
+.held {
+   display: none;
    position: absolute;
    user-select: none;
    pointer-events: none;
+   background: #666;
+   padding: var(--space-05) var(--space-2);
 }
 
 
