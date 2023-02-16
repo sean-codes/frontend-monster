@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&family=Roboto:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet">
+</head>
+
+<body>
+   <div class="app">
+      <div class="form">
+         <div class="page-login">
+            <h2>Log in to your account</h2>
+            <div class="input-group m-t-1" id="user">
+               <label for="username">username<div class="required">*</div></label>
+               <input type="text" id="username" placeholder="username">
+               <div class="error">Error message</div>
+            </div>
+            <div class="input-group m-t-1" id="pass">
+               <label for="username">password<div class="required">*</div></label>
+               <input type="password" id="username" placeholder="password">
+               <div class="error">Error message</div>
+            </div>
+            <button class="primary m-t-1">
+               <div class="text">Log In</div>
+            </button>
+            <div class="hint m-t-1">Failed Login. Try 123/123</div>
+
+            <hr class="m-t-1" />
+
+            <button class="m-t-1">
+               <div class="icon">
+                  <img src="../_assets/images/icon_google_g.webp" alt="">
+               </div>
+               <div class="text">Button Icon</div>
+            </button>
+            <button class="m-t-1">
+               <div class="icon">
+                  <img src="../_assets/images/icon_github.svg" alt="">
+               </div>
+               <div class="text">Button Icon</div>
+            </button>
+            <div class="m-t-1">
+               <a href="#">Forgot Password?</a>
+            </div>
+         </div>
+         <div class="page-success">Login Success!</div>
+      </div>
+   </div>
+
+
+
+
+   <div class="component-header">Text / Utilities</div>
+   <h2>Heading 2</h2>
+   <label for="">Label Text<span class="required">*</span></label>
+   <br />
+   <a href="#">Links</a>
+
+
+   <div class="component-header">Button</div>
+   <button class="primary">
+      <div class="text">Button Primary</div>
+   </button>
+   <button>
+      <div class="text">Button Icon</div>
+      <div class="icon">
+         <img src="../_assets/images/icon_google_g.webp" alt="">
+      </div>
+   </button>
+
+
+   <div class="component-header">Inputs</div>
+   <div class="input-group">
+      <input type="text" placeholder="placeholder">
+      <div class="error">Error message</div>
+   </div>
+
+   <div class="input-group error">
+      <input type="text" placeholder="error">
+      <div class="error">Error message</div>
+   </div>
+
+
+
+   <br />
+   <img src="./example.png" width="80%">
+   <script src="./script.js"></script>
+</body>
+
+</html>
