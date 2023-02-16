@@ -14,16 +14,17 @@
 }
 
 html, body {
-   font-family: monospace;
    background: var(--color-bg);
    height: 100%;
    margin: 0;
    padding: var(--space-1);
+   font-size: 13px;
 }
 
 * {
    color: var(--color-text);
    box-sizing: border-box;
+   font-family: monospace;
 }
 
 .container {
@@ -36,17 +37,32 @@ html, body {
 /*------------------------------------------------------
 | Folders
 ------------------------------------------------------*/
-.file,
-.folder {
+.title {
+   font-size: 1rem;
+   padding: 0 var(--space-1);
+}
+.file {
    padding: var(--space-05) 0;
-   padding-left: calc(var(--space-1) * var(--depth));
-   user-select: none;
+   padding-left: calc(var(--space-1) + var(--space-1) * var(--depth));
+   cursor: pointer;
+   display: block;
+   background: none;
+   width: 100%;
+   border:none;
+   text-align:left;
+   font-size: 1rem;
 }
 
-.file:hover,
-.folder:hover {
+.folders.grabbing,
+.folders.grabbing .file {   
+   cursor: grabbing;
+}
+
+
+
+.folders:not(.grabbing) .file:hover,
+.file.over {
    background: rgba(255, 255, 255, 0.5);
-   cursor: grab;
 }
 
 
@@ -58,7 +74,9 @@ html, body {
    display: none;
    position: absolute;
    user-select: none;
+   -webkit-user-select: none;
    pointer-events: none;
+   -webkit-pointer-events: none;
    background: #666;
    padding: var(--space-05) var(--space-2);
 }

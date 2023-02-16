@@ -5,13 +5,11 @@ var appLogin = document.querySelector('#page-login.app')
 var inputGroupUser = appLogin.querySelector('#username')
 var inputGroupPassword = appLogin.querySelector('#password')
 var button = appLogin.querySelector('button')
-console.log(appLogin, inputGroupUser, inputGroupPassword, button)
+// console.log(appLogin, inputGroupUser, inputGroupPassword, button)
 
 // get the input
 var inputUser = inputGroupUser.querySelector('input')
 var inputPass = inputGroupPassword.querySelector('input')
-
-console.log(inputUser.value)
 
 
 button.onclick = buttonOnClick

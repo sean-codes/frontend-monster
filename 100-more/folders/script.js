@@ -1,4 +1,3 @@
-
 var mockFiles = [
    { name: 'folder_a', type: 'folder', files: [
       { name: 'item_z' },
@@ -15,11 +14,16 @@ var mockFiles = [
    { name: 'folder_c', type: 'folder', files: [
       { name: 'item_z' },
       { name: 'item_x' },
-      { name: 'folder_c_1', type: 'folder', files: [
+      { name: 'atem_x' },
+      { name: 'folder_c_2', type: 'folder', files: [
          { name: 'item_a' },
          { name: 'item_b' },
       ]},
-      { name: 'folder_c_2', type: 'folder', files: [
+      { name: 'a_folder_c_1', type: 'folder', files: [
+         { name: 'item_a' },
+         { name: 'item_b' },
+      ]},
+      { name: 'folder_aaa', type: 'folder', files: [
          { name: 'item_a' },
          { name: 'item_b' },
       ]},
@@ -51,9 +55,27 @@ function fsMoveFile(from, to) {
       toDir.files.push(moved)
    }
 
-   // console.log(mockFiles)
+   // sort
+   curseFsSort(mockFiles)
+   console.log(mockFiles)
 
    renderFiles()
+}
+
+function curseFsSort(files) {
+   for (var file of files) {
+      if (file.type == 'folder') {
+         curseFsSort(file.files)
+         console.log('sort', file.name)
+         file.files.sort((a, b) => {
+            var testString = a.name < b.name
+            return testString ? -1 : 1
+         })
+         file.files.sort((a, b) => {
+            return a.type === 'folder' && b.type !== 'folder' ? -1 : 1
+         })
+      }
+   }
 }
 
 
@@ -87,13 +109,13 @@ var state = {
    events: []
 }
 
-
-var events = []
+curseFsSort(mockFiles)
 renderFiles(mockFiles)
 
 
 function onMouseMove(e) {
    htmlHeld.style.display = state.held ? 'block' : 'none'
+   htmlFolders.classList.toggle('grabbing', state.held ? true : false)
 
    if (state.held) {
       htmlHeld.innerHTML = state.held.name
@@ -123,29 +145,57 @@ function onFileMouseUp(e) {
 }
 
 
+function onFileMouseOver(e) {
+   if (state.held) {
+      var flattenedFiles = flatFiles(mockFiles)
+      var file = flattenedFiles[this.dataset.flatId]
+      // var folder = file.dir
+      // console.log(file.dir)
+      var i = this.dataset.flatId // ok
+      if (file.type !== 'folder') {
+         for (i = this.dataset.flatId; i > 0; i--) {
+            var folder = flattenedFiles[i]
+            var isFolder = folder.type === 'folder'
+            var hasFile = isFolder && folder.files.some(f => file.path + f.name === file.full)
+            if (isFolder && hasFile) {
+               file = folder
+               break
+            }
+         }
+      }
+
+      // remove / add
+      var htmlCurrentlyOver = document.querySelector('.over')
+      htmlCurrentlyOver && htmlCurrentlyOver.classList.remove('over')
+
+      var newOver = document.querySelector(`[data-flat-id="${i}"`)
+      newOver.classList.add('over')
+   }
+}
+
 function onFileMouseDown(e) {
    var file = flatFiles(mockFiles)[this.dataset.flatId]
    state.held = file
-
-   // console.log('mousedown', file)
+   htmlFolders.classList.toggle('grabbing', state.held ? true : false)
 }
 
 
 function renderFiles(files) {
-   // var flattened = flatFiles(files)
    htmlFolders.innerHTML = ''
 
    var flattened = flatFiles(mockFiles)
    for (var i in flattened) {
       var flat = flattened[i]
-      htmlFile = document.createElement('div')
+      htmlFile = document.createElement('button')
       htmlFile.classList.add('file')
       htmlFile.setAttribute('style', `--depth: ${flat.depth}`)
       htmlFile.innerText = flat.name
+      htmlFile.tabIndex = 1
       htmlFile.dataset.flatId = i
       htmlFolders.appendChild(htmlFile)
       htmlFile.addEventListener('mousedown', onFileMouseDown)
       htmlFile.addEventListener('mouseup', onFileMouseUp)
+      htmlFile.addEventListener('mouseover', onFileMouseOver)
    }
 }
 
@@ -153,7 +203,6 @@ function renderFiles(files) {
 function flatFiles(files) {
    var flat = []
    curseFiles(files, (file) => flat.push(file))
-   // console.log(flat)
    return flat
 }
 
@@ -165,8 +214,9 @@ function curseFiles(files, callback, dir, path = '', depth = 0) {
       callback({ // ./
          ...file, // ./info
          depth: depth, // for display
+         full: filePath + file.name,
          path: filePath, // ..
-         dir: dir || { files } // ..info
+         dir: dir || { files }, // ..info
       })
 
 
