@@ -1,0 +1,112 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="icon" href="data:;base64,=">
+   <link rel="stylesheet" href="./style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+   <style>
+      .material-symbols-outlined {
+         font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+      }
+   </style>
+</head>
+
+<body>
+   <div class="app">
+      <div class="logo center m-t-4">
+         <img src="../_assets/images/icon-firefox-logo.svg" alt="">
+      </div>
+      <div class="form p-3 m-t-4" id="page-login">
+         <h2 class="center">Welcome Back</h2>
+         <p class="m-t-1 center">Enter your credentials to access your account.</p>
+         <div class="input-group m-t-3" id="input-group-email">
+            <div class="icon">
+               <div class="material-symbols-outlined">mail</div>
+            </div>
+            <input type="text" placeholder="Enter your email">
+            <div class="error">You must enter an email</div>
+         </div>
+         <div class="input-group m-t-1" id="input-group-pass">
+            <div class="icon">
+               <div class="material-symbols-outlined">mail</div>
+            </div>
+            <input type="text" placeholder="Enter your password">
+            <div class="error">You must enter a password</div>
+         </div>
+         <button class="m-t-1">Sign In</button>
+         <div class="error-message">Authentication failed! Try 123/123</div>
+      </div>
+      <div class="form p-3 m-t-4" id="page-success">
+         <h2 class="center">Success!</h2>
+         <br />
+         <p class="center">We do not have a website yet but here's a cat gif!</p>
+         <img class="m-t-1" src="https://i.gifer.com/4CYW.gif" width="100%"/>
+      </div>
+
+      <p class="center m-t-4" id="forgot">
+         Forgot your password? <a href="#">Reset Password</a>
+      </p>
+   </div>
+
+
+
+   <div class="component-header">Logo</div>
+   <div class="logo">
+      <img src="../_assets/images/icon-firefox-logo.svg" alt="">
+   </div>
+
+
+
+   <div class="component-header">Text / Utilities</div>
+   <h2>Heading 2</h2>
+   <p>Paragraph text</p>
+   <a href="#">Links</a>
+
+
+   <div class="component-header">Input</div>
+   <div class="input-group">
+      <div class="icon">
+         <div class="material-symbols-outlined">mail</div>
+      </div>
+      <input type="text" placeholder="Placeholder text">
+      <div class="error">Error message</div>
+   </div>
+
+   <div class="input-group error">
+      <div class="icon">
+         <div class="material-symbols-outlined">mail</div>
+      </div>
+      <input type="text" placeholder="Placeholder text">
+      <div class="error">Error message</div>
+   </div>
+
+   <div class="component-header">Button</div>
+   <button>Sign In</button>
+
+
+   <br />
+   <br />
+   <br />
+   <br />
+   <br />
+   <img src="./example.png" width="90%">
+
+   <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+:root {
+   --font: 'Ubuntu', sans-serif;
+   --color-primary: #287ffe;
+   --color-primary-hover: hsl(216, 99%, 63%);
+   --color-bg: #f3f5ff;
+   --color-white: #ffffff;   
+   --color-black: #334f79;
+   --color-gray: hsl(216, 21%, 34%);
+   --color-p: rgba(0, 0, 0, 0.45);
+   --color-input-border: rgba(0, 0, 0, 0.1);
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --height-input: 3.5rem;
+   --width-logo: 6rem;
+   --border-radius: 0.5rem;
+}
+
+html, body {
+   background: var(--color-bg);
+   color: var(--color-gray);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: var(--font);
+   box-sizing: border-box;
+}
+
+body {
+   padding: var(--space-1);
+}
+
+
+.component-header {
+   border-bottom: 2px solid var(--color-gray);
+   border-left: 2px solid var(--color-gray);
+   border-radius: 0 0 0 0.25rem;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+   font-weight: 500;
+}
+
+.app {
+   min-height: 100vh;
+}
+
+.form {
+   max-width: 550px;
+   background: var(--color-white);
+   border-radius: var(--border-radius);
+   margin: auto;
+}
+
+.form .error-message {
+   color: red;
+   text-align: center;
+   margin-top: var(--space-0_5);
+   display: none;
+}
+
+.form.error .error-message {
+   display: block;
+}
+
+.app #page-success {
+   display: none;
+}
+
+.app.success #page-login {
+   display: none;
+}
+
+.app.success #page-success {
+   display: block;
+}
+.app.success #forgot {
+   display: none;
+}
+
+/*------------------------------------------------------------
+| Text / Utilities
+------------------------------------------------------------*/
+h2 {
+   font-weight: 500;
+}
+
+p {
+   color: var(--color-p);
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-primary);
+}
+
+.center {
+   text-align: center;
+   margin: auto;
+}
+
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.p-3 { padding: var(--space-3); }
+.m-t-1 { margin-top: var(--space-1); }
+.m-t-2 { margin-top: var(--space-2); }
+.m-t-3 { margin-top: var(--space-3); }
+.m-t-4 { margin-top: var(--space-4); }
+.m-t-5 { margin-top: var(--space-5); }
+/*------------------------------------------------------------
+| Logo
+------------------------------------------------------------*/
+.logo {
+   width: var(--width-logo);
+}
+
+
+/*------------------------------------------------------------
+| Inputs
+------------------------------------------------------------*/
+.input-group {
+   position: relative;
+}
+.input-group input{
+   background: none;
+   border: none;
+   height: var(--height-input);
+   border: 1.5px solid var(--color-input-border);
+   width: 100%;
+   border-radius: var(--border-radius);
+   padding-left: 3rem;
+   font-size: 1rem;
+}
+
+
+.input-group .icon {
+   position: absolute;
+   top: calc(var(--height-input) / 2);
+   transform: translateY(-50%);
+   left: var(--space-1);
+   color: var(--color-primary);
+}
+
+.input-group .error {
+   color: red;
+   display: none;
+   margin-top: var(--space-0_25);
+}
+
+.input-group.error .error{
+   display: block;
+}
+
+.input-group.error input {
+   border-color: red;
+}
+
+.input-group.error .icon {
+   color: red;
+}
+
+/*------------------------------------------------------------
+| Button
+------------------------------------------------------------*/
+button {
+   width: 100%;
+   background: var(--color-primary);
+   height: var(--height-input);
+   color: var(--color-white);
+   border-radius: var(--border-radius);
+   border: none;
+   cursor: pointer;
+   font-size: 1rem;
+}
+
+button:hover {
+   background: var(--color-primary-hover);
+}
