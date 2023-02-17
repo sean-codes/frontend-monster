@@ -37,34 +37,19 @@ html, body {
 /*------------------------------------------------------
 | Folders
 ------------------------------------------------------*/
-.title {
-   font-size: 1rem;
-   padding: 0 var(--space-1);
-}
-.file {
-   padding: var(--space-05) 0;
-   padding-left: calc(var(--space-1) + var(--space-1) * var(--depth));
-   cursor: pointer;
-   display: block;
-   background: none;
-   width: 100%;
-   border:none;
-   text-align:left;
-   font-size: 1rem;
+.folder, .file {
+   padding-left: calc(var(--depth) * 1rem);
+   user-select: none;
 }
 
-.folders.grabbing,
-.folders.grabbing .file {   
-   cursor: grabbing;
-}
-
-
-
-.folders:not(.grabbing) .file:hover,
-.file.over {
+.folder:hover, 
+.file:hover {
    background: rgba(255, 255, 255, 0.5);
 }
 
+.file.over {
+   background: red;
+}
 
 /*------------------------------------------------------
 | Draggable
@@ -99,7 +84,7 @@ html, body {
    flex-direction: column;
 }
 
-.events {
+#debug {
    background: #222;
    color: #FFF;
    min-width: 100%;
