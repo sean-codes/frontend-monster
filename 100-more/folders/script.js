@@ -90,6 +90,7 @@ function renderFile(file, depth, isFolder = false) {
    return `
       <div 
          class="file" 
+         draggable="true"
          style="--depth: ${depth}"
          data-folder="${file.folder}"
          data-path="${file.path}"
@@ -110,7 +111,9 @@ function getIconClass(file) {
 
 var down = undefined
 var over = undefined
+var holding = false
 var htmlHeld = document.querySelector('.held')
+
 
 function setupListeners() {
    var files = htmlFolders.querySelectorAll('.file')
@@ -118,6 +121,7 @@ function setupListeners() {
       // file.addEventListener('mousemove', onMouseMove)  
       file.addEventListener('mousedown', onMousedownFile)
       file.addEventListener('mouseup', onMouseupFile)
+      file.addEventListener('dragstart', onDragstartFile)
    }
 
    var folders = htmlFolders.querySelectorAll('.folder')
@@ -127,7 +131,9 @@ function setupListeners() {
 
    var folderTitles = htmlFolders.querySelectorAll('.folder > .file')
    for (var folderTitle of folderTitles) {
-      folderTitle.addEventListener('click', onMouseclickFolder)
+      // should use dragstart or some sort of offset/timer around here
+      // this style will cause the folder clicks need to be perfect
+      folderTitle.addEventListener('mouseup', onMouseclickFolder)
    }
 }
 
@@ -149,23 +155,26 @@ function onMousemoveFolder(e) {
 }
 
 function onMouseclickFolder(e) {
-   e.stopPropagation()
-   var untoggled = this.parentElement.classList.toggle('closed')
-   var folderPath = this.dataset.path
-   openFolders.push(folderPath)
-   if (untoggled) {
-      openFolders = openFolders.filter(f => f !== folderPath)
-   }
+   if (!holding) {
+      var untoggled = this.parentElement.classList.toggle('closed')
+      var folderPath = this.dataset.path
+      openFolders.push(folderPath)
+      if (untoggled) {
+         openFolders = openFolders.filter(f => f !== folderPath)
+      }
 
-   debug('onMouseclickFolder: "' + folderPath + '"')
+      debug('onMouseclickFolder: "' + folderPath + '"')
+   }
 }
 
 function onMouseupFile(e) {
-   if (down && over) {
+   console.log('up?')
+   if (down && over && (down !== over)) {
       debug('onMouseupFile: attempting move "' + down + '" -> "' + over + '"')
       // move file
       var downName = down.split('/').pop()
       var newPath =  over + '/' + downName
+
       var success = fs.renameSync(down, newPath)
 
       // switch open
@@ -178,11 +187,15 @@ function onMouseupFile(e) {
          }
       }
    }
-
-   drop()
 }
 
-function onMousedownFile(ele) {
+function onDragstartFile(e) {
+   e.preventDefault()
+   document.body.classList.add('holding')
+   holding = true
+}
+
+function onMousedownFile(e) {
    down = this.dataset.path
    debug('onMousedownFile: "' + down + '"')
 }
@@ -206,16 +219,18 @@ function updateHeld(x, y) {
    if (!down) {
       document.body.classList.remove('holding')
       htmlHeld.style.display = 'none'
+      holding = false
       return
    }
 
-   var name = down.split('/').pop()
-   if (!document.body.classList.contains('holding')) {
-      debug('updateHeld: lifted "' + name + '"')
+   if (holding) {
+      var name = down.split('/').pop()
+      if (!document.body.classList.contains('holding')) {
+         debug('updateHeld: lifted "' + name + '"')
+      }
+      htmlHeld.style.display = 'block'
+      htmlHeld.innerHTML = name
+      htmlHeld.style.left = x + 'px'
+      htmlHeld.style.top = y + 'px'
    }
-   document.body.classList.add('holding')
-   htmlHeld.style.display = 'block'
-   htmlHeld.innerHTML = name
-   htmlHeld.style.left = x + 'px'
-   htmlHeld.style.top = y + 'px'
 }

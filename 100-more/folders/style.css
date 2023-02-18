@@ -101,18 +101,18 @@ body.holding .file {
 }
 
 .holding .folder.over {
-   background:rgba(255, 255, 255, 0.1);
+   background:rgba(255, 255, 255, 0.05);
 }
 
 
 .file .icon {
    width: 1.5rem;
+   text-align:center;
 }
 
 .file .icon:after {
    font-family: fa-icons;
    width: 1.5rem;
-   text-align: center;
 }
 
 /* Icons */
@@ -170,8 +170,13 @@ body.holding .file {
    background: #666;
    padding: var(--space-0_5) var(--space-2);
    color: #FFF;
+   animation: fadeIn 0.25s;
 }
 
+@keyframes fadeIn {
+   0% { opacity: 0 }
+   100% { opacity: 1 }
+}
 
 
 /*------------------------------------------------------
@@ -200,4 +205,5 @@ body.holding .file {
    outline: none;
    font-size: 1rem;
    padding: var(--space-1);
+   line-height: 2rem;
 }
