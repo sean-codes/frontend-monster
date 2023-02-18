@@ -1,3 +1,18 @@
+@font-face {
+   font-family: fa-icons;
+   src: url('../_assets/fontawesome/webfonts/fa-regular-400.ttf');
+}
+
+@font-face {
+   font-family: fa-icons-solid;
+   src: url('../_assets/fontawesome/webfonts/fa-solid-900.ttf');
+}
+
+@font-face {
+   font-family: fa-icons-brand;
+   src: url('../_assets/fontawesome/webfonts/fa-brands-400.ttf');
+}
+
 :root {
    --font: monospace;
    --color-bg: #121417;
@@ -36,7 +51,6 @@ html, body {
 .right .title {
    font-size: 1.25rem;
    color: #9da5b4;
-   padding: 0.5rem;
 }
 
 body.holding,
@@ -46,7 +60,10 @@ body.holding .file {
 /*------------------------------------------------------
 | Folders
 ------------------------------------------------------*/
-
+.folders {
+   padding-top: 0.5rem;
+   margin-left: -0.4rem;
+}
 .file {
    user-select: none;
    padding-top: 0.5rem;
@@ -71,18 +88,6 @@ body.holding .file {
    display: none;
 }
 
-.folder > .file i:nth-of-type(1) {
-   display: none;
-}
-.folder > .file i:nth-of-type(2) {
-   display: block;
-}
-.folder.closed > .file i:nth-of-type(2) {
-   display: none;
-}
-.folder.closed > .file i:nth-of-type(1) {
-   display: block;
-}
 
 .folder-title:hover, 
 .file:hover {
@@ -98,6 +103,58 @@ body.holding .file {
 .holding .folder.over {
    background:rgba(255, 255, 255, 0.1);
 }
+
+
+.file .icon {
+   width: 1.5rem;
+}
+
+.file .icon:after {
+   font-family: fa-icons;
+   width: 1.5rem;
+   text-align: center;
+}
+
+/* Icons */
+/* Get unicode from https://fontawesome.com/search?o=r&m=free */
+.folder > .file .icon {
+   position: relative;
+}
+.folder > .file .icon:after {
+   font-family: fa-icons;
+   content: '\f07c';
+}
+.folder.closed > .file .icon:after {
+   font-family: fa-icons-solid;
+   content: '\f07b';
+}
+/* Caret Folder Icons */
+/*.folder > .file .icon:before {
+   position: absolute;
+   width: 1rem;
+   top: 0;
+   left: -1.5rem;
+   font-family: fa-icons-solid;
+   content: '\f0d7';
+}
+.folder.closed > .file .icon:before {
+   font-family: fa-icons-solid;
+   content: '\f0da';
+}*/
+
+/* Default */
+.file .icon:after {
+   content: '\f15b';
+}
+
+/*.file .icon[class*="ext-"]:after { font-family: fa-icons-brand; }*/
+/* Going to duplicate font-family for now */
+.file .icon.ext-js:after { font-family: fa-icons-brand; content: '\f3b9'; }
+.file .icon.ext-css:after { font-family: fa-icons-brand; content: '\f13c'; }
+.file .icon.ext-scss:after { font-family: fa-icons-brand; content: '\f41e'; }
+.file .icon.ext-sass:after { font-family: fa-icons-brand; content: '\f41e'; }
+.file .icon.ext-html:after { font-family: fa-icons-brand; content: '\f13b'; }
+
 
 /*------------------------------------------------------
 | Draggable
@@ -140,4 +197,7 @@ body.holding .file {
    height: 100%;
    border: none;
    flex: 1;
+   outline: none;
+   font-size: 1rem;
+   padding: var(--space-1);
 }

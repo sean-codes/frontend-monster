@@ -1,20 +1,31 @@
 import * as fs from "./mockFs.js"
 
-console.log(fs)
+
 
 fs.tests()
+
+var htmlDebug = document.querySelector('#debug')
+htmlDebug.value = ''
+window.debug = function(text) {
+   htmlDebug.value = Date.now().toString().slice(-5) + ': ' + text + "\r\n" + htmlDebug.value
+}
+
+
 
 var htmlFolders = document.querySelector('.folders')
 var openFolders = []
 
 var root = undefined
 function update() {
+   debug('update: rendering')
    root = curseReadDir('')
    render()
 }
 
 fs.watch('', {}, update)
 update()
+
+
 
 function curseReadDir(path) {
    var readDir = fs.readDirSync(path)
@@ -49,8 +60,6 @@ function Folder(path, files) {
    return this
 }
 
-
-
 function render() {
    var html = renderFolder(root)
    htmlFolders.innerHTML = html
@@ -65,7 +74,6 @@ function renderFolder(folder, depth = -1) {
          : renderFile(file, depth + 1)
    }
 
-      // ${renderFile(folder, depth)}
    var opened = openFolders.some(f => f === folder.path) || folder.path == ''
 
    return `
@@ -86,31 +94,17 @@ function renderFile(file, depth, isFolder = false) {
          data-folder="${file.folder}"
          data-path="${file.path}"
       >
-         <div class="icon">
-            ${isFolder
-               ? `<i class="fa-solid fa-folder"></i><i class="fa-regular fa-folder-open"></i>`
-               : `<i class="${iconClass}"></i>`
-            }
-         </div>
+         <div class="icon ${iconClass}"></div>
          <div class="text">${file.name}</div>
       </div>
    `
 }
 
 function getIconClass(file) {
-   // console.log('meow', file.name)
    var fileSplit = file.name.split('.')
-   var ext = fileSplit.length > 0 ? fileSplit.pop() : ''
+   var ext = fileSplit.length > 1 ? fileSplit.pop() : ''
 
-   if (file.type == 'folder') {
-      return 'fa-regular fa-folder-open'
-   }
-   return {
-      'html': 'fa-brands fa-html5',
-      'js': 'fa-brands fa-js',
-      'css': 'fa-brands fa-css3',
-      'scss': 'fa-brands fa-sass',
-   }[ext] || 'fa-solid fa-file-code'
+   return ext ? 'ext-' + ext : '' 
 }
 
 
@@ -144,7 +138,6 @@ document.body.addEventListener('mouseleave', onMouseup)
 
 function onMousemoveFolder(e) {
    e.stopPropagation()
-   lift()
    // remove old over. add over to this
    var oldOver = document.querySelector('.over')
    oldOver && oldOver.classList.remove('over')
@@ -163,26 +156,25 @@ function onMouseclickFolder(e) {
    if (untoggled) {
       openFolders = openFolders.filter(f => f !== folderPath)
    }
+
+   debug('onMouseclickFolder: "' + folderPath + '"')
 }
 
 function onMouseupFile(e) {
    if (down && over) {
-      if (down == over) {
-         // expand folder
-         console.log(down, over)
-      } else {
-         // move file
-         var downName = down.split('/').pop()
-         var newPath =  over + '/' + downName
-         var success = fs.renameSync(down, newPath)
+      debug('onMouseupFile: attempting move "' + down + '" -> "' + over + '"')
+      // move file
+      var downName = down.split('/').pop()
+      var newPath =  over + '/' + downName
+      var success = fs.renameSync(down, newPath)
 
-         // switch open
-         if (success) {
-            var wasOpen = openFolders.some(f => f == down)
-            if (wasOpen) {
-               openFolders = openFolders.filter(f => f !== down)
-               openFolders.push(newPath)
-            }
+      // switch open
+      if (success) {
+         debug('onMouseupFile: move success')
+         var wasOpen = openFolders.some(f => f == down)
+         if (wasOpen) {
+            openFolders = openFolders.filter(f => f !== down)
+            openFolders.push(newPath)
          }
       }
    }
@@ -192,6 +184,7 @@ function onMouseupFile(e) {
 
 function onMousedownFile(ele) {
    down = this.dataset.path
+   debug('onMousedownFile: "' + down + '"')
 }
 
 function onMousemove(e) {
@@ -199,12 +192,10 @@ function onMousemove(e) {
 }
 
 function onMouseup(e) {
+   debug('onMouseup: dropping')
    drop()
 }
 
-function lift() {
-   document.body.classList.add('holding')
-}
 function drop() {
    over = undefined
    down = undefined
@@ -218,8 +209,12 @@ function updateHeld(x, y) {
       return
    }
 
-   htmlHeld.style.display = 'block'
    var name = down.split('/').pop()
+   if (!document.body.classList.contains('holding')) {
+      debug('updateHeld: lifted "' + name + '"')
+   }
+   document.body.classList.add('holding')
+   htmlHeld.style.display = 'block'
    htmlHeld.innerHTML = name
    htmlHeld.style.left = x + 'px'
    htmlHeld.style.top = y + 'px'
