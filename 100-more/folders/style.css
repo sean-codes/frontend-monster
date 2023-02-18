@@ -1,10 +1,10 @@
 :root {
    --font: monospace;
-   --color-bg: #222;
+   --color-bg: #121417;
    --color-text: #FEFEFE;
-   --space-025: 0.25rem;
-   --space-05: 0.5rem;
-   --space-075: 0.75rem;
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
    --space-1: 1rem;
    --space-15: 1.5rem;
    --space-2: 2rem;
@@ -22,7 +22,6 @@ html, body {
 }
 
 * {
-   color: var(--color-text);
    box-sizing: border-box;
    font-family: monospace;
 }
@@ -33,22 +32,71 @@ html, body {
    padding: var(--space-1);
    display: flex;
 }
+.left .title,
+.right .title {
+   font-size: 1.25rem;
+   color: #9da5b4;
+   padding: 0.5rem;
+}
 
+body.holding,
+body.holding .file {
+   cursor: grabbing!important;
+}
 /*------------------------------------------------------
 | Folders
 ------------------------------------------------------*/
-.folder, .file {
-   padding-left: calc(var(--depth) * 1rem);
+
+.file {
    user-select: none;
+   padding-top: 0.5rem;
+   padding-bottom: 0.5rem;
+   padding-left: calc(0.5rem + var(--depth) * 1.5rem);
+   cursor: grab;
+   color: #9da5b4;
+   display: flex;
+   gap: var(--space-0_5);
+   font-size: 1.25rem;
 }
 
-.folder:hover, 
+.file .icon {
+
+}
+
+.folder > .file {
+   font-weight: bolder;
+}
+
+.folder.closed > .files {
+   display: none;
+}
+
+.folder > .file i:nth-of-type(1) {
+   display: none;
+}
+.folder > .file i:nth-of-type(2) {
+   display: block;
+}
+.folder.closed > .file i:nth-of-type(2) {
+   display: none;
+}
+.folder.closed > .file i:nth-of-type(1) {
+   display: block;
+}
+
+.folder-title:hover, 
 .file:hover {
-   background: rgba(255, 255, 255, 0.5);
+   background: rgba(255, 255, 255, 0.1);
 }
 
-.file.over {
-   background: red;
+/* holding */
+.holding .folder.over > .file {
+   background: #4d78cc;
+   color: #FFF;
+}
+
+.holding .folder.over {
+   background:rgba(255, 255, 255, 0.1);
 }
 
 /*------------------------------------------------------
@@ -63,7 +111,8 @@ html, body {
    pointer-events: none;
    -webkit-pointer-events: none;
    background: #666;
-   padding: var(--space-05) var(--space-2);
+   padding: var(--space-0_5) var(--space-2);
+   color: #FFF;
 }
 
 
@@ -85,8 +134,8 @@ html, body {
 }
 
 #debug {
-   background: #222;
-   color: #FFF;
+   background: rgba(255,255, 255, 0.05);
+   color: rgba(255, 255, 255, 0.5);
    min-width: 100%;
    height: 100%;
    border: none;

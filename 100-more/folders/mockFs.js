@@ -5,27 +5,27 @@ var mockFiles = {
    name: 'root',
    files: [
       { name: 'folder_a', type: 'folder', files: [
-         { name: 'item z' },
-         { name: 'item x' },
+         { name: 'item z.css' },
+         { name: 'item x.html' },
          { name: 'folder a 1', type: 'folder', files: [
-            { name: 'item a' },
-            { name: 'item b' },
+            { name: 'item a.html' },
+            { name: 'item b.css' },
          ]},
          { name: 'folder_a_2', type: 'folder', files: [
-            { name: 'item_b' },
-            { name: 'item_a' },
+            { name: 'item_b.js' },
+            { name: 'item_a.js' },
          ]},
       ]},
       { name: 'folder_c', type: 'folder', files: [
-         { name: 'item z' },
-         { name: 'item x' },
+         { name: 'item z.js' },
+         { name: 'item x.css' },
          { name: 'folder c 1', type: 'folder', files: [
-            { name: 'item a' },
-            { name: 'item b' },
+            { name: 'item a.cpp' },
+            { name: 'item b.js' },
          ]},
          { name: 'folder c 2', type: 'folder', files: [
-            { name: 'item a' },
-            { name: 'item b' },
+            { name: 'item a.scss' },
+            { name: 'item b.scss' },
          ]},
       ]},
    ]
@@ -36,7 +36,7 @@ var mockFiles = {
 //---------------------------------------------------------------
 export function readDirSync(path) {
    var dir = osTraverseToPath(path)
-   if (dir.files) {
+   if (dir && dir.files) {
       var sorted = [...dir.files]
       sorted
          .sort((a, b) => a.name < b.name ? 1 : -1)
@@ -151,11 +151,11 @@ function testOsTraverseToPath() {
 function testReadDirSync() {
    var testCases = [
       { path: '', expect: ['folder_a', 'folder_c'] },
-      { path: '/folder_a', expect: ['folder a 1', 'folder_a_2', 'item x', 'item z' ] },
-      { path: 'folder_a', expect: ['folder a 1', 'folder_a_2', 'item x', 'item z'] },
-      { path: 'folder_a/folder a 1', expect: ['item a', 'item b'] },
-      { path: '/folder_a/folder a 1', expect: ['item a', 'item b'] },
-      { path: '/folder_a/folder_a_2', expect: ['item_a', 'item_b'] },
+      { path: '/folder_a', expect: ["folder a 1","folder_a_2","item x.html","item z.css"] },
+      { path: 'folder_a', expect: ["folder a 1","folder_a_2","item x.html","item z.css"]   },
+      { path: 'folder_a/folder a 1', expect: ["item a.html","item b.css"]  },
+      { path: '/folder_a/folder a 1', expect: ["item a.html","item b.css"] },
+      { path: '/folder_a/folder_a_2', expect: ["item_a.js","item_b.js"]  },
       { path: '/folder_a/item z', expect: undefined },
    ]
 

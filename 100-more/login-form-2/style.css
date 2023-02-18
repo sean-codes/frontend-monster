@@ -7,6 +7,7 @@
    --color-black: #334f79;
    --color-gray: hsl(216, 21%, 34%);
    --color-p: rgba(0, 0, 0, 0.45);
+   --color-red: #F22;
    --color-input-border: rgba(0, 0, 0, 0.1);
    --space-0_25: 0.25rem;
    --space-0_5: 0.5rem;
@@ -16,6 +17,7 @@
    --space-3: 3rem;
    --space-4: 4rem;
    --space-5: 5rem;
+   --space-6: 6rem;
    --height-input: 3.5rem;
    --width-logo: 6rem;
    --border-radius: 0.5rem;
@@ -52,14 +54,14 @@ body {
 }
 
 .form {
-   max-width: 550px;
+   max-width: 500px;
    background: var(--color-white);
    border-radius: var(--border-radius);
    margin: auto;
 }
 
 .form .error-message {
-   color: red;
+   color: var(--color-red);
    text-align: center;
    margin-top: var(--space-0_5);
    display: none;
@@ -113,11 +115,16 @@ a {
 .m-t-3 { margin-top: var(--space-3); }
 .m-t-4 { margin-top: var(--space-4); }
 .m-t-5 { margin-top: var(--space-5); }
+.m-t-10 { margin-top: 10rem; }
 /*------------------------------------------------------------
 | Logo
 ------------------------------------------------------------*/
 .logo {
    width: var(--width-logo);
+}
+
+.logo.half-up {
+   margin-top: -7rem;
 }
 
 
@@ -148,7 +155,7 @@ a {
 }
 
 .input-group .error {
-   color: red;
+   color: var(--color-red);
    display: none;
    margin-top: var(--space-0_25);
 }
@@ -158,11 +165,11 @@ a {
 }
 
 .input-group.error input {
-   border-color: red;
+   border-color: var(--color-red);
 }
 
 .input-group.error .icon {
-   color: red;
+   color: var(--color-red);
 }
 
 /*------------------------------------------------------------
