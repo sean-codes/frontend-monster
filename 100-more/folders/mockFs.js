@@ -70,7 +70,25 @@ export function renameSync(oldPath, newPath) {
 
    newFolder.files.push(copy)
    debug.innerHTML = JSON.stringify(mockFiles, null, 4)
+   window.postMessage({ type: 'fs_change', data: {
+      old: oldPath,
+      new: newPath,
+   }})
    return true
+}
+
+export function watch(
+   path = '', 
+   options = {}, 
+   callBack = () => {}
+) {
+   // i wonder how the messaging works in node internally for this
+   window.addEventListener('message', (e) => {
+      if (e.data && e.data.type == 'fs_change') {
+         console.log('fs.watch: file system changed')
+         callBack()
+      }
+   })
 }
 
 function osPathInfo(path) {

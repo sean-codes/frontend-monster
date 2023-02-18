@@ -7,13 +7,14 @@ fs.tests()
 var htmlFolders = document.querySelector('.folders')
 var openFolders = []
 
-var root = curseReadDir('')
-render()
-
+var root = undefined
 function update() {
    root = curseReadDir('')
    render()
 }
+
+fs.watch('', {}, update)
+update()
 
 function curseReadDir(path) {
    var readDir = fs.readDirSync(path)
@@ -183,7 +184,6 @@ function onMouseupFile(e) {
                openFolders.push(newPath)
             }
          }
-         update()
       }
    }
 
