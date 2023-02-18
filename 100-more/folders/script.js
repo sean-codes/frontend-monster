@@ -143,7 +143,7 @@ document.body.addEventListener('mouseleave', onMouseup)
 
 function onMousemoveFolder(e) {
    e.stopPropagation()
-   
+   lift()
    // remove old over. add over to this
    var oldOver = document.querySelector('.over')
    oldOver && oldOver.classList.remove('over')
@@ -172,7 +172,17 @@ function onMouseupFile(e) {
       } else {
          // move file
          var downName = down.split('/').pop()
-         fs.renameSync(down, over + '/' + downName)
+         var newPath =  over + '/' + downName
+         var success = fs.renameSync(down, newPath)
+
+         // switch open
+         if (success) {
+            var wasOpen = openFolders.some(f => f == down)
+            if (wasOpen) {
+               openFolders = openFolders.filter(f => f !== down)
+               openFolders.push(newPath)
+            }
+         }
          update()
       }
    }
@@ -182,7 +192,6 @@ function onMouseupFile(e) {
 
 function onMousedownFile(ele) {
    down = this.dataset.path
-   lift()
 }
 
 function onMousemove(e) {
