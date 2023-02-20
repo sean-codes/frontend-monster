@@ -1,0 +1,121 @@
+:root {
+   --font: monospace;
+   --color-bg: #EEE;
+   --color-white: #FEFEFE;
+   --color-button-bg: #4E9FE6;
+   --color-button-bg-hover: hsl(208, 75%, 65%);
+   --color-button-del-bg: hsl(0, 80%, 67%);
+   --color-button-del-bg-hover: hsl(0, 80%, 77%);
+   --color-button-color: #FEFEFE;
+   --td-min-width: 8rem;
+   --color-table-bg: #FEFEFE;
+   --color-table-text: #333;
+   --row-height: 4.5rem;
+
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+}
+
+html, body {
+   background: var(--color-bg);
+   height: 100%;
+}
+
+* {
+   font-family: var(--font);
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+body {
+   ccdisplay: flex;
+   padding: var(--space-1);
+}
+.container {
+   margin: 5rem auto;
+   max-width: 60rem;
+}
+
+h1 {
+   color: #222;
+   margin-bottom: var(--space-2);
+}
+
+.table-wrapper {
+   border: 2px solid rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   border-radius: 0.25rem;
+   background: var(--color-table-bg);
+   overflow-x: auto;
+   width: auto;
+}
+table {
+   width: 100%;
+   color: var(--color-table-text);
+   border: none;
+   border-collapse: collapse;
+}
+
+table th {
+}
+table td, table th {
+   padding: 0 var(--space-1);
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+   border-collapse: collapse;
+   height: var(--row-height);
+   min-width: var(--td-min-width);
+}
+table tr:last-of-type td {
+   border-bottom: none;
+}
+table th {
+   text-align: left;
+}
+/* delete animation */
+td{
+   opacity: 1;
+   transition: opacity 0.25s;
+   transition-delay: 0.25s;
+}
+.delete td{
+   background: hsl(0, 75%, 70%);
+   color: #FFF;
+   opacity: 0;
+   overflow: hidden;
+}
+
+.actions {
+   padding-top: var(--space-1);
+}
+
+.actions .page {
+   padding-top: var(--space-0_5);
+}
+
+button {
+   background: none;
+   border: none;
+   background: var(--color-button-bg);
+   color: var(--color-button-color);
+   padding: var(--space-0_5) var(--space-1_5);
+   cursor: pointer;
+   border: 2px solid rgba(0, 0, 0, 0.25);
+   border-radius: 0.25rem;
+}
+button:hover {
+   background: var(--color-button-bg-hover);
+}
+button.del {
+   background: var(--color-button-del-bg);
+}
+button.del:hover {
+   background: var(--color-button-del-bg-hover);
+}
