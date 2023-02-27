@@ -1,0 +1,124 @@
+:root {
+   --font: monospace;
+   --color-border: rgba(0, 0, 0, 0.15);
+   --color-link: #1a62c0;
+   --color-text: #333;
+   --color-p: #444;
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --size-icon: 2rem;
+   --border-radius: 0.35rem;
+}
+
+html, body {
+   font-family: monospace;
+   color: var(--color-text);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+}
+
+body {
+   padding: var(--space-1);
+}
+
+.component-header {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: var(--space-0_5);
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   height: calc(100vh - 5rem);
+   padding-top: 5rem;
+   max-width: 50rem;
+   margin: auto;
+}
+
+/*---------------------------------------------------------
+| Text / Utility
+---------------------------------------------------------*/
+h3 {
+   font-weight: 200;
+}
+
+a {
+   text-decoration: none;
+   color: var(--color-link);
+}
+
+p {
+   color: var(--color-p);
+}
+
+.m-t-1 { margin-top: var(--space-1) }
+.m-t-2 { margin-top: var(--space-2) }
+.m-t-3 { margin-top: var(--space-3) }
+.m-t-4 { margin-top: var(--space-4) }
+.m-t-5 { margin-top: var(--space-5) }
+
+/*---------------------------------------------------------
+| Card
+---------------------------------------------------------*/
+.card {
+   border: 2px solid var(--color-border);
+   padding: var(--space-1_5);
+   border-radius: var(--border-radius);
+}
+
+
+/*---------------------------------------------------------
+| Accordian
+---------------------------------------------------------*/
+.accordian {
+   border-top: 1px solid var(--color-border);
+}
+
+.accordian .top {
+   display: flex;
+   align-items: center;
+   cursor: pointer;
+   user-select: none;
+   padding: var(--space-1) 0;
+}
+
+.accordian:last-of-type .top {
+   padding-bottom: 0;
+}
+
+.accordian .top .text {
+   flex: 1;
+}
+
+.accordian .top .icon {
+   width: var(--size-icon);
+   height: var(--size-icon);
+   transition: all 0.15s;
+
+}
+.accordian .top .icon img {
+   opacity: 0.5;
+   width: 100%;
+}
+
+.accordian .bottom {
+   display: none;
+}
+.accordian.open .bottom {
+   display: block;
+   padding-top: var(--space-1);
+   padding-bottom: var(--space-2);
+}
+.accordian.open .top .icon {
+   transform: rotateZ(180deg);
+}
