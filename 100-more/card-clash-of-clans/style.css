@@ -1,0 +1,193 @@
+:root {
+   --font: monospace;
+   --color-bg: linear-gradient(#a7929e, #b38a87);
+   --color-white: #FFF;
+   --color-grey: #555;
+   --color-pink: #dd6088;
+   --color-purple: #3b3c6d;
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --border-radius: 0.75rem;
+   --size-h2: 1.85rem;
+   --color-border: rgba(0, 0, 0, 0.15);
+   --box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+   --size-h2: 2rem;
+}
+
+body, html {
+   background: var(--color-bg);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: var(--font);
+   box-sizing: border-box;
+}
+
+body {
+   padding: var(--space-1);
+   overflow-x: hidden;
+}
+
+.component-header {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: 0.5rem;
+   font-weight: bolder;
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   min-height: 100vh;
+}
+
+.card {
+   max-width: 25rem;
+   box-shadow: var(--box-shadow);
+   border-radius: var(--border-radius);
+   margin: 5rem auto;
+}
+
+h2 {
+   font-size: var(--size-h2);
+}
+/*--------------------------------------------------------
+| character
+--------------------------------------------------------*/
+.character {
+   background: #4e7a77;
+   border-radius: var(--border-radius) var(--border-radius) 0 0;
+   position: relative;
+   padding-top: calc(2/3 * 100%);
+
+   /*  3d */
+   backface-visibility: visible;
+   perspective-origin: 50% 50%;
+   perspective: 350px;
+   cctransform-style: preserve-3d;
+}
+
+/* to hide the blur from going outside */
+.character .bg{
+   overflow: hidden;
+}
+.character .bg,
+.character .bg:after {
+   border-radius: var(--border-radius) var(--border-radius) 0 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+}
+.character .bg:after {
+   content: '';
+   background-image: url('../_assets/images/background-vector-mountains.jpg');
+   background-size: cover;
+   filter: blur(10px) saturate(40%);
+}
+.character .bg.purple:after {
+   background-image: url('../_assets/images/bg_game_1.png');
+}
+
+.character img {
+   pointer-events: none;
+   z-index: 1;
+   position: absolute;
+   top: 50%;
+   left:50%;
+   height: 100%;
+   transform: translate(-50%, -50%) scale(-1.25, 1.25);
+   animation: image 3s infinite alternate;
+}
+
+.character .pad {
+   position: absolute;
+   width: 50%;
+   height: 50%;
+   z-index: 100;
+   background: rgba(0, 0, 0, 0.25);
+}
+.character .pad:hover {
+   background: rgba(0, 0, 0, 0.5);
+}
+@keyframes image {
+   0% {
+      transform: translate(-50%, -50%) scale(-1.25, 1.25) rotateY(10deg);
+   }
+
+   100% {
+      transform: translate(-50%, -50%) scale(-1.25, 1.25) rotateY(-10deg);
+   }
+}
+/*--------------------------------------------------------
+| info
+--------------------------------------------------------*/
+.info {
+   background: var(--color-white);
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   padding: var(--space-3) var(--space-2);
+   gap: var(--space-2);
+   font-weight: bold;
+}
+
+.info .level {
+   color: var(--color-pink);
+   font-weight: bolder;
+   text-transform: uppercase;
+}
+
+.info .name {
+   margin-top: var(--space-0_5);
+}
+.info .description {
+   color: var(--color-grey);
+}
+
+/*--------------------------------------------------------
+| stats
+--------------------------------------------------------*/
+.stats {
+   background: var(--color-pink);
+   color: var(--color-white);
+   display: flex;
+   justify-content: space-between;
+   border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+.stats.purple {
+   background: var(--color-purple);
+}
+.stats .stat {
+   padding: var(--space-1_5);
+   text-align: center;
+   border-left: 2px solid var(--color-border);
+   flex: 1;
+}
+.stats .stat:first-of-type {
+   border-left: none;
+}
+.stats .stat .value {
+   font-size: var(--size-h2);
+   font-weight: bolder;
+}
+.stats .stat .name {
+   margin-top: var(--space-0_5);
+   text-transform: uppercase;
+}
+
+
+
+
+
+
+
