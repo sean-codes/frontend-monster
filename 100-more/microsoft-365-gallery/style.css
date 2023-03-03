@@ -1,0 +1,153 @@
+:root {
+   --font: monospace;
+   --color-white: #FEFEFE;
+   --color-black: #222;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --size-icon: 2.5rem;
+   --size-icon-arrow: 2.5rem;
+   --size-h3: 1.25rem;
+   --box-shadow: 0 1px 3px rgba(0,0,0,0.12), 
+      0 1px 2px rgba(0,0,0,0.24);
+}
+
+html, body {
+   background: var(--color-white);
+   color: var(--color-black);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+
+body {
+   padding: var(--space-1);
+}
+
+.component {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: var(--space-0_5);
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   min-height: 100vh;
+   padding-top: 5rem;
+   max-width: 70rem;
+   margin: auto;
+}
+
+
+.m-t-1 { margin-top: var(--space-1); }
+
+/*---------------------------------------------------------
+| Accordian
+---------------------------------------------------------*/
+.accordian {
+}
+
+.accordian .top {
+   display: flex;
+   align-items: center;
+   gap: var(--space-0_5);
+   padding: var(--space-1) var(--space-0_5);
+   cursor: pointer;
+   user-select: none;
+}
+
+.accordian .icon {
+   width: var(--size-icon);
+   height: var(--size-icon);
+}
+
+.accordian .icon.arrow {
+   width: var(--size-icon-arrow);
+   height: var(--size-icon-arrow);
+   transform: rotate(-90deg);
+}
+.accordian .icon img {
+   width: 100%;
+   height: 100%;
+}
+
+.accordian .title {
+   font-size: var(--size-h3);
+   font-weight: bold;
+}
+
+.accordian .bottom {
+   display: none;
+   padding: var(--space-1);
+   user-select: none;
+}
+
+.accordian.open .icon.arrow {
+   transform: rotate(0deg);
+}
+.accordian.open {
+   box-shadow: var(--box-shadow);
+}
+
+.accordian.open .bottom {
+   display: block;
+}
+
+.accordian .top:target,   
+.accordian .top:focus,   
+.accordian .top:focus-visible {
+   outline: 2.5px dotted var(--color-black);
+   outline-offset: -5px;
+}
+
+/*---------------------------------------------------------
+| Preview
+---------------------------------------------------------*/
+.preview {
+   padding-top: 100%;
+   position: relative;
+}
+
+.preview img {
+   position: absolute;
+   top: 5%;
+   left: 5%;
+   width: 90%;
+   height: 90%;
+   object-fit: cover;
+   animation: in 0.2s;
+}
+
+@keyframes in {
+   0% { 
+      opacity: 0;
+      transform: scale(0.9);
+   }
+
+   100% {}
+}
+
+/*---------------------------------------------------------
+| Layout
+---------------------------------------------------------*/
+.layout {
+   display: grid;
+   grid-template-columns: 2fr 3fr;
+}
+
+.layout .right {
+   display: flex;
+}
+.layout .right > *{
+   margin: auto;
+   width: 100%;
+}
