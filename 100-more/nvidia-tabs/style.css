@@ -1,0 +1,211 @@
+:root {
+   --font: monospace;
+   --color-bg: #222;
+   --color-text: #FEFEFE;
+   --color-green: hsl(120, 80%, 60%);
+   --color-green-hover: hsl(120, 80%, 80%);
+   --color-border: rgba(255, 255, 255, 0.5);
+
+   /* Text Size */
+   --size-h1: 2.25rem;
+   --size-h2: 1.5rem;
+   --size-p: 1.15rem;
+
+   /* Spacing */
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   /* Component Control */
+   --tab-width: 12rem;
+   --app-list-width: 18rem;
+   --app-icon-size: 3rem;
+   --size-vi-play-button: 4rem;
+}
+
+html, body {
+   background: var(--color-bg);
+   color: var(--color-text);
+}
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family: var(--font);
+}
+
+.component {
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   height: 100vh;
+   position: relative;
+   padding: var(--space-2);
+}
+/* For blurring background */
+.app .content {
+   padding-top: 8rem;
+   max-width: 70rem;
+   margin: auto;
+   position: relative;
+   z-index: 1;
+}
+.app .background {
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: url('../_assets/images/bg_game_3.png');
+   background-size: cover;
+   filter: blur(3rem) brightness(20%);
+   top: 0;
+   left: 0;
+   z-index: 0;
+}
+
+/*--------------------------------------------------------
+| Text / Utility
+--------------------------------------------------------*/
+h1 { font-size: var(--size-h1);}
+h2 { font-size: var(--size-h2);}
+p { font-size: var(--size-p);}
+a { 
+   color: var(--color-green); 
+   text-decoration: none;
+   font-size: var(--size-p);
+}
+.center { text-align: center; }
+.m-t-1 { margin-top: var(--space-1); }
+.m-t-2 { margin-top: var(--space-2); }
+.m-t-3 { margin-top: var(--space-3); }
+.m-t-4 { margin-top: var(--space-4); }
+.m-t-5 { margin-top: var(--space-5); }
+
+/*--------------------------------------------------------
+| Button
+--------------------------------------------------------*/
+button {
+   display: flex;
+   background: none;
+   border: none;
+   align-items: center;
+   color: var(--color-green);
+   gap: var(--space-0_5);
+   font-weight: bolder;
+}
+
+/*--------------------------------------------------------
+| Tabs
+--------------------------------------------------------*/
+.tabs {
+   display: flex;
+   justify-content: center;
+}
+
+.tabs li {
+   list-style: none;
+   font-size: var(--size-p);
+   max-width: var(--tab-width);
+   padding: var(--space-1) var(--space-2);
+   cursor: pointer;
+   user-select: none;
+   text-align: center;
+   border-bottom: 2px solid var(--color-border);
+}
+
+.tabs li.active {
+   color: var(--color-green);
+   border-bottom: 2px solid var(--color-green);
+}
+
+.tabs li:hover {
+   color: var(--color-green-hover);
+   border-bottom: 2px solid var(--color-green-hover);
+}
+
+
+/*--------------------------------------------------------
+| App list
+--------------------------------------------------------*/
+.app-list {
+   max-width: var(--app-list-width);
+   display: flex;
+   flex-wrap: wrap;
+   gap: var(--space-1);
+}
+.app-list img {
+   width: var(--app-icon-size);
+   height: var(--app-icon-size);
+}
+
+@media (max-width: 800px) {
+   .app-list {
+      max-width: 100%;
+   }
+}
+
+
+/*--------------------------------------------------------
+| Video Image
+--------------------------------------------------------*/
+.video-image {
+   position: relative;
+   padding-top: calc(10/16 * 100%);
+}
+
+.video-image .bg {
+   position: absolute;
+   object-fit: cover;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   filter: brightness(90%);
+}
+.video-image:hover .bg {
+   filter: brightness(100%);
+}
+
+.video-image button {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: var(--size-vi-play-button);
+   height: var(--size-vi-play-button);
+   /* display but poor interaction */
+   outline: 0.45rem solid #000;
+   outline-offset: 0.5rem;
+   border-radius: 50%;
+   filter: invert(1);
+   cursor: pointer;
+}
+
+
+/*--------------------------------------------------------
+| Layout
+--------------------------------------------------------*/
+.layout {
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   gap: var(--space-2);
+}
+
+@media (max-width: 700px) {
+   .layout {
+      grid-template-columns: 1fr;
+   }
+}
+
+
+
