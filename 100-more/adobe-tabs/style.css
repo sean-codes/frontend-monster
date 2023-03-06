@@ -1,0 +1,213 @@
+:root {
+   --font: monospace;
+   --font: 'Ubuntu', sans-serif;
+   --color-black: #333;
+   --color-white: #FEFEFE;
+   --color-white-hover: #EEE;
+   --color-blue: #3273de;
+   --color-blue-hover: hsl(217, 72%, 58%);
+   --color-tabs-border: rgba(0, 0, 0, 0.05);
+   --color-tabs-border-active: rgba(0, 0, 0, 0.5);
+   --color-tabs-border-hover: rgba(0, 0, 0, 0.3);
+   --color-tabs-text: rgba(0, 0, 0, 0.4);
+   --color-tabs-text-active: rgba(0, 0, 0, 0.65);
+   --color-card-border: rgba(0, 0, 0, 0.25);
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --button-height: 2rem;
+   --size-app-icon: 2.5rem;
+   --border-radius: 0.5rem;
+}
+
+
+html, body {
+   font-family: var(--font);
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   padding: var(--space-1);
+}
+
+.component {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+   font-weight: bolder;
+}
+
+.app {
+   min-height: 100vh;
+   max-width: 50rem;
+   margin: auto;
+}
+
+/*------------------------------------------------------
+| Text / Utility
+------------------------------------------------------*/
+a {
+   text-decoration: none;
+}
+.center {
+   text-align: center;
+}
+.m-t-1 { margin-top: 1rem }
+.m-t-2 { margin-top: 2rem }
+.m-t-3 { margin-top: 3rem }
+.m-t-4 { margin-top: 4rem }
+.m-t-5 { margin-top: 5rem }
+/*------------------------------------------------------
+| Buttons
+------------------------------------------------------*/
+button {
+   border-radius: var(--button-height);
+   height: var(--button-height);
+   padding: 0 var(--space-1);
+   background: none;
+   border: 2px solid var(--color-black);
+   color: var(--color-black);
+   font-weight: bolder;
+   cursor: pointer;
+}
+
+button:hover {
+   background: var(--color-white-hover);
+}
+
+button.primary {
+   background: var(--color-blue);
+   color: var(--color-white);
+   border: none;
+}
+
+button.primary:hover {
+   background: var(--color-blue-hover);
+}
+
+/*------------------------------------------------------
+| Tabs
+------------------------------------------------------*/
+.tabs {
+   list-style: none;
+   display: flex;
+   justify-content: center;
+   user-select: none;
+}
+.tabs li {
+   border-bottom: 3px solid var(--color-tabs-border);
+   padding: var(--space-1) var(--space-1_5);
+   cursor: pointer;
+   color: var(--color-tabs-text);
+}
+.tabs li:hover {
+   border-color: var(--color-tabs-border-hover);
+}
+.tabs li.active {
+   border-color: var(--color-tabs-border-active);
+   color: var(--color-tabs-text-active);
+}
+
+@media (max-width:800px) {
+   .tabs {
+      flex-direction: column;
+   }
+}
+
+.tab {
+   display: none;
+}
+
+.tab.show {
+   display: block;
+}
+
+/*------------------------------------------------------
+| Card
+------------------------------------------------------*/
+.card {
+   border: 1px solid var(--color-card-border);
+   border-radius: var(--border-radius);
+}
+.card .card-content {
+   padding: var(--space-1);
+}
+
+/* card image */
+.card .card-image {
+   position: relative;
+   padding-top: calc(9/16 * 100%);
+}
+.card .card-image img {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+
+/* card title */
+.card .card-title {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: var(--space-1);
+}
+.card .card-title .app-icon {
+   width: var(--size-app-icon);
+}
+.card .card-title .app-icon img {
+   width: 100%;
+}
+.card .card-title .title {
+   flex: 1;
+}
+.card .card-title .screens {
+   opacity: 0.3;
+}  
+
+/* card description */
+.card .card-desc {
+   padding: var(--space-1) 0;
+   min-height: 8rem;
+}
+
+/* card actions */
+.card .card-actions {
+   padding: var(--space-1) 0 0;
+   border-top: 1px solid var(--color-card-border);
+   display: flex;
+   justify-content: right;
+   gap: var(--space-1);
+}
+
+/*------------------------------------------------------
+| Grid
+------------------------------------------------------*/
+.grid {
+   display: flex;
+   gap: var(--space-1);
+}
+
+.grid .item {
+   flex: 1;
+}
+
+@media (max-width:800px) {
+   .grid {
+      flex-direction: column;
+   }
+}
