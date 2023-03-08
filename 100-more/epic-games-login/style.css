@@ -1,0 +1,198 @@
+:root {
+   --font: sans-serif;
+   --color-bg: #121212;
+   --color-bg-form: #202020;
+   --color-text: rgba(255, 255, 255, 0.7);
+   --color-text-lighter: rgba(255, 255, 255, 0.9);
+   --color-placeholder: rgba(255, 255, 255, 0.8);
+   --color-border: rgba(255, 255, 255, 0.4);
+   --color-error: hsl(0, 95%, 75%);
+   --color-button: #6799e4;
+   --color-button-disabled: #1a4a82;
+   --color-button-hover: hsl(216, 70%, 70%);
+   --size-form-icon: 3.5rem;
+   --height-input: 5rem;
+   --border: 1.5px solid var(--color-border);
+   --border-error: 1.5px solid var(--color-error);
+   --border-radius: 0.45rem;
+
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+   letter-spacing: 0.025rem;
+}
+
+html {
+   background: var(--color-bg);
+   padding: 1rem;
+   font-size: 13px;
+}
+
+.component {
+   color: #FFF;
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: 0.5rem;
+   margin: 2rem 0 1rem 0;
+   font-weight: bolder;
+}
+
+.app {
+   min-height: 100vh;
+}
+
+.app .form {
+   max-width: 35rem;
+   margin: 10rem auto;
+   background: var(--color-bg-form);
+   padding: var(--space-5);
+   border-radius: var(--border-radius);
+}
+
+/*------------------------------------------------
+| Text / Utilities
+------------------------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+   color: var(--color-text-lighter);
+
+}
+p, label {
+   font-weight: 500;
+   color: var(--color-text);
+}
+a {
+   color: var(--color-text-lighter);
+}
+
+.flex {
+   display: flex;
+}
+
+.flex.space-between {
+   justify-content: space-between;
+}
+
+.center { text-align: center; }
+
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+.m-t-5 { margin-top: 5rem; }
+/*------------------------------------------------
+| Form Icon
+------------------------------------------------*/
+.form-icon {
+   width: var(--size-form-icon);
+   height: auto;
+   filter: invert(1) brightness(115%);
+}
+
+/*------------------------------------------------
+| Input Group
+------------------------------------------------*/
+.input-group {
+   position: relative;
+}
+
+.input-group input {
+   width: 100%;
+   height: var(--height-input);
+   background: none;
+   color: var(--color-text);
+   padding-top: var(--space-2);
+   padding-left: var(--space-1);
+   outline: none;
+   border: var(--border);
+   border-radius: var(--border-radius);
+}
+
+.input-group i {
+   position: absolute;
+   right: var(--space-1);
+   filter: invert(1);
+   top: calc(var(--height-input) / 2);
+   transform: translateY(-50%);
+   font-size: 1.5rem;
+}
+
+.input-group label {
+   position: absolute;
+   top: calc(var(--height-input) / 2);
+   left: var(--space-2);
+   transform: translateY(-50%) scale(1.2);
+   color: var(--color-border);
+   transition: all 0.15s;
+   pointer-events: none;
+   user-select: none;
+}
+
+.input-group input:not(:placeholder-shown) ~ label,
+.input-group input:focus ~ label {
+   transform: scale(1);
+   top: var(--space-1);
+   left: var(--space-1);
+}
+
+.input-group .error {
+   margin-top: var(--space-0_5);
+   color: var(--color-error);
+   display: none;
+}
+
+.input-group.error .error {
+   display: block;
+}
+.input-group.error input {
+   border: var(--border-error);
+}
+
+
+/*------------------------------------------------
+| Checkbox Group
+------------------------------------------------*/
+.checkbox-group {
+   display: flex;
+   align-items: center;
+   gap: var(--space-1);
+   color: var(--color-text);
+}
+
+/*------------------------------------------------
+| Button
+------------------------------------------------*/
+button {
+   height: var(--height-input);
+   width: 100%;
+   background: var(--color-button);
+   border-radius: var(--border-radius);
+   border: none;
+   color: var(--color-text-lighter);
+   text-transform: uppercase;
+   font-weight: bolder;
+   cursor: pointer;
+   user-select: none;
+}
+button:hover {
+   background: var(--color-button-hover);
+}
+button:disabled {
+   background: var(--color-button-disabled);
+   pointer-events: none;
+}
+
+
+
+

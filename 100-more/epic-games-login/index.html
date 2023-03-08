@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css">
+</head>
+
+<body>
+   <div class="app">
+      <div class="form" id="pageLogin">
+         <div class="center">
+            <img src="../_assets/images/icon_epic-games.png" alt="" class="form-icon">
+         </div>
+         <h3 class="center m-t-5">Sign in with an Epic Games account</h3>
+         <div class="input-group m-t-2" id="groupEmail">
+            <input type="text" placeholder=" ">
+            <label for="">Email Address</label>
+            <!-- <div class="error">Login failed</div> -->
+         </div>
+
+         <div class="input-group m-t-2" id="groupPassword">
+            <input type="password" placeholder=" ">
+            <label for="">Password</label>
+            <i class="fa-solid fa-eye-slash"></i>
+            <div class="error">Login failed. Try admin/admin</div>
+         </div>
+         <div class="flex space-between m-t-2">
+            <div class="item">
+               <label for="checkbox1" class="checkbox-group">
+                  <input type="checkbox" id="checkbox1">
+                  Remember me
+               </label>
+            </div>
+            <div class="item">
+               <a href="#">Links for places</a>
+            </div>
+         </div>
+         <button disabled class="m-t-2" id="buttonLogin">Log in Now</button>
+         <div class="m-t-2 center">
+            <a href="#">Privacy Policy</a>
+         </div>
+         <p class="m-t-2 center">
+            Don't have an Epic Games account? <a href="#">Sign Up</a>
+         </p>
+         <p class="m-t-1 center">
+            Back to <a href="#">all sign in options</a>
+         </p>
+      </div>
+      <div class="form" id="pageSuccess" style="display: none">
+         <h1>Login success!</h1>
+      </div>
+   </div>
+
+
+   <div class="component">Text / Utilities</div>
+   <h2>Heading 2</h2>
+   <p>Paragraph Text</p>
+   <a href="#">Links for places</a>
+
+
+   <div class="component">Form Icon</div>
+   <img src="../_assets/images/icon_epic-games.png" alt="" class="form-icon">
+
+
+   <div class="component">Input</div>
+   <div class="input-group">
+      <input type="text" placeholder=" ">
+      <label for="">Email Address</label>
+      <div class="error">Error message.</div>
+   </div>
+
+   <div class="input-group error">
+      <input type="password" placeholder=" ">
+      <label for="">Password</label>
+      <i class="fa-solid fa-eye-slash"></i>
+      <div class="error">Error message.</div>
+   </div>
+
+
+   <div class="component">Checkbox</div>
+   <label for="checkbox1" class="checkbox-group">
+      <input type="checkbox" id="checkbox1">
+      Remember me
+   </label>
+
+
+   <div class="component">Button</div>
+   <button>Log in now</button>
+   <button disabled>Disabled button</button>
+
+   <script src="script.js"></script>
+   <!-- <img src="./example.png" alt="" width="100%"> -->
+   <!-- <img src="./example2.png" alt="" width="100%"> -->
+</body>
+
+</html>
