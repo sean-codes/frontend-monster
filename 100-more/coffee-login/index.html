@@ -1,0 +1,135 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+ </head>
+
+<body>
+   <!-- Application -->
+   <div class="app">
+      <!-----------------------------------------------------
+      | Sign In Form
+      ------------------------------------------------------>
+      <div class="form show" id="formLogin">
+         <div class="top-icon center">
+            <img src="../_assets/images/icon_coffee-to-go.png" alt="">
+         </div>
+         <h2 class="center m-t-2">Welcome back!</h2>
+         <div class="input-group m-t-2" id="groupUser">
+            <input autocomplete="false" type="text" id="inputX" placeholder=" ">
+            <label for="inputX">Username</label>
+            <div class="underline"></div>
+            <div class="error">You must enter a username</div>
+         </div>
+         <div class="input-group m-t-2" id="groupPass">
+            <input autocomplete="false" type="password" id="inputY" placeholder=" ">
+            <label for="inputY">Password</label>
+            <div class="underline"></div>
+            <div class="error">You must enter a password</div>
+         </div>
+         <div class="m-t-2">
+            <button>Log in</button>
+            <div class="error-message m-t-1 center">Login Failed! Try admin/admin</div>
+         </div>
+         <p class="light m-t-4">Don't have an account? <a href="#" id="join-now">Join Now</a></p>
+      </div>
+
+      <!-----------------------------------------------------
+      | Create Account Form
+      ------------------------------------------------------>
+      <div class="form" id="formCreate">
+         <div class="top-icon center">
+            <img src="../_assets/images/icon_coffee-to-go.png" alt="">
+         </div>
+         <h2 class="center m-t-2">Create an account!</h2>
+         <div class="input-group m-t-2" id="groupUser">
+            <input autocomplete="false" type="text" id="inputX" placeholder=" ">
+            <label for="inputX">Username</label>
+            <div class="underline"></div>
+            <div class="error">You must enter a username</div>
+         </div>
+         <div class="input-group m-t-2" id="groupPass">
+            <input autocomplete="false" type="password" id="inputY" placeholder=" ">
+            <label for="inputY">Password</label>
+            <div class="underline"></div>
+            <div class="error">You must enter a password</div>
+         </div>
+         <div class="m-t-2">
+            <button>Create an account</button>
+            <div class="error-message m-t-1 center">Login Failed! Try admin/admin</div>
+         </div>
+         <p class="light m-t-4">Already have an account? <a href="#" id="sign-in">Sign in</a></p>
+
+      </div>
+
+      <!-----------------------------------------------------
+      | Success Form
+      ------------------------------------------------------>
+      <div class="form" id="formSuccess">
+         <div class="top-icon center">
+            <img src="../_assets/images/icon_coffee-to-go.png" alt="">
+         </div>
+         <p class="success center">Successful Login!!</p>
+      </div>
+
+      <!-----------------------------------------------------
+      | Successful Create Account Form
+      ------------------------------------------------------>
+      <div class="form" id="formCreateSuccess">
+         <div class="top-icon center">
+            <img src="../_assets/images/icon_coffee-to-go.png" alt="">
+         </div>
+         <h2 class="success center">Account Created!</h2>
+         <div class="center m-t-2">
+            <button id="return-to-sign-in" class="center">Return to sign in</button>
+         </div>
+      </div>
+   </div>
+
+
+
+   <!-- Components -->
+   <div class="components">
+      <h1>Components</h1>
+
+      <div class="component">Text / Utils</div>
+      <h2>Heading 2</h2>
+      <p>Paragraph text with <a href="#">a link</a></p>
+      <p class="light">Light text with <a href="#">a link</a></p>
+
+      <div class="component">Input Group</div>
+      <div class="input-group">
+         <input autocomplete="false" type="text" id="inputX" placeholder=" ">
+         <label for="inputX">Normal input</label>
+         <div class="underline"></div>
+         <div class="error">Error message</div>
+      </div>
+
+      <div class="input-group error">
+         <input autocomplete="false" type="text" id="inputY" placeholder=" ">
+         <label for="inputY">Input with error</label>
+         <div class="underline"></div>
+         <div class="error">Error message</div>
+      </div>
+
+      <div class="component">Button</div>
+      <button>Button</button>
+
+
+      <div class="component">Top Icon</div>
+      <div class="top-icon">
+         <img src="../_assets/images/icon_coffee-to-go.png" alt="">
+      </div>
+   </div>
+
+   <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,196 @@
+:root {
+   --font: 'Nunito', sans-serif;
+   --color-bg: #d7d7d7;
+   --color-form: #745996;
+   --color-text: #fefefe;
+   --color-p-light: #b79ed4;
+   --color-button: #ee7f8b;
+   --color-border: rgba(255, 255, 255, 0.5);
+   --color-error: #ffc4c0;
+   --color-label: var(--color-p-light);
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --size-h1: 2rem;
+   --size-h2: 1.75rem;
+   --size-p: 1rem;
+
+   --height-input: 4rem;
+   --input-border: 2px solid var(--color-border);
+   --size-top-icon: 10rem;
+   --border-radius: 1rem;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+
+body {
+   ccpadding: var(--space-1);
+   background: var(--color-form);
+   color: var(--color-text);
+}
+
+.component {
+   border-bottom: 2px solid #FEFEFE;
+   border-left: 2px solid #FEFEFE;
+   padding: var(--space-0_5);
+   margin: 2rem 0 1rem 0;
+}
+
+
+.app {
+   background: var(--color-bg);
+   padding: 5rem 2rem;
+   min-height: 100vh;
+   display: flex;
+}
+
+.app .form {
+   background: var(--color-form);
+   max-width: 32rem;
+   width: 100%;
+   margin: auto;
+   padding: 4rem;
+   border-radius: var(--border-radius);
+   display: none;
+}
+
+.app .form.show {
+   display: block;
+}
+
+.app .error-message {
+   color: var(--color-error);
+   display: none;
+}
+
+.app .form.error .error-message {
+   display: block;
+}
+
+.components {
+   padding: var(--space-1);
+}
+/*-----------------------------------------------------
+| Text / Utility
+-----------------------------------------------------*/
+h1 { font-size: var(--size-h1); }
+h2 { font-size: var(--size-h2); }
+p { font-size: var(--size-p); }
+.light { color: var(--color-p-light) }
+a {
+   text-decoration: none;
+   font-weight: bolder;
+   color: var(--color-text);
+}
+.success { color: var(--color-success) }
+
+.m-t-1 { margin-top: 1rem!important; }
+.m-t-2 { margin-top: 2rem!important; }
+.m-t-3 { margin-top: 3rem!important; }
+.m-t-4 { margin-top: 4rem!important; }
+.m-t-5 { margin-top: 5rem!important; }
+.center { text-align: center; margin: auto}
+/*-----------------------------------------------------
+| Input
+-----------------------------------------------------*/
+.input-group {
+   position: relative;
+}
+
+.input-group input {
+   width: 100%;
+   height: var(--height-input);
+   background: 0;
+   border: none;
+   border-bottom: var(--input-border);
+   outline: none;
+   color: var(--color-text);
+   padding-top: calc(var(--height-input) - var(--space-3));
+   font-size: var(--size-h2);
+}
+.input-group .underline {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 3px;
+   top: calc(var(--height-input) - 2px);
+   left: 0;
+   background: #FEFEFE;
+   transition: all 0.1s;
+}
+.input-group input:focus ~ .underline {
+   width: 100%;
+}
+
+.input-group label {
+   position: absolute;
+   top: calc(var(--height-input) / 2);
+   left: 0;
+   transform: translateY(-50%) scale(1.5);
+   transform-origin: 0 50%;
+   pointer-events: none;
+   transition: all 0.15s;
+   color: var(--color-label);
+}
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+   top: 0;
+   left: 0;
+   transform: translateY(0) scale(1);
+}
+
+.input-group .error {
+   display: none;
+   padding-top: var(--space-0_5);
+   color: var(--color-error);
+}
+.input-group.error .error {
+   display: block;
+}
+.input-group.error label {
+   color: var(--color-error);
+}
+.input-group.error input {
+   border-bottom-color: var(--color-error);
+}
+.input-group.error input ~ .underline {
+   background: var(--color-error);
+}
+
+/*-----------------------------------------------------
+| Button
+-----------------------------------------------------*/
+button {
+   background: var(--color-button);
+   border: none;
+   height: var(--height-input);
+   width: 100%;
+   display: block;
+   color: var(--color-text);
+   font-size: var(--size-h2);
+   font-weight: bolder;
+   border: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+/*-----------------------------------------------------
+| Top Icon
+-----------------------------------------------------*/
+.top-icon {
+   width: var(--size-top-icon);
+
+}
+.top-icon img{
+   width: 100%;
+   height: auto;
+}
