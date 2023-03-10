@@ -1,0 +1,134 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      :root {
+         --size-player: 8rem;
+      }
+      body {
+         background: #3b3a40;
+      }
+      .stars {
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+      }
+
+      .stars .star {
+         position: absolute;
+         width: 10px;
+         height: 10px;
+         background: rgba(255, 255, 255, 0.25);
+         border-radius: 50%;
+         left: calc(var(--x) * 1%);
+         top: calc(var(--y) * 1%);
+         transform: scale(var(--size));
+      }
+      .player {
+         width: var(--size-player);
+         height: var(--size-player);
+         position: fixed;
+      }
+      .player img{
+         width: 100%;
+         image-rendering: pixelated;
+      }
+
+      .player .animated {
+         display: none;
+      }
+
+      .player.animate .animated {
+         display: block;
+      }
+      .player.animate .still {
+         display: none;
+      }
+   </style>
+</head>
+<body tab-index="0">
+   <div class="stars">
+      <div class="star" style="--x:50; --y:50; --size: 2"></div>
+      <div class="star" style="--x:20; --y:20; --size: 1"></div>
+      <div class="star" style="--x:20; --y:70; --size: 1.2"></div>
+      <div class="star" style="--x:90; --y:90; --size: 1.5"></div>
+      <div class="star" style="--x:80; --y:30; --size: 1"></div>
+      <div class="star" style="--x:70; --y:40; --size: 0.5"></div>
+      <div class="star" style="--x:90; --y:10; --size: 2"></div>
+   </div>
+   <div class="player">
+      <img class="still" src="./sprite_space_ship.png" alt="">
+      <img class="animated" src="./sprite_space_ship_animated.gif" alt="">
+   </div>
+
+   <script>
+      var player = document.querySelector('.player')
+      // set the state of the player
+      var rotation = 0
+      var moving = false
+      var turningLeft = false
+      var turningRight = false
+      var positionX = window.innerWidth/2
+      var positionY = window.innerHeight/2
+
+      document.body.onkeydown = onKeyDown
+      document.body.onkeyup = onKeyUp
+
+      // set change the state based on key up/down
+      function onKeyDown(event) {
+         if (event.key === 'ArrowUp') {
+            player.classList.add('animate')
+            moving = true
+         }
+
+         if (event.key === 'ArrowLeft') {
+            turningLeft = true
+         }
+         if (event.key === 'ArrowRight') {
+            turningRight = true
+         }
+      }
+      function onKeyUp(event) {
+         if (event.key === 'ArrowUp') {
+            moving = false
+         }
+         if (event.key === 'ArrowLeft') {
+            turningLeft = false
+         }
+         if (event.key === 'ArrowRight') {
+            turningRight = false
+         }
+      }
+
+      // call render 60 times a second
+      setInterval(update, 1000/60)
+      function update() {
+         // each call update the player position and rotation
+         if (moving) {
+            var moveX = Math.sin(rotation)
+            var moveY = Math.cos(rotation)
+            positionX += moveX * 10
+            positionY -= moveY * 10
+         }
+
+         if (turningRight) {
+            rotation += 0.075
+         }
+         if (turningLeft) {
+            rotation -= 0.075
+         }
+
+         // update the player on screen
+         player.classList.toggle('animate', moving)
+         player.style.left = `${positionX}px`
+         player.style.top = `${positionY}px`
+         player.style.transform = `rotate(${rotation}rad)`
+      }
+   </script>
+
+</body>
+</html>

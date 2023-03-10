@@ -1,0 +1,96 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+   <div class="app">
+      <div class="form show" id="formLogin">
+         <div class="form-top">
+            <h1>Log In</h1>
+         </div>
+         <div class="p-2">
+            <div class="input-group" id="groupUser">
+               <input type="text" placeholder="Username">
+               <div class="error">You must enter a username</div>
+            </div>
+            <div class="input-group m-t-2" id="groupPass">
+               <input type="password" placeholder="Password">
+               <div class="error">You must enter a password</div>
+            </div>
+            <button class="m-t-2">Log in</button>
+            <div class="login-error m-t-1">Login failed!</div>
+            <div class="m-t-2">No account? <a href="#">Sign up!</a></div>
+         </div>
+      </div>
+      <div class="form" id="formCreate">
+         <div class="form-top">
+            <h1>Create Account</h1>
+         </div>
+         <div class="p-2">
+            <div class="input-group" id="groupUser">
+               <input type="text" placeholder="Username">
+               <div class="error">You must enter a username</div>
+            </div>
+            <div class="input-group m-t-2" id="groupPass">
+               <input type="password" placeholder="Password">
+               <div class="error">You must enter a password</div>
+            </div>
+            <button class="m-t-2">Create Account</button>
+            <div class="login-error m-t-1">Could not create account!</div>
+            <div class="m-t-2">Have an account account? <a href="#">Sign in</a></div>
+         </div>
+      </div>
+      <div class="form" id="formLoginSuccess">
+         <div class="form-top">
+            <h1>Application</h1>
+         </div>
+         <div class="p-2">
+            <p>Login Successful!</p>
+         </div>
+      </div>
+      <div class="form" id="formCreateSuccess">
+         <div class="form-top">
+            <h1>Create Account</h1>
+         </div>
+         <div class="p-2">
+            <p>Account created successful!</p>
+            <button class="m-t-2">Goto to login</button>
+         </div>
+      </div>
+   </div>
+
+   <div class="component">form-top</div>
+   <div class="form-top">
+      <h1>Form top</h1>
+   </div>
+
+   <div class="component">input</div>
+   <div class="input-group">
+      <input type="text" placeholder="Placeholder">
+      <div class="error">Error message</div>
+   </div>
+
+   <br />
+   <br />
+
+   <div class="input-group error">
+      <input type="text">
+      <div class="error">Error message</div>
+   </div>
+
+
+   <div class="component">button</div>
+   <button>Button</button>
+
+
+   <img src="./example.png" alt="" width="100%">
+
+   <script src="./script.js"></script>
+</body>
+
+</html>

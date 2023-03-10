@@ -1,0 +1,133 @@
+:root {
+   --font: monospace;
+   --color-bg: #445566;
+   --color-primary: #2188dd;
+   --color-form: #ebebeb;
+   --color-text: #222;
+   --color-text-primary: #fefefe;
+   --color-border: rgba(0, 0, 0, 0.25);
+   --color-error: hsl(0, 100%, 67%);
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --height-input: 4rem;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+   font-family: var(--font);
+}
+
+body {
+   padding: 1rem;
+   background: var(--color-bg);
+   color: var(--color-text);
+}
+
+.component {
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: 0.5rem;
+   font-weight: bolder;
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   min-height: 100vh;
+   padding-top: 5rem;
+}
+
+.app .form {
+   background: var(--color-form);
+   max-width: 30rem;
+   margin: auto;
+   display: none;
+}
+
+.app .form.show {
+   display: block;
+}
+
+.app .form .login-error {
+   color: var(--color-error);
+   text-align: center;
+   font-weight: bold;
+   display: none;
+}
+
+.app .form.error .login-error {
+   display: block;
+}
+
+/*------------------------------------------------------------
+| Text / Utilities
+------------------------------------------------------------*/
+.p-1 { padding: var(--space-1); }
+.p-2 { padding: var(--space-2); }
+.m-t-1{ margin-top: 1rem; }
+.m-t-2{ margin-top: 2rem; }
+.m-t-3{ margin-top: 3rem; }
+.m-t-4{ margin-top: 4rem; }
+.m-t-5{ margin-top: 5rem; }
+/*------------------------------------------------------------
+| Form top
+------------------------------------------------------------*/
+.form-top {
+   background: var(--color-primary);
+   padding: var(--space-2);
+   text-align: center;
+   position: relative;
+   color: var(--color-text-primary);
+}
+.form-top:after {
+   content: '';
+   position: absolute;
+   width: var(--space-2);
+   height: var(--space-2);
+   background: var(--color-primary);
+   top: 0;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(45deg);
+}
+/*------------------------------------------------------------
+| Input
+------------------------------------------------------------*/
+.input-group {
+
+}
+.input-group input{
+   width: 100%;
+   height: var(--height-input);
+   border: 1px solid var(--color-border);
+   padding: 0 var(--space-1);
+   font-size: 1rem;
+}
+.input-group .error {
+   display: none;
+   color: var(--color-error);
+   font-weight: bold;
+}
+.input-group.error .error {
+   display: block;
+   margin-top: var(--space-0_5);
+}
+
+/*------------------------------------------------------------
+| Button
+------------------------------------------------------------*/
+button {
+   width: 100%;
+   border: none;
+   background: var(--color-primary);
+   height: var(--height-input);
+   color: var(--color-text-primary);
+   font-weight: bold;
+   cursor: pointer;
+}
