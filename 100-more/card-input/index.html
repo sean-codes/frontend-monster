@@ -1,0 +1,201 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css">
+</head>
+<body> 
+    <!-----------------------------------------------------------------
+    | App
+    ------------------------------------------------------------------>
+     <div class="app">
+        <div class="form">
+            <!-- Card -->
+            <div class="card">
+                <div class="card-top">
+                    <div class="left">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div class="right">
+                        <i class="fa-brands fa-cc-visa"></i>
+                    </div>
+                </div>
+                <div class="card-middle">
+                    <div class="number">
+                        <div class="part-1">####</div>
+                        <div class="part-2">####</div>
+                        <div class="part-3">####</div>
+                        <div class="part-4">####</div>
+                    </div>
+                </div>
+                <div class="card-bottom">
+                    <div class="group" id="cardCardHolder">
+                        <div class="key">Card Holder</div>
+                        <div class="value">FULL NAME</div>
+                    </div>
+                    <div class="group">
+                        <div class="key">Expires</div>
+                        <div class="value">MM/YY</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fields -->
+            <div class="fields">
+                <div class="input-group m-t-3" id="inputGroupCardNumber">
+                    <label for="field1">Cαrd Number</label>
+                    <input id="field1" type="number" autocomplete="field1">
+                </div>
+                <div class="input-group m-t-2" id="inputGroupCardHolders">
+                    <label for="field2">Cαrd Holders</label>
+                    <input id="field2" type="text" autocomplete="field2">
+                </div>
+            </div>
+            <div class="flex gap-2 m-t-2">
+                <div class="item flex gap-1">
+                    <!-- Selects Month / Year -->
+                    <div class="item">
+                        <div class="input-group" id="inputGroupMonth">
+                            <label for="">Expiration Date</label>
+                            <select name="" id="" value="default">
+                                <option value="">Month</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="input-group" id="inputGroupYear">
+                            <label for="">&nbsp;</label>
+                            <select name="" id="" value="default">
+                                <option value="">Year</option>
+                                <option value="">2023</option>
+                                <option value="">2024</option>
+                                <option value="">2025</option>
+                                <option value="">2026</option>
+                                <option value="">2027</option>
+                                <option value="">2028</option>
+                                <option value="">2029</option>
+                                <option value="">2030</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="item half">
+                    <!-- Security Code -->
+                    <div class="input-group" id="inputGroupCVV">
+                        <label>CVV</label>
+                        <input type="text">
+                    </div>
+                </div>
+            </div>
+            <div class="m-t-3">
+                <button id="buttonSubmit">Submit</button>
+            </div>
+        </div>
+     </div>
+
+
+
+
+    <!-----------------------------------------------------------------
+    | Components
+    ------------------------------------------------------------------>
+    <!-- Card -->
+    <div class="component">Card</div>
+    <div class="card">
+        <div class="card-top">
+            <div class="left">
+                <i class="fa-solid fa-microchip"></i>
+            </div>
+            <div class="right">
+                <i class="fa-brands fa-cc-visa"></i>
+            </div>
+        </div>
+        <div class="card-middle">
+            <div class="number highlight">
+                <div class="part-1">####</div>
+                <div class="part-2">####</div>
+                <div class="part-3">####</div>
+                <div class="part-4">####</div>
+            </div>
+        </div>
+        <div class="card-bottom">
+            <div class="group">
+                <div class="key">Key</div>
+                <div class="value highlight">value</div>
+            </div>
+            <div class="group">
+                <div class="key">Key</div>
+                <div class="value">value</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input -->
+    <div class="component">Input</div>
+    <div class="input-group">
+        <label>Input Label</label>
+        <input type="text">
+    </div>
+
+    <!-- Select -->
+    <div class="component">Select</div>
+    <div class="input-group">
+        <label for="">Select Label</label>
+        <select name="" id="" value="default">
+            <option value="default">Option 1</option>
+            <option value="">Option 2</option>
+            <option value="">Option 3</option>
+        </select>
+        <i class="fa-solid fa-chevron-down"></i>
+    </div>
+    
+    <!-- Button -->
+    <div class="component">Button</div>
+    <button>Button</button>
+
+    <!-- Flex -->
+    <div class="component">Flex</div>
+    <div class="flex demo">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+    <div class="flex gap-1 demo">
+        <div class="item">gap 1</div>
+        <div class="item">gap 1</div>
+        <div class="item">gap 1</div>
+    </div>
+    <div class="flex gap-2 demo">
+        <div class="flex gap-1 demo">
+            <div class="item">gap 1</div>
+            <div class="item">gap 1</div>
+        </div>
+        <div class="item">gap 2</div>
+    </div>
+
+
+
+
+    <br />
+    <br />
+    <br />
+    <!-- <img src="./example.png" width="100%"> -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap');
+
+:root {
+    --font: 'Roboto Mono', monospace;;
+
+    /* colors */
+    --color-border: rgba(0, 0, 0, 0.2);
+    --color-primary: #35af96;
+    --color-primary-hover: #35af96DD;
+    --color-white: #FEFEFE;
+    --color-text: #333;
+    --color-text-grey: #CCC;
+    --color-bg: #f8fff9;
+    --box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    --box-shadow-2: 0px 4px 16px rgba(0, 0, 0, 0.25);
+
+    /* util */
+    --space-0_25: 0.25rem;
+    --space-0_5: 0.5rem;
+    --space-0_75: 0.75rem;
+    --space-1: 1rem;
+    --space-1_5: 1.5rem;
+    --space-2: 2rem;
+    --space-3: 3rem;
+    --space-4: 4rem;
+    --space-5: 5rem;
+    --size-h1: 2rem;
+    --size-h2: 1.5rem;
+    --size-h3: 1.2rem;
+
+    /* components */
+    --app-width: 40rem;
+    --form-card-offset: 12rem;
+    --form-border-radius: 1rem;
+    --card-background: url(../_assets/images/background-vector-mountains.jpg);
+    --card-border-radius: 1rem;
+    --card-icon-size: 3rem;
+    --card-max-width: 32rem;
+    --card-highlight-radius: 0.5rem;
+    --card-highlight-height: 2.25rem;
+    --card-spacing: 4rem;
+    --card-number-width: 25rem;
+    --input-height: 4rem;
+    --input-border-radius: 0.5rem;
+    --input-border: 1px solid var(--color-border);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    box-sizing: border-box;
+}
+html {
+    font-size: 13px;
+}
+
+body {
+    padding: var(--space-1);
+    background: var(--color-bg);
+}
+
+.component {
+    border-bottom: 2px solid #222;
+    border-left: 2px solid #222;
+    padding: var(--space-0_5);
+    font-weight: bolder;
+    margin: 2rem 0 1rem 0;
+}
+
+.app {
+    min-height: 100vh;
+    max-width: var(--app-width);
+    margin: auto;
+}
+
+.app .form {
+    box-shadow: var(--box-shadow-2);
+    border-radius: var(--form-border-radius);
+    padding: var(--space-2);
+    margin-top: calc(var(--form-card-offset) + var(--space-4));
+    background: var(--color-white);
+}
+.app .form .card {
+    margin-top: calc(-1 * var(--form-card-offset));
+    margin-left: auto;
+    margin-right: auto;
+}
+/*--------------------------------------------------------
+| Utils
+--------------------------------------------------------*/
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+
+/*--------------------------------------------------------
+| Card
+--------------------------------------------------------*/
+.card {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+    var(--card-background);
+    background-size: cover;
+    padding: var(--space-2);
+    border-radius: var(--card-border-radius);
+    color: var(--color-white);
+    max-width: var(--card-max-width);
+    box-shadow: var(--box-shadow-2);
+}
+
+/* Top */
+.card .card-top {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--card-icon-size);
+}
+
+/* Middle */
+.card .card-middle {
+    padding-top: var(--card-spacing);
+    max-width: var(--card-number-width);
+}
+
+.card .card-middle .number {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--size-h2);
+}
+
+/* Bottom */
+.card .card-bottom {
+    padding-top: var(--card-spacing);
+    justify-content: space-between;
+    display: flex;
+}
+.card .card-bottom .group .key {
+    color: var(--color-text-grey);
+    padding-bottom: var(--space-0_25);
+}
+.card .card-bottom .group .value {
+    font-size: var(--size-h3);
+}
+
+.card .highlight {
+    position: relative;
+}
+.card .highlight:after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: var(--card-highlight-height);
+    width: calc(100% + var(--space-2));
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: var(--card-highlight-radius);
+}
+/*--------------------------------------------------------
+| Input
+--------------------------------------------------------*/
+.input-group {
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    padding-bottom: var(--space-0_25);
+    color: var(--color-text);
+    font-weight: bold;
+    white-space: nowrap;
+}
+.input-group input,
+.input-group select {
+    display: block;
+    width: 100%;
+    height: var(--input-height);
+    border-radius: var(--input-border-radius);
+    border: var(--input-border);
+    padding: 0 var(--space-1);
+    appearance: none;
+    font-size: var(--size-h3);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.input-group input:focus,
+.input-group select:focus {
+    box-shadow: var(--box-shadow);
+}
+
+.input-group i {
+    position: absolute;
+    bottom: calc(var(--input-height) / 2);
+    right: var(--space-1);
+    transform: translate(0, 50%);
+    color: var(--color-text);
+}
+
+
+/*--------------------------------------------------------
+| Button
+--------------------------------------------------------*/
+button {
+    height: var(--input-height);
+    display: block;
+    width: 100%;
+    background: var(--color-primary);
+    color: var(--color-white);
+    border-radius: var(--input-border-radius);
+    border: none;
+    box-shadow: var(--box-shadow);
+    font-weight: bold;
+    font-size: var(--size-h2);
+}
+
+button:hover {
+    background: var(--color-primary-hover);
+    cursor: pointer;
+}
+
+
+/*--------------------------------------------------------
+| Flex
+--------------------------------------------------------*/
+.flex {
+    display: flex;
+}
+
+.flex > * {
+    flex: 1;
+}
+
+.flex.gap-1 {
+    gap: var(--space-1);
+}
+.flex.gap-2 {
+    gap: var(--space-2);
+}
+/* for example */
+.flex.demo > * {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.flex .item.half {
+    flex: 0.5;
+}
