@@ -1,0 +1,148 @@
+:root {
+    --font: monospace;
+    --color-topbar: #222;
+    --color-background: #eee;
+    --color-sidebar: #444;
+    --color-sidebar-hover: #838383;
+    --color-text: #fefefe;
+    --color-link: #DEDEDE;
+    --color-toggle: #111;
+    --space-0_25: 0.25rem;
+    --space-0_5: 0.5rem;
+    --space-1: 1rem;
+    --space-1_5: 1.5rem;
+    --space-2: 2rem;
+    --space-3: 3rem;
+    --space-4: 4rem;
+    --space-5: 5rem;
+
+    --height-topnav: 4rem;
+    --font-size-button: 1.2rem;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: var(--font);
+    transition: all 0.15s;
+}
+
+body {
+    background: var(--color-background);
+}
+/*--------------------------------------------------------
+| Top nav
+--------------------------------------------------------*/
+.topnav {
+    padding: 0 var(--space-1);
+    background: var(--color-topbar);
+    color: var(--color-text);
+    height: var(--height-topnav);
+    line-height: var(--height-topnav);
+    align-items: center;
+    display: flex;
+}
+
+.topnav .title {
+    flex: 1;
+}
+.topnav .menu {
+    display: none;
+}
+
+
+/*--------------------------------------------------------
+| Sidenav
+--------------------------------------------------------*/
+.sidenav {
+    max-width: 25rem;
+    background: var(--color-sidebar);
+    color: var(--color-text);
+    min-height: calc(100vh - var(--height-topnav));
+    transition: all 0.2s;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidenav .buttons {
+    flex: 1;
+}
+
+.sidenav .title {
+    padding: var(--space-1);
+}
+
+.sidenav.hide {
+    max-width: 5rem;
+    overflow: hidden;
+}
+.sidenav .button .icon {
+    padding: 0 1rem;
+}
+.sidenav.hide .button .text {
+    transition: all 0.1s;
+    opacity: 0;
+}
+.sidenav.hide .title {
+    opacity: 0;
+}
+/*--------------------------------------------------------
+| List
+--------------------------------------------------------*/
+.button {
+    display: flex;
+    gap: var(--space-1);
+    cursor: pointer;
+    user-select: none;
+    padding: var(--space-1);
+    color: var(--color-link);
+    transition: all 0s;
+}
+
+.button:hover {
+    background: var(--color-sidebar-hover);
+}
+
+.button .text {
+    flex: 1;
+    white-space: nowrap;
+    font-size: var(--font-size-button)
+}
+.dropdown + .list {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+
+.dropdown.open +.list {
+    max-height: calc(4rem * var(--link-count));
+}
+.dropdown .icon:last-of-type {
+    transition: all 0.25s;
+}
+.dropdown.open .icon:last-of-type {
+    transform: rotate(-90deg);
+}
+.list .button {
+    padding-left: var(--space-2);
+}
+
+
+/*--------------------------------------------------------
+| Toggle
+--------------------------------------------------------*/
+.sidenav .toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-1);
+    background: var(--color-toggle);
+    transition: all 0.2s;
+}
+
+.sidenav .toggle i {
+    transform: rotate(0deg);
+}
+.sidenav.hide .toggle i {
+    transform: rotate(180deg);
+}
