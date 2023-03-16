@@ -1,0 +1,202 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline slider</title>
+    <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="app">
+        <div class="timeline">
+            <div class="icon-group active" index="0">
+                <div class="icon">
+                    <i class="fa-brands fa-github-alt"></i>
+                </div>
+                <div class="line">
+                    <div class="dot"></div>
+                </div>
+                <div class="text">Github</div>
+            </div>
+            <div class="icon-group" index="1">
+                <div class="icon">
+                    <i class="fa-solid fa-code-fork"></i>
+                </div>
+                <div class="line">
+                    <div class="dot"></div>
+                </div>
+                <div class="text">Fork</div>
+            </div>
+            <div class="icon-group" index="2">
+                <div class="icon">
+                    <i class="fa-solid fa-code-compare"></i>
+                </div>
+                <div class="line">
+                    <div class="dot"></div>
+                </div>
+                <div class="text">Compare</div>
+            </div>
+            <div class="icon-group" index="3">
+                <div class="icon">
+                    <i class="fa-solid fa-code-commit"></i>
+                </div>
+                <div class="line">
+                    <div class="dot"></div>
+                </div>
+                <div class="text">Commit</div>
+            </div>
+            <div class="icon-group" index="4">
+                <div class="icon">
+                    <i class="fa-solid fa-code-pull-request"></i>
+                </div>
+                <div class="line">
+                    <div class="dot"></div>
+                </div>
+                <div class="text">Request</div>
+            </div>
+            <div class="icon-group" index="5">
+                <div class="icon">
+                    <i class="fa-solid fa-code-merge"></i>
+                </div>
+                <div class="line">
+                    <div class="dot"></div>
+                </div>
+                <div class="text">Merge</div>
+            </div>
+            <div class="highlight"></div>
+        </div>
+        <div class="card-holder">
+            <div class="card show card-0">
+                <h2>Github</h2>
+                <br />
+                <p>
+                    Show changes between the working tree and
+                    the index or a tree, changes between the index
+                    and a tree, changes between two trees, changes
+                    resulting from a merge, changes between two
+                    blob objects, or changes between two files on disk.
+                </p>
+            </div>
+            <div class="card card-1">
+                <h2>Fork</h2>
+                <br />
+                <p>
+                    Show changes between the working tree and
+                    the index or a tree, changes between the index
+                    and a tree, changes between two trees, changes
+                    resulting from a merge, changes between two
+                    blob objects, or changes between two files on disk.
+                </p>
+            </div>
+            <div class="card card-2">
+                <h2>Compare</h2>
+                <br />
+                <p>
+                    Show changes between the working tree and
+                    the index or a tree, changes between the index
+                    and a tree, changes between two trees, changes
+                    resulting from a merge, changes between two
+                    blob objects, or changes between two files on disk.
+                </p>
+            </div>
+            <div class="card card-3">
+                <h2>Commit</h2>
+                <br />
+                <p>
+                    Show changes between the working tree and
+                    the index or a tree, changes between the index
+                    and a tree, changes between two trees, changes
+                    resulting from a merge, changes between two
+                    blob objects, or changes between two files on disk.
+                </p>
+            </div>
+            <div class="card card-4">
+                <h2>Request</h2>
+                <br />
+                <p>
+                    Show changes between the working tree and
+                    the index or a tree, changes between the index
+                    and a tree, changes between two trees, changes
+                    resulting from a merge, changes between two
+                    blob objects, or changes between two files on disk.
+                </p>
+            </div>
+            <div class="card card-5">
+                <h2>Merge</h2>
+                <br />
+                <p>
+                    Show changes between the working tree and
+                    the index or a tree, changes between the index
+                    and a tree, changes between two trees, changes
+                    resulting from a merge, changes between two
+                    blob objects, or changes between two files on disk.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="component">icon-group</div>
+    <div class="icon-group">
+        <div class="icon">
+            <i class="fa-solid fa-code-compare"></i>
+        </div>
+        <div class="line">
+            <div class="dot"></div>
+        </div>
+        <div class="text">Compare</div>
+    </div>
+
+    <div class="icon-group active">
+        <div class="icon">
+            <i class="fa-solid fa-code-compare"></i>
+        </div>
+        <div class="line">
+            <div class="dot"></div>
+        </div>
+        <div class="text">Compare</div>
+    </div>
+
+    <div class="component">highlight</div>
+    <div style="position: relative">
+        <div class="highlight"></div>
+    </div>
+
+    <div class="component">timeline</div>
+    <div class="timeline">
+        <div class="item">0</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+
+    <div class="component">card</div>
+    <div class="card-holder">
+        <div class="card show">
+            <h2>Compare</h2>
+            <br />
+            <p>
+                Show changes between the working tree and
+                the index or a tree, changes between the index
+                and a tree, changes between two trees, changes
+                resulting from a merge, changes between two
+                blob objects, or changes between two files on disk.
+            </p>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+
+    <br />
+    <br />
+    <br />
+    <img src="./example.png" alt="" width="100%">
+</body>
+
+</html>

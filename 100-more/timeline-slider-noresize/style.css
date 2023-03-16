@@ -1,0 +1,187 @@
+:root {
+    /* util */
+    --font: monospace;
+    --color-text: #333;
+    --color-highlight: blue;
+    --color-bg: #FEFEFE;
+    --space-0_25: 0.25rem;
+    --space-0_5: 0.5rem;
+    --space-1: 1rem;
+    --space-1_5: 1.5rem;
+    --space-2: 2rem;
+    --space-3: 3rem;
+    --space-4: 4rem;
+    --space-5: 5rem;
+
+    /* features */
+    --width-icon-group: 6rem;
+    --icon-height: 5rem;
+    --icon-font-size: 2rem;
+    --line-height: 0.25rem;
+    --color-line: #DFDFDF;
+    --color-icon-highlight: #ba73f2;
+    --color-dot-border-highlight: #b694d02f;
+    --dot-size: 0.75rem;
+    --card-box-shadow: 0px 3px 10px #bb73f25a;
+    --card-max-width: 40rem;
+    --card-border-radius: 0.25rem;
+}
+
+* {
+    font-family: var(--font);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--color-bg);
+    padding: var(--space-1);
+}
+
+.component {
+    border-bottom: 2px solid #222;
+    border-left: 2px solid #222;
+    margin: 2rem 0em 1rem 0rem;
+    padding: 0.5rem;
+    font-weight: bold;
+}
+
+.app {
+    min-height: 100vh;
+    padding-top: 10rem;
+}
+
+/*-----------------------------------------------
+| Text / Utility
+-----------------------------------------------*/
+
+
+/*-----------------------------------------------
+| Icon Group
+-----------------------------------------------*/
+.icon-group {
+    text-align: center;
+    width: var(--width-icon-group);
+    min-width: var(--width-icon-group);
+    cursor: pointer;
+}
+.icon-group .line {
+    height: var(--line-height);
+    background: var(--color-line);
+    position: relative;
+}
+.icon-group .line .dot {
+    width: var(--dot-size);
+    height: var(--dot-size);
+    outline: 2px solid var(--color-line);
+    border-radius: 100%;
+    background: var(--color-bg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.25s;
+}
+.icon-group .icon {
+    height: var(--icon-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon-group .icon i {
+    font-size: var(--icon-font-size);
+}
+.icon-group .text {
+    padding-top: var(--space-1);
+}
+.icon-group.active .line .dot,
+.icon-group:hover .line .dot {
+    background:  var(--color-icon-highlight);
+    outline-width: 0.5rem;
+    outline-color: var(--color-dot-border-highlight);
+}
+.icon-group.active .icon i,
+.icon-group:hover .icon i {
+    color: var(--color-icon-highlight);
+}
+.icon-group.active .text {
+    font-weight: bolder;
+}
+
+/*-----------------------------------------------
+| Highlight
+-----------------------------------------------*/
+.highlight {
+    width: var(--width-icon-group);
+    height: var(--line-height);
+    background: var(--color-icon-highlight);
+    position: absolute;
+    top: var(--icon-height);
+    left: 0;
+    transition: all 0.25s;
+}
+
+/*-----------------------------------------------
+| Timeline
+-----------------------------------------------*/
+.timeline {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: auto;
+    width: calc(var(--width-icon-group) * 6);
+}
+
+/*-----------------------------------------------
+| Card
+-----------------------------------------------*/
+.card-holder {
+    position: relative;
+    min-height: 20rem;
+}
+.card {
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--card-box-shadow);
+    padding: var(--space-2);
+    width: var(--card-max-width);
+    margin-top: var(--space-2);
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: out 0.25s;
+}
+
+.card.show {
+    animation: in 0.25s;
+    transform: translateX(-50%);
+    opacity: 1;
+}
+
+@keyframes in {
+    0% {
+        transform: translate(-50%, 150px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+    }
+}
+
+@keyframes out {
+    0% {
+        transform: translate(-50%, 0px);
+        opacity: 1;
+    }
+    
+    100% {
+        transform: translate(-50%, 150px);
+        opacity: 0;
+    }
+}
