@@ -1,0 +1,109 @@
+:root {
+   --font: monospace;
+   --color-white: #FEFEFE;
+   --color-purple: #975ab3;
+   --color-hover: rgba(255, 255, 255, 0.1);
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --border-radius: 0.75rem;
+   --highlight-edge-size: 1rem;
+}
+
+* {
+   font-family: var(--font);
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+/*-------------------------------------------------------------
+| Navbar
+-------------------------------------------------------------*/
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: var(--space-1);
+   padding-right: var(--space-1);
+   background: var(--color-purple);
+   color: var(--color-white);
+   padding-top: var(--space-0_5);
+}
+
+.navbar .links {
+   display: flex;
+   position: relative;
+}
+
+.navbar .link {
+   border-radius: var(--border-radius) var(--border-radius) 0 0;
+   display: flex;
+   gap: var(--space-0_5);
+   cursor: pointer;
+   padding: var(--space-1) var(--space-1);
+   position: relative;
+   z-index: 2;
+}
+.navbar .link:hover {
+   background: var(--color-hover);
+}
+.navbar .link.active {
+   color: var(--color-purple);
+}
+
+.navbar .links .highlight {
+   position: absolute;
+   height: 100%;
+   width: 10rem;
+   left: 0;
+   background: rgba(255, 255, 255, 0.25);
+   background: #FFF;
+   z-index: 1;
+   transition: all 0.25s;
+   border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+.navbar .links .highlight .outer{
+   width: 100%;
+   height: var(--highlight-edge-size);
+   position: absolute;
+   bottom: 0;
+}
+
+.navbar .links .highlight .outer .left, 
+.navbar .links .highlight .outer .right {
+   height: var(--highlight-edge-size);
+   width: var(--highlight-edge-size);
+   background: var(--color-white);
+   position: absolute;
+} 
+.navbar .links .highlight .outer .left {
+   left: 0;
+   transform: translateX(-100%);
+}
+.navbar .links .highlight .outer .right {
+   right: 0;
+   transform: translateX(100%);
+}
+
+.navbar .links .highlight .outer .left:after, 
+.navbar .links .highlight .outer .right:after {
+   content: ' ';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   background: var(--color-purple);
+   border-radius: 0 0 var(--border-radius) 0;
+}
+.navbar .links .highlight .outer .right:after {
+   border-radius: 0 0 0 var(--border-radius);
+}
+
+.content {
+   padding: var(--space-1);
+}
