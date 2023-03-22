@@ -1,0 +1,191 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+   <!-- App -->
+   <div class="app">
+      <div class="layout">
+         <div class="left">
+            <div class="component-today">
+               <div class="top">
+                  <div class="day">Tuesday</div>
+                  <div class="date">22 Mar 2023</div>
+                  <div class="location">
+                     <i class="fa-solid fa-location-dot"></i>
+                     <div class="text">Chicago, IL</div>
+                  </div>
+               </div>
+               <div class="bottom">
+                  <div class="icon">
+                     <i class="fa-solid fa-sun"></i>
+                  </div>
+                  <div class="temp"><span class="num">56</span>°F</div>
+                  <div class="type">Sunny</div>
+               </div>
+            </div>
+         </div>
+         <div class="right">
+            <div class="component-details">
+               <div class="line" id="precipitation">
+                  <div class="key">precipitation</div>
+                  <div class="value"><span class="num">0</span> %</div>
+               </div>
+               <div class="line" id="humidity">
+                  <div class="key">humidity</div>
+                  <div class="value"><span class="num">34</span>  %</div>
+               </div>
+               <div class="line" id="wind">
+                  <div class="key">wind</div>
+                  <div class="value"><span class="num">0</span>  mp/h</div>
+               </div>
+            </div>
+            <div class="component-days">
+               <div class="day active" index="0">
+                  <div class="icon">
+                     <i class="fa-solid fa-sun"></i>
+                  </div>
+                  <div class="label">Tue</div>
+                  <div class="temp"><span class="num">50</span>°F</div>
+               </div>
+               <div class="day" index="1">
+                  <div class="icon">
+                     <i class="fa-solid fa-cloud-rain"></i>
+                  </div>
+                  <div class="label">wed</div>
+                  <div class="temp"><span class="num">50</span>°F</div>
+               </div>
+               <div class="day" index="2">
+                  <div class="icon">
+                     <i class="fa-solid fa-cloud"></i>
+                  </div>
+                  <div class="label">thu</div>
+                  <div class="temp"><span class="num">50</span>°F</div>
+               </div>
+               <div class="day" index="3">
+                  <div class="icon">
+                     <i class="fa-solid fa-sun"></i>
+                  </div>
+                  <div class="label">fri</div>
+                  <div class="temp"><span class="num">50</span>°F</div>
+               </div>
+            </div>
+            <button>
+               <i class="fa-solid fa-location-dot"></i>
+               <div class="text">Change location</div>
+            </button>
+         </div>
+      </div>
+   </div>
+
+   <!-- Components -->
+   <div class="component">Text/Utils</div>
+   <h2>Heading 2</h2>
+   <h3>Heading 3</h3>
+   <p>Paragraph text</p>
+
+   <!----------------------------------------------------------------
+   |  Component Today
+   ----------------------------------------------------------------->
+   <div class="component">today</div>
+   <div class="component-today">
+      <div class="top">
+         <div class="day">Tuesday</div>
+         <div class="date">22 Mar 2023</div>
+         <div class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="text">Chicago, IL</div>
+         </div>
+      </div>
+      <div class="bottom">
+         <div class="icon">
+            <i class="fa-solid fa-sun"></i>
+         </div>
+         <div class="temp">50°F</div>
+         <div class="type">Sunny</div>
+      </div>
+   </div>
+
+   <!----------------------------------------------------------------
+   |  Component Details
+   ----------------------------------------------------------------->
+   <div class="component">details</div>
+   <div class="component-details">
+      <div class="line">
+         <div class="key">precipitation</div>
+         <div class="value">0 %</div>
+      </div>
+      <div class="line">
+         <div class="key">humidity</div>
+         <div class="value">34 %</div>
+      </div>
+      <div class="line">
+         <div class="key">wind</div>
+         <div class="value">0 mp/h</div>
+      </div>
+   </div>
+
+   <!----------------------------------------------------------------
+   |  Component Days
+   ----------------------------------------------------------------->
+   <div class="component">days</div>
+   <div class="component-days">
+      <div class="day">
+         <div class="icon">
+            <i class="fa-solid fa-sun"></i>
+         </div>
+         <div class="label">Tue</div>
+         <div class="temp">50°F</div>
+      </div>
+      <div class="day">
+         <div class="icon">
+            <i class="fa-solid fa-cloud-rain"></i>
+         </div>
+         <div class="label">wed</div>
+         <div class="temp">32°F</div>
+      </div>
+      <div class="day">
+         <div class="icon">
+            <i class="fa-solid fa-cloud"></i>
+         </div>
+         <div class="label">thu</div>
+         <div class="temp">45°F</div>
+      </div>
+      <div class="day">
+         <div class="icon">
+            <i class="fa-solid fa-sun"></i>
+         </div>
+         <div class="label">fri</div>
+         <div class="temp">56°F</div>
+      </div>
+   </div>
+
+   <!----------------------------------------------------------------
+   |  Component Button
+   ----------------------------------------------------------------->
+   <div class="component">button</div>
+   <button>
+      <i class="fa-solid fa-location-dot"></i>
+      <div class="text">Change location</div>
+   </button>
+
+   
+   <script src="./script.js"></script>
+   
+   <!-- EXAMPLE -->
+   <br />
+   <br />
+   <img src="./example.png" width="100%" />
+</body>
+
+</html>

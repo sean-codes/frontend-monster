@@ -1,0 +1,225 @@
+:root {
+   --font: 'Roboto Mono', monospace;;
+
+   --color-bg: #333b48;
+   --color-text: #FEFEFE;
+   
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --size-p: 1rem;
+   --size-h1: 3.5rem;
+   --size-h2: 1.75rem;
+   --size-h3: 1.35rem;
+   --shadow-1: 0px 2px 8px rgba(0, 0, 0, 0.15);
+   --shadow-2: 0px 3px 12px rgba(0, 0, 0, 0.15);
+
+   --border-radius: 1.5rem;
+   
+   /* Component Styles */
+   --today-background: url(../_assets/images/bg-chicago.jpeg);
+   --today-background-overlay: linear-gradient(to right,
+   rgba(0, 0, 0, 0.25), 
+   rgba(0, 0, 0, 0));
+   --today-max-width: 25rem;
+   --days-border-radius: 1rem;
+   --days-background: #303846;
+   --days-background-hover: #f1f1f1;
+   --days-color-hover: #222831;
+   --button-background: linear-gradient(to right, #72edf2, #5561e6);
+   --button-background-hover: linear-gradient(to right, #9fe8eb, #838be6);
+   
+   
+   /* App */
+   --app-background: #212730;
+   --app-width: 50rem;
+}
+
+
+html, body {
+   background: var(--color-bg);
+}
+
+body {
+   padding: var(--space-1);
+   color: var(--color-text);
+}
+
+* {
+   box-sizing: border-box;
+   font-family: var(--font);
+   margin: 0;
+   padding: 0;
+}
+
+.component {
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: var(--space-0_5);
+   color: var(--color-text);
+   margin: 2rem 0 1rem 0;
+}
+
+/* App */
+.app {
+   min-height: 100%;
+   display: flex;
+}
+.app .layout {
+   margin: auto;
+   display: flex;
+   width: 100%;
+   background: var(--app-background);
+   border-radius: var(--border-radius);
+   max-width: var(--app-width);
+   box-shadow: var(--shadow-2);
+}
+.app .layout .left {
+   flex: 10;
+   padding: var(--space-0);
+   padding-right: 0;
+}
+.app .layout .left > * {
+   height: 100%;
+   width: 100%;
+   transform: scale(1);
+}
+.app .layout .right {
+   flex: 11;
+   padding: var(--space-2);
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-2);
+}
+@media (max-width: 700px) {
+   .app .layout {
+      flex-direction: column;
+   }
+}
+
+
+
+/*-----------------------------------------------------------------
+| Text / Utils
+-----------------------------------------------------------------*/
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+
+
+
+/*-----------------------------------------------------------------
+| Today
+-----------------------------------------------------------------*/
+.component-today {
+   padding: var(--space-2);
+   background-image: 
+      var(--today-background-overlay),
+      var(--today-background);
+   background-size: cover;
+   background-position: center;
+   border-radius: var(--border-radius) 0 0 var(--border-radius);
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;   
+}
+
+.component-today .day {
+   font-size: var(--size-h2);
+   font-weight: bolder;
+}
+.component-today .date {
+   margin-top: var(--space-0_25);
+}
+.component-today .location {
+   display: flex;
+   margin-top: var(--space-0_5);
+   gap: var(--space-0_5);
+}
+.component-today .icon {
+   font-size: var(--size-h1);
+}
+.component-today .temp {
+   font-size: var(--size-h1);
+   font-weight: bolder;
+}
+.component-today .type {
+   font-size: var(--size-h2);
+   font-weight: bolder;
+   text-transform: capitalize;
+}
+
+/*-----------------------------------------------------------------
+| Details
+-----------------------------------------------------------------*/
+.component-details {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-1);
+}
+.component-details .line {
+   display: flex;
+   justify-content: space-between;
+}
+.component-details .line .key {
+   text-transform: uppercase;
+   font-weight: bolder;
+}
+
+/*-----------------------------------------------------------------
+| Days
+-----------------------------------------------------------------*/
+.component-days {
+   display: flex;
+   border-radius: var(--days-border-radius);
+   background: var(--days-background);
+   font-size: var(--size-h3);
+   box-shadow: var(--shadow-1);
+}
+.component-days .day {
+   border-radius: var(--days-border-radius);
+   padding: var(--space-1);
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-1);
+   flex: 1;
+}
+.component-days .day.active,
+.component-days .day:hover {
+   cursor: pointer;
+   background: var(--days-background-hover);
+   color: var(--days-color-hover);
+}
+.component-days .day .label {
+   text-transform: capitalize;
+}
+.component-days .day .temp {
+   font-weight: bolder;
+}
+
+/*-----------------------------------------------------------------
+| Button
+-----------------------------------------------------------------*/
+button {
+   width: 100%;
+   border-radius: var(--border-radius);
+   padding: var(--space-0_5);
+   display: flex;
+   font-size: var(--size-p);
+   gap: var(--space-1);
+   justify-content: center;
+   font-weight: bolder;
+   border: none;
+   background: var(--button-background);
+   color: var(--color-text);
+   box-shadow: var(--shadow-1);
+}
+button:hover {
+   background: var(--button-background-hover);
+   cursor: pointer;
+}

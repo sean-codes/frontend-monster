@@ -7,8 +7,11 @@
       :root {
          --size-player: 8rem;
       }
-      body {
+      html, body {
          background: #3b3a40;
+         width:100%;
+         height: 100%;
+         overflow: hidden;
       }
       .stars {
          position: absolute;
@@ -32,22 +35,39 @@
          width: var(--size-player);
          height: var(--size-player);
          position: fixed;
+         transform: translate(-50%, -50%);
+         z-index: 10;
       }
       .player img{
          width: 100%;
          image-rendering: pixelated;
       }
-
+      
       .player .animated {
          display: none;
       }
-
+      
       .player.animate .animated {
          display: block;
       }
       .player.animate .still {
          display: none;
       }
+
+      .bullet {
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         transform: translate(-50%, -50%);
+         z-index: 1;
+      }
+      
+      .bullet img {
+         width: 100%;
+         height: auto;
+         image-rendering: pixelated;
+      }
+
    </style>
 </head>
 <body tab-index="0">
@@ -67,66 +87,106 @@
 
    <script>
       var player = document.querySelector('.player')
-      // set the state of the player
-      var rotation = 0
-      var moving = false
+      var x = window.innerWidth / 2
+      var y = window.innerHeight / 2
+      var jets = false
       var turningLeft = false
       var turningRight = false
-      var positionX = window.innerWidth/2
-      var positionY = window.innerHeight/2
+      var shooting = false
+      var rotation = 0
+      var speed = 5
+      var bulletSpeed = 15
+      var turnSpeed = 0.1
+      var bullets = []
+      var shootTimer = 0
+      var shootDelay = 200
+      
+      window.onkeydown = onKeydown
+      window.onkeyup = onKeyup
 
-      document.body.onkeydown = onKeyDown
-      document.body.onkeyup = onKeyUp
-
-      // set change the state based on key up/down
-      function onKeyDown(event) {
-         if (event.key === 'ArrowUp') {
-            player.classList.add('animate')
-            moving = true
-         }
-
-         if (event.key === 'ArrowLeft') {
-            turningLeft = true
-         }
-         if (event.key === 'ArrowRight') {
-            turningRight = true
-         }
+      function onKeydown(e) {
+         if (e.key == 'ArrowUp') { jets = true }
+         if (e.key == 'ArrowLeft') { turningLeft = true }
+         if (e.key == 'ArrowRight') { turningRight = true }
+         if (e.key == ' ') { shooting = true }
       }
-      function onKeyUp(event) {
-         if (event.key === 'ArrowUp') {
-            moving = false
-         }
-         if (event.key === 'ArrowLeft') {
-            turningLeft = false
-         }
-         if (event.key === 'ArrowRight') {
-            turningRight = false
-         }
+      function onKeyup(e) {
+         if (e.key == 'ArrowUp') { jets = false }
+         if (e.key == 'ArrowLeft') { turningLeft = false }
+         if (e.key == 'ArrowRight') { turningRight = false }
+         if (e.key == ' ') { shooting = false }
+
       }
 
-      // call render 60 times a second
-      setInterval(update, 1000/60)
+      update()
+      
+      function fire() {
+         if (Date.now()  - shootTimer > shootDelay) {
+            shootTimer = Date.now()
+            console.log('can shoot')
+            var elementBullet = document.createElement('div')
+            elementBullet.classList.add('bullet')
+            var img = document.createElement('img')
+            img.src = "./bullet.png"
+            elementBullet.append(img)
+            document.body.append(elementBullet)
+            
+            var xStart = x + Math.sin(rotation)*50
+            var yStart = y - Math.cos(rotation)*50
+
+            elementBullet.style.transform = `translate(-50%, -50%) rotate(${rotation}rad)`
+            elementBullet.style.top = yStart + 'px'
+            elementBullet.style.left = xStart + 'px'
+   
+            bullets.push({
+               x: xStart,
+               y: yStart,
+               rotation: rotation,
+               element: elementBullet
+            })
+         }
+
+      }
+
       function update() {
-         // each call update the player position and rotation
-         if (moving) {
-            var moveX = Math.sin(rotation)
-            var moveY = Math.cos(rotation)
-            positionX += moveX * 10
-            positionY -= moveY * 10
+         setTimeout(update, 1000/60)
+
+         for (var bullet of bullets) {
+            var xMove = Math.sin(bullet.rotation) * bulletSpeed
+            var yMove = Math.cos(bullet.rotation) * bulletSpeed
+
+            bullet.x += xMove
+            bullet.y -= yMove
+
+            bullet.element.style.transform = `translate(-50%, -50%) rotate(${bullet.rotation}rad)`
+            bullet.element.style.top = bullet.y + 'px'
+            bullet.element.style.left = bullet.x + 'px'
+         }
+
+         if (shooting) {
+            fire()
+         }
+
+         if (jets) {
+            // move
+            var xMove = Math.sin(rotation) * speed
+            var yMove = Math.cos(rotation) * speed
+            y = y - yMove
+            x = x + xMove
+         }
+
+         if (turningLeft) {
+            rotation -= turnSpeed
          }
 
          if (turningRight) {
-            rotation += 0.075
-         }
-         if (turningLeft) {
-            rotation -= 0.075
+            rotation += turnSpeed
          }
 
-         // update the player on screen
-         player.classList.toggle('animate', moving)
-         player.style.left = `${positionX}px`
-         player.style.top = `${positionY}px`
-         player.style.transform = `rotate(${rotation}rad)`
+         player.style.left = x + 'px'
+         player.style.top = y + 'px'
+         player.style.transform = `translate(-50%, -50%) rotate(${rotation}rad)`
+         player.classList.toggle('animate', jets)
       }
    </script>
 
