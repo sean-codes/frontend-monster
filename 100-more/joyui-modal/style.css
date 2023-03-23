@@ -1,0 +1,189 @@
+:root {
+   --font: monospace;
+   --color-bg: #0a1929;
+   --color-bg-dark: #09090d;
+   --color-blue: #054da7;
+   --color-blue-outline: #0a6bde;
+   --color-white: #FEFEFE;
+   --color-white-dark: #8f8fa3;
+   --color-error: rgb(234, 63, 63);
+   
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --border-radius: 0.5rem;
+   --shadow-1: 0px 7px 15px rgba(0, 0, 0, 0.2);
+   --input-border: 1px solid rgba(255, 255, 255, 0.35);
+   --input-border-error: 1px solid rgba(255, 0, 0, 0.35);
+   --input-outline: 2px solid var(--color-blue-outline);
+   --modal-background: rgba(255, 255, 255, 0);
+   --modal-content-width: 26rem;
+   --modal-content-background: var(--color-bg-dark);
+   --modal-content-border: 1px solid rgba(255, 255, 255, 0.15);
+   --modal-content-border-radius: 0.75rem;
+   --modal-overlay-blur: 10px;
+}
+
+* {
+   font-family: var(--font);
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background: var(--color-bg);
+   color: var(--color-white);
+   padding: var(--space-1);
+}
+
+
+.component {
+   padding: var(--space-0_5);
+   border-bottom: 2px solid var(--color-white);
+   border-left: 2px solid var(--color-white);
+   margin: 2rem 0 1rem 0;
+}
+.app {
+   min-height: 100%;
+}
+
+/*-----------------------------------------------------
+| Text / Utils
+-----------------------------------------------------*/
+.light {
+   color: var(--color-white-dark);
+}
+
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+.m-t-5 { margin-top: 5rem; }
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+
+/*-----------------------------------------------------
+| Buttons
+-----------------------------------------------------*/
+button {
+   background: var(--color-blue);
+   border: none;
+   width: 100%;
+   padding: var(--space-1);
+   color: var(--color-white);
+   font-weight: bold;
+   border-radius: var(--border-radius);
+   cursor: pointer;
+}
+
+button:hover {
+   filter: brightness(110%);
+}
+
+/*-----------------------------------------------------
+| Input Group
+-----------------------------------------------------*/
+.input-group {
+   
+}
+.input-group .error {
+   display: none;
+   color: var(--color-error);
+   margin-top: var(--space-0_5);
+}
+.input-group input {
+   width: 100%;
+   padding: var(--space-1);
+   margin-top: var(--space-0_5);
+   background: none;
+   border: var(--input-border);
+   border-radius: var(--border-radius);
+   color: var(--color-white);
+}
+.input-group input:focus {
+   outline: var(--input-outline);
+}
+
+.input-group.error input {
+   border: var(--input-border-error);
+}
+.input-group.error label {
+   color: var(--color-error);
+}
+.input-group.error .error {
+   display: block;
+}
+
+/*-----------------------------------------------------
+| Modal
+-----------------------------------------------------*/
+.modal {
+   display: none;
+   width: 100%;
+   height: 100%;
+   position: fixed;
+   top: 0;
+   left: 0;
+   align-items: center;
+   justify-content: center;
+   z-index: 98
+}
+.modal.show {
+   display: flex;
+}
+
+.modal .overlay {
+   background: var(--modal-background);
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 99;
+   filter: blur(var(--modal-overlay-blur));
+   backdrop-filter: blur(0px);
+}
+.modal .content {
+   background: var(--modal-content-background);
+   width: var(--modal-content-width);
+   max-width: 100%;
+   z-index: 100;
+   border-radius: var(--modal-content-border-radius);
+   padding: var(--space-1);
+   border: var(--modal-content-border);
+   box-shadow: var(--shadow-1);
+}
+
+/*-----------------------------------------------------
+| Projects
+-----------------------------------------------------*/
+.projects {
+   display: flex;
+   flex-wrap: wrap;
+   margin-left: calc(-1 * var(--space-0_5));
+   margin-right: calc(-1 * var(--space-0_5));
+}
+.projects .project {
+   width: 25%;
+   padding: var(--space-0_5);
+}
+.projects .project .info {
+   background: var(--color-bg-dark);
+   padding: var(--space-1);
+   border-radius: var(--border-radius);
+   height: 100%;
+}
+.projects .project .name {
+   font-weight: bold;
+}
+.projects .project .desc {
+   color: var(--color-white-dark);
+   margin-top: var(--space-0_5);
+}

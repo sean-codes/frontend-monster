@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="app">
+      <button class="togglesModal m-t-5" modal="form-modal">Create new project</button>
+      <div class="modal" id="form-modal">
+         <div class="overlay"></div>
+         <div class="content">
+            <div class="form p-1">
+               <p>Create new project</p>
+               <p class="light m-t-1">Fill in th einformation of the project</p>
+               <div class="input-group m-t-2" id="inputGroupName">
+                  <label for="input">Name</label>
+                  <input type="text">
+                  <div class="error">Please enter a name</div>
+               </div>
+               <div class="input-group m-t-2" id="inputGroupDescription">
+                  <label for="input">Description</label>
+                  <input type="text">
+                  <div class="error">Please enter a description</div>
+               </div>
+               <button class="m-t-2" id="submit">Submit</button>
+            </div>
+         </div>
+      </div>
+      <h2 class="m-t-2">Projects</h2>
+      <div class="projects m-t-1"></div>
+   </div>
+
+   <div class="component">Text/Utils</div>
+   <p>Paragraph text</p>
+   <p class="light">Paragraph text Light</p>
+
+   <div class="component">Button</div>
+   <button>A Button</button>
+
+   <div class="component">Input</div>
+   <div class="input-group">
+      <label for="input">Label</label>
+      <input type="text">
+   </div>
+
+   <div class="component">Form</div>
+   <div class="form">
+      <p>Form Title</p>
+      <p class="light">Paragraph text Light</p>
+      <div class="input-group m-t-1">
+         <label for="input">Label</label>
+         <input type="text">
+      </div>
+      <div class="input-group m-t-1">
+         <label for="input">Label</label>
+         <input type="text">
+      </div>
+      <button class="m-t-1">A Button</button>
+   </div>
+   
+   <div class="component">Modal</div>
+   <button class="togglesModal" modal="example-modal">toggle</button>
+   <div class="modal" id="example-modal">
+      <div class="overlay"></div>
+      <div class="content">
+         <p>This is an example modal</p>
+         <button class="togglesModal m-t-1" modal="example-modal">hide</button>
+      </div>
+   </div>
+   
+   <div class="component">Projects List</div>
+   <div class="projects">
+      <div class="project">
+         <div class="info">
+            <div class="name">name</div>
+            <div class="desc">This is where the description will be.</div>
+         </div>
+      </div>
+      <div class="project">
+         <div class="info">
+            <div class="name">name</div>
+            <div class="desc">This is where the description will be.</div>
+         </div>
+      </div>
+      <div class="project">
+         <div class="info">
+            <div class="name">name</div>
+            <div class="desc">This is where the description will be.</div>
+         </div>
+      </div>
+      <div class="project">
+         <div class="info">
+            <div class="name">name</div>
+            <div class="desc">This is where the description will be.</div>
+         </div>
+      </div>
+      <div class="project">
+         <div class="info">
+            <div class="name">name</div>
+            <div class="desc">This is where the description will be.</div>
+         </div>
+      </div>
+      <div class="project">
+         <div class="info">
+            <div class="name">name</div>
+            <div class="desc">This is where the description will be. This is where the description will be.</div>
+         </div>
+      </div>
+   </div>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <br/>
+   <img src="./example.png" width="100%">
+   <img src="./example2.png" width="100%">
+   <script src="./script.js"></script>
+</body>
+</html>
