@@ -1,0 +1,129 @@
+:root {
+   --font: monospace;
+   --color-primary: #4572f2;
+   --color-background: #69b2f4;
+   --color-delete: #ea4e45;
+   --color-text: #545454;
+   --color-white: #fefefe;
+   --color-shadow: rgba(0, 0, 0, 0.15);
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --size-h2: 1.5rem;
+   --border-radius: 0.5rem;
+   --list-border: 1px solid rgba(0, 0, 0, 0.15);
+   --list-min-height: 30rem;
+   --shadow-1: 0px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+body {
+   background: var(--color-background);
+   color: var(--color-white);
+   padding: var(--space-1);
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   font-family: var(--font);
+}
+
+
+/* App */
+
+.app {
+   min-height: 100%;
+   max-width: 30rem;
+   margin: auto;
+   padding-top: 5rem;
+}
+
+
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+.center { text-align: center; }
+
+/* Components */
+.component {
+   margin: 2rem 0 1rem 0;
+   border-bottom: 3px solid #FEFEFE;
+   border-left: 3px solid #FEFEFE;
+   padding: var(--space-0_5);
+   font-weight: bold;
+}
+/*---------------------------------------------------
+| Input
+---------------------------------------------------*/
+.component-input {
+   background: var(--color-white);
+   display: flex;
+   padding: var(--space-1);
+   box-shadow: var(--shadow-1);
+   border-radius: var(--border-radius);
+}
+.component-input input {
+   flex: 1;
+   display: block;
+   padding: var(--space-0_5);
+   font-size: var(--size-h2);
+   color: var(--color-text);
+   border: none;
+   outline: none;
+}
+.component-input button {
+   background: var(--color-primary);
+   border: none;
+   color: var(--color-white);
+   padding: 0 var(--space-2);
+   border-radius: var(--border-radius);
+   font-size: var(--size-h2);  
+   text-transform: uppercase;
+   cursor: pointer;
+}
+
+.component-input button:hover {
+   filter: brightness(110%);
+}
+/*---------------------------------------------------
+| List
+---------------------------------------------------*/
+.component-list {
+   box-shadow: var(--shadow-1);
+   background: var(--color-white);
+   color: var(--color-text);
+   padding: 0 var(--space-1);
+   min-height: var(--list-min-height);
+   border-radius: var(--border-radius);
+   align-items: center;
+}
+.component-list .item {
+   display: flex;
+   padding: var(--space-1);
+   border-bottom: var(--list-border);
+   line-height: 3rem;
+}
+.component-list .item .text {
+   flex: 1;
+   font-size: var(--size-h2);
+}
+.component-list .item.deleted .text {
+   text-decoration: line-through;
+}
+.component-list .item button {
+   background: none;
+   border: none;
+   color: var(--color-delete);
+   font-size: var(--size-h2);
+   cursor: pointer;
+   width: 3rem;
+   height: 3rem;
+   border-radius: 100%;
+}
+.component-list .item button:hover {
+   filter: brightness(110%);
+   background: var(--color-shadow);
+}
