@@ -1,129 +1,123 @@
 :root {
    --font: monospace;
-   --color-primary: #4572f2;
-   --color-background: #69b2f4;
+   --color-bg: #5f9fef;
+   --color-button: #3278ce;
    --color-delete: #ea4e45;
-   --color-text: #545454;
-   --color-white: #fefefe;
-   --color-shadow: rgba(0, 0, 0, 0.15);
+   --color-white: #ffffff;
+   --color-list-text: rgba(0, 0, 0, 0.5);
+   --shadow-1: 0px 2px 4px rgba(0, 0, 0, 0.25);
    --space-0_5: 0.5rem;
    --space-1: 1rem;
    --space-2: 2rem;
    --space-3: 3rem;
    --space-4: 4rem;
-   --size-h2: 1.5rem;
-   --border-radius: 0.5rem;
-   --list-border: 1px solid rgba(0, 0, 0, 0.15);
-   --list-min-height: 30rem;
-   --shadow-1: 0px 2px 4px rgba(0, 0, 0, 0.15);
+   --space-5: 5rem;
+   --height-input: 4rem;
+   --border-radius: 0.45rem;
+   --list-border: 2px solid var(--color-list-text);
+   --size-h2: 1.25rem;
+   --size-del-button: 2.5rem;
+   --app-width: 35rem;
 }
 
 body {
-   background: var(--color-background);
-   color: var(--color-white);
-   padding: var(--space-1);
+   background: var(--color-bg);
+   padding: var(--space-2);
 }
 
 * {
-   margin: 0;
    padding: 0;
+   margin: 0;
+   box-sizing: border-box;
    font-family: var(--font);
 }
-
-
-/* App */
-
 .app {
    min-height: 100%;
-   max-width: 30rem;
+   max-width: var(--app-width);
    margin: auto;
-   padding-top: 5rem;
 }
 
+.component {
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: var(--space-0_5);
+   color: #FFF;
+   margin: 2rem 0 1rem 0;
+}
+
+button {
+   background: none;
+   border: none;
+}
 
 .m-t-1 { margin-top: 1rem; }
 .m-t-2 { margin-top: 2rem; }
 .m-t-3 { margin-top: 3rem; }
 .m-t-4 { margin-top: 4rem; }
+.m-t-5 { margin-top: 5rem; }
 .center { text-align: center; }
-
-/* Components */
-.component {
-   margin: 2rem 0 1rem 0;
-   border-bottom: 3px solid #FEFEFE;
-   border-left: 3px solid #FEFEFE;
-   padding: var(--space-0_5);
-   font-weight: bold;
-}
-/*---------------------------------------------------
-| Input
----------------------------------------------------*/
+.white { color: var(--color-white); }
+/*-----------------------------------------------------
+| Component Input
+-----------------------------------------------------*/ 
 .component-input {
-   background: var(--color-white);
-   display: flex;
-   padding: var(--space-1);
-   box-shadow: var(--shadow-1);
-   border-radius: var(--border-radius);
+   position: relative;
+   box-shadow: var(--shadow-1);  
 }
+
 .component-input input {
-   flex: 1;
-   display: block;
-   padding: var(--space-0_5);
-   font-size: var(--size-h2);
-   color: var(--color-text);
+   width: 100%;
+   padding: var(--space-1);
    border: none;
-   outline: none;
+   border-radius: var(--border-radius);
+   font-size: var(--size-h2);
 }
 .component-input button {
-   background: var(--color-primary);
-   border: none;
+   position: absolute;
+   right: var(--space-1);
+   top: 50%;
+   transform: translateY(-50%);
+   background: var(--color-button);
+   padding: var(--space-0_5) var(--space-1);;
    color: var(--color-white);
-   padding: 0 var(--space-2);
-   border-radius: var(--border-radius);
-   font-size: var(--size-h2);  
    text-transform: uppercase;
+   font-weight: bolder;
+   border-radius: var(--border-radius);
+   font-size: var(--size-h2);
+}
+.component-input button:hover {
+   filter: brightness(110%);
    cursor: pointer;
 }
 
-.component-input button:hover {
-   filter: brightness(110%);
-}
-/*---------------------------------------------------
-| List
----------------------------------------------------*/
+/*-----------------------------------------------------
+| Component List
+-----------------------------------------------------*/ 
 .component-list {
-   box-shadow: var(--shadow-1);
+   box-shadow: var(--shadow-1);   
+   padding: var(--space-1);
+   font-size: var(--size-h2);
    background: var(--color-white);
-   color: var(--color-text);
-   padding: 0 var(--space-1);
-   min-height: var(--list-min-height);
    border-radius: var(--border-radius);
    align-items: center;
 }
+
 .component-list .item {
    display: flex;
-   padding: var(--space-1);
+   color: var(--color-list-text);
+   justify-content: space-between;
    border-bottom: var(--list-border);
-   line-height: 3rem;
+   line-height: var(--size-del-button);
 }
-.component-list .item .text {
-   flex: 1;
-   font-size: var(--size-h2);
-}
-.component-list .item.deleted .text {
-   text-decoration: line-through;
-}
+
 .component-list .item button {
-   background: none;
-   border: none;
    color: var(--color-delete);
    font-size: var(--size-h2);
-   cursor: pointer;
-   width: 3rem;
-   height: 3rem;
+   width: var(--size-del-button);
+   height: var(--size-del-button);
    border-radius: 100%;
 }
+
 .component-list .item button:hover {
-   filter: brightness(110%);
-   background: var(--color-shadow);
+   background: rgba(0, 0, 0, 0.25);
 }

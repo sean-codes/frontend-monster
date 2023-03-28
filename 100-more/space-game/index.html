@@ -6,6 +6,7 @@
    <style>
       :root {
          --size-player: 8rem;
+         --size-rock: 100px;
       }
       html, body {
          background: #3b3a40;
@@ -59,13 +60,24 @@
          width: 20px;
          height: 20px;
          transform: translate(-50%, -50%);
-         z-index: 1;
+         z-index: 5;
       }
       
       .bullet img {
          width: 100%;
          height: auto;
          image-rendering: pixelated;
+      }
+
+      .rock {
+         position: absolute;
+         transform: translate(-50%, -50%);
+         width: var(--size-rock);
+         height: var(--size-rock);
+         background:#222;
+         border: 6px solid #000;
+         border-radius: 100%;
+         z-index: 2;
       }
 
    </style>
@@ -100,6 +112,31 @@
       var bullets = []
       var shootTimer = 0
       var shootDelay = 200
+      var rocks = []
+      var bulletId = 0
+      var rockId = 0
+
+      createRock(0, 0)
+      createRock(window.innerWidth, 0)
+      createRock(0, window.innerHeight)
+      createRock(window.innerWidth, window.innerHeight)
+      
+      function createRock(x, y, size = 300) {
+         rockId += 1
+         var element = document.createElement('rock')
+         element.classList.add('rock')
+         document.body.append(element)
+
+         rocks.push({
+            x: x, 
+            y: y,
+            size: size,
+            rotation: Math.random() * (Math.PI*2),
+            speed: 500 / size,
+            element: element,
+            rockId: rockId
+         })
+      }
       
       window.onkeydown = onKeydown
       window.onkeyup = onKeyup
@@ -122,6 +159,7 @@
       
       function fire() {
          if (Date.now()  - shootTimer > shootDelay) {
+            bulletId += 1
             shootTimer = Date.now()
             console.log('can shoot')
             var elementBullet = document.createElement('div')
@@ -139,6 +177,7 @@
             elementBullet.style.left = xStart + 'px'
    
             bullets.push({
+               id: bulletId,
                x: xStart,
                y: yStart,
                rotation: rotation,
@@ -161,6 +200,48 @@
             bullet.element.style.transform = `translate(-50%, -50%) rotate(${bullet.rotation}rad)`
             bullet.element.style.top = bullet.y + 'px'
             bullet.element.style.left = bullet.x + 'px'
+         }
+
+         for (var rock of rocks) {
+            var xMove = Math.sin(rock.rotation) * rock.speed
+            var yMove = Math.cos(rock.rotation) * rock.speed
+
+            rock.x += xMove
+            rock.y -= yMove
+
+            if (rock.x > window.innerWidth + rock.size) { rock.x = -rock.size }
+            if (rock.x < -rock.size) { rock.x = window.innerWidth + rock.size }
+            if (rock.y > window.innerHeight + rock.size) { rock.y = -rock.size }
+            if (rock.y < -rock.size) { rock.y = window.innerHeight + rock.size }
+
+            rock.element.style.setProperty(`--size-rock`, `${rock.size}px`)
+            rock.element.style.left = rock.x + 'px'
+            rock.element.style.top = rock.y + 'px'
+
+            for (var bullet of bullets) {
+               var a2 = Math.pow(bullet.x - rock.x, 2)
+               var b2 = Math.pow(bullet.y - rock.y, 2)
+               var distance = Math.sqrt(a2 + b2)
+
+               var hasHit = distance < rock.size/2
+               if (hasHit) {
+                  // remove bullet
+                  bullets = bullets.filter(b => b.id !== bullet.id)
+                  bullet.element.remove()
+
+                  rock.element.remove()
+                  rocks = rocks.filter(r => r.rockId !== rock.rockId)
+                  console.log(rocks.length)
+                  rock.element.remove()
+                  if (rock.size > 150) {
+                     createRock(rock.x, rock.y, rock.size/2)
+                     createRock(rock.x, rock.y, rock.size/2)
+                  }
+
+                  // exit
+                  break
+               }
+            }
          }
 
          if (shooting) {
