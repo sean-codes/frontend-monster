@@ -1,0 +1,191 @@
+:root {
+   --font: monospace;
+   --color-primary: rgb(144, 92, 247);
+   --color-text-primary: #FEFEFE;
+   --color-grey: rgba(0, 0, 0, 0.05);
+   --color-white: #FFF;
+   --color-text: #444;
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --shadow-1: 0px 3px 6px rgba(0, 0, 0, 0.15);
+   --shadow-2: 0px 8px 16px rgba(0, 0, 0, 0.1);
+
+   /* App */
+   --list-item-size: 8rem;
+   --list-item-hover-outline: 2px solid var(--color-primary);
+}
+
+* {
+   font-family: var(--font);
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+   color: var(--color-text);
+}
+
+body {
+   padding: var(--space-1);
+}
+
+.component {
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: var(--space-0_5);
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   min-height: 100vh;
+   max-width: 40rem;
+   margin: auto;
+}
+
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   pointer-events: none;
+}
+
+.modal.show {
+   pointer-events: all;
+}
+
+.modal .overlay {
+   pointer-events: none;
+   opacity: 0;
+   width: 100%;
+   height: 100%;
+   filter: blur(5px);
+   backdrop-filter: blur(0);
+   background: rgba(0, 0, 0, 0.015);
+   transition-delay: 0.2s;
+}
+.modal.show .overlay {
+   opacity: 1;
+   pointer-events: all;
+   transition-delay: 0s;
+}
+
+.modal .content {
+   transition: all 0.2s;
+   position: absolute;
+   max-width: 40rem;
+   width: 100%;
+   top: 50%;
+   left: 50%;
+   opacity: 0;
+   transform: translate(-50%, -100%);
+   background: var(--color-white);
+   pointer-events: none;
+}
+.modal.show .content {
+   transform: translate(-50%, -50%);
+   pointer-events: all;
+   opacity: 1;
+}
+
+/*--------------------------------------------------------------
+| Button / Utilities
+--------------------------------------------------------------*/
+button {
+   padding: var(--space-0_5) var(--space-1);
+   border: none;
+   background: var(--color-primary);
+   color: var(--color-text-primary);
+   font-weight: bolder;
+   box-shadow: var(--shadow-1);
+}
+button:hover {
+   filter: brightness(110%);
+   cursor: pointer;
+}
+
+button.big {
+   padding: var(--space-0_75) var(--space-2);
+}
+
+.m-t-1 { margin-top : 1rem; }
+.m-t-2 { margin-top : 2rem; }
+
+/*--------------------------------------------------------------
+| Document List
+--------------------------------------------------------------*/
+.component-list {
+   display: flex;
+   gap: var(--space-2);
+   flex-wrap: wrap;
+}
+
+.component-list .item {
+   width: var(--list-item-size);   
+   height: var(--list-item-size);   
+   box-shadow: var(--shadow-1);
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-end;
+   cursor: pointer;
+}
+.component-list .item:hover {
+   outline: var(--list-item-hover-outline);
+}
+
+.component-list .item .title {
+   padding: var(--space-1);
+   background: var(--color-grey);
+   text-align: center;
+   text-overflow: ellipsis;
+   max-width: 100%;
+   white-space: nowrap;
+}
+
+
+/*--------------------------------------------------------------
+| Editor
+--------------------------------------------------------------*/
+.component-editor {
+   box-shadow: var(--shadow-2);
+   padding: var(--space-1);
+}
+.component-editor .top {
+   display: flex;
+   align-items: center;
+   gap: var(--space-1);
+   padding-bottom: var(--space-1);
+}
+.component-editor .top .input-group {
+   flex-grow: 1;
+}
+.component-editor .top .input-group label {
+   font-weight: bold;
+   width: 100%;
+}
+.component-editor .top .input-group input {
+   outline: none;
+   width: 100%;
+   border: none;
+   margin-top: var(--space-0_25);
+}
+.component-editor .bottom {
+   border-top: 2px solid var(--color-grey);
+   
+} 
+
+.component-editor .bottom textarea {
+   width: 100%;
+   resize: none;
+   margin-top: var(--space-1);
+   border: none;
+   outline: none;
+   height: 50vh;
+}

@@ -1,0 +1,106 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="app">
+      <h1>Notes Editor</h1>   
+      <div class="m-t-1">
+         <button class="big" id="buttonCreate">Create New</button>
+      </div>
+
+      <div class="component-list m-t-2">
+         <div class="item">
+            <div class="title">Title 1</div>
+         </div>
+         <div class="item">
+            <div class="title">Title 2</div>
+         </div>
+         <div class="item">
+            <div class="title">Title 3</div>
+         </div>
+         <div class="item">
+            <div class="title">Title 4</div>
+         </div>
+         <div class="item">
+            <div class="title">Title 1</div>
+         </div>
+      </div>
+
+      <div class="modal">
+         <div class="overlay"></div>
+         <div class="content">
+            <div class="component-editor">
+               <div class="top">
+                  <div class="input-group">
+                     <label for="editorTitle">Title:</label>
+                     <input tabindex="1" type="text" id="editorTitle">
+                  </div>
+                  <div class="buttons">
+                     <button tabindex="4" id="buttonDelete">Delete</button>
+                     <button tabindex="3" id="buttonSave">Save and Close</button>
+                  </div> 
+               </div>
+               <div class="bottom">
+                  <textarea tabindex="2"  name="" id="" rows="10">A textarea</textarea>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   
+   <div class="component">Button / Utilities</div>
+   <button>A button</button>
+
+   
+   <div class="component">Document List</div>
+   <div class="component-list">
+      <div class="item">
+         <div class="title">Title 1</div>
+      </div>
+      <div class="item">
+         <div class="title">Title 2</div>
+      </div>
+      <div class="item">
+         <div class="title">Title 3</div>
+      </div>
+      <div class="item">
+         <div class="title">Title 4</div>
+      </div>
+      <div class="item">
+         <div class="title">Title 1</div>
+      </div>
+   </div>
+   
+   
+   <div class="component">Editor</div>
+   <div class="component-editor">
+      <div class="top">
+         <div class="input-group">
+            <label for="editorTitle">Title:</label>
+            <input type="text" id="editorTitle">
+         </div>
+         <div class="buttons">
+            <button>Delete</button>
+            <button>Save and Close</button>
+         </div> 
+      </div>
+      <div class="bottom">
+         <textarea name="" id="" rows="10">A textarea</textarea>
+      </div>
+   </div>
+   
+   <script src="./script.js"></script>
+   <br />
+   <br />
+   <br />
+   <br />
+   <img src="./example.png" width="100%">
+   <img src="./example2.png" width="100%">
+</body>
+</html>
