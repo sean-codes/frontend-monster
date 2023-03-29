@@ -1,0 +1,231 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css">
+</head>
+<body>
+   <div class="app">
+      <h1>Payment Details</h1>
+      <h3 class="purple m-t-3">Your saved payment methods</h3>
+      <div class="component-list m-t-2">
+         <div class="card">
+            <div class="card-icon">
+               <img src="../_assets/images/icon-mastercard.png" alt="">
+            </div>
+            <div class="card-info">
+               <div class="card-num">**** **** **** 4298</div>
+               <div class="card-exp">Expiration 09/26</div>
+            </div>
+            <div class="card-actions">
+               <button class="">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  Edit
+               </button>
+               <button class="danger">
+                  <i class="fa-solid fa-trash"></i>
+                  Delete
+               </button>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-icon">
+               <img src="../_assets/images/icon-visa.png" alt="">
+            </div>
+            <div class="card-info">
+               <div class="card-num">**** **** **** 4298</div>
+               <div class="card-exp">Expiration 09/26</div>
+            </div>
+            <div class="card-actions">
+               <button class="">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  Edit
+               </button>
+               <button class="danger">
+                  <i class="fa-solid fa-trash"></i>
+                  Delete
+               </button>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-icon">
+               <img src="../_assets/images/icon-amex.svg" alt="">
+            </div>
+            <div class="card-info">
+               <div class="card-num">**** **** **** 4298</div>
+               <div class="card-exp">Expiration 09/26</div>
+            </div>
+            <div class="card-actions">
+               <button class="">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  Edit
+               </button>
+               <button class="danger">
+                  <i class="fa-solid fa-trash"></i>
+                  Delete
+               </button>
+            </div>
+         </div>
+         <div class="card">
+            <div class="card-icon">
+               <img src="../_assets/images/icon-amex.svg" alt="">
+            </div>
+            <div class="card-info">
+               <div class="card-num">**** **** **** 4298</div>
+               <div class="card-exp">Expiration 09/26</div>
+            </div>
+            <div class="card-actions">
+               <button class="">
+                  <i class="fa-solid fa-pen-to-square"></i>
+                  Edit
+               </button>
+               <button class="danger">
+                  <i class="fa-solid fa-trash"></i>
+                  Delete
+               </button>
+            </div>
+         </div>
+      </div>
+      <button class="primary m-t-2" id="buttonAddNew">
+         <i class="fa-solid fa-plus"></i>
+         Add new payment method
+      </button>
+
+      <div class="modal">
+         <div class="overlay"></div>
+         <div class="content">
+            <h2>Payment method</h2>
+               <div class="input-group m-t-2">
+                  <label for="">Card Number</label>
+                  <input type="text" placeholder="Enter a number">
+                  <div class="error">Error message</div>
+               </div>
+               <div class="input-group m-t-1">
+                  <label for="">Expiration month and year</label>
+                  <input type="month" placeholder="01/01/2024">
+                  <div class="error">Error message</div>
+            </div>
+            <div class="input-group m-t-1">
+               <label for="">Card Type</label>
+               <select>
+                  <option value="">Select a card type</option>
+                  <option value="visa">Visa</option>
+                  <option value="master">Mastercard</option>
+                  <option value="amex">Amex</option>
+               </select>
+               <div class="error">Error message</div>
+            </div>
+            <div class="actions m-t-2">
+               <button id="buttonCancel">Cancel</button>
+               <button class="primary">Save</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="component">Utils</div>
+   <h1>Heading 1</h1>
+   <h3>Heading 3</h3>
+   <h3 class="purple">Heading 3</h3>
+   <p>Paragraph text</p>
+   <p class="grey">Paragraph text</p>
+   <button>
+      <i class="fa-solid fa-plus"></i>
+      default
+   </button>
+   <button class="danger">danger</button>
+   <button class="primary">Add payment</button>
+
+
+   <div class="component">Utilities</div>
+   <h2>Heading 2</h2>
+   <h3 class="purple">Heading 3 Purple</h3>
+   <p>Paragraph text</p>
+   <p class="purple">Paragraph text purple</p>
+   <p class="light">Paragraph text light</p>
+   <button>Normal button</button>
+   <button class="danger">Red button</button>
+   <button class="primary">
+      <i class="fa-solid fa-plus"></i>
+      Primary button
+   </button>
+
+   <div class="component">List</div>
+   <div class="component-list">
+      <div class="card">
+         <div class="card-icon">
+            <img src="../_assets/images/icon-mastercard.png" alt="">
+         </div>
+         <div class="card-info">
+            <div class="card-num">**** **** **** 4298</div>
+            <div class="card-exp">Expiration 09/26</div>
+         </div>
+         <div class="card-actions">
+            <button class="">
+               <i class="fa-solid fa-pen-to-square"></i>
+               Edit
+            </button>
+            <button class="danger">
+               <i class="fa-solid fa-trash"></i>
+               Delete
+            </button>
+         </div>
+      </div>
+   </div>
+   
+   <div class="component">Inputs</div>
+   <div class="input-group">
+      <label for="">Card Number</label>
+      <input type="text" placeholder="Enter a number">
+      <div class="error">Error message</div>
+   </div>
+   <br />
+   <br />
+   <div class="input-group">
+      <label for="">Expiration month and year</label>
+      <input type="month" placeholder="01/01/2024">
+      <div class="error">Error message</div>
+   </div>
+   <br />
+   <br />
+   <div class="input-group">
+      <label for="">Card Type</label>
+      <select>
+         <option value="">Select a card type</option>
+         <option value="visa">Visa</option>
+         <option value="master">Mastercard</option>
+         <option value="amex">Amex</option>
+      </select>
+      <div class="error">Error message</div>
+   </div>
+   <br />
+   <br />
+   <p>With errors</p>
+   <br />
+   <div class="input-group error">
+      <label for="">Card Number</label>
+      <input type="text" placeholder="Enter a number">
+      <div class="error">Error message</div>
+   </div>
+   <br>
+   <div class="input-group error">
+      <label for="">Card Type</label>
+      <select>
+         <option value="">Select a card type</option>
+         <option value="visa">Visa</option>
+         <option value="master">Mastercard</option>
+         <option value="amex">Amex</option>
+      </select>
+      <div class="error">Error message</div>
+   </div>
+   
+   <br />
+   <br />
+   <br />
+   <img src="./example.png" width="100%">
+   <!-- <img src="./example2.png" width="100%"> -->
+   <script src="./script.js"></script>
+</body>
+</html>

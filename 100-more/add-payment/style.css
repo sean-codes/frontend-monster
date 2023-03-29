@@ -1,0 +1,216 @@
+:root {
+   --font: monospace;
+   
+   --color-bg: #0d0f18;
+   --color-bg-2: #1e212e;
+   --color-green: #5ac169;
+   --color-purple: #636ae9;
+   --color-grey: #8e9094;
+   --color-red: #d7504a;
+   --color-white: #FEFEFE;
+
+   /* Util */
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-0_75: 0.75rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --border-radius: 0.5rem;
+   --shadow-1: 0px 4px 14px rgba(0, 0, 0, 0.25);
+
+   /* Component  */
+   --list-card-icon-size: 6rem;
+
+   /* App */
+   --app-width: 50rem;
+   --modal-content-width: 40rem;
+   --modal-background: rgba(255, 255, 255, 0.1);
+}
+
+body {
+   background: var(--color-bg);
+   padding: var(--space-1);
+   color: var(--color-white);
+}
+
+* {
+   font-family: var(--font);
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+.component {
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: 0.5rem;
+   color: #FFF;
+   margin: 2rem 0 1rem 0;
+}
+
+
+.app {
+   min-height: 100%;
+   max-width: var(--app-width);
+   margin: auto;
+   margin-top: var(--space-5);
+}
+
+.modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: none;
+}
+
+.modal .overlay {
+   position: absolute;
+   top: -10%;
+   left: -10%;
+   width: 120%;
+   height: 120%;
+   background: var(--modal-background);
+   backdrop-filter: blur(10px);
+   filter: blur(10px);
+}
+.modal .content {
+   background: var(--color-bg-2);
+   padding: var(--space-2);
+   border-radius: var(--border-radius);
+   max-width: var(--modal-content-width);
+   margin: auto;
+   margin-top: var(--space-4);
+   z-index: 1;
+   position: relative;
+   box-shadow: var(--shadow-1);
+}
+
+.modal .content .actions {
+   display: flex;
+   justify-content: flex-end;
+   gap: var(--space-1);
+}
+
+.modal.show {
+   display: block;
+}
+
+/*-------------------------------------------------------------
+| Utilities
+-------------------------------------------------------------*/
+.m-t-1 { margin-top: 1rem; }
+.m-t-2 { margin-top: 2rem; }
+.m-t-3 { margin-top: 3rem; }
+.m-t-4 { margin-top: 4rem; }
+.m-t-5 { margin-top: 5rem; }
+
+.purple {
+   color: var(--color-purple);
+}
+
+.light {
+   color: var(--color-grey);
+}
+
+
+button {
+   padding: var(--space-1) var(--space-2);
+   background: none;
+   border: 1px solid var(--color-grey);
+   border-radius: var(--border-radius);
+   color: var(--color-grey);
+}
+
+button.danger {
+   color: var(--color-red);
+   border: 1px solid var(--color-red);
+}
+
+button.primary {
+   border: none;
+   background: var(--color-purple);
+   color: var(--color-white);
+}
+
+button:hover {
+   filter: brightness(120%);
+   cursor: pointer;
+}
+
+/*-------------------------------------------------------------
+| List
+-------------------------------------------------------------*/
+.component-list {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-1);  
+}
+
+.component-list .card {
+   background: var(--color-bg-2);
+   border-radius: var(--border-radius);
+   display: flex;
+   gap: var(--space-2);
+   align-items: center;
+   padding: var(--space-2);
+}
+.component-list .card .card-info {
+   flex: 1;
+}
+.component-list .card .card-info .card-exp {
+   margin-top: var(--space-0_5);
+}
+.component-list .card .card-icon {
+   width: var(--list-card-icon-size);
+}
+.component-list .card .card-icon img {
+   width: 100%;
+}
+.component-list .card .card-actions {
+   display: flex;
+   gap: var(--space-1);
+}
+
+
+/*-------------------------------------------------------------
+| Input group
+-------------------------------------------------------------*/
+.input-group {
+   
+}
+.input-group label {
+   padding-bottom: var(--space-0_5);
+   display: block;
+}
+
+.input-group input,
+.input-group select{
+   display: block;
+   width: 100%;
+   background: none;
+   border: 1px solid var(--color-grey);
+   border-radius: var(--border-radius);
+   padding: var(--space-1);
+   color: var(--color-white);
+}
+.input-group .error {
+   color: var(--color-red);
+   padding-top: var(--space-0_5);
+   display: none;
+}
+
+.input-group.error .error {
+   display: block;
+}
+.input-group.error input,
+.input-group.error select {
+   border-color: var(--color-red);
+}
+
