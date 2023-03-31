@@ -1,142 +1,107 @@
 :root {
    --font: monospace;
-   
    --color-bg: #0d0f18;
-   --color-bg-2: #1e212e;
-   --color-green: #5ac169;
-   --color-purple: #636ae9;
-   --color-grey: #8e9094;
-   --color-red: #d7504a;
+   --color-bg-2: #161821;
+   --color-red: #d8514a;
    --color-white: #FEFEFE;
+   --color-white-2: #f2f2f2;
+   --color-grey: #a6a8ab;
+   --color-primary: #636ae9;
 
-   /* Util */
    --space-0_25: 0.25rem;
    --space-0_5: 0.5rem;
-   --space-0_75: 0.75rem;
    --space-1: 1rem;
    --space-1_5: 1.5rem;
    --space-2: 2rem;
    --space-3: 3rem;
    --space-4: 4rem;
    --space-5: 5rem;
-
    --border-radius: 0.5rem;
-   --shadow-1: 0px 4px 14px rgba(0, 0, 0, 0.25);
+   --shadow-1: 0px 4px 10px rgba(0, 0, 0, 0.1);
 
-   /* Component  */
-   --list-card-icon-size: 6rem;
-
-   /* App */
-   --app-width: 50rem;
-   --modal-content-width: 40rem;
-   --modal-background: rgba(255, 255, 255, 0.1);
-}
-
-body {
-   background: var(--color-bg);
-   padding: var(--space-1);
-   color: var(--color-white);
+   /* Component / App */
+   --card-image-width: 7rem;
+   --modal-width: 40rem;
 }
 
 * {
-   font-family: var(--font);
    margin: 0;
    padding: 0;
    box-sizing: border-box;
+   font-family: var(--font);
 }
-
-.component {
-   border-bottom: 2px solid #FFF;
-   border-left: 2px solid #FFF;
-   padding: 0.5rem;
-   color: #FFF;
-   margin: 2rem 0 1rem 0;
+body {
+   background: var(--color-bg);
+   color: var(--color-white);
+   padding: var(--space-1);
 }
-
 
 .app {
-   min-height: 100%;
-   max-width: var(--app-width);
+   min-height: 100vh;
+   max-width: 50rem;
    margin: auto;
-   margin-top: var(--space-5);
 }
 
-.modal {
+.modal, .modal .overlay {
    position: fixed;
    top: 0;
    left: 0;
    width: 100%;
    height: 100%;
-   display: none;
 }
 
 .modal .overlay {
-   position: absolute;
-   top: -10%;
-   left: -10%;
-   width: 120%;
-   height: 120%;
-   background: var(--modal-background);
-   backdrop-filter: blur(10px);
+   background: rgba(255, 255, 255, 0.1);
    filter: blur(10px);
+   backdrop-filter: blur(0);
 }
+
 .modal .content {
+   position: relative;
+   max-width: var(--modal-width);
+   margin: auto;
+   margin-top: var(--space-5);
    background: var(--color-bg-2);
    padding: var(--space-2);
    border-radius: var(--border-radius);
-   max-width: var(--modal-content-width);
-   margin: auto;
-   margin-top: var(--space-4);
    z-index: 1;
-   position: relative;
    box-shadow: var(--shadow-1);
 }
 
 .modal .content .actions {
-   display: flex;
-   justify-content: flex-end;
-   gap: var(--space-1);
+   text-align: right;
 }
 
-.modal.show {
-   display: block;
+.modal.hide {
+   display: none;
 }
 
-/*-------------------------------------------------------------
-| Utilities
--------------------------------------------------------------*/
-.m-t-1 { margin-top: 1rem; }
-.m-t-2 { margin-top: 2rem; }
-.m-t-3 { margin-top: 3rem; }
-.m-t-4 { margin-top: 4rem; }
-.m-t-5 { margin-top: 5rem; }
-
+/*--------------------------------------------------------
+| Text / Utility
+--------------------------------------------------------*/
 .purple {
-   color: var(--color-purple);
+   color: var(--color-primary);
 }
-
-.light {
+.grey {
    color: var(--color-grey);
 }
-
 
 button {
    padding: var(--space-1) var(--space-2);
    background: none;
    border: 1px solid var(--color-grey);
+   color: var(--color-white-2);
    border-radius: var(--border-radius);
-   color: var(--color-grey);
 }
 
-button.danger {
+button.red {
+   border-color: var(--color-red);
    color: var(--color-red);
-   border: 1px solid var(--color-red);
 }
 
 button.primary {
+   background: var(--color-primary);
    border: none;
-   background: var(--color-purple);
-   color: var(--color-white);
 }
 
 button:hover {
@@ -144,73 +109,72 @@ button:hover {
    cursor: pointer;
 }
 
-/*-------------------------------------------------------------
-| List
--------------------------------------------------------------*/
-.component-list {
+.m-t-1 { margin-top: var(--space-1); }
+.m-t-2 { margin-top: var(--space-2); }
+.m-t-3 { margin-top: var(--space-3); }
+.m-t-4 { margin-top: var(--space-4); }
+.m-t-5 { margin-top: var(--space-5); }
+
+/*--------------------------------------------------------
+| Cards
+--------------------------------------------------------*/
+.cards {
    display: flex;
    flex-direction: column;
-   gap: var(--space-1);  
-}
-
-.component-list .card {
-   background: var(--color-bg-2);
-   border-radius: var(--border-radius);
-   display: flex;
-   gap: var(--space-2);
-   align-items: center;
-   padding: var(--space-2);
-}
-.component-list .card .card-info {
-   flex: 1;
-}
-.component-list .card .card-info .card-exp {
-   margin-top: var(--space-0_5);
-}
-.component-list .card .card-icon {
-   width: var(--list-card-icon-size);
-}
-.component-list .card .card-icon img {
-   width: 100%;
-}
-.component-list .card .card-actions {
-   display: flex;
    gap: var(--space-1);
 }
-
-
-/*-------------------------------------------------------------
-| Input group
--------------------------------------------------------------*/
-.input-group {
-   
+.cards .card {
+   display: flex;
+   justify-content: space-between;
+   gap: var(--space-1);
+   align-items: center;
+   background: var(--color-bg-2);
+   padding: var(--space-1);
+   border-radius: var(--border-radius);
 }
+.cards .card .image {
+   width: var(--card-image-width);
+}
+.cards .card .text {
+   flex: 1;
+}
+.cards .card .text .card-num {
+   font-weight: bolder;
+}
+.cards .card .text .card-exp {
+   margin-top: var(--space-0_5);
+   color: var(--color-grey);
+}
+
+
+/*--------------------------------------------------------
+| Input Group
+--------------------------------------------------------*/
 .input-group label {
-   padding-bottom: var(--space-0_5);
    display: block;
 }
-
 .input-group input,
-.input-group select{
-   display: block;
+.input-group select {
    width: 100%;
+   padding: var(--space-1);
    background: none;
    border: 1px solid var(--color-grey);
    border-radius: var(--border-radius);
-   padding: var(--space-1);
+   margin-top: var(--space-1);
    color: var(--color-white);
 }
 .input-group .error {
+   margin-top: var(--space-0_5);
    color: var(--color-red);
-   padding-top: var(--space-0_5);
    display: none;
 }
 
 .input-group.error .error {
    display: block;
 }
-.input-group.error input,
-.input-group.error select {
+.input-group.error label {
+   color: var(--color-red);
+}
+.input-group.error input {
    border-color: var(--color-red);
 }
-
