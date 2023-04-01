@@ -1,0 +1,55 @@
+* {
+   padding: 0;
+   margin:0;
+   box-sizing: border-box;
+   font-family: monospace;
+}
+
+body {
+   background: #222;
+   color: #FFF;
+}
+
+.container {
+   max-width: 45rem;
+   margin: 5rem auto;
+   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.acc .title {
+   background: #444;
+   font-weight: bold;
+   padding: 1rem;
+   position: relative;
+   user-select: none;
+   cursor: pointer;
+   
+}
+.acc .title:hover {
+   filter: brightness(110%);
+}
+
+.acc .title .icon {
+   position: absolute;
+   top: 50%;
+   right: 1rem;
+   transform: translateY(-50%) rotate(45deg);
+   font-size: 1.25rem;
+   transition: all 0.25s;
+}
+
+.acc .content {
+   padding: 1rem;
+   background: #465;
+   max-height: 10rem;
+   overflow: hidden;
+   transition: all 0.25s;
+}
+.acc.closed .content {
+   padding: 0 1rem;
+   max-height: 0;
+}
+.acc.closed .title .icon {
+   transform: translateY(-50%) rotate(0deg);
+
+}
