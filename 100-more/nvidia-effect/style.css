@@ -1,0 +1,115 @@
+:root {
+   --font: monospace;
+   --color-text: #FEFEFE;
+   --color-bg: #24262b;
+   --color-green: rgba(68, 102, 85, 0.496);
+   --color-board: #111;
+   --chip-width: 10rem;
+   --chip-height: 8rem;
+   --chip-depth: 3rem;
+   --chip-color: var(--color-green);
+   --chip-border: 
+      inset 0px 0px 0px 3px #9cfd6b89,
+      inset 0px 0px 10px 3px #9cfd6b89;
+   --chip-background: #85d27b9d;
+   --chip-unit-color: transparent;
+   --chip-unit-color-lit: #b7f399;
+   --chip-rotate-z: 0deg;
+}
+
+body {
+   color: var(--color-text);
+   font-family: var(--font);
+   background: var(--color-bg);
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.board {
+   max-width: 10rem;
+   margin: 5rem auto;
+}
+.chip {
+   width: var(--chip-width);
+   height: var(--chip-height);
+   position: relative;
+   
+   transform: translateZ(20px) rotateX(60deg) rotateZ(var(--chip-rotate-z));
+   transform-style: preserve-3d;
+   perspective: 10000px;
+   backface-visibility: hidden;
+   box-shadow: var(--chip-border);
+   transition: all 0.01s;
+}
+
+.chip .side {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   box-shadow: var(--chip-border);
+   background: var(--chip-background);
+   border-radius: 1px;
+}
+
+.chip .side-t {
+   ccbackground: rgba(112, 246, 130, 0.5);
+}
+
+.chip .side-bl {
+   width: var(--chip-depth);
+   left: 100%;
+   transform: rotateY(90deg);
+   transform-origin: 0% 100%;
+   ccbackground: none;
+}
+.chip .side-br {
+   height: var(--chip-depth);
+   bottom: 100%;
+   top: unset;
+   transform-origin: 0% 100%;
+   transform: rotateX(90deg);
+   ccbackground: none;
+}
+.chip .side-fr {
+   height: var(--chip-depth);
+   z-index: 10;
+   top: 100%;
+   transform-origin: 50% 0;
+   transform: rotateX(-90deg) translateX(-0.1px) translateY(-0.1px);
+   ccbackground: rgba(112, 246, 130, 0.5);
+}
+.chip .side-fl {
+   width: var(--chip-depth);
+   left: unset;
+   right: 100%;
+   transform-origin: 100% 0;
+   transform: rotateY(-90deg) translateY(0.1px) translateX(0.1px);
+   ccbackground: rgba(112, 246, 130, 0.5);
+}
+
+.chip .units {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: translateZ(calc(var(--chip-depth)*0.7 * -1));
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.chip .units .unit {
+   width: calc(var(--chip-width) / 5);
+   height: calc(var(--chip-height) / 4);
+   background: var(--chip-unit-color);
+   transition: all 0.5s;
+   ccbox-shadow: none;
+}
+.chip .units .unit.lit {
+   background: var(--chip-unit-color-lit);
+   ccbox-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+}
