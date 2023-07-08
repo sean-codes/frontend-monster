@@ -1,0 +1,58 @@
+:root {
+   --font: monospace;
+   --color-table-border: #222;
+   --color-table-head: #DDD;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 1rem;
+   --table-max-width: 500px;
+}
+
+html, body {
+   font-family: var(--font);
+}
+
+table th button {
+   background: none;
+   border: none;
+   cursor: pointer;
+}
+
+table {
+   border-collapse: collapse;
+   width: 100%;
+   text-align: center;
+}
+
+td, th {
+   border: 1px solid var(--color-table-border);
+   padding: var(--space-0_5) var(--space-1);
+}
+
+th {
+   background: var(--color-table-head);
+}
+
+th button {
+   text-transform: capitalize;
+   font-weight: bolder;
+}
+
+
+
+.pagination {
+   display: flex;
+   justify-content: center;
+   padding-top: var(--space-1);
+   gap: var(--space-1);
+   align-items: center;
+}
+
+.filter {
+   margin-bottom: var(--space-1);
+}
+
+.app {
+   max-width: 600px;
+   margin: 5rem auto;
+}
