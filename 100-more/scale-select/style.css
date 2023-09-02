@@ -18,6 +18,7 @@
    --bar-space-large: 8px;
    --bar-space-medium: 5px;
    --bar-space-small: 4px;
+   --bar-space-tiny: 3px;
 
    /* Icon */
    --icon-size: 14px;
@@ -53,6 +54,7 @@ html, body {
 .component-filter {
    text-align: center;
    padding-top: var(--space-3);
+   touch-action: none;
 }
 
 /* Wrapper */
@@ -153,10 +155,15 @@ html, body {
 }
 
 .component-filter .bars .bar.hover:after,
-.component-filter .bars .bar:hover:not(.hover):after,
 .component-filter .bars .bar.selected:not(.hover):after {
    transition: transform 0.25s;
    transform: scale(1, 2) translateX(-50%);
+}
+@media (min-width: 800px) {
+   .component-filter .bars .bar:hover:not(.hover):after {
+      transition: transform 0.25s;
+      transform: scale(1, 2) translateX(-50%);
+   }
 }
 @media (max-width: 800px) {
    .component-filter .bars .bar{
@@ -166,6 +173,11 @@ html, body {
 @media (max-width: 500px) {
    .component-filter .bars .bar{
       padding: 0 var(--bar-space-small);
+   }
+}
+@media (max-width: 400px) {
+   .component-filter .bars .bar{
+      padding: 0 var(--bar-space-tiny);
    }
 }
 
@@ -179,6 +191,7 @@ html, body {
 .component-filter .range.show {
    opacity: 1;
 }
+
 /*-----------------------------------------------------------
 | Image Grid
 -----------------------------------------------------------*/
@@ -196,6 +209,19 @@ html, body {
    position: relative;
    width: 25%;
 }
+
+@media (max-width: 900px) {
+   .images .image {
+      width: 33.333%;
+   }
+}
+
+@media (max-width: 600px) {
+   .images .image {
+      width: 50%;
+   }
+}
+
 .images .image.hide {
    display: none;
 }
@@ -204,7 +230,9 @@ html, body {
    padding-bottom: calc(9/16 * 100%);
    position: relative;
 }
-.images .image canvas {
+
+/* for demo */
+.images .image canvas { 
    top: var(--space-0_25);
    left: var(--space-0_25);
    position: absolute;
@@ -214,6 +242,7 @@ html, body {
    opacity: 0.75;
 }
 
+/* not for demo */
 .images .image img {
    top: var(--space-0_25);
    left: var(--space-0_25);

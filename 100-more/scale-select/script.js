@@ -1,5 +1,6 @@
 
 // HTML SELECTORS
+var ready = false
 var htmlApp = document.querySelector('.app')
 var htmlLabel = htmlApp.querySelector('.label')
 var htmlLabelText = htmlLabel.querySelector('.text')
@@ -22,14 +23,18 @@ do {
    htmlBar.classList.add('bar')
    htmlBar.classList.add('hide')
 
-   htmlBar.addEventListener('mouseenter', handleMouseEnter)
-   htmlBar.addEventListener('mouseleave', handleMouseLeave)
+   htmlBar.addEventListener('pointerdown', e => {
+      e.target.releasePointerCapture(e.pointerId)
+   })
+   htmlBar.addEventListener('pointerenter', handleMouseEnter)
+   htmlBar.addEventListener('pointerleave', handleMouseLeave)
+   htmlBar.addEventListener('pointerup', handleClick)
    htmlBar.addEventListener('click', handleClick)
    
    htmlBarsContainer.appendChild(htmlBar)
    htmlBars.push(htmlBar)
    kStart += kStep
-} while (kStart < kEnd)
+} while (kStart <= kEnd)
 
 function handleMouseEnter(e) {
    var htmlBar = e.target
@@ -86,12 +91,14 @@ function toggleImages(k) {
 
    }, 500)
 }
+
 function hideAllImages() {
    var htmlImages = document.querySelectorAll('.images .image')
    for (var htmlImage of htmlImages) {
       htmlImage.classList.add('hide')
    }
 }
+
 function showImages(k) {
    var htmlImages = document.querySelectorAll(`.images .image[k="${k}"]`)
    for (var htmlImage of htmlImages) {
