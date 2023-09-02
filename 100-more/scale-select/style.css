@@ -32,7 +32,11 @@ html, body {
 }
 
 .app {
+   display: none;
+}
 
+.app.ready {
+   display: block;
 }
 
 /*-----------------------------------------------------------
@@ -44,6 +48,7 @@ html, body {
 -----------------------------------------------------------*/
 .component-filter {
    text-align: center;
+   padding-top: var(--space-3);
 }
 
 /* Wrapper */
@@ -57,6 +62,10 @@ html, body {
    text-align: center;
    position: fixed;
    transition: all 0.5s;
+   opacity: 0;
+}
+.component-filter .label.show {
+   opacity: 1;
 }
 
 .component-filter .label.hover {
@@ -88,7 +97,10 @@ html, body {
    transform: translateX(-50%) rotate(45deg);
    background: var(--color-text);
 }
-
+@keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+}
 @keyframes bounce {
    0% { transform: translateY(0) }
    50% { transform: translateY(-10px) }
@@ -116,10 +128,20 @@ html, body {
    position: absolute;
    left: calc(50%);
    bottom: 0;
-   
    transform: scale(1, 1) translateX(-50%);
    transform-origin: 0 100%;
    transition: transform 0.5s;
+}
+.component-filter .bars .bar.hide:after {
+   opacity: 0;
+}
+.component-filter .bars .bar.show:after {
+   animation: barIn 1s;
+}
+
+@keyframes barIn{
+   0% { opacity: 0; transform: scale(1, 0) translateX(-50%); }
+   100% { opacity: 1; transform: scale(1, 1) translateX(-50%); }
 }
 
 .component-filter .bars .bar:active:after {
@@ -149,15 +171,18 @@ html, body {
    justify-content: space-between;
    padding-top: var(--space-1);
    font-weight: bolder;
+   opacity: 0;
 }
-
+.component-filter .range.show {
+   opacity: 1;
+}
 /*-----------------------------------------------------------
 | Image Grid
 -----------------------------------------------------------*/
 .images {
    display: flex;
    flex-wrap: wrap;
-   padding-top: var(--space-2);
+   padding-top: var(--space-4);
    transition: all 0.5s;
 }
 .images.fade {

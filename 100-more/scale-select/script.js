@@ -4,6 +4,7 @@ var htmlApp = document.querySelector('.app')
 var htmlLabel = htmlApp.querySelector('.label')
 var htmlLabelText = htmlLabel.querySelector('.text')
 var htmlBarsContainer = htmlApp.querySelector('.bars')
+var htmlRange = htmlApp.querySelector('.range')
 var htmlBars = []
 
 // State
@@ -19,6 +20,7 @@ do {
    var htmlBar = document.createElement('div')
    htmlBar.setAttribute('k', kStart)
    htmlBar.classList.add('bar')
+   htmlBar.classList.add('hide')
 
    htmlBar.addEventListener('mouseenter', handleMouseEnter)
    htmlBar.addEventListener('mouseleave', handleMouseLeave)
@@ -98,9 +100,31 @@ function showImages(k) {
 }
 
 
-// initial click
 generateDemoImages()
-htmlBars[0].click()
+
+// bars in
+var barInTimeout = 0
+
+htmlBars.forEach((htmlBar, i) => {
+   var min = htmlBars.length/2
+   // closer to min = faster?
+   var distance = Math.abs(min - i)
+   var percent = distance / min
+   setTimeout(() => {
+      htmlBar.classList.add('show')
+      htmlBar.classList.remove('hide')
+   }, percent*1000)
+})
+
+setTimeout(() => {
+   // label/range in  
+   htmlLabel.classList.add('show')
+   htmlRange.classList.add('show')
+
+   // initial click
+   htmlBars[0].click()
+
+}, 2000)
 
 
 
@@ -125,9 +149,10 @@ function generateDemoImages() {
    
    var k = 1000
    
-   for (var i = 0; i < 1000; i++) {
+   for (var i = 0; i < 300; i++) {
       var htmlExampleImage = document.createElement('div')
       htmlExampleImage.classList.add('image')
+      htmlExampleImage.classList.add('hide')
    
       var canvas = document.createElement('canvas')
       var ctx = canvas.getContext('2d')
@@ -156,4 +181,7 @@ function generateDemoImages() {
       k += 200
       if (k > 10000) k = 1000
    }
+
+   htmlApp.classList.add('ready')
+   document.querySelector('.loader').style.display = 'none'
 }
