@@ -1,135 +1,159 @@
-/*--------------------------------------------------------------
-| Demo pictures
---------------------------------------------------------------*/
-var images = document.querySelector('.images')
 
-var k = 1000
-for (var i = 0; i < 100; i++) {
-   // create new
-   var image = document.createElement('div')   
-   image.classList.add('image')
-   var img = document.createElement('img')
-   image.appendChild(img)
+// HTML SELECTORS
+var htmlApp = document.querySelector('.app')
+var htmlLabel = htmlApp.querySelector('.label')
+var htmlLabelText = htmlLabel.querySelector('.text')
+var htmlBarsContainer = htmlApp.querySelector('.bars')
+var htmlBars = []
 
-   var number = 300 + i
-   img.src = 'https://placekitten.com/' + number
+// State
+var htmlBarSelected = null
 
-   image.setAttribute('k', k)
-   images.appendChild(image)
-   k += 200
-   if (k > 10000) k = 1000
-}
+// Generate Bars
+var kStart = 1000
+var kEnd = 10000
+var kStep = 200
 
-// actual stuffs
+htmlBarsContainer.innerHTML = ''
+do {
+   var htmlBar = document.createElement('div')
+   htmlBar.setAttribute('k', kStart)
+   htmlBar.classList.add('bar')
 
-
-// elements
-var middle = document.querySelector('.middle')
-var label = document.querySelector('.label')
-var labelText = label.querySelector('.text')
-var savedX = 0
-var linePadding = 6.5
-var lineWidth = 1
-
-function positionLabel(x) {
-   var labelBox = label.getBoundingClientRect()
-   var middleBox = middle.getBoundingClientRect()
-   label.style.left = (x - labelBox.width/2) - middleBox.left + linePadding + lineWidth + 'px'
-}
-
-/*--------------------------------------------------------------
-| Handle Mousing
---------------------------------------------------------------*/
-middle.addEventListener('mousemove', handleMouseMove)
-middle.addEventListener('mouseout', handleMouseOut)
-
-function handleMouseMove(e) {
-   var padding = 6.5
-   positionLabel(e.clientX - padding)
-}
-function handleMouseOut(e) {
-   positionLabel(savedX)
-}
-/*--------------------------------------------------------------
-| Handle Clicking
---------------------------------------------------------------*/
-var start = 800 // 1000
-var incriment = 200
-var lines = []
-while (start < 10000) {
-   start += incriment
-   var line = document.createElement('div')
-   line.dataset.k = start
-   line.classList.add('line')
-   line.addEventListener('click', handleClickLine)
-   line.addEventListener('mouseenter', handleHoverLine)
+   htmlBar.addEventListener('mouseenter', handleMouseEnter)
+   htmlBar.addEventListener('mouseleave', handleMouseLeave)
+   htmlBar.addEventListener('click', handleClick)
    
-   middle.appendChild(line)
-   lines.push(line)
+   htmlBarsContainer.appendChild(htmlBar)
+   htmlBars.push(htmlBar)
+   kStart += kStep
+} while (kStart < kEnd)
+
+function handleMouseEnter(e) {
+   var htmlBar = e.target
+   htmlBar.classList.add('hover')
+   htmlLabel.classList.add('hover')
+   setLabelPosition(htmlBar)
+   setTimeout(() => { htmlBar.classList.remove('hover') }, 250)
+
+}
+
+function handleMouseLeave(e) {
+   setLabelPosition(htmlBarSelected)
+   htmlLabel.classList.remove('hover')
+}
+
+function handleClick(e) {
+   var htmlBar = e.target
+   htmlLabel.classList.add('click')
+   setTimeout(() => { htmlLabel.classList.remove('click')}, 250)
+   if (htmlBarSelected) htmlBarSelected.classList.remove('selected')
+   htmlBar.classList.add('selected')
+   htmlBarSelected = htmlBar
+
+   var k = htmlBar.getAttribute('k')
+   toggleImages(k)
+
+   setLabelPosition(htmlBar)
+}
+
+function setLabelPosition(htmlBar) {
+   // set text
+   var k = htmlBar.getAttribute('k')
+   htmlLabelText.innerHTML = k + 'k'
+   
+   // set position
+   var boxBar = htmlBar.getBoundingClientRect()
+   var boxLabel = htmlLabel.getBoundingClientRect()
+   htmlLabel.style.left = boxBar.x + Math.max(boxBar.width/2) - boxLabel.width/2 + 'px'
 }
 
 
-function handleHoverLine(e) {
-   var lineThatGotHovered = e.target
-   // update the label
-   labelText.innerHTML = lineThatGotHovered.dataset.k + 'k'
+window.addEventListener('resize', handleResize)
+function handleResize() {
+   setLabelPosition(htmlBarSelected)
 }
 
-function handleClickLine(e) {
-   var lineThatGotClicked = e.target
-
-   // remove from the old
-   var currentlySelector = middle.querySelector('.selected')
-   if (currentlySelector) currentlySelector.classList.remove('selected')
-
-   // add to the new
-   lineThatGotClicked.classList.add('selected')
-   
-   // position code
-   var lineBox = lineThatGotClicked.getBoundingClientRect()
-   
-
-   var x = lineBox.x
-   savedX = x
-   positionLabel(x)
-
-
-   // update the label
-   var k = lineThatGotClicked.dataset.k
-   labelText.innerHTML = k + 'k'
-
-   var imagesThatMatchK = document.querySelectorAll(`[k="${k}"]`)
-   
-   transitionImages(imagesThatMatchK)
-}
-
-var debounce;
-function transitionImages(imagesThatMatchK) {
-   images.classList.add('fade')
-   clearTimeout(debounce)
-   debounce = setTimeout(() => {
+function toggleImages(k) {
+   var htmlImagesContainer = document.querySelector('.images')
+   htmlImagesContainer.classList.add('fade')
+   setTimeout(() => {
       hideAllImages()
-      showImages(imagesThatMatchK)   
-      images.classList.remove('fade')
+      showImages(k)
+      htmlImagesContainer.classList.remove('fade')
+
    }, 500)
 }
-
 function hideAllImages() {
-   var images = document.querySelectorAll('.images .image')
-   for (var image of images) {
-      image.classList.add('hide')
+   var htmlImages = document.querySelectorAll('.images .image')
+   for (var htmlImage of htmlImages) {
+      htmlImage.classList.add('hide')
+   }
+}
+function showImages(k) {
+   var htmlImages = document.querySelectorAll(`.images .image[k="${k}"]`)
+   for (var htmlImage of htmlImages) {
+      htmlImage.classList.remove('hide')
    }
 }
 
-function showImages(images) {
-   for (var image of images) {
-      image.classList.remove('hide')
+
+// initial click
+generateDemoImages()
+htmlBars[0].click()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------
+| Demo pictures (no use!)
+--------------------------------------------------------------*/
+function generateDemoImages() {
+   var htmlImages = document.querySelector('.images')
+   
+   var k = 1000
+   
+   for (var i = 0; i < 1000; i++) {
+      var htmlExampleImage = document.createElement('div')
+      htmlExampleImage.classList.add('image')
+   
+      var canvas = document.createElement('canvas')
+      var ctx = canvas.getContext('2d')
+   
+      var percent = k/9000
+      var colorR = Math.floor(percent * 255)
+      var colorH = Math.floor(percent * 360)
+      // ctx.fillStyle = `rgb(${colorR/2}, ${colorR/2}, ${colorR})`
+      ctx.fillStyle = `hsl(${colorH}, 90%, 90%)`
+      ctx.fillRect(0, 0, canvas.width, canvas.height)
+   
+      var img = document.createElement('img')
+      var num = Math.floor(Math.random() * 3) + 1
+      img.src = `../_assets/images/bg_game_${num}.png`
+   
+      var htmlExampleImageAspect = document.createElement('div')
+      htmlExampleImageAspect.classList.add('aspect')
+      htmlExampleImage.appendChild(htmlExampleImageAspect)
+      htmlExampleImageAspect.appendChild(img)
+      htmlExampleImageAspect.appendChild(canvas)
+      htmlExampleImage.setAttribute('k', k)
+      htmlImages.appendChild(htmlExampleImage)
+   
+      
+      
+      k += 200
+      if (k > 10000) k = 1000
    }
 }
-
-
-// click the first one
-lines[0].click()
-// var middleBox = middle.getBoundingClientRect()
-// savedX = middleBox.left
-// positionLabel(middleBox.left)

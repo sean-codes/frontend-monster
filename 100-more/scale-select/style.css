@@ -1,138 +1,196 @@
 :root {
-   --font: monospace;
-   --color-background: #222;
-   --color-text: #FFF;
-   --line-height: 30px;
-   --line-height-max: 60px;
-   --line-width: 1px;
-   --width-label: 100px;
-   --height-label: 32px;
-   --color-line: #FFF;
-   --space-half: 0.5rem;
-   --space-1: 1rem;
-   --space-2: 2rem;
-   --space-3: 3rem;
-   --space-4: 4rem;
-   --space-5: 5rem;
-   --size-arrow: 1rem;
-   --width-label: 100px;
+   --color-background: #FFF;
+   --color-text: #222;
+   --space-0_25: 4px;
+   --space-0_5: 8px;
+   --space-1: 16px;
+   --space-2: 32px;
+   --space-3: 48px;
+   --space-4: 64px;
+
+   /* Bar */
+   --bar-width: 1px;
+   --bar-width-select: 2px;
+   --bar-height: 32px;
+   --bar-height-max: 64px;
+   --bar-space-large: 8px;
+   --bar-space-medium: 5px;
+   --bar-space-small: 4px;
+
+   /* Icon */
+   --icon-size: 14px;
+
+   /* Label */
+   --label-width: 100px;
+   --label-height: 34px;
 }
 
 html, body {
-   font-family: var(--font);
+   font-family: monospace;
    background: var(--color-background);
-   color: var(--color-text)
+   color: var(--color-text);
 }
 
-* {
-   box-sizing: border-box;
+.app {
+
 }
 
-.component-slider {
+/*-----------------------------------------------------------
+| Utility
+-----------------------------------------------------------*/
+
+/*-----------------------------------------------------------
+| Filter
+-----------------------------------------------------------*/
+.component-filter {
    text-align: center;
 }
-.component-slider .wrapper{
+
+/* Wrapper */
+.component-filter .wrapper {
    display: inline-block;
 }
 
-/*-------------------------------------------------------------
-| Top
--------------------------------------------------------------*/
-.component-slider .top {
-   position: relative;
-   height: var(--height-label);
-   /* border: 1px solid red; */
-}
-.component-slider .top .label {
-   position: absolute;
-   display: flex;
-   flex-direction: column;
+/* Label */
+.component-filter .label {
+   width: var(--label-width);
    text-align: center;
-   width: var(--width-label);
-   transition: all 0.1s; 
+   position: fixed;
+   transition: all 0.5s;
 }
-.component-slider .top .label .text {
-   padding-bottom: var(--space-half);
+
+.component-filter .label.hover {
+   transition: all 0.1s;
 }
-.component-slider .top .label .arrow {
-   width: var(--size-arrow);
-   height: var(--size-arrow);
-   position:relative;
-   overflow: hidden;
+.component-filter .label.click {
+   animation: bounce 0.25s;
+}
+
+.component-filter .label .text {
+   padding-bottom: var(--space-0_25);
+   
+}
+.component-filter .icon {
    margin: auto;
+   width: var(--icon-size);
+   height: var(--icon-size);
+   position: relative;
+   overflow: hidden;
 }
-.component-slider .top .label .arrow:after {
+
+.component-filter .icon:after {
    content: '';
-   position:absolute;
    width: 100%;
    height: 100%;
-   top: -70%;
-   left: 0;
-   background: var(--color-text);
-   transform: rotate(45deg);
-}
-/*-------------------------------------------------------------
-| Middle
--------------------------------------------------------------*/
-.component-slider .middle {
-   display: flex;  
-   /* gap: var(--space-1); */
-   height: var(--line-height-max);
-   align-items: end;
-   /* border: 1px solid #FFF; */
-   justify-content: center;
-}
-
-.component-slider .middle .line {
-   padding: 0 var(--space-half);
-   position: relative;
-   /* background: red; */
-   height: 100%;
-}
-
-.component-slider .middle .line:after {
-   content: '';
    position: absolute;
-   bottom: 0;
+   top: -8px;
    left: 50%;
-   background: var(--color-line);
-   height: var(--line-height);
-   width: var(--line-width);
-   transition: all 1s;
-}
-.component-slider .middle .line:hover:after,
-.component-slider .middle .line.selected:after {
-   transition: all 0.05s;
-   height: var(--line-height-max);
+   transform: translateX(-50%) rotate(45deg);
+   background: var(--color-text);
 }
 
-/*-------------------------------------------------------------
-| Bottom
--------------------------------------------------------------*/
-.component-slider .bottom {
+@keyframes bounce {
+   0% { transform: translateY(0) }
+   50% { transform: translateY(-10px) }
+   100% { transform: translateY(0) }
+}
+
+/* Bars */
+.component-filter .bars {
+   display: flex;
+   height: var(--bar-height-max);
+   padding-top: var(--label-height);
+}
+.component-filter .bars .bar {
+   padding: 0 var(--bar-space-large);
+   cursor: pointer;
+   position: relative;
+}
+
+.component-filter .bars .bar:after {
+   content: '';
+   display: block;
+   background: var(--color-text);
+   width: var(--bar-width);
+   height: var(--bar-height);
+   position: absolute;
+   left: calc(50%);
+   bottom: 0;
+   
+   transform: scale(1, 1) translateX(-50%);
+   transform-origin: 0 100%;
+   transition: transform 0.5s;
+}
+
+.component-filter .bars .bar:active:after {
+   width: var(--bar-width-select);
+}
+
+.component-filter .bars .bar.hover:after,
+.component-filter .bars .bar:hover:not(.hover):after,
+.component-filter .bars .bar.selected:not(.hover):after {
+   transition: transform 0.25s;
+   transform: scale(1, 2) translateX(-50%);
+}
+@media (max-width: 800px) {
+   .component-filter .bars .bar{
+      padding: 0 var(--bar-space-medium);
+   }
+}
+@media (max-width: 500px) {
+   .component-filter .bars .bar{
+      padding: 0 var(--bar-space-small);
+   }
+}
+
+/* range */
+.component-filter .range {
    display: flex;
    justify-content: space-between;
    padding-top: var(--space-1);
+   font-weight: bolder;
 }
 
-
+/*-----------------------------------------------------------
+| Image Grid
+-----------------------------------------------------------*/
 .images {
-   padding-top: 2rem;
    display: flex;
    flex-wrap: wrap;
-   gap: 1rem;
-   justify-content: center;
-   opacity: 1;
-   transition: 0.2s;
+   padding-top: var(--space-2);
+   transition: all 0.5s;
 }
-
 .images.fade {
    opacity: 0;
 }
 
-.image {
-   opacity: 1;
+.images .image {
+   position: relative;
+   width: 25%;
 }
-.image.hide {
+.images .image.hide {
    display: none;
+}
+.images .image .aspect {
+   width: 100%;
+   padding-bottom: calc(9/16 * 100%);
+   position: relative;
+}
+.images .image canvas {
+   top: var(--space-0_25);
+   left: var(--space-0_25);
+   position: absolute;
+   width: calc(100% - var(--space-0_5));
+   height: calc(100% - var(--space-0_5));
+   object-fit: cover;
+   opacity: 0.75;
+}
+
+.images .image img {
+   top: var(--space-0_25);
+   left: var(--space-0_25);
+   position: absolute;
+   width: calc(100% - var(--space-0_5));
+   height: calc(100% - var(--space-0_5));
+   object-fit: cover;
 }
