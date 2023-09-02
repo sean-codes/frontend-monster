@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
 :root {
    --color-background: #FFF;
    --color-text: #222;
@@ -26,7 +28,7 @@
 }
 
 html, body {
-   font-family: monospace;
+   font-family: 'Raleway', sans-serif;
    background: var(--color-background);
    color: var(--color-text);
 }
@@ -42,7 +44,9 @@ html, body {
 /*-----------------------------------------------------------
 | Utility
 -----------------------------------------------------------*/
-
+.lite {
+   font-weight: 400;
+}
 /*-----------------------------------------------------------
 | Filter
 -----------------------------------------------------------*/
@@ -60,7 +64,7 @@ html, body {
 .component-filter .label {
    width: var(--label-width);
    text-align: center;
-   position: fixed;
+   position: absolute;
    transition: all 0.5s;
    opacity: 0;
 }
@@ -170,7 +174,6 @@ html, body {
    display: flex;
    justify-content: space-between;
    padding-top: var(--space-1);
-   font-weight: bolder;
    opacity: 0;
 }
 .component-filter .range.show {

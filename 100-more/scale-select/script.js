@@ -149,7 +149,7 @@ function generateDemoImages() {
    
    var k = 1000
    
-   for (var i = 0; i < 300; i++) {
+   for (var i = 0; i < 500; i++) {
       var htmlExampleImage = document.createElement('div')
       htmlExampleImage.classList.add('image')
       htmlExampleImage.classList.add('hide')
@@ -163,15 +163,11 @@ function generateDemoImages() {
       // ctx.fillStyle = `rgb(${colorR/2}, ${colorR/2}, ${colorR})`
       ctx.fillStyle = `hsl(${colorH}, 90%, 90%)`
       ctx.fillRect(0, 0, canvas.width, canvas.height)
-   
-      var img = document.createElement('img')
-      var num = Math.floor(Math.random() * 3) + 1
-      img.src = `../_assets/images/bg_game_${num}.png`
+
    
       var htmlExampleImageAspect = document.createElement('div')
       htmlExampleImageAspect.classList.add('aspect')
       htmlExampleImage.appendChild(htmlExampleImageAspect)
-      htmlExampleImageAspect.appendChild(img)
       htmlExampleImageAspect.appendChild(canvas)
       htmlExampleImage.setAttribute('k', k)
       htmlImages.appendChild(htmlExampleImage)
