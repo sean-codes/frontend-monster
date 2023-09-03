@@ -1,0 +1,45 @@
+:root {
+   --font: monospace;
+   --color-bg: #222;
+   --color-text: #FFF;
+   --color-image-bg: rgb(146, 175, 142);
+   --space-1: 1rem;
+
+   --card-color-text: #111;
+}
+
+hmtl, body {
+   font-family: var(--font);
+   color: var(--color-text);
+   background: var(--color-bg);
+}
+
+
+.images {
+   columns: 4 200px;
+}
+
+.images .image {
+   text-align: center;
+   display: inline-block;
+   width: 100%;
+   background: var(--color-image-bg);
+   margin-top: var(--space-1);
+   padding-top: calc(4/3 * 100%);
+   position: relative;
+}
+
+.images .image.landscape {
+   padding-top: calc(12/19 * 100%);
+}
+
+.images .image .text {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-50%) translateY(-50%);
+   color: var(--card-color-text);
+   font-weight: bold;
+}
+
+
