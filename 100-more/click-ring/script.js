@@ -16,7 +16,7 @@ var width = 20
 
 
 var pointerAngle = 0
-var zoneAngle = 0
+var zoneAngle = Math.PI*2 - 1
 var zoneSize = Math.PI/2 //25%
 var aCircle = Math.PI*2
 
@@ -37,26 +37,25 @@ function render() {
 }
 
 function handleClick() {
-   var angle1Start = zoneAngle
-   var angle1End = zoneAngle + zoneSize
+   var check = pointerAngle
+   var start = zoneAngle
+   var end = zoneAngle + zoneSize
 
-   // how do you handle angles that go over a circle correctly
-   // if the pointer is greater and end over than 0 then move it up aCircle.. 
-   // two checks not right please fix
-   var angle2Start = angle1Start
-   var angle2End = angle1End
 
-   if (angle2End > aCircle) {
-      angle2Start = 0
-      angle2End -= aCircle
+   // its less but more complicated :(
+   var backflow = zoneSize - (end - Math.PI*2) 
+   if (end > aCircle && check < aCircle - backflow) {
+      check += aCircle
    } 
-   var check1 = pointerAngle > angle1Start && pointerAngle < angle1End
-   var check2 = pointerAngle > angle2Start && pointerAngle < angle2End
 
-   if (check1 || check2) {
-      zoneAngle = Math.random() * (Math.PI*2)
-      zoneSize = Math.PI/2
+   if (check > start && check < end) {
+      moveZone()
    }
+}
+
+function moveZone() {
+   zoneAngle = Math.random() * (Math.PI*2)
+   zoneSize = Math.PI/2
 }
 
 function drawPointer() {
