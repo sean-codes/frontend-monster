@@ -1,0 +1,177 @@
+[
+   {
+      "name": "Sport",
+      "models": [
+         {
+            "name": "S 1000 RR",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_1.avif"
+         },
+         {
+            "name": "R 1250 RS",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_2.avif"
+         },
+         {
+            "name": "S 1000 XR",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_3.avif"
+         },
+         {
+            "name": "S 1000 XR 2023",
+            "year": 2022,
+            "img": "../_assets/images/bmw_motorcycle_4.avif"
+         },
+         {
+            "name": "F 900 XR",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_5.avif"
+         }
+      ]
+   },
+   {
+      "name": "M",
+      "models": [
+         {
+            "name": "M 1000 RR",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_6.avif"
+         },
+         {
+            "name": "M 1000 R",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_7.avif"
+         },
+         {
+            "name": "M 1000 XR",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_8.avif"
+         }
+      ]
+   },
+   {
+      "name": "Tour",
+      "models": [
+         {
+            "name": "K 1600 GT",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_9.avif"
+         },
+         {
+            "name": "K 1600 B Option 719 Midnight",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_10.avif",
+            "special": true
+         },
+         {
+            "name": "R 1250 RT",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_11.avif"
+         }
+      ]
+   },
+   {
+      "name": "Roadster",
+      "models": [
+         {
+            "name": "R 1250 R",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_12.avif"
+         },
+         {
+            "name": "F 900 R",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_13.avif",
+            "note": "special"
+         },
+         {
+            "name": "G 310 R",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_14.avif"
+         }
+      ]
+   },
+   {
+      "name": "Heritage",
+      "models": [
+         {
+            "name": "R 18",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_15.avif"
+         },
+         {
+            "name": "R 18 100 Years",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_16.avif",
+            "note": "special"
+         },
+         {
+            "name": "R 18 Classic",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_17.avif"
+         },
+         {
+            "name": "R 18 B",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_18.avif"
+         },
+         {
+            "name": "R nineT Urban G/S",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_19.avif"
+         },
+         {
+            "name": "R 12",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_20.avif"
+         }
+      ]
+   },
+   {
+      "name": "Adventure",
+      "models": [
+         {
+            "name": "R 1300 GS",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_21.avif"
+         },
+         {
+            "name": "R 1250 GS Adventure",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_22.avif"
+         },
+         {
+            "name": "F 850 GS",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_23.avif"
+         },
+         {
+            "name": "G 310 GS",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_24.avif"
+         }
+      ]
+   },
+   {
+      "name": "Urban Mobility",
+      "models": [
+         {
+            "name": "CE 04",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_25.avif",
+            "note": "electric"
+         },
+         {
+            "name": "CCE 02",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_26.avif",
+            "note": "electric"
+         },
+         {
+            "name": "C 400 GT",
+            "year": 2024,
+            "img": "../_assets/images/bmw_motorcycle_27.avif"
+         }
+      ]
+   }
+]

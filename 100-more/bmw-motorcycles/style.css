@@ -1,0 +1,278 @@
+:root {
+   --font: monospace;
+   --color-bg: #FFF;
+   --color-text: #222;
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --titlebar-height: 4rem;
+   --titlebar-background: #DDD;
+   --titlebar-fontsize: 1.2rem;
+   --titlebar-background-hover: #CCC;
+
+   --gallery-item-width: 20rem;
+}
+
+
+
+html, body {
+   padding: 0;
+   margin: 0;
+   background: var(--color-bg);
+   color: var(--color-text);
+   font-family: var(--font);
+}
+
+.component-header {
+   font-size: 1rem;
+   font-weight: bolder;
+   border-bottom: 2px solid #222;
+   border-left: 2px solid #222;
+   padding: var(--space-0_5);
+   margin: var(--space-2) 0 var(--space-1) 0;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.app {
+   min-height: 100vh;
+}
+.app .help {
+   padding: var(--space-2);
+}
+.app .help.hide {
+   display: none;
+}
+#galleries {
+   display: none;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+   transition: all 0.25s;
+   height: 0;
+}
+#galleries.show {
+   display: grid;
+}
+#galleries .component-gallery {
+   grid-column: 1;
+   grid-row: 1;
+}
+.overlay {
+   position: absolute;
+   top: 0;
+   left: 0;
+   background: rgba(0, 0, 0, 0.5);
+   width: 100%;
+   height: 100%;
+   opacity:0;
+   transition: all 0.25s;
+}
+.overlay.show {
+   opacity: 1;
+}
+/*-------------------------------------------------------------------------
+| util
+-------------------------------------------------------------------------*/
+.p-1 { padding: 1rem; }
+.p-2 { padding: 2rem; }
+.p-3 { padding: 3rem; }
+.p-4 { padding: 4rem; }
+
+/*-------------------------------------------------------------------------
+| component: titlebar
+-------------------------------------------------------------------------*/
+.component-titlebar {
+}
+.component-titlebar .bar {
+   height: var(--titlebar-height);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: var(--titlebar-background);
+   position: relative;
+   z-index: 2;
+   width: 100%;
+}
+.component-titlebar .menu {
+   display: flex;
+   align-items: center;
+   gap: var(--space-0_5);
+   font-weight: bolder;
+   height: 100%;
+   padding: 0 var(--space-1);
+   user-select: none;
+}
+.component-titlebar .menu .icon {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr;
+}
+.component-titlebar .menu .icon .fa-close,
+.component-titlebar .menu .icon .fa-bars {
+   grid-column: 1;
+   grid-row: 1;
+}
+.component-titlebar .menu .icon .fa-close,
+.component-titlebar.open .menu .icon .fa-bars {
+   opacity: 0;
+}
+
+.component-titlebar .menu .icon .fa-bars,
+.component-titlebar.open .menu .icon .fa-close {
+   opacity: 1;
+}
+
+.component-titlebar .menu:hover {
+   background: var(--titlebar-background-hover);
+   cursor: pointer;
+}
+.component-titlebar .menu .text {
+  font-size: var(--titlebar-fontsize);
+}
+.component-titlebar .logo {
+   height: 100%;
+   padding: var(--space-1) 0;
+   padding-right: var(--space-1);
+}
+.component-titlebar .logo img{
+   height: 100%;
+   width: auto;
+}
+.component-titlebar .content {
+   opacity: 0;
+   transform: translateY(-100%);
+   transition: all 0.2s;
+   z-index: 0;
+   position:absolute;
+   width: 100%;
+   background: var(--color-bg);
+   padding: var(--space-1);
+   padding-top: var(--space-2);
+}
+.component-titlebar.open .content {
+   opacity: 1;
+   transform: translateY(0);
+   max-height: 85vh;
+   overflow: scroll;
+}
+
+/*-------------------------------------------------------------------------
+| component: layer 1
+-------------------------------------------------------------------------*/
+.component-layer {
+   display: flex;
+/*   gap: var(--space-3);*/
+   font-size: 1.25rem;
+   transition: all 0.25s;
+   position: relative;
+   z-index: 10;
+   background: var(--color-bg);
+}
+.component-layer.hide {
+   transform: translateY(-50%);
+   height: 0;
+   opacity: 0;
+}
+.component-layer .option {
+   text-align: center;
+   padding: var(--space-1);
+   cursor: pointer;
+}
+.component-layer .option .icon {
+   opacity: 0;
+   transition: all 0.25s;
+   font-size: 2rem;
+   position: relative;
+   transform: translateY(-15px);
+   padding-top: var(--space-0_5);
+}
+.component-layer .option:hover,
+.component-layer .option.selected{
+   font-weight: 900;
+}
+.component-layer .option:hover .icon,
+.component-layer .option.selected .icon{
+   transform: translateY(0px);
+   opacity: 1;
+}
+
+/*-------------------------------------------------------------------------
+| component: layer 2
+-------------------------------------------------------------------------*/
+.component-layer.small {
+   font-size: 1rem;
+   gap: var(--space-2);
+}
+.component-layer.small .icon{
+   font-size: 1.5rem;
+}
+
+
+/*-------------------------------------------------------------------------
+| component: gallery
+-------------------------------------------------------------------------*/
+.component-gallery {
+   flex-wrap: wrap;
+   transition: all 0.25s;
+   display: flex;
+   z-index: 1;
+   animation: in 0.25s;
+}
+@keyframes in {
+   0% {
+      opacity:0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+.component-gallery.hide {
+   opacity: 0;
+}
+.component-gallery .item {
+   width: var(--gallery-item-width);
+   overflow: hidden;
+}
+.component-gallery .item .image {
+   transition: all 0.1s;
+   margin-right: 0rem;
+}
+.component-gallery .item .image img {
+   width: 100%;
+   height: 150px;
+   object-fit: contain;
+}
+.component-gallery .item .text {
+   text-align: center;
+   padding: var(--space-1) 0;
+}
+.component-gallery .item .text .model {
+   font-size: 1.2rem;
+   padding-top: var(--space-0_5);
+}
+.component-gallery .item:hover {
+   cursor: pointer;
+}
+.component-gallery .item:hover .image{
+   transform: scale(1.1);
+}
+.component-gallery .item:hover .text .year {
+   font-weight: 900;
+}
+.component-gallery .item:hover .text .model {
+   text-decoration: underline;
+   font-weight: 900;
+}
+
+@media (max-width: 800px) {
+   .component-gallery {
+      justify-content: center;
+   }
+}

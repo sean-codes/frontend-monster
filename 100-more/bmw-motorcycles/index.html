@@ -1,0 +1,242 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css"></link>
+   <link rel="stylesheet" href="./style.css"></link>
+</head>
+<body>
+   <div class="app">
+      <div class="overlay"></div>
+      <div class="component-titlebar">
+         <div class="bar">
+            <div class="menu">
+               <div class="icon">
+                  <i class="open fa-solid fa-bars"></i>
+                  <i class=" close fa-solid fa-close"></i>
+               </div>
+               <div class="text">Menu</div>
+            </div>
+
+            <div class="logo">
+               <img src="../_assets/images/bmw_motorrad_logo.svg" alt="">
+            </div>
+         </div>
+
+         <div class="content">
+            <div class="component-layer one">
+               <div class="option">
+                  <div class="text">Home</div>
+                  <div class="icon">
+                     <i class="fa-solid fa-angle-down"></i>
+                  </div>
+               </div>
+               <div class="option" id="option-models">
+                  <div class="text">Models</div>
+                  <div class="icon">
+                     <i class="fa-solid fa-angle-down"></i>
+                  </div>
+               </div>
+               <div class="option">
+                  <div class="text">Finance</div>
+                  <div class="icon">
+                     <i class="fa-solid fa-angle-down"></i>
+                  </div>
+               </div>
+               <div class="option">
+                  <div class="text">Offers</div>
+                  <div class="icon">
+                     <i class="fa-solid fa-angle-down"></i>
+                  </div>
+               </div>
+               <div class="option">
+                  <div class="text">Individualization</div>
+                  <div class="icon">
+                     <i class="fa-solid fa-angle-down"></i>
+                  </div>
+               </div>
+            </div>
+
+            <div class="component-layer two small hide">
+               <template id="template-option">
+                  <div class="option">
+                     <div class="text">Model Overview</div>
+                     <div class="icon">
+                        <i class="fa-solid fa-angle-down"></i>
+                     </div>
+                  </div>
+               </template>
+            </div>
+            <div class="help hide">Try Models menu</div>
+            <div id="galleries">
+               <template id="template-gallery">
+                  <div class="component-gallery">
+                     <template id="template-gallery-item">
+                        <div class="item">
+                           <div class="image">
+                              <img src="../_assets/images/bmw_motorcycle_1.avif" alt="">
+                           </div>
+                           <div class="text">
+                              <div class="year">2024</div>
+                              <div class="model">S 1000 RR</div>
+                           </div>
+                        </div>
+                     </template>
+                  </div>
+               </template>
+            </div>
+         </div>
+      </div>
+      <div class="p-2">
+         BMW Menu Example
+      </div>
+      <div class="tape-measure" style="opacity: 0; top:0; left: 0; position: fixed; pointer-events: none"></div>
+   </div>
+
+   <div class="component-header">titlebar</div>
+   <div class="component-titlebar">
+      <div class="bar">
+         <div class="menu">
+            <div class="icon">
+               <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="text">Menu</div>
+         </div>
+
+         <div class="logo">
+            <img src="../_assets/images/bmw_motorrad_logo.svg" alt="">
+         </div>
+      </div>
+
+      <div class="content">
+         content
+      </div>
+   </div>
+
+   <div class="component-header">layer 1</div>
+   <div class="component-layer">
+      <div class="option">
+         <div class="text">Home</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Models</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Finance</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Offers</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Individualization</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+   </div>
+
+   <div class="component-header">layer 2</div>
+   <div class="component-layer small">
+      <div class="option">
+         <div class="text">Model Overview</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Sport</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">M</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Tour</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Roadster</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+      <div class="option">
+         <div class="text">Heritage</div>
+         <div class="icon">
+            <i class="fa-solid fa-angle-down"></i>
+         </div>
+      </div>
+   </div>
+
+   <div class="component-header">gallery</div>
+   <div class="component-gallery show">
+      <div class="item">
+         <div class="image">
+            <img src="../_assets/images/bmw_motorcycle_1.avif" alt="">
+         </div>
+         <div class="text">
+            <div class="year">2024</div>
+            <div class="model">S 1000 RR</div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="image">
+            <img src="../_assets/images/bmw_motorcycle_2.avif" alt="">
+         </div>
+         <div class="text">
+            <div class="year">2024</div>
+            <div class="model">S 1250 RS</div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="image">
+            <img src="../_assets/images/bmw_motorcycle_3.avif" alt="">
+         </div>
+         <div class="text">
+            <div class="year">2024</div>
+            <div class="model">S 1000 XR</div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="image">
+            <img src="../_assets/images/bmw_motorcycle_4.avif" alt="">
+         </div>
+         <div class="text">
+            <div class="year">2022</div>
+            <div class="model">S 1000 XR 2023 </div>
+         </div>
+      </div>
+      <div class="item">
+         <div class="image">
+            <img src="../_assets/images/bmw_motorcycle_5.avif" alt="">
+         </div>
+         <div class="text">
+            <div class="year">2023</div>
+            <div class="model">F 900 XR</div>
+         </div>
+      </div>
+   </div>
+
+   <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
