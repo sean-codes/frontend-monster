@@ -1,0 +1,355 @@
+[
+   {
+      "label": "Sportbike",
+      "url": "https://suzukicycles.com/sportbike",
+      "items": [
+         {
+            "label": "Hayabusa",
+            "img": "./images/hayabusa.png",
+            "package": "25th Anniversary Edition"
+         },
+         {
+            "label": "Hayabusa",
+            "img": "./images/hayabusa.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-R1000R",
+            "img": "./images/gsxr1000r.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-R1000RZ",
+            "img": "./images/gsxr1000rz.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-R1000",
+            "img": "./images/gsxr1000.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-8R",
+            "img": "./images/gsx8r.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-R750",
+            "img": "./images/gsxr750.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-R750Z",
+            "img": "./images/gsxr750z.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-R600",
+            "img": "./images/gsxr600.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-R600Z",
+            "img": "./images/gsxr600z.png",
+            "package": ""
+         },
+         {
+            "label": "GSX250R ABS",
+            "img": "./images/gsx250r-abs.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Street",
+      "url": "https://suzukicycles.com/street",
+      "items": [
+         {
+            "label": "KATANA",
+            "img": "./images/katana.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-8R",
+            "img": "./images/gsx8r.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-8S",
+            "img": "./images/gsx8s.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000GT+",
+            "img": "./images/gsxs1000gt.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000GT",
+            "img": "./images/gsxs1000gt.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000",
+            "img": "./images/gsxs1000.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-S750Z",
+            "img": "./images/gsxs750z.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-S750Z ABS",
+            "img": "./images/gsxs750z-abs.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-S750",
+            "img": "./images/gsxs750.png",
+            "package": ""
+         },
+         {
+            "label": "SV650 ABS",
+            "img": "./images/sv650-abs.png",
+            "package": ""
+         },
+         {
+            "label": "SV650",
+            "img": "./images/sv650.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Sport Touring",
+      "url": "https://suzukicycles.com/sport-touring",
+      "items": [
+         {
+            "label": "GSX-S1000GT+",
+            "img": "./images/gsxs1000gt.png",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000GT",
+            "img": "./images/gsxs1000gt.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Crossover",
+      "url": "https://suzukicycles.com/crossover",
+      "items": [
+         {
+            "label": "GSX-S1000GX+",
+            "img": "./images/gsxs1000gx.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Cruiser",
+      "url": "https://suzukicycles.com/cruiser",
+      "items": [
+         {
+            "label": "Suzuki Boulevard M109R B.O.S.S.",
+            "img": "./images/suzuki-boulevard-m109r-boss.png",
+            "package": ""
+         },
+         {
+            "label": "Suzuki Boulevard M109R",
+            "img": "./images/suzuki-boulevard-m109r.png",
+            "package": ""
+         },
+         {
+            "label": "Suzuki Boulevard C50",
+            "img": "./images/suzuki-boulevard-c50.png",
+            "package": ""
+         },
+         {
+            "label": "Suzuki Boulevard C50T",
+            "img": "./images/suzuki-boulevard-c50t.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Touring",
+      "url": "https://suzukicycles.com/touring",
+      "items": [
+         {
+            "label": "Suzuki Boulevard C50T",
+            "img": "./images/suzuki-boulevard-c50t.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Adventure",
+      "url": "https://suzukicycles.com/adventure",
+      "items": [
+         {
+            "label": "V-STROM 1050DE Adventure",
+            "img": "./images/vstrom-1050de-adventure.png",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050DE",
+            "img": "./images/vstrom-1050de.png",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050",
+            "img": "./images/vstrom-1050.png",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800DE Adventure",
+            "img": "./images/vstrom-800de-adventure.png",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800DE",
+            "img": "./images/vstrom-800de.png",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800 Touring",
+            "img": "./images/vstrom-800-touring.jpg",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800",
+            "img": "./images/vstrom-800.jpg",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050XT Adventure",
+            "img": "./images/vstrom-1050xt-adventure.png",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050XT",
+            "img": "./images/vstrom-1050xt.png",
+            "package": ""
+         },
+         {
+            "label": "V-Strom 650XT Adventure",
+            "img": "./images/vstrom-650xt-adventure.png",
+            "package": ""
+         },
+         {
+            "label": "V-Strom 650XT",
+            "img": "./images/vstrom-650xt.png",
+            "package": ""
+         },
+         {
+            "label": "V-Strom 650",
+            "img": "./images/vstrom-650.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "DualSport",
+      "url": "https://suzukicycles.com/dualsport",
+      "items": [
+         {
+            "label": "DR650S",
+            "img": "./images/dr650s.png",
+            "package": ""
+         },
+         {
+            "label": "DR-Z400S",
+            "img": "./images/drz400s.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "SuperMoto",
+      "url": "https://suzukicycles.com/supermoto",
+      "items": [
+         {
+            "label": "DR-Z400SM",
+            "img": "./images/drz400sm.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Motocross",
+      "url": "https://suzukicycles.com/motocross",
+      "items": [
+         {
+            "label": "RM-Z450",
+            "img": "./images/rmz450.png",
+            "package": ""
+         },
+         {
+            "label": "RM-Z250",
+            "img": "./images/rmz250.png",
+            "package": ""
+         },
+         {
+            "label": "RM85",
+            "img": "./images/rm85.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Off Road",
+      "url": "https://suzukicycles.com/off-road",
+      "items": [
+         {
+            "label": "DR-Z125L",
+            "img": "./images/drz125l.png",
+            "package": ""
+         },
+         {
+            "label": "DR-Z50",
+            "img": "./images/drz50.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Youth",
+      "url": "https://suzukicycles.com/youth-motorcycle",
+      "items": [
+         {
+            "label": "DR-Z125L",
+            "img": "./images/drz125l.png",
+            "package": ""
+         },
+         {
+            "label": "RM85",
+            "img": "./images/rm85.png",
+            "package": ""
+         },
+         {
+            "label": "DR-Z50",
+            "img": "./images/drz50.png",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Scooter",
+      "url": "https://suzukicycles.com/scooter",
+      "items": [
+         {
+            "label": "Burgman 400",
+            "img": "./images/burgman-400.png",
+            "package": ""
+         },
+         {
+            "label": "Burgman 200",
+            "img": "./images/burgman-200.png",
+            "package": ""
+         }
+      ]
+   }
+]

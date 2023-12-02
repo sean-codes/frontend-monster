@@ -1,0 +1,226 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>suzuki</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel='stylesheet' href="../_assets/fontawesome/css/all.min.css" />
+</head>
+<body>
+   <div class="app">
+      <div class="c-toolbar">
+         <div class="logo">
+            <img src="../_assets/images/suzuki-logo.svg" alt="">
+         </div>
+         <div class="links slash grey">
+            <div class="link">MOTORCYCLES</div>
+            <div class="link">ATVs</div>
+            <div class="link">RACING</div>
+            <div class="link">PARTS & ACCESSORIES</div>
+            <div class="link">OWNERS</div>
+            <div class="link">OFFERS</div>
+         </div>
+         <div class="map slash red">
+            <i class="fa-solid fa-location-dot"></i>
+         </div>
+         <div class="search slash black">
+            <i class="fa-solid fa-magnifying-glass"></i>
+         </div>
+      </div>   
+
+      <div class="c-menu">
+         <div class="selection">
+            <div class="bikes">
+               <div class="left">
+                  <div class="categories">
+                     <template id="template-category">
+                        <div class="category" data-category="sportbike">
+                           <div class="label">sportbike</div>
+                        </div>
+                     </template>
+                  </div>
+               </div>
+               <div class="right options-groups">
+                  <template id="template-option-group">
+                     <div class="options show" data-category="sportbike">
+                        <template id="template-option">
+                           <div class="option">
+                              <div class="image">
+                                 <img src="./images/hayabusa.png" alt="">
+                              </div>
+                              <div class="text">
+                                 <div class="label">Hayabusa</div>
+                                 <div class="spec">25th Anniversary Edition</div>
+                              </div>
+                           </div>
+                        </template>
+                        <template id="template-explore">
+                           <div class="explore">
+                              <div class="text">Explore Sportbike</div>
+                              <div class="icon">
+                                 <i class="fa-solid fa-chevron-right"></i>
+                              </div>
+                           </div>
+                        </template>
+                     </div>
+                  </template>
+               </div>
+            </div>
+            <div class="footer">
+               <div class="link">Accessibility</div>
+               <div class="link">Privacy Statement</div>
+               <div class="link">Legal Notices</div>
+               <div class="link">Supplier Code of Conduct</div>
+            </div>
+         </div>
+         <div class="display">
+            <div class="c-display">
+               <div class="toolbar">
+                  <div class="text">Close</div>
+                  <div class="close">
+                     <i class="fa-solid fa-xmark"></i>
+                  </div>
+               </div>
+               <div class="title">Hayabusa</div>
+               <div class="spec">25th Anniversary Edition</div>
+               <p>Gen3 Hayabusa: the quickest, most technologically advanced and aerodynamic Hayabusa yet.</p>
+               <div class="image">
+                  <img src="./images/hayabusa.png" alt="">
+               </div>
+               <div class="price">
+                  Base MSRP: $19,599
+               </div>
+               <button class="explore">Explore</button>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <!-- <img style="display: block;" src="./example-1.png" alt=""> -->
+   <div class="component-header">toolbar</div>
+   <div class="c-toolbar">
+      <div class="logo">
+         <img src="../_assets/images/suzuki-logo.svg" alt="">
+      </div>
+      <div class="links slash grey">
+         <div class="link">MOTORCYCLES</div>
+         <div class="link">ATVs</div>
+         <div class="link">RACING</div>
+         <div class="link">PARTS & ACCESSORIES</div>
+         <div class="link">OWNERS</div>
+         <div class="link">OFFERS</div>
+      </div>
+      <div class="map slash red">
+         <i class="fa-solid fa-location-dot"></i>
+      </div>
+      <div class="search slash black">
+         <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+   </div>
+
+
+   <!-- <img style="display: block;" src="./example-2.png" alt=""> -->
+   <div class="component-header">menu</div>
+   <div class="c-menu">
+      <div class="selection">
+         <div class="bikes">
+            <div class="left">
+               <div class="categories">
+                  <div class="category" data-category="sportbike">
+                     <div class="label">sportbike</div>
+                  </div>
+                  <div class="category" data-category="street">
+                     <div class="label">street</div>
+                  </div>
+               </div>
+            </div>
+            <div class="right">
+               <div class="options show" data-category="sportbike">
+                  <div class="option">
+                     <div class="image">
+                        <img src="../_assets/images/bmw_motorcycle_1.avif" alt="">
+                     </div>
+                     <div class="text">
+                        <div class="label">Hayabusa</div>
+                        <div class="spec">25th Anniversary Edition</div>
+                     </div>
+                  </div>
+                  <div class="option">
+                     <div class="image">
+                        <img src="../_assets/images/bmw_motorcycle_2.avif" alt="">
+                     </div>
+                     <div class="text">
+                        <div class="label">Hayabusa</div>
+                     </div>
+                  </div>
+                  <div class="explore">
+                     <div class="text">Explore Sportbike</div>
+                     <div class="icon">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                     </div>
+                  </div>
+               </div>
+               <div class="options" data-category="street">
+                  <div class="option">
+                     <div class="image">
+                        <img src="../_assets/images/bmw_motorcycle_3.avif" alt="">
+                     </div>
+                     <div class="text">
+                        <div class="label">Hayabusa</div>
+                     </div>
+                  </div>
+                  <div class="option">
+                     <div class="image">
+                        <img src="../_assets/images/bmw_motorcycle_4.avif" alt="">
+                     </div>
+                     <div class="text">
+                        <div class="label">Hayabusa</div>
+                     </div>
+                  </div>
+                  <div class="explore">
+                     <div class="text">Explore Sportbike</div>
+                     <div class="icon">
+                        <i class="fa-solid fa-up-right-from-square"></i>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="footer">
+            <div class="link">Accessibility</div>
+            <div class="link">Privacy Statement</div>
+            <div class="link">Legal Notices</div>
+            <div class="link">Supplier Code of Conduct</div>
+         </div>
+      </div>
+      <div class="display">
+         display
+      </div>
+   </div>
+
+   <!-- <img style="display: block;" src="./example-3.png" alt=""> -->
+   <div class="component-header">bike display</div>
+   <div class="c-display">
+      <div class="toolbar">
+         <div class="text">Close</div>
+         <div class="close">
+            <i class="fa-solid fa-xmark"></i>
+         </div>
+      </div>
+      <div class="title">Hayabusa</div>
+      <div class="spec">25th Anniversary Edition</div>
+      <p>Gen3 Hayabusa: the quickest, most technologically advanced and aerodynamic Hayabusa yet.</p>
+      <div class="image">
+         <img src="./images/burgman-200.png" alt="">
+      </div>
+      <div class="price">
+         Base MSRP: $19,599
+      </div>
+      <button class="explore">Explore</button>
+   </div>
+
+
+   <script src="./script.js"></script>
+</body>
+</html>

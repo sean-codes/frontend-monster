@@ -1,0 +1,355 @@
+[
+   {
+      "label": "Sportbike",
+      "url": "https://suzukicycles.com/sportbike",
+      "items": [
+         {
+            "label": "Hayabusa",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx1300rz_hayabusa-25th-anniversary-edition/model-gallery/bikestage_hayabusa_25thann_thmbnails_profileright_2400x1500.png?mw=400&w=400&hash=B3A7FB90344B986E202C35712F297F14",
+            "package": "25th Anniversary Edition"
+         },
+         {
+            "label": "Hayabusa",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx1300r_hayabusa/2023/color-gallery/gsx1300rrm3_gry_single_seat_cowl_right_2400x1500.png?mw=400&w=400&hash=3253F1C92E173889820E59F934CB3A7A",
+            "package": ""
+         },
+         {
+            "label": "GSX-R1000R",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-r1000r/2024/gallery/gsx-r1000rzam4_bqj_right_2400x1500.png?mw=400&w=400&hash=498BF04404D040E77CC8357BC0366D52",
+            "package": ""
+         },
+         {
+            "label": "GSX-R1000RZ",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-r1000rz_100th-anniversary-edition/2023/gallery/gsx-r1000rzm3_ysf_right_2400x1500.png?mw=400&w=400&hash=0F29686B1ACB567BD80ED11DBC74CBA6",
+            "package": ""
+         },
+         {
+            "label": "GSX-R1000",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-r1000a/2024/gallery/gsx-r1000am4_qt7_right_2400x1500.png?mw=400&w=400&hash=71C946A3540EF61FAFC86E984F2A0744",
+            "package": ""
+         },
+         {
+            "label": "GSX-8R",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-8r/studio-gallery/blue/gsx800frqm4_ysf_right_2400x1500.png?mw=400&w=400&hash=E200771070A92934EC6CF5C62F231F87",
+            "package": ""
+         },
+         {
+            "label": "GSX-R750",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-r750/2024/gallery-images/gsx-r750zm4_bqj_right_2400x1500.png?mw=400&w=400&hash=504EECD30F6460A659F2F9FEE42FA3F6",
+            "package": ""
+         },
+         {
+            "label": "GSX-R750Z",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-r750z_100th-anniversary-edition/2023/gallery/gsx-r750zm3_ysf_right_2400x1500.png?mw=400&w=400&hash=71BD064121096D4B97EACF8082C0C73B",
+            "package": ""
+         },
+         {
+            "label": "GSX-R600",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-r600/2024/gallery/gsx-r600m4_kgl_right_2400x1500.png?mw=400&w=400&hash=656A4A407944C75D7B0A3615E6C7D729",
+            "package": ""
+         },
+         {
+            "label": "GSX-R600Z",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-r600z_100th-anniversary-edition/2023/gallery/gsx-r600zm3_ysf_right_2400x1500.png?mw=400&w=400&hash=68F9F121C19E408AC22F64494E769B3B",
+            "package": ""
+         },
+         {
+            "label": "GSX250R ABS",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx250r/2023/gsx250ra_m3_bd7_right_2400x1500.png?mw=400&w=400&hash=52A10FC3EA4EA50EC6907D91F360575A",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Street",
+      "url": "https://suzukicycles.com/street",
+      "items": [
+         {
+            "label": "KATANA",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/katana-microsite/model-gallery/bikestage_katana_thmbnails_profile_right_2400x1500.png?mw=400&w=400&hash=BC4EF21E23413FF2CE51B7F35A4F6147",
+            "package": ""
+         },
+         {
+            "label": "GSX-8R",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-8r/studio-gallery/blue/gsx800frqm4_ysf_right_2400x1500.png?mw=400&w=400&hash=E200771070A92934EC6CF5C62F231F87",
+            "package": ""
+         },
+         {
+            "label": "GSX-8S",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-8s/2024/gallery/gsx800rqm4_qt7_right_2400x1500.png?mw=400&w=400&hash=4C2B2880ACAD03DBB19BAF067C74DEFB",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000GT+",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s1000gt_plus/2024/gallery/red/gsx-s1000gt_m4_yyg_right_2400x1500.png?mw=400&w=400&hash=7E254C3AB0454912649C1D1570DC8705",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000GT",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s1000gt/2024/gallery/gsx-s1000gt_m4_yvb_right_2400x1500.png?mw=400&w=400&hash=65434C2A73C3EF9EF3238B3504920791",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s1000a/2024/gallery/gsx-s1000_m4_qka_right_2400x1500.png?mw=400&w=400&hash=1F908B6867853ADED22273ED5066A482",
+            "package": ""
+         },
+         {
+            "label": "GSX-S750Z",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s750z/2023/gsx-s750z_m3_b55_right_2400x1500.png?mw=400&w=400&hash=5889CDE550A9D0C3760447B6CD6C9FC6",
+            "package": ""
+         },
+         {
+            "label": "GSX-S750Z ABS",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s750za/2023/gsx-s750za_m3_bd7_right_2400x1500.png?mw=400&w=400&hash=9B3FF7922A4128EED8B8CEDF3457E404",
+            "package": ""
+         },
+         {
+            "label": "GSX-S750",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s750/2022/gallery/gsx-s750_m2_ykv_right_2400x1500.png?mw=400&w=400&hash=1AC6C69A869C736269337CA90A24DA05",
+            "package": ""
+         },
+         {
+            "label": "SV650 ABS",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/sv650a/2024/gallery/sv650am4_yvb_right_2400x1500.png?mw=400&w=400&hash=BE2E8E5C797ADA19AE0C73F3131C5F15",
+            "package": ""
+         },
+         {
+            "label": "SV650",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/sv650/2023/gallery/sv650m3_bth_right_2400x1500.png?mw=400&w=400&hash=A61A09E568521D0A6A99B32AD2EEA861",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Sport Touring",
+      "url": "https://suzukicycles.com/sport-touring",
+      "items": [
+         {
+            "label": "GSX-S1000GT+",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s1000gt_plus/2024/gallery/red/gsx-s1000gt_m4_yyg_right_2400x1500.png?mw=400&w=400&hash=7E254C3AB0454912649C1D1570DC8705",
+            "package": ""
+         },
+         {
+            "label": "GSX-S1000GT",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s1000gt/2024/gallery/gsx-s1000gt_m4_yvb_right_2400x1500.png?mw=400&w=400&hash=65434C2A73C3EF9EF3238B3504920791",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Crossover",
+      "url": "https://suzukicycles.com/crossover",
+      "items": [
+         {
+            "label": "GSX-S1000GX+",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/gsx-s1000gx-plus/2024/studio-gallery/gsx-s1000gx_m4_qu5_right_2400x1500.png?mw=400&w=400&hash=66328748FAFDF3696582CC2425AD8C10",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Cruiser",
+      "url": "https://suzukicycles.com/cruiser",
+      "items": [
+         {
+            "label": "Suzuki Boulevard M109R B.O.S.S.",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/vzr1800bz_m109rboss/2021/gallery/vzr1800bzm1_kel_r_alt_web.png?mw=400&w=400&hash=8D83314BDC5739E21A4A7F3CE98A21F4",
+            "package": ""
+         },
+         {
+            "label": "Suzuki Boulevard M109R",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/boulevard-m109r/2024/color-gallery/vzr1800m3_yvb_right_2400x1500.png?mw=400&w=400&hash=9544A1D72BD46CF322215CEBB0470BC3",
+            "package": ""
+         },
+         {
+            "label": "Suzuki Boulevard C50",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/vl800_c50/2021/gallery/vl800m1_yyg_r_web.png?mw=400&w=400&hash=62DAEF8855C685E89B04C852C298A524",
+            "package": ""
+         },
+         {
+            "label": "Suzuki Boulevard C50T",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/vl800t_c50t/2021/gallery/vl800tm1_yuh_r_nobackrest_web.png?mw=400&w=400&hash=EAA76ED7B15A5657018B0C69FD3A7D74",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Touring",
+      "url": "https://suzukicycles.com/touring",
+      "items": [
+         {
+            "label": "Suzuki Boulevard C50T",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/vl800t_c50t/2021/gallery/vl800tm1_yuh_r_nobackrest_web.png?mw=400&w=400&hash=EAA76ED7B15A5657018B0C69FD3A7D74",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Adventure",
+      "url": "https://suzukicycles.com/adventure",
+      "items": [
+         {
+            "label": "V-STROM 1050DE Adventure",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl1050rja---v-strom-1050deadv/2024/gallery/dl1050rjm3_jwn_right_2400x1500.png?mw=400&w=400&hash=64781D453D4E8A644E65D917008662D8",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050DE",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl1050rj---v-strom-1050de/2024/gallery/dl1050rjm3_kgl_right_2400x1500.png?mw=400&w=400&hash=FE193F162A8461D012472933ED8A406B",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl1050a_vstrom1050/2024/gallery/dl1050rrm4_cgh_right_2400x1500.png?mw=400&w=400&hash=D7A1BEDB666FBAFA477D7201F236D69D",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800DE Adventure",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl800deadv---v-strom-800de-adv/2024/color-gallery/dl800dercm3_yvb_right_accessories_2400x1500.png?mw=400&w=400&hash=6BC1E387EECEA6164AF6F6D7A84AF9AE",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800DE",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl800de---v-strom-800de/2024/color-gallery/dl800dercm4_qu2_right_2400x1500.png?mw=400&w=400&hash=9DA05DAABE57F7AF8F641D00EB55FE20",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800 Touring",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl800-touring/gallery/dl800rqm4_yvb_right_2400x1500.jpg?mw=400&w=400&hash=A11DA7C334A7A545E38E9572BDF0A98E",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 800",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl800/gallery/dl800rqm4_qvp_right_2400x1500.jpg?mw=400&w=400&hash=8BF90155C3DCF66EAE47853306353B7C",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050XT Adventure",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl1050xaa_vstrom1050xtadv/2022/gallery/dl1050rc_m2_bt1_right_2400x1500.png?mw=400&w=400&hash=E65AEAA3A432EE459FA12C18ED960C20",
+            "package": ""
+         },
+         {
+            "label": "V-STROM 1050XT",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl1050xa-vstrom1050xt/2022/gallery/dl1050rc_m2_bd7_right_2400x1500.png?mw=400&w=400&hash=6771D25C80746138DC7806237238C0E1",
+            "package": ""
+         },
+         {
+            "label": "V-Strom 650XT Adventure",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl650xaa_vstrom650xtadv/2024/gallery/dl650xam4_jwn_right_2400x1500.png?mw=400&w=400&hash=8F9A7E224F7F953D8AE0C1BA89539524",
+            "package": ""
+         },
+         {
+            "label": "V-Strom 650XT",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl650xa_vstrom650xt/2024/gallery/dl650xam4_yvb_right_2400x1500.png?mw=400&w=400&hash=6DD4DC63412676DD3E6D76651AEE8F90",
+            "package": ""
+         },
+         {
+            "label": "V-Strom 650",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dl650a_vstrom650/2024/gallery/dl650am4_yud_right_2400x1500.png?mw=400&w=400&hash=3E311D06FFC45F7C3B1F3622E98D4359",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "DualSport",
+      "url": "https://suzukicycles.com/dualsport",
+      "items": [
+         {
+            "label": "DR650S",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dr650s/2023/color-gallery/dr650sem3_30h_wht_right_2400x1500.png?mw=400&w=400&hash=C93157DFD6BFC6B08CD2E7F23CE482F7",
+            "package": ""
+         },
+         {
+            "label": "DR-Z400S",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dr-z400s/2024/gallery/dr-z400sm4_019_right_2400x1500.png?mw=400&w=400&hash=1D971DD090E87377D5EC407E7473968D",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "SuperMoto",
+      "url": "https://suzukicycles.com/supermoto",
+      "items": [
+         {
+            "label": "DR-Z400SM",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dr-z400sm/2024/gallery/dr-z400smm4_019_right_2400x1500.png?mw=400&w=400&hash=0A76E35313BF1A1778D0D2670A6788DA",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Motocross",
+      "url": "https://suzukicycles.com/motocross",
+      "items": [
+         {
+            "label": "RM-Z450",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/rm-z450/2023/color-gallery/rm-z450m3_yu1_right_2400x1500.png?mw=400&w=400&hash=834E507CBEC2E95662C4A3C0810B573E",
+            "package": ""
+         },
+         {
+            "label": "RM-Z250",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/rm-z250/2023/color-gallery/rm-z250m3_yu1_right_2400x1500.png?mw=400&w=400&hash=18105B629007EFB6D79A8479028D5C78",
+            "package": ""
+         },
+         {
+            "label": "RM85",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/rm85/2023/color-gallery/rm85m3_yu1_right_2400x1500.png?mw=400&w=400&hash=2DAA63FD2C050184E7F530D6BEB5413F",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Off Road",
+      "url": "https://suzukicycles.com/off-road",
+      "items": [
+         {
+            "label": "DR-Z125L",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dr-z125l/2023/color-gallery/dr-z125lm3_yu1_right_2400x1500.png?mw=400&w=400&hash=F4F8340E18BD86FBE72704EC83154685",
+            "package": ""
+         },
+         {
+            "label": "DR-Z50",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dr-z50/2023/gallery/dr-z50m3_yu1_right_2400x1500.png?mw=400&w=400&hash=EFA970AC5BA1BBD1386C028945D8B7A9",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Youth",
+      "url": "https://suzukicycles.com/youth-motorcycle",
+      "items": [
+         {
+            "label": "DR-Z125L",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dr-z125l/2023/color-gallery/dr-z125lm3_yu1_right_2400x1500.png?mw=400&w=400&hash=F4F8340E18BD86FBE72704EC83154685",
+            "package": ""
+         },
+         {
+            "label": "RM85",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/rm85/2023/color-gallery/rm85m3_yu1_right_2400x1500.png?mw=400&w=400&hash=2DAA63FD2C050184E7F530D6BEB5413F",
+            "package": ""
+         },
+         {
+            "label": "DR-Z50",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/dr-z50/2023/gallery/dr-z50m3_yu1_right_2400x1500.png?mw=400&w=400&hash=EFA970AC5BA1BBD1386C028945D8B7A9",
+            "package": ""
+         }
+      ]
+   },
+   {
+      "label": "Scooter",
+      "url": "https://suzukicycles.com/scooter",
+      "items": [
+         {
+            "label": "Burgman 400",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/an400a_burgman-400/2022/gallery/an400am2_qka_right_gallery_2400x1500.png?mw=400&w=400&hash=896C7F4DF49637D0A798008BF1F5CB33",
+            "package": ""
+         },
+         {
+            "label": "Burgman 200",
+            "img": "https://suzukicycles.com/-/media/project/cycles/images/products/motorcycles/uh200a_burgman200/2022/gallery/uh200am2_yua_r.png?mw=400&w=400&hash=46F073056744A01FCC1905367B78A020",
+            "package": ""
+         }
+      ]
+   }
+]
