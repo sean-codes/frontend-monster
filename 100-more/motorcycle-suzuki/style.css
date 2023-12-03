@@ -129,6 +129,7 @@ html, body {
    cursor: pointer;
    font-family: var(--font-oswald);
 }
+.c-toolbar .links .link.active:after,
 .c-toolbar .links .link:hover:after{
    content: '';
    position: absolute;
@@ -171,6 +172,12 @@ html, body {
    min-height: calc(100vh - var(--c-toolbar-height));
    display: flex;
    z-index: 1000;
+   transition: all 0.2s;
+   opacity: 1;
+}
+.c-menu.hide {
+   opacity: 0;
+   pointer-events: none;
 }
 .c-menu .selection {
    padding-top: var(--space-3);
@@ -187,6 +194,9 @@ html, body {
    flex: 1;
    display: flex;
    padding-left: var(--space-4);
+}
+.c-menu .bikes .right{
+   max-width: 330px;
 }
 .c-menu .footer{
    background: var(--color-grey);
@@ -215,12 +225,13 @@ html, body {
    text-transform: uppercase;
    position: relative;
 }
+.c-menu .categories .category.active .label:after,
 .c-menu .categories .category:hover .label:after {
    content: '';
    position: absolute;
    bottom: -0.5rem;
    left: 0;
-   width: 5rem;
+   width: 4rem;
    border-bottom: 3px solid var(--color-blue);
    user-select: none;
    pointer-events: none;
@@ -260,7 +271,8 @@ html, body {
    height: 100%;
    opacity: 0.5;
 }
-.c-menu .options .option:hover .image{
+.c-menu .options .option:hover .image,
+.c-menu .options .option.active .image{
    opacity: 1;
 }
 .c-menu .options .option .image img{
