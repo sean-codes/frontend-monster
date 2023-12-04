@@ -1,0 +1,984 @@
+[
+   {
+      "label": "Adventure",
+      "items": [
+         {
+            "name": "NEW TIGER 900 RANGE",
+            "price": "$14,995.00",
+            "img": "./images/new-tiger-900-range.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "106.5"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "66.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "50+"
+               }
+            ]
+         },
+         {
+            "name": "TIGER 900",
+            "price": "$14,995.00",
+            "img": "./images/tiger-900.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "94"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "64"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "+65"
+               }
+            ]
+         },
+         {
+            "name": "TIGER SPORT 660",
+            "price": "$9,695.00",
+            "img": "./images/tiger-sport-660.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "660"
+               },
+               {
+                  "key": "HP",
+                  "value": "81"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "47"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "TIGER 850 SPORT",
+            "price": "$12,290.00",
+            "img": "./images/tiger-850-sport.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "888"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "84"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "60"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "60+"
+               }
+            ]
+         },
+         {
+            "name": "TIGER 1200 GT",
+            "price": "$19,595.00",
+            "img": "./images/tiger-1200-gt.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP",
+                  "value": "147"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "95"
+               },
+               {
+                  "key": "YEAR WARRANTY",
+                  "value": "3 "
+               }
+            ]
+         },
+         {
+            "name": "TIGER 1200 RALLY",
+            "price": "$22,995.00",
+            "img": "./images/tiger-1200-rally.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP",
+                  "value": "147"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "95"
+               },
+               {
+                  "key": "YEAR WARRANTY",
+                  "value": "3 "
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Modern Classics",
+      "items": [
+         {
+            "name": "SCRAMBLER 1200",
+            "price": "$13,595.00",
+            "img": "./images/scrambler-1200.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "81.1"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "89"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "SPEED 400",
+            "price": "$4,995.00",
+            "img": "./images/speed-400.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "398"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "28"
+               },
+               {
+                  "key": "SERIES ENGINE",
+                  "value": "TR"
+               },
+               {
+                  "key": "DEDICATED ACCESSORIES",
+                  "value": "20+"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 400 X",
+            "price": "$5,595.00",
+            "img": "./images/scrambler-400-x.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "398"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "27.7"
+               },
+               {
+                  "key": "SERIES ENGINE",
+                  "value": "TR"
+               },
+               {
+                  "key": "DEDICATED ACCESSORIES",
+                  "value": "20+"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TWIN 900",
+            "price": "$9,895.00",
+            "img": "./images/speed-twin-900.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59 "
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "64 "
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T100",
+            "price": "$10,995.00",
+            "img": "./images/bonneville-t100.jpg",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP POWER",
+                  "value": "64.1"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "117"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 900",
+            "price": "$11,495.00",
+            "img": "./images/scrambler-900.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP Peak Power",
+                  "value": "64"
+               },
+               {
+                  "key": "Mileage Service",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T120",
+            "price": "$12,695.00",
+            "img": "./images/bonneville-t120.png",
+            "attributes": [
+               {
+                  "key": "GENESIS",
+                  "value": "1959"
+               },
+               {
+                  "key": "CC BONNEVILLE TWIN",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "77.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "116"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TWIN 1200",
+            "price": "$12,895.00",
+            "img": "./images/speed-twin-1200.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "100"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE BOBBER",
+            "price": "$13,795.00",
+            "img": "./images/bonneville-bobber.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE SPEEDMASTER",
+            "price": "$13,795.00",
+            "img": "./images/bonneville-speedmaster.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "THRUXTON RS",
+            "note": "new",
+            "price": "$16,995.00",
+            "img": "./images/thruxton-rs.png",
+            "attributes": [
+               {
+                  "key": " CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER ",
+                  "value": "103"
+               },
+               {
+                  "key": "ACCESSORIES ",
+                  "value": "80 "
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Motocross",
+      "items": [
+         {
+            "name": "TF 250-X",
+            "price": "$9,995.00",
+            "img": "./images/tf-250_x.png",
+            "attributes": [
+               {
+                  "key": "ALL NEW",
+                  "value": ""
+               },
+               {
+                  "key": "250CC ENGINE",
+                  "value": ""
+               },
+               {
+                  "key": "ALUMINIUM FRAME",
+                  "value": ""
+               },
+               {
+                  "key": "TOP TIER COMPONENTS",
+                  "value": ""
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Roadsters",
+      "items": [
+         {
+            "name": "TRIDENT 660",
+            "price": "$8,595.00",
+            "note": "new",
+            "img": "./images/trident-660.png",
+            "attributes": [
+               {
+                  "key": "CC Engine",
+                  "value": "660"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "47"
+               },
+               {
+                  "key": "HP",
+                  "value": "81"
+               },
+               {
+                  "key": "MILEAGE SERVICE ",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "STREET TRIPLE 765",
+            "price": "$9,995.00",
+            "img": "./images/street-triple-765.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "765"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP",
+                  "value": "120"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "6000"
+               }
+            ]
+         },
+         {
+            "name": "Street Triple 765 Moto2™ Edition",
+            "price": "$15,395.00",
+            "img": "./images/street-triple-765-moto2_-edition.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "765"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "128"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "6000"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TRIPLE 1200 RS",
+            "price": "$18,895.00",
+            "note": "new",
+            "img": "./images/speed-triple-1200-rs.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP",
+                  "value": "177"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "92"
+               },
+               {
+                  "key": "LBS WET WEIGHT",
+                  "value": "436.5"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TRIPLE 1200 RR",
+            "price": "$20,950.00",
+            "img": "./images/speed-triple-1200-rr.png",
+            "attributes": [
+               {
+                  "key": "CC Engine",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP Peak Power",
+                  "value": "177"
+               },
+               {
+                  "key": "LB-FT Peak Torque",
+                  "value": "92"
+               },
+               {
+                  "key": "Miles Service",
+                  "value": "10,000"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Rocket 3",
+      "items": [
+         {
+            "name": "ROCKET 3",
+            "price": "$23,895.00",
+            "note": "new",
+            "img": "./images/rocket-3.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Stealth Edition",
+      "items": [
+         {
+            "name": "STEALTH EDITIONS",
+            "price": "$10,645.00",
+            "img": "./images/stealth-editions.png",
+            "attributes": []
+         }
+      ]
+   },
+   {
+      "label": "Special Editions",
+      "items": [
+         {
+            "name": "STEALTH EDITIONS",
+            "price": "$10,645.00",
+            "img": "./images/stealth-editions.png",
+            "attributes": []
+         },
+         {
+            "name": "NEW THRUXTON FINAL EDITION",
+            "price": "$17,995.00",
+            "img": "./images/new-thruxton-final-edition.png",
+            "attributes": [
+               {
+                  "key": " CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER ",
+                  "value": "103"
+               },
+               {
+                  "key": "ACCESSORIES ",
+                  "value": "80 "
+               }
+            ]
+         },
+         {
+            "name": "Tiger 900 GT Aragón Edition",
+            "price": "$16,495.00",
+            "img": "./images/tiger-900-gt-arag_n-edition.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "94"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "64"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "+65"
+               }
+            ]
+         },
+         {
+            "name": "Tiger 900 Rally Aragón Edition",
+            "price": "$16,995.00",
+            "img": "./images/tiger-900-rally-arag_n-edition.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "94"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "64"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "+65"
+               }
+            ]
+         },
+         {
+            "name": "T120 BLACK DGR LIMITED EDITION",
+            "price": "$13,495.00",
+            "img": "./images/t120-black-dgr-limited-edition.png",
+            "attributes": [
+               {
+                  "key": "GENESIS",
+                  "value": "1959"
+               },
+               {
+                  "key": "CC BONNEVILLE TWIN",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "77.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "116"
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 R 221",
+            "price": "$24,795.00",
+            "img": "./images/rocket-3-r-221.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 GT 221",
+            "price": "$25,495.00",
+            "img": "./images/rocket-3-gt-221.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Chrome Collection",
+      "items": [
+         {
+            "name": "SPEED TWIN 900 CHROME EDITION",
+            "price": "$10,395.00",
+            "img": "./images/speed-twin-900-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59 "
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "64 "
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T100 CHROME EDITION",
+            "price": "$11,495.00",
+            "img": "./images/bonneville-t100-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP POWER",
+                  "value": "64.1"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "117"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 900 CHROME EDITION",
+            "price": "$11,995.00",
+            "img": "./images/scrambler-900-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP Peak Power",
+                  "value": "64"
+               },
+               {
+                  "key": "Mileage Service",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T120 CHROME EDITION",
+            "price": "$13,495.00",
+            "img": "./images/bonneville-t120-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "GENESIS",
+                  "value": "1959"
+               },
+               {
+                  "key": "CC BONNEVILLE TWIN",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "77.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "116"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE BOBBER CHROME EDITION",
+            "price": "$14,595.00",
+            "img": "./images/bonneville-bobber-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE SPEEDMASTER CHROME EDITION",
+            "price": "$14,595.00",
+            "img": "./images/bonneville-speedmaster-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 1200 XE CHROME EDITION (MY23)",
+            "price": "$16,995.00",
+            "img": "./images/scrambler-1200-xe-chrome-edition-_my23_.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "81.1"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "89"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "THRUXTON RS CHROME EDITION",
+            "price": "$17,795.00",
+            "img": "./images/thruxton-rs-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": " CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER ",
+                  "value": "103"
+               },
+               {
+                  "key": "ACCESSORIES ",
+                  "value": "80 "
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 R CHROME EDITION",
+            "price": "$24,795.00",
+            "img": "./images/rocket-3-r-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 GT CHROME EDITION",
+            "price": "$25,495.00",
+            "img": "./images/rocket-3-gt-chrome-edition.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         }
+      ]
+   }
+]

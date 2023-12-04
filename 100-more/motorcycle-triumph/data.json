@@ -1,0 +1,986 @@
+[
+   {
+      "label": "Adventure",
+      "items": [
+         {
+            "name": "NEW TIGER 900 RANGE",
+            "price": "$14,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/my24/tiger%20900%202024/tigrer%20900%20cgi%20web/472/tiger%20900%20gt_my24_snowdonia%20white_rhs_472px.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "106.5"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "66.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "50+"
+               }
+            ]
+         },
+         {
+            "name": "TIGER 900",
+            "price": "$14,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/2020%20tiger%20900/cgi/my23%20colours/caspian%20blue/gt%20pro/version2/tiger-900-gt-pro_my23_caspian-blue_rhs-v2-_472px.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "94"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "64"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "+65"
+               }
+            ]
+         },
+         {
+            "name": "TIGER SPORT 660",
+            "price": "$9,695.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/my22/ll1%20tiger%20sport%20660/base%20images/korosi%20red%20graphite/tiger-sport-660-korosi-red-graphite-rhs-472.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "660"
+               },
+               {
+                  "key": "HP",
+                  "value": "81"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "47"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "TIGER 850 SPORT",
+            "price": "$12,290.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/my24/cx7_tiger_850_sport/tiger%20850%20sport_my24_jet%20black_rhs_472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "888"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "84"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "60"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "60+"
+               }
+            ]
+         },
+         {
+            "name": "TIGER 1200 GT",
+            "price": "$19,595.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/my22/2022%20tiger%201200/base%20images/gt%20pro/my22-tiger-1200-gt-pro-lucerne-blue-rhs-472.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP",
+                  "value": "147"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "95"
+               },
+               {
+                  "key": "YEAR WARRANTY",
+                  "value": "3 "
+               }
+            ]
+         },
+         {
+            "name": "TIGER 1200 RALLY",
+            "price": "$22,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/my22/2022%20tiger%201200/base%20images/rally%20pro/my22-tiger-1200-rally-pro-matt-khaki-rhs-472.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP",
+                  "value": "147"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "95"
+               },
+               {
+                  "key": "YEAR WARRANTY",
+                  "value": "3 "
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Modern Classics",
+      "items": [
+         {
+            "name": "SCRAMBLER 1200",
+            "price": "$13,595.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my24%20scrambler%201200/cgi/web/472/scrambler%201200%20x_my24_ash%20grey_rhs.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "81.1"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "89"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "SPEED 400",
+            "price": "$4,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/t%20series/speed%20400/speed%20400%20cgi/472/speed%20400_my24_carnival%20red_rhs.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "398"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "28"
+               },
+               {
+                  "key": "SERIES ENGINE",
+                  "value": "TR"
+               },
+               {
+                  "key": "DEDICATED ACCESSORIES",
+                  "value": "20+"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 400 X",
+            "price": "$5,595.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/t%20series/scrambler%20400%20x/scrambler%20400%20x%20cgi/472/scrambler%20400%20x_my24_matt%20khaki%20green_rhs.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "398"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "27.7"
+               },
+               {
+                  "key": "SERIES ENGINE",
+                  "value": "TR"
+               },
+               {
+                  "key": "DEDICATED ACCESSORIES",
+                  "value": "20+"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TWIN 900",
+            "price": "$9,895.00",
+            "note": "new",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my23%20colours/speed%20twin%20900/ironstone/speed%20twin%20900_my23_ironstone_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59 "
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "64 "
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T100",
+            "price": "$10,995.00",
+            "note": "new",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my21/t100/updated%20images/others/bonneville-t100-family-promo-updated-955x537.jpg",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP POWER",
+                  "value": "64.1"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "117"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 900",
+            "price": "$11,495.00",
+            "note": "new",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my24%20colours/dcz_scrambler_900/scrambler%20900_my24_cosmic%20yellow_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP Peak Power",
+                  "value": "64"
+               },
+               {
+                  "key": "Mileage Service",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T120",
+            "price": "$12,695.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my24%20stealth%20editions/stealth%20editions/du4/1080/bonneville%20t120_my24_phantom%20blue_rhs_1080px.png",
+            "attributes": [
+               {
+                  "key": "GENESIS",
+                  "value": "1959"
+               },
+               {
+                  "key": "CC BONNEVILLE TWIN",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "77.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "116"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TWIN 1200",
+            "price": "$12,895.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my23%20colours/speed%20twin%201200/matt%20baja%20orange/speed%20twin%201200_my23_matt%20baja%20orange_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "100"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE BOBBER",
+            "price": "$13,795.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my23%20colours/bobber/bonneville-bobber_my23_red-hopper_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE SPEEDMASTER",
+            "price": "$13,795.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my23%20colours/speedmaster/cordovan%20red/bonneville%20speedmaster_my23_cordovan%20red_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "THRUXTON RS",
+            "price": "$16,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my24%20colours/df4_thruxton_rs/thruxton%20rs_my24_jet%20black_silver%20ice_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": " CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER ",
+                  "value": "103"
+               },
+               {
+                  "key": "ACCESSORIES ",
+                  "value": "80 "
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Motocross",
+      "items": [
+         {
+            "name": "TF 250-X",
+            "price": "$9,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/off-road/tf250/zb1/472/tf250x_my24_jetblack_rhs_472px.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "ALL NEW",
+                  "value": ""
+               },
+               {
+                  "key": "250CC ENGINE",
+                  "value": ""
+               },
+               {
+                  "key": "ALUMINIUM FRAME",
+                  "value": ""
+               },
+               {
+                  "key": "TOP TIER COMPONENTS",
+                  "value": ""
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Roadsters",
+      "items": [
+         {
+            "name": "TRIDENT 660",
+            "price": "$8,595.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/roadsters-supersports/my24/lg1_trident_660/trident_my24_jet%20black_rhs_472px.png",
+            "note": "new",
+            "attributes": [
+               {
+                  "key": "CC Engine",
+                  "value": "660"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "47"
+               },
+               {
+                  "key": "HP",
+                  "value": "81"
+               },
+               {
+                  "key": "MILEAGE SERVICE ",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "STREET TRIPLE 765",
+            "price": "$9,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/roadsters-supersports/my23/street%20triple/765%20rs%20variant/colours/carnival%20red/my23-street-triple-rs-carnival-red-rhs-825x472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "765"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP",
+                  "value": "120"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "6000"
+               }
+            ]
+         },
+         {
+            "name": "Street Triple 765 Moto2™ Edition",
+            "price": "$15,395.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/roadsters-supersports/my23/moto2%20street%20triple/colours/triumph%20racing%20yellow/my23-street-triple-moto2-triumph-racing-yellow-rhs-825x472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "765"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "128"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "6000"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TRIPLE 1200 RS",
+            "price": "$18,895.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/q_auto/sitecoremedialibrary/media-library/images/motorcycles/roadsters-supersports/my23%20colours/speed%20triple%201200%20rs/silver%20sub%20frame%202023/speed-triple-1200-rs_my23_sapphire-black_rhs1920x1080.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP",
+                  "value": "177"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "92"
+               },
+               {
+                  "key": "LBS WET WEIGHT",
+                  "value": "436.5"
+               }
+            ]
+         },
+         {
+            "name": "SPEED TRIPLE 1200 RR",
+            "note": "new",
+            "price": "$20,950.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/roadsters-supersports/my22/speed%20triple%202022/base%20images/red%20hopper-storm%20grey/speed-triple-1200-rr-red-hopper-storm-grey-rhs-472.png",
+            "attributes": [
+               {
+                  "key": "CC Engine",
+                  "value": "1160"
+               },
+               {
+                  "key": "HP Peak Power",
+                  "value": "177"
+               },
+               {
+                  "key": "LB-FT Peak Torque",
+                  "value": "92"
+               },
+               {
+                  "key": "Miles Service",
+                  "value": "10,000"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Rocket 3",
+      "items": [
+         {
+            "name": "ROCKET 3",
+            "price": "$23,895.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/rocket%203/my23/rocket%203%20r/rocket-3-r_my23_matt-silver-ice_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Stealth Edition",
+      "items": [
+         {
+            "name": "STEALTH EDITIONS",
+            "price": "$10,645.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my24%20stealth%20editions/stealth%20editions/dpz/472/speed%20twin%20900_my24_phantom%20green_rhs_472px.png",
+            "attributes": []
+         }
+      ]
+   },
+   {
+      "label": "Special Editions",
+      "items": [
+         {
+            "name": "STEALTH EDITIONS",
+            "price": "$10,645.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my24%20stealth%20editions/stealth%20editions/dpz/472/speed%20twin%20900_my24_phantom%20green_rhs_472px.png",
+            "attributes": []
+         },
+         {
+            "name": "NEW THRUXTON FINAL EDITION",
+            "price": "$17,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/my24%20thruxton%20fe/thruxton%20fe%20web/472/thruxton%20rs_my24_final%20edition_rhs_472px.png",
+            "attributes": [
+               {
+                  "key": " CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER ",
+                  "value": "103"
+               },
+               {
+                  "key": "ACCESSORIES ",
+                  "value": "80 "
+               }
+            ]
+         },
+         {
+            "name": "Tiger 900 GT Aragón Edition",
+            "price": "$16,495.00",
+            "note": "new",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/my24/aragon%20editions/web_cgi/472/tiger%20900%20gt%20aragon%20edition_my24_diablo%20red_rhs.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "94"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "64"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "+65"
+               }
+            ]
+         },
+         {
+            "name": "Tiger 900 Rally Aragón Edition",
+            "price": "$16,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/adventure-touring/my24/aragon%20editions/web_cgi/472/tiger%20900%20rally%20aragon%20edition_my24_matt%20phantom%20black_rhs.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "94"
+               },
+               {
+                  "key": "LB-FT&nbsp;PEAK TORQUE",
+                  "value": "64"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "+65"
+               }
+            ]
+         },
+         {
+            "name": "T120 BLACK DGR LIMITED EDITION",
+            "price": "$13,495.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/t120%20black%20dgr%20limited%20edition/legacy%20images/t120-black-dgr-limited-edition-nav-825x472.png",
+            "attributes": [
+               {
+                  "key": "GENESIS",
+                  "value": "1959"
+               },
+               {
+                  "key": "CC BONNEVILLE TWIN",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "77.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "116"
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 R 221",
+            "price": "$24,795.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/2022%20special%20editions/rocket%203%20r%20221/base%20images/my22-rocket-3-r-221-472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 GT 221",
+            "price": "$25,495.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/2022%20special%20editions/rocket%203%20gt%20221/base%20images/my22-rocket-3-gt-221-472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "label": "Chrome Collection",
+      "items": [
+         {
+            "name": "SPEED TWIN 900 CHROME EDITION",
+            "price": "$10,395.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/speed%20twin%20900/base%20images/sized/speed-twin-900-chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59 "
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "64 "
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T100 CHROME EDITION",
+            "price": "$11,495.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/t100/base%20images/sized/t100-chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "HP POWER",
+                  "value": "64.1"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "117"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 900 CHROME EDITION",
+            "price": "$11,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/scrambler%20900/base%20images/sized/scrambler-900--chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "900"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "59"
+               },
+               {
+                  "key": "HP Peak Power",
+                  "value": "64"
+               },
+               {
+                  "key": "Mileage Service",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE T120 CHROME EDITION",
+            "price": "$13,495.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/t120/base%20images/sized/t120--chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "GENESIS",
+                  "value": "1959"
+               },
+               {
+                  "key": "CC BONNEVILLE TWIN",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "77.4"
+               },
+               {
+                  "key": "ACCESSORIES",
+                  "value": "116"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE BOBBER CHROME EDITION",
+            "price": "$14,595.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/bobber/base%20images/sized/bonneville-bobber-chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "BONNEVILLE SPEEDMASTER CHROME EDITION",
+            "price": "$14,595.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/speedmaster/base%20images/sized/speedmaster-chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "cc ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "78"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "76"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "SCRAMBLER 1200 XE CHROME EDITION (MY23)",
+            "price": "$16,995.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/scrambler%201200%20xe/base%20images/sized/scrambler-1200-xe--chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "81.1"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "89"
+               },
+               {
+                  "key": "MILES SERVICE",
+                  "value": "10,000"
+               }
+            ]
+         },
+         {
+            "name": "THRUXTON RS CHROME EDITION",
+            "price": "$17,795.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/modern-classics/chrome%20editions/thruxton%20rs/base%20images/sized/thruxton-rs-chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": " CC ENGINE",
+                  "value": "1200"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "83"
+               },
+               {
+                  "key": "HP PEAK POWER ",
+                  "value": "103"
+               },
+               {
+                  "key": "ACCESSORIES ",
+                  "value": "80 "
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 R CHROME EDITION",
+            "price": "$24,795.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/rocket%203/my23/chrome%20editions/rocket%203%20r/colours/sized/rocket-3-r-chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         },
+         {
+            "name": "ROCKET 3 GT CHROME EDITION",
+            "price": "$25,495.00",
+            "img": "https://media.triumphmotorcycles.co.uk/image/upload/f_auto/q_auto/sitecoremedialibrary/media-library/images/motorcycles/rocket%203/my23/chrome%20editions/rocket%203%20gt/base%20images/sized/rocket-3-gt-chrome-edition-image-medium-825x472.png",
+            "attributes": [
+               {
+                  "key": "CC ENGINE",
+                  "value": "2500"
+               },
+               {
+                  "key": "LB-FT PEAK TORQUE",
+                  "value": "163"
+               },
+               {
+                  "key": "HP PEAK POWER",
+                  "value": "165"
+               },
+               {
+                  "key": "LB LIGHTER ",
+                  "value": "88"
+               }
+            ]
+         }
+      ]
+   }
+]

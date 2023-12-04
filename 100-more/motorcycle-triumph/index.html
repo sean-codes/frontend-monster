@@ -1,0 +1,314 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel='stylesheet' href="../_assets/fontawesome/css/all.min.css" />
+</head>
+<body>
+   <div class="app">
+      <div class="c-toolbar">
+         <div class="logo">
+            <img src="../_assets/images/logo-triumph.svg" alt="">
+         </div>
+         <div class="links">
+            <div class="link" id="menu-btn">motorcycles</div>
+            <div class="link">accessories</div>
+            <div class="link">clothing</div>
+            <div class="link">owners</div>
+            <div class="link">discover</div>
+         </div>
+         <div class="more-links">
+            <div class="link">dealers</div>
+            <div class="link">configure</div>
+            <div class="link">offers</div>
+            <div class="link">test ride</div>
+         </div>
+         <div class="location">
+            <div class="icon icon-map">
+               <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="text">
+               USA
+            </div>
+            <div class="icon icon-map">
+               <i class="fa-solid fa-chevron-down"></i>
+            </div>
+         </div>
+      </div>
+      <div class="menu close">
+         <div class="c-tabs">
+            <div class="tab active">motorcycles</div>
+            <div class="tab">offers</div>
+         </div>
+
+         <div class="layers">
+            <div class="c-categories">
+               <div class="categories">
+                  <div class="category active">road</div>
+                  <div class="category">track</div>
+                  <div class="category">classics</div>
+               </div>
+
+               <div class="other-links">
+                  <div class="link">Prior Model Year</div>
+                  <div class="link">Pre-owned Motorcycles</div>
+                  <div class="link">LATEST OFFERS</div>
+               </div>
+
+               <div class="apps">
+                  <div class="link">
+                     <i class="fa-solid fa-book"></i>
+                     <div class="text">Model Overview</div>
+                  </div>
+                  <div class="link">
+                     <i class="fa-solid fa-sliders"></i>
+                     <div class="text">Configure</div>
+                  </div>
+                  <div class="link">
+                     <i class="fa-solid fa-rocket"></i>
+                     <div class="text">Test Ride</div>
+                  </div>
+                  <div class="link">
+                     <i class="fa-solid fa-location-dot"></i>
+                     <div class="text">Dealers</div>
+                  </div>
+               </div>
+            </div>
+
+
+
+            <div class="c-bikes">
+               <div class="header">
+                  <div class="text">Adventure</div>
+                  <div class="link">
+                     Explore
+                     <i class="fa-solid fa-chevron-right"></i>
+                  </div>
+               </div>
+               <div class="bikes">
+                  <template id="template-bike">
+                     <div class="bike active">
+                        <div class="note">
+                           new
+                        </div>
+                        <div class="image">
+                           <img src="./images/bonneville-bobber.png" alt="">
+                        </div>
+                        <div class="text">
+                           <div class="title">Bonneville Bobber</div>
+                           <div class="price">Price From $14,995.00</div>
+                        </div>
+                     </div>
+                  </template>
+               </div>
+            </div>
+
+            <div class="c-display">
+               <div class="title">Bonneville Bobber</div>
+               <div class="price">
+                  <div class="label">Price From</div>
+                  <div class="dollars">$15,000.00</div>
+               </div>
+
+               <div class="bike">
+                  <div class="image">
+                     <img src="./images/bonneville-speedmaster-chrome-edition.png" alt="">
+                  </div>
+                  <div class="specs">
+                     <table>
+                        <tr>
+                           <td class="value">900</td>
+                           <td class="key">CC Engine</td>
+                        </tr>
+                        <tr>
+                           <td class="value">106.5</td>
+                           <td class="key">HP peak power</td>
+                        </tr>
+                        <tr>
+                           <td class="value">60.4</td>
+                           <td class="key">lb-ft peak torque</td>
+                        </tr>
+                        <tr>
+                           <td class="value">50+</td>
+                           <td class="key">accessories</td>
+                        </tr>
+                     </table>
+                     <div class="buttons">
+                        <button class="primary">Configure</button>
+                        <button>View details</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   
+   <!-----------------------------------------------------------
+   | Component: Toolbar
+   ------------------------------------------------------------>
+   <div class="component-header">toolbar</div>
+   <div class="c-toolbar">
+      <div class="logo">
+         <img src="../_assets/images/logo-triumph.svg" alt="">
+      </div>
+      <div class="links">
+         <div class="link active">motorcycles</div>
+         <div class="link">accessories</div>
+         <div class="link">clothing</div>
+         <div class="link">owners</div>
+         <div class="link">discover</div>
+      </div>
+      <div class="more-links">
+         <div class="link">dealers</div>
+         <div class="link">configure</div>
+         <div class="link">offers</div>
+         <div class="link">test ride</div>
+      </div>
+      <div class="location">
+         <div class="icon icon-map">
+            <i class="fa-solid fa-location-dot"></i>
+         </div>
+         <div class="text">
+            USA
+         </div>
+         <div class="icon icon-map">
+            <i class="fa-solid fa-chevron-down"></i>
+         </div>
+      </div>
+   </div>
+
+   <!-----------------------------------------------------------
+   | Component: Tabs
+   ------------------------------------------------------------>
+   <div class="component-header">tabs</div>
+   <div class="c-tabs">
+      <div class="tab active">motorcycles</div>
+      <div class="tab">offers</div>
+   </div>
+
+
+   <!-----------------------------------------------------------
+   | Component: Categories
+   ------------------------------------------------------------>
+   <div class="component-header">categories</div>
+   <div class="c-categories">
+      <div class="categories">
+         <div class="category active">road</div>
+         <div class="category">track</div>
+         <div class="category">classics</div>
+      </div>
+
+      <div class="other-links">
+         <div class="link">Prior Model Year</div>
+         <div class="link">Pre-owned Motorcycles</div>
+         <div class="link">LATEST OFFERS</div>
+      </div>
+
+      <div class="apps">
+         <div class="link">
+            <i class="fa-solid fa-book"></i>
+            <div class="text">Model Overview</div>
+         </div>
+         <div class="link">
+            <i class="fa-solid fa-sliders"></i>
+            <div class="text">Configure</div>
+         </div>
+         <div class="link">
+            <i class="fa-solid fa-rocket"></i>
+            <div class="text">Test Ride</div>
+         </div>
+         <div class="link">
+            <i class="fa-solid fa-location-dot"></i>
+            <div class="text">Dealers</div>
+         </div>
+      </div>
+   </div>
+
+   <!-----------------------------------------------------------
+   | Component: Bikes
+   ------------------------------------------------------------>
+   <div class="component-header">bikes</div>
+   <div class="c-bikes">
+      <div class="header">
+         <div class="text">Adventure</div>
+         <div class="link">
+            Explore
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+      <div class="bikes">
+         <div class="bike">
+            <div class="note">
+               new
+            </div>
+            <div class="image">
+               <img src="./images/bonneville-bobber.png" alt="">
+            </div>
+            <div class="text">
+               <div class="title">Bonneville Bobber</div>
+               <div class="price">Price From $14,995.00</div>
+            </div>
+         </div>
+         <div class="bike">
+            <div class="note"></div>
+            <div class="image">
+               <img src="./images/bonneville-speedmaster-chrome-edition.png" alt="">
+            </div>
+            <div class="text">
+               <div class="title">Bonneville Speedmaster</div>
+               <div class="price">Price From $12,995.00</div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <br />
+   <br />
+
+   <!-----------------------------------------------------------
+   | Component: Display
+   ------------------------------------------------------------>
+   <div class="component-header">display</div>
+   <div class="c-display">
+      <div class="title">Bonneville Bobber</div>
+      <div class="price">
+         <div class="label">Price From</div>
+         <div class="dollars">$15,000.00</div>
+      </div>
+
+      <div class="bike">
+         <div class="image">
+            <img src="./images/bonneville-speedmaster-chrome-edition.png" alt="">
+         </div>
+         <div class="specs">
+            <table>
+               <tr>
+                  <td class="value">900</td>
+                  <td class="key">CC Engine</td>
+               </tr>
+               <tr>
+                  <td class="value">106.5</td>
+                  <td class="key">HP peak power</td>
+               </tr>
+               <tr>
+                  <td class="value">60.4</td>
+                  <td class="key">lb-ft peak torque</td>
+               </tr>
+               <tr>
+                  <td class="value">50+</td>
+                  <td class="key">accessories</td>
+               </tr>
+            </table>
+            <div class="buttons">
+               <button class="primary">Configure</button>
+               <button>View details</button>
+            </div>
+         </div>
+      </div>
+   </div>
+   <script src="./script.js"></script>
+</body>
+</html>
