@@ -1,0 +1,716 @@
+[
+   {
+      "name": "DesertX",
+      "items": [
+         {
+            "name": "DesertX Rally",
+            "price": "$22,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/48zGJmEsTgIWOr5fg7yDY6/57ae8b987001e331ee40ed1c73f1a977/Model-Menu-MY23-DesertX-Rally.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "110 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "68 lb-ft"
+               },
+               {
+                  "key": "Wet Weight (No Fuel)",
+                  "value": "465 lb"
+               }
+            ]
+         },
+         {
+            "name": "DesertX",
+            "price": "Starting from $17,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/1vwdPTpTeizmpbhcX4bN8Z/a3395d8286451d61b14583108790d8a1/Model-Menu-MY22-DesertX.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "110 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "68 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "445 lbs"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Diavel",
+      "items": [
+         {
+            "name": "Diavel V4",
+            "price": "MSRP Starting From $26,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/36jbSxVmgHbc94XPo4j3Xt/8c5ada2150fb3f8eac2603ccf04c13ee/Model-Menu-MY23-Diavel-V4-Rd.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "168 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "93 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "465 lb"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Monster",
+      "items": [
+         {
+            "name": "Monster 30th Anniversario",
+            "price": "$18,595",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/4LK4WP7SM4P4Ok6GNZYWYb/1e4b8796f323a0d51b369ee618849dc7/Model-Menu-MY23-Monster-30-Anniversario.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "111 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "69 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "361.5 lbs"
+               }
+            ]
+         },
+         {
+            "name": "Monster +",
+            "price": "Starting from $12,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/7hZI3F6mqHHWkewv0Sme2/ca3c6c396a7b7d534cb50df703a7f7ee/Model-Menu-MY23-Monster-937-plus-DS.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "111 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "69 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "366 lb"
+               }
+            ]
+         },
+         {
+            "name": "Monster SP",
+            "price": "$15,695",
+            "img": "https://images.ctfassets.net/o6sr41tx16eu/3ifboBhgesWXVnOn9zogeT/747e6499883752f29e5f269c9a726d14/MonSPHeader_780x430.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "111 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "69 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "366 lb"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Hypermotard",
+      "items": [
+         {
+            "name": "Hypermotard 698 Mono RVE",
+            "price": "$14,495",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/7IvfslJCuMRW3hgD6momRv/1e79522e5d41d811724734397bd9b757/Model-Menu-MY24-Hypermotard-698-Mono-RVE.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "77.5 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "46.5 lb-ft"
+               },
+               {
+                  "key": "Wet Weight (No Fuel)",
+                  "value": "333 lb"
+               }
+            ]
+         },
+         {
+            "name": "Hypermotard 698 Mono",
+            "price": "$12,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/4nvV7L0ryk7OlQLshb40A/b9f37ecc59e4d64b4ff950c1b3921015/Model-Menu-MY24-Hypermotard-698-Mono.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "77.5 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "46.5 lb-ft"
+               },
+               {
+                  "key": "Wet Weight (No Fuel)",
+                  "value": "333 lb"
+               }
+            ]
+         },
+         {
+            "name": "Hypermotard 950 SP",
+            "price": "$18,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/5dQ6xxtW0MXgQ9zAgdonJP/18d5872f921a651d7740ef46206e54b7/Model-Menu-MY22-HYM-SP-v06.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "114 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "71 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "388 lb"
+               }
+            ]
+         },
+         {
+            "name": "Hypermotard 950",
+            "price": "$15,295",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/3HRkTmZ1iuXi3qbuliRu1V/1308a110bfc850b6546ff27ba719fae7/Model-Menu-MY20-Hypermotard-Red.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "114 hp"
+               },
+               {
+                  "key": "TORQUE",
+                  "value": "71 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "388 lb"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Multistrada",
+      "items": [
+         {
+            "name": "Discover the world of Multistrada",
+            "img": "https://images.ctfassets.net/o6sr41tx16eu/4SdtjtBPxF7DVSeWqJYbSS/e97efeb9c7132b5e3f1f366aa009aae0/Pikes_Peak_Menu_1_780x430.jpg",
+            "attributes": []
+         },
+         {
+            "name": "Multistrada V4 RS",
+            "price": "$37,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/2jmSo2RBTauvwaWaimeVCz/af33948d8929d5437fa3eef6e644ed37/Model-Menu-MY24-Multistrada-V4-RS.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "180 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "87 lb-ft"
+               },
+               {
+                  "key": "Wet Weight (No Fuel)",
+                  "value": "496 lb"
+               }
+            ]
+         },
+         {
+            "name": "Multistrada V4 S Grand Tour",
+            "price": "$28,395",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/1U3Y08O85YxDFuXSIQuOGi/237425047d4d041b02fdc0cc578844ef/Model-Menu-MY23-Multistrada-V4-S-Grand-Tour.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "170 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "92.2 lb-ft"
+               },
+               {
+                  "key": "Wert Weight (No Fuel)",
+                  "value": "518 lb"
+               }
+            ]
+         },
+         {
+            "name": "Multistrada V4 Rally",
+            "price": "Starting From $29,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/42FbcdjwVjfPzaCt5JterH/a5ec7cfd87b8464522fb92bd60f0fd9d/Model-Menu-MY23-Multistrada-Rally-Radar-Gr.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "170 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "89.2 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "500 lb"
+               }
+            ]
+         },
+         {
+            "name": "Multistrada V4 Pikes Peak",
+            "price": "$31,595",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/5VzayBSeItSSB6S76T3B1K/4e3a2d350c38e8534ffb35d96cc51101/Model-Menu-MY22-MTS-V4-PP-v06.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "170 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "92 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "472 lb"
+               }
+            ]
+         },
+         {
+            "name": "Multistrada V2 S",
+            "price": "Starting from $19,295",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/3PcRGP82S1ih4ad9aLWrEJ/be7344e1676f785fe1a2b55ffd62ecd8/Model-Menu-MY23-Multistrada-V2S-TBST.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "113 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "71 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "445 lb"
+               }
+            ]
+         },
+         {
+            "name": "Multistrada V4 S",
+            "price": "Starting from $27,195",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/3y8XAAHn21xyhZKca9duWE/3bfed00e0947e304588387addb19114b/Model-Menu-MY21-Multistrada-V4-S-Red.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "170 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "92 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "480 lb"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Panigale",
+      "items": [
+         {
+            "name": "Panigale V2 Bayliss",
+            "price": "$22,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/7AHGO3zch7PVqNRJ4Jl5he/110516d42388c33e433e183ef679e270/Model-Menu-MY22-PV2-Bayliss.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "155 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "76.7 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "385 lb"
+               }
+            ]
+         },
+         {
+            "name": "Panigale V2",
+            "price": "Starting from $18,595",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/3D5QKQasxYqwDHf49b0myd/ef53b3bfc7c025b25afebb55468156d7/Model-Menu-MY23-Panigale-V2-Bk.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "155hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "76.7 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "388 lb"
+               }
+            ]
+         },
+         {
+            "name": "Panigale V4",
+            "price": "$24,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/ZyYUtfF8mAe0kZmXFG72c/49ef6759a34a5a26c61c1f3a2909cadc/Model-Menu-MY22-Panigale-V4-v06.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "210 hp @12,500 rpm"
+               },
+               {
+                  "key": "Torque",
+                  "value": "90.6 lb-ft"
+               },
+               {
+                  "key": "Dry weight",
+                  "value": "386 lb"
+               }
+            ]
+         },
+         {
+            "name": "Panigale V4 S",
+            "price": "$32,195",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/1En4xiMmT63cqUWSisOBFF/c35507f34b5ee18151bb1f4383f09152/Model-Menu-MY22-Panigale-V4-S-V06.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "210 hp @12,500 rpm"
+               },
+               {
+                  "key": "Torque",
+                  "value": "90.6 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "384 lb"
+               }
+            ]
+         },
+         {
+            "name": "Panigale V4 R",
+            "price": "MSRP $45,495",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/1FvMjeuJ5MPqhUBiKshms6/f88336edbd67404fc3cbb16696128334/Model-Menu-MY23-Panigale-V4R.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "207hp @ 13,500 rpm"
+               },
+               {
+                  "key": "Torque",
+                  "value": "82 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "379 lb"
+               }
+            ]
+         },
+         {
+            "name": "Panigale V4 SP2 30ᵗʰ Anniversario 916",
+            "price": "$45,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/2ut4THpcExwC1n2g3laIHn/2bbf4e7b788514bd6e7f4208720b2508/Model-Menu-MY24-Panigale-V4-SP2-30-Anniversario-916.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "210 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "90.6 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "381 lb"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Streetfighter",
+      "items": [
+         {
+            "name": "Streetfighter V4 Lamborghini",
+            "price": "MSRP Starting From $68,000",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/5kkoPNfevASziIHKnHLCHU/c65326f7dc7f55cf48194b6d952f86a2/Model-Menu-MY23-Ducati-Streetfighter-Lamborghini.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "208 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "90.4 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "392 lb"
+               }
+            ]
+         },
+         {
+            "name": "Streetfighter V2",
+            "price": "$17,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/6NlhQzfCzKBmFSbwbqArl3/86daf31f0298ac89e37f740020f9d7c4/Model-Menu-MY22-SF-V2-v06.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "150 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "74,8 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "392 lb"
+               }
+            ]
+         },
+         {
+            "name": "Streetfighter V4",
+            "price": "MSRP $22,095",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/49Mitwa5u9X8t8WIOZnxI0/d5ee3e3e05beede53ba66fa76873bfe4/Model-Menu-MY23-Streetfighter-V4.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "208 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "90.4 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "397 lb"
+               }
+            ]
+         },
+         {
+            "name": "Streetfighter V4 S",
+            "price": "MSRP From $27,595",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/1qAIix85oIVEOSOpsdaAlI/84ac0d30e5b8ee8d819554a76a16ee58/Model-Menu-MY23-Streetfighter-V4S-Gr.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "208 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "90.4 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "392 lb"
+               }
+            ]
+         },
+         {
+            "name": "Streetfighter V4 SP2",
+            "price": "MSRP $37,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/6OopHcu4133bYo3sCTTsAR/53cc2d0e8e990957dc3b40d36f85f2d1/Model-Menu-MY23-Streetfighter-V4S-SP2.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "208 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "90.4 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "390 lb"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Superleggera",
+      "items": [
+         {
+            "name": "Superleggera V4",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/44VVijspCKvE6idM0PKlyi/6f095c98e8c66b4d27d2c56d2fdce0f5/Model-Menu-MY20-Superleggera-V4.png",
+            "attributes": [
+               {
+                  "key": "POWER",
+                  "value": "234 hp"
+               },
+               {
+                  "key": "TORQUE",
+                  "value": "87.7 lb-ft"
+               },
+               {
+                  "key": "DRY WEIGHT",
+                  "value": "335.5 lb "
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "SuperSport",
+      "items": [
+         {
+            "name": "SuperSport 950",
+            "price": "$15,495",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/VX5ylyIcdNU8mAkEgi3i9/ec91184846c53fd5da0f40d891112963/Model-Menu-MY21-SuperSport-950-Ducati-Red.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "110 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "69 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "405 lb"
+               }
+            ]
+         },
+         {
+            "name": "SuperSport 950 S",
+            "price": "Starting from $17,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/6xHmWGo24HLoZAEwrl2uxZ/d4c5e4099cec644d6c7feb10350c1dc4/Model-Menu-MY21-SuperSport-950S-Artic-White.png",
+            "attributes": [
+               {
+                  "key": "Power",
+                  "value": "110 hp"
+               },
+               {
+                  "key": "Torque",
+                  "value": "69 lb-ft"
+               },
+               {
+                  "key": "Dry Weight",
+                  "value": "405 lb"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "Scrambler",
+      "items": [
+         {
+            "name": "Scrambler",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/Rl2BCEw8m0thzhB8Wk85D/f730e62a8b6faa665a668b900d67d8a5/Scrambler-background-menu-780x430.jpg",
+            "attributes": []
+         },
+         {
+            "name": "Icon",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/3PtXsyJVSyje9WZxrp2e3m/d15dec6bec1e56d209715169ffdf14e9/Model-Menu-MY23-SCR-Icon-Y.png",
+            "attributes": []
+         },
+         {
+            "name": "Full Throttle",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/l5TqABzqw7TocBPuolSQQ/666151a0b41f19929a415794aae2974f/Model-Menu-MY23-SCR-Full-Throttle.png",
+            "attributes": []
+         },
+         {
+            "name": "Nightshift",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/7LafcNoWHCdfB7rMnNK1jb/10d4a5e9e43ea571232ac9bb0ded216a/Model-Menu-MY23-SCR-Nightshift.png",
+            "attributes": []
+         },
+         {
+            "name": "1100 Tribute Pro",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/2laII0UIbjtA6Hxl4hT1in/21ab2024c621b391b79f2571941a95ff/Model-Menu-MY22-SCR-1100-Tribute.png",
+            "attributes": []
+         },
+         {
+            "name": "Urban Motard",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/1rLRzuGy3IhrQ6Vp9HcnV5/9842f49e5ffa399632001a839fb1b5bf/Model-Menu-MY22-SCR-Urban-Motard.png",
+            "attributes": []
+         },
+         {
+            "name": "1100 Sport Pro",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/3fMfypAewSUttp4MuC792u/0b45842ee45f7074bec06de0859d86ef/Model-Menu-MY20-1100-SportPro.png",
+            "attributes": []
+         },
+         {
+            "name": "1100 Dark Pro",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/3VWUTwNQQBUFL7U3rH7sxI/21965297e5727eb726f7924616038b42/Model-Menu-MY21-SCR-1100-Dark-Pro-v04.png",
+            "attributes": []
+         },
+         {
+            "name": "Desert Sled",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/4mVEMBXXJc1FFSfQAFMzKK/443da1cd4e819ae1c26f511333557f47/Model-Menu-MY21-Desert-Sled-Blue.png",
+            "attributes": []
+         },
+         {
+            "name": "Icon Dark",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/1bub9q8yhrn8MqLIXToOqJ/ee3542b43a411520c6bdaecd43331cb4/Model-Menu-MY21-SCR-Icon-Dk-v04.png",
+            "attributes": []
+         }
+      ]
+   },
+   {
+      "name": "E-BIKES",
+      "items": [
+         {
+            "name": "E-bike model range",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/5ND6pEEMd6Rl1kUdQg7yv6/8b671295a1fdc5a72c49cb5bd2004d34/gamma-e-bike-image-menu-780x430.jpg",
+            "attributes": []
+         },
+         {
+            "name": "Powerstage RR",
+            "price": "$11,990",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/5hePAZnNye5aYYisxpBYwu/290376527b60c21d0c3dba52e9c8ab8b/Model-Menu-MY23-Powerstage-RR.png",
+            "attributes": []
+         },
+         {
+            "name": "FUTA",
+            "price": "$8295",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/2ZVIhKbe3j9lgVQoZqSgGh/96c156c4f420dcc21778fc7862b9dd82/Model-Menu-MY22-Futa.png",
+            "attributes": []
+         },
+         {
+            "name": "MIG-S",
+            "price": "$5,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/4NHFK1hxsDOZ2LjhRHxDqS/070041289677ffe69943c2b6fdeafbd3/Model-Menu-MY22-MIG-S.png",
+            "attributes": []
+         },
+         {
+            "name": "TK-01RR",
+            "price": "$8,295",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/5FhKtKcVhuzh6Su8qpjYiR/f5a9c00b9196024b44a8756a098f03db/Model-Menu-MY21-TK-01RR.png",
+            "attributes": []
+         },
+         {
+            "name": "TK-01RR Limited Edition",
+            "price": "$10,995",
+            "img": "https://images.ctfassets.net/x7j9qwvpvr5s/7rXDZviAihBuadP2JRw08C/7c8bd0ffbc16fcb6ce462b16db966d03/Model-Menu-MY22-TK-01RR.png",
+            "attributes": []
+         }
+      ]
+   }
+]

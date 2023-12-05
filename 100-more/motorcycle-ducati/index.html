@@ -1,0 +1,233 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Ducati</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel='stylesheet' href="../_assets/fontawesome/css/all.min.css" />
+</head>
+<body>
+   <div class="app">
+      <div class="c-toolbar open">
+         <div class="menu">
+            <i class="fa-solid fa-bars"></i>
+         </div>
+         <div class="links">
+            <div class="link active" id="menu-btn">
+               <div class="text" title="models">models</div>
+               <i class="fa-solid fa-caret-up"></i>
+               <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="link ">
+               <div class="text" title="equipment">equipment</div>
+               <i class="fa-solid fa-caret-up"></i>
+               <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="link">
+               <div class="text" title="current offfers">current offfers</div>
+            </div>
+         </div>
+         <div class="logo">
+            <img src="../_assets/images/logo_ducati.png" alt="">
+         </div>
+         <div class="links">
+            <div class="link"><div class="text" title="news">news</div></div>
+            <div class="link"><div class="text" title="configurator">configurator</div></div>
+            <div class="link"><div class="text" title="dealer locator">dealer locator</div></div>
+         </div>
+      </div>
+      <div class="menu">
+         <div class="c-cats">
+            <template id="template-category">
+               <div class="cat">
+                  <div class="image">
+                     <img src="./images/diavel-v4.png" alt="">
+                  </div>
+                  <div class="label">Diavel</div>
+               </div>
+            </template>
+         </div>
+
+         <div class="c-subcat">
+            <template id="template-subcat-link">
+               <div class="link">
+                  <span class="note">new</span> 
+                  <div class="text" title="scrambler">scrambler</div>
+               </div>
+            </template>
+         </div>
+
+         <div class="c-display">
+            <div class="image">
+               <img src="./images/hypermotard-950-sp.png" alt="">
+            </div>
+            <div class="details">
+               <div class="title">Diavel</div>
+               <div class="attributes">
+                  <div class="att">
+                     <div class="value">114 hp</div>
+                     <div class="key">power</div>
+                  </div>
+                  <div class="att">
+                     <div class="value">71 lb-ft</div>
+                     <div class="key">torque</div>
+                  </div>
+                  <div class="att">
+                     <div class="value">388 lb</div>
+                     <div class="key">dry weight</div>
+                  </div>
+               </div>
+               <div class="price">$18,995</div>
+            </div>
+            <div class="actions">
+               <button>configure</button>
+               <button class="primary">discover more</button>
+            </div>
+         </div>
+      </div>   
+   </div>
+
+   <!--------------------------------------------
+   | component: toolbar
+   ---------------------------------------------->
+   <div class="component-header">toolbar</div>   
+   <div class="c-toolbar">
+      <div class="menu">
+         <i class="fa-solid fa-bars"></i>
+      </div>
+      <div class="links">
+         <div class="link active">
+            <div class="text">models</div>
+            <i class="fa-solid fa-caret-up"></i>
+            <i class="fa-solid fa-caret-down"></i>
+         </div>
+         <div class="link ">
+            <div class="text">equipment</div>
+            <i class="fa-solid fa-caret-up"></i>
+            <i class="fa-solid fa-caret-down"></i>
+         </div>
+         <div class="link">current offers </div>
+      </div>
+      <div class="logo">
+         <img src="../_assets/images/logo_ducati.png" alt="">
+      </div>
+      <div class="links">
+         <div class="link">news</div>
+         <div class="link">configurator</div>
+         <div class="link">dealer locator</div>
+      </div>
+   </div>
+
+
+   <!--------------------------------------------
+   | component: categories
+   ---------------------------------------------->
+   <div class="component-header">categories</div>
+   <div class="c-cats">
+      <div class="cat active">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+      <div class="cat">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+      <div class="cat">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+      <div class="cat">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+      <div class="cat">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+      <div class="cat">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+      <div class="cat">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+      <div class="cat">
+         <div class="image">
+            <img src="./images/diavel-v4.png" alt="">
+         </div>
+         <div class="label">Diavel</div>
+      </div>
+   </div>
+
+   <!--------------------------------------------
+   | component: sub category
+   ---------------------------------------------->
+   <div class="component-header">sub-category</div>
+   <div class="c-subcat">
+      <div class="link">
+         <span class="note">new</span> 
+         <div class="text" title="scrambler">scrambler</div>
+      </div>
+      <div class="link active">
+         <div class="text" title="950 sp">950 sp</div>
+      </div>
+      <div class="link">
+         <div class="text" title="diavel">diavel</div>
+      </div>
+      <div class="link">
+         <div class="text" title="monster">monster</div>
+      </div>
+   </div>
+
+
+   <!--------------------------------------------
+   | component: display
+   ---------------------------------------------->
+   <div class="component-header">display</div>
+   <div class="c-display">
+      <div class="image">
+         <img src="./images/hypermotard-950-sp.png" alt="">
+      </div>
+      <div class="details">
+         <div class="title">Diavel</div>
+         <div class="attributes">
+            <div class="att">
+               <div class="value">114 hp</div>
+               <div class="key">power</div>
+            </div>
+            <div class="att">
+               <div class="value">71 lb-ft</div>
+               <div class="key">torque</div>
+            </div>
+            <div class="att">
+               <div class="value">388 lb</div>
+               <div class="key">dry weight</div>
+            </div>
+         </div>
+         <div class="price">$18,995</div>
+      </div>
+      <div class="actions">
+         <button>configure</button>
+         <button class="primary">discover more</button>
+      </div>
+   </div>
+
+
+   <script src="./script.js"></script>
+</body>
+</html>
