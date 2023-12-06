@@ -1,0 +1,145 @@
+[
+   {
+      "name": "718",
+      "img": "./images/cat_text_718.svg",
+      "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/718@2x.webp",
+      "items": [
+         {
+            "img": "./images/718-cayman-models.webp",
+            "name": "718 Cayman Models"
+         },
+         {
+            "img": "./images/718-boxster-models.webp",
+            "name": "718 Boxster Models"
+         },
+         {
+            "img": "./images/718-cayman-gt4-rs.webp",
+            "name": "718 Cayman GT4 RS"
+         },
+         {
+            "img": "./images/718-spyder-rs.webp",
+            "name": "718 Spyder RS"
+         }
+      ],
+      "catImg": "./images/cat_text_and_car_718.webp"
+   },
+   {
+      "name": "911",
+      "img": "./images/cat_text_911.svg",
+      "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/911@2x.webp",
+      "items": [
+         {
+            "img": "./images/911-carrera-models.webp",
+            "name": "911 Carrera Models"
+         },
+         {
+            "img": "./images/911-carrera-cabriolet-models.webp",
+            "name": "911 Carrera Cabriolet Models"
+         },
+         {
+            "img": "./images/911-targa-models.webp",
+            "name": "911 Targa Models"
+         },
+         {
+            "img": "./images/911-turbo-models.webp",
+            "name": "911 Turbo Models"
+         },
+         {
+            "img": "./images/911-turbo-cabriolet-models.webp",
+            "name": "911 Turbo Cabriolet Models"
+         },
+         {
+            "img": "./images/911-dakar.webp",
+            "name": "911 Dakar"
+         },
+         {
+            "img": "./images/911-gt3-models.webp",
+            "name": "911 GT3 Models"
+         },
+         {
+            "img": "./images/911-gt3-rs.webp",
+            "name": "911 GT3 RS"
+         },
+         {
+            "img": "./images/911-s_t.webp",
+            "name": "911 S/T"
+         }
+      ],
+      "catImg": "./images/cat_text_and_car_911.webp"
+   },
+   {
+      "name": "taycan",
+      "img": "./images/cat_text_taycan.svg",
+      "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/taycan@2x.webp",
+      "note": "Electric",
+      "items": [
+         {
+            "img": "./images/taycan-models.webp",
+            "name": "Taycan Models"
+         },
+         {
+            "img": "./images/cross-turismo-models.webp",
+            "name": "Cross Turismo Models"
+         },
+         {
+            "img": "./images/sport-turismo-models.webp",
+            "name": "Sport Turismo Models"
+         }
+      ],
+      "catImg": "./images/cat_text_and_car_taycan.webp"
+   },
+   {
+      "name": "panamera",
+      "img": "./images/cat_text_panamera.svg",
+      "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/panamera@2x.webp",
+      "note": "Gasoline | Hybrid",
+      "items": [
+         {
+            "img": "./images/new-panamera-models.webp",
+            "name": "New Panamera Models"
+         },
+         {
+            "img": "./images/panamera-models.webp",
+            "name": "Panamera Models"
+         },
+         {
+            "img": "./images/panamera-sport-turismo-models.webp",
+            "name": "Panamera Sport Turismo Models"
+         },
+         {
+            "img": "./images/panamera-executive-models.webp",
+            "name": "Panamera Executive Models"
+         }
+      ],
+      "catImg": "./images/cat_text_and_car_panamera.webp"
+   },
+   {
+      "name": "macan",
+      "img": "./images/cat_text_macan.svg",
+      "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/macan@2x.webp",
+      "items": [
+         {
+            "img": "./images/macan-models.webp",
+            "name": "Macan Models"
+         }
+      ],
+      "catImg": "./images/cat_text_and_car_macan.webp"
+   },
+   {
+      "name": "cayenne",
+      "img": "./images/cat_text_cayenne.svg",
+      "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/cayenne@2x.webp",
+      "note": "Gasoline | Hybrid",
+      "items": [
+         {
+            "img": "./images/cayenne-models.webp",
+            "name": "Cayenne Models"
+         },
+         {
+            "img": "./images/cayenne-coup_-models.webp",
+            "name": "Cayenne Coupé Models"
+         }
+      ],
+      "catImg": "./images/cat_text_and_car_cayenne.webp"
+   }
+]

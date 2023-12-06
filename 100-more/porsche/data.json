@@ -1,0 +1,139 @@
+[
+    {
+        "name": "718",
+        "img": "https://cdn.ui.porsche.com/porsche-design-system/model-signatures/718.min.d92dc0fe91e67bd51120d91c5cd1eb2f.svg",
+        "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/718@2x.webp",
+        "items": [
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/718-cayman@2x.webp",
+                "name": "718 Cayman Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/718-boxster@2x.webp",
+                "name": "718 Boxster Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/718-cayman-gt4-rs@2x.webp",
+                "name": "718 Cayman GT4 RS"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/718-spyder-rs@2x.webp",
+                "name": "718 Spyder RS"
+            }
+        ]
+    },
+    {
+        "name": "911",
+        "img": "https://cdn.ui.porsche.com/porsche-design-system/model-signatures/911.min.5c462658f9d472e90a139173414e8fdd.svg",
+        "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/911@2x.webp",
+        "items": [
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-carrera@2x.webp",
+                "name": "911 Carrera Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-carrera-cabriolet@2x.webp",
+                "name": "911 Carrera Cabriolet Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-targa@2x.webp",
+                "name": "911 Targa Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-turbo@2x.webp",
+                "name": "911 Turbo Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-turbo-cabriolet@2x.webp",
+                "name": "911 Turbo Cabriolet Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-dakar@2x.webp",
+                "name": "911 Dakar"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-gt3@2x.webp",
+                "name": "911 GT3 Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-gt3-rs@2x.webp",
+                "name": "911 GT3 RS"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/911-st@2x.webp",
+                "name": "911 S/T"
+            }
+        ]
+    },
+    {
+        "name": "taycan",
+        "img": "https://cdn.ui.porsche.com/porsche-design-system/model-signatures/taycan.min.ba4e7c3cb86a78d626d4463b81be0f23.svg",
+        "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/taycan@2x.webp",
+        "note": "Electric",
+        "items": [
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/taycan@2x.webp",
+                "name": "Taycan Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/taycan-cross-turismo@2x.webp",
+                "name": "Cross Turismo Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/taycan-sport-turismo@2x.webp",
+                "name": "Sport Turismo Models"
+            }
+        ]
+    },
+    {
+        "name": "panamera",
+        "img": "https://cdn.ui.porsche.com/porsche-design-system/model-signatures/panamera.min.d35913b252657f7c5cfcae74cfd61b26.svg",
+        "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/panamera@2x.webp",
+        "note": "Gasoline | Hybrid",
+        "items": [
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/panamera@2x.webp",
+                "name": "New Panamera Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/panamera-g2@2x.webp",
+                "name": "Panamera Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/panamera-sport-turismo@2x.webp",
+                "name": "Panamera Sport Turismo Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/panamera-executive@2x.webp",
+                "name": "Panamera Executive Models"
+            }
+        ]
+    },
+    {
+        "name": "macan",
+        "img": "https://cdn.ui.porsche.com/porsche-design-system/model-signatures/macan.min.e38fbf34ed4f00066620901babd99af0.svg",
+        "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/macan@2x.webp",
+        "items": [
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/macan@2x.webp",
+                "name": "Macan Models"
+            }
+        ]
+    },
+    {
+        "name": "cayenne",
+        "img": "https://cdn.ui.porsche.com/porsche-design-system/model-signatures/cayenne.min.4026ba6b335cc98e10592f900cf731e1.svg",
+        "catimg": "https://nav.porsche.com/00BC524/series-assets/1920/cayenne@2x.webp",
+        "note": "Gasoline | Hybrid",
+        "items": [
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/cayenne@2x.webp",
+                "name": "Cayenne Models"
+            },
+            {
+                "img": "https://nav.porsche.com/00BC524/model-assets/1920/cayenne-coupe@2x.webp",
+                "name": "Cayenne Coupé Models"
+            }
+        ]
+    }
+]

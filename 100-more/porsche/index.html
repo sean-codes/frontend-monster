@@ -1,0 +1,405 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel='stylesheet' href="../_assets/fontawesome/css/all.min.css" />
+</head>
+<body class="lock">
+   <div class="app">
+      <div class="c-toolbar">
+         <div class="link" id="menu-btn">
+            <i class="fa-solid fa-bars"></i>
+            <div class="text">Menu</div>
+         </div>
+         <div class="logo">
+            <img src="../_assets/images/logo-prosche.svg" alt="">
+         </div>
+         <div class="link">
+            <i class="fa-solid fa-user"></i>
+         </div>
+      </div>
+
+      <div class="menu">
+         <div class="overlay"></div>
+         <div class="content">
+            <div class="left">
+               <!-- Left -->
+               <div class="inner">
+                  <div class="c-menu-start active">
+                     <div class="link active" data-menu="categories">
+                        <div class="text">Models</div>
+                        <div class="icon">
+                           <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                     </div>
+                     <div class="link" data-menu="links">
+                        <div class="text">Shopping Tools</div>
+                        <div class="icon">
+                           <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                     </div>
+                     <div class="link" data-menu="links-2">
+                        <div class="text">Porsche Shop</div>
+                        <div class="icon">
+                           <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                     </div>
+                     <div class="link" data-menu="links-3">
+                        <div class="text">Services</div>
+                        <div class="icon">
+                           <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                     </div>
+                     <div class="link" data-menu="links">
+                        <div class="text">Experience</div>
+                        <div class="icon">
+                           <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                     </div>
+                     <div class="link" data-menu="links-2">
+                        <div class="text">Find Your Porsche Center</div>
+                        <div class="icon">
+                           <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                     </div>
+                     <div class="link" data-menu="links-3">
+                        <div class="text">My Porsche</div>
+                        <div class="icon">
+                           <i class="fa-solid fa-chevron-right"></i>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="c-menu-cats-2">
+                     <div class="back" id="menu-btn-back">
+                        <i class="fa-solid fa-chevron-left"></i>
+                        <div class="text">Models</div>
+                     </div>
+                     <div class="cats">
+                        <template id="template-cat-2">
+                           <div class="cat" title="718">
+                              <div class="content">
+                                 <img src="./images/cat_text_718.svg" alt="">
+                              </div>
+                              <i class="fa-solid fa-chevron-right"></i>
+                           </div>
+                        </template>
+                     </div>
+                  </div>
+               </div>
+               <!-- End Left -->
+            </div>
+            <div class="right">
+               <!-- Right -->
+               <div class="inner">
+                  <div class="c-menu-cats active" id="menu-categories">
+                     <template id="template-cat">
+                        <div class="cat" title="718">
+                           <div class="image">
+                              <img src="./images/cat_text_and_car_718.webp" alt="">
+                           </div>
+                        </div>
+                     </template>
+                  </div>
+
+                  <div class="c-menu-links" id="menu-links">
+                     <div class="link">Build Your Own</div>
+                     <div class="link">Compare Models</div>
+                     <div class="link">New & Used Inventory</div>
+                     <div class="link">Current Vehicle Offers</div>
+                     <div class="link">Certified Pre-Owned & Warranty</div>
+                     <div class="link">Find Conntect Services</div>
+                     <div class="link">Porsche Financial Services</div>
+                  </div>
+
+                  <div class="c-menu-links" id="menu-links-2">
+                     <div class="link">Tequipment – Genuine Accessories</div>
+                     <div class="link">Exclusive Manufaktur</div>
+                     <div class="link">Online Bill Payment</div>
+                     <div class="link">Delivery Programs</div>
+                     <div class="link">Porsche Protection Plan</div>
+                     <div class="link">Service & Maintenance</div>
+                     <div class="link">Classic – Service & Parts</div>
+                  </div>
+                  <div class="c-menu-links" id="menu-links-3">
+                     <div class="link">Motorsport</div>
+                     <div class="link">Drive – Rentals & Subscriptions</div>
+                     <div class="link">Experience Center Atlanta</div>
+                     <div class="link">Experience Center Los Angeles</div>
+                     <div class="link">Track Experience Birmingham</div>
+                     <div class="link">Travel Experience</div>
+                     <div class="link">E-Zentrum</div>
+                     <div class="link">Apps & Entertainment</div>
+                     <div class="link">Christophorus – The Porsche Magazine</div>
+                     <div class="link">Newsletter</div>
+                     <div class="link">Porsche Clubs</div>
+                     <div class="link">Golf</div>
+                     <div class="link">Museum</div>
+                  </div>   
+
+                  <template id="template-models">
+                     <div class="c-models">
+                        <div class="buttons">
+                           <button>
+                              <i class="fa-solid fa-gear"></i>
+                              <div class="text">Build Your Porsche</div>
+                           </button>
+                           <button>
+                              <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                              <div class="text">Compare</div>
+                           </button>
+                           <button>
+                              <i class="fa-solid fa-magnifying-glass-location"></i>
+                              <div class="text">New & Used Inventory</div>
+                           </button>
+                        </div>
+
+                        <div class="models p-t-2">
+                        </div>
+                        <div class="buttons p-t-5">
+                           <button>
+                              <div class="text end-btn">718 Models</div>
+                           </button>
+                        </div>
+                     </div>
+                  </template>
+                  <template id="template-model">
+                     <div class="model">
+                        <img src="./images/718-cayman-models.webp" alt="">
+                        <div class="text">718 Cayman Models</div>
+                     </div>
+                  </template>
+               </div>
+               <!-- End Right -->
+            </div>
+            <div class="close" id="menu-btn-close">
+               <i class="fa-solid fa-xmark"></i>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------------------------------------
+   | component: menu start
+   --------------------------------------------------------------->
+   <div class="component-header">toolbar</div>
+   <div class="c-toolbar">
+      <div class="link">
+         <i class="fa-solid fa-bars"></i>
+         <div class="text">Menu</div>
+      </div>
+      <div class="logo">
+         <img src="../_assets/images/logo-prosche.svg" alt="">
+      </div>
+      <div class="link">
+         <i class="fa-solid fa-user"></i>
+      </div>
+   </div>
+
+   <!--------------------------------------------------------------
+   | component: menu start
+   --------------------------------------------------------------->
+   <div class="component-header">menu-start</div>
+   <div class="c-menu-start">
+      <div class="link active">
+         <div class="text">Models</div>
+         <div class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+      <div class="link">
+         <div class="text">Shopping Tools</div>
+         <div class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+      <div class="link">
+         <div class="text">Porsche Shop</div>
+         <div class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+      <div class="link">
+         <div class="text">Services</div>
+         <div class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+      <div class="link">
+         <div class="text">Experience</div>
+         <div class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+      <div class="link">
+         <div class="text">Find Your Porsche Center</div>
+         <div class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+      <div class="link">
+         <div class="text">My Porsche</div>
+         <div class="icon">
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------------------------------------
+   | component: menu links
+   --------------------------------------------------------------->
+   <div class="component-header">menu-links</div>
+   <div class="c-menu-links">
+      <div class="link">Build Your Own</div>
+      <div class="link">Compare Models</div>
+      <div class="link">New & Used Inventory</div>
+   </div>
+
+   <!--------------------------------------------------------------
+   | component: menu categories
+   --------------------------------------------------------------->
+   <div class="component-header">menu-categories</div>
+   <div class="c-menu-cats">
+      <div class="cat" title="718">
+         <div class="image">
+            <img src="./images/cat_text_and_car_718.webp" alt="">
+         </div>
+      </div>
+      <div class="cat" title="911">
+         <div class="image">
+            <img src="./images/cat_text_and_car_911.webp" alt="">
+         </div>
+      </div>
+      <div class="cat" title="taycan">
+         <div class="image">
+            <img src="./images/cat_text_and_car_taycan.webp" alt="">
+         </div>
+      </div>
+      <div class="cat" title="panamera">
+         <div class="image">
+            <img src="./images/cat_text_and_car_panamera.webp" alt="">
+         </div>
+      </div>
+      <div class="cat" title="macan">
+         <div class="image">
+            <img src="./images/cat_text_and_car_macan.webp" alt="">
+         </div>
+      </div>
+      <div class="cat" title="cayenne">
+         <div class="image">
+            <img src="./images/cat_text_and_car_cayenne.webp" alt="">
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------------------------------------
+   | component: menu categories 2
+   --------------------------------------------------------------->
+   <div class="component-header">menu-categories-2</div>
+   <div class="c-menu-cats-2">
+      <div class="back">
+         <i class="fa-solid fa-chevron-left"></i>
+         <div class="text">Models</div>
+      </div>
+      <div class="cats">
+         <div class="cat" title="718">
+            <div class="content">
+               <img src="./images/cat_text_718.svg" alt="">
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+         <div class="cat" title="911">
+            <div class="content">
+               <img src="./images/cat_text_911.svg" alt="">
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+         <div class="cat" title="taycan">
+            <div class="content">
+               <img src="./images/cat_text_taycan.svg" alt="">
+               <div class="note">Electric</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+         <div class="cat" title="panamera">
+            <div class="content">
+               <img src="./images/cat_text_panamera.svg" alt="">
+               <div class="note">Gasoline/Hybrid</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+         <div class="cat" title="macan">
+            <div class="content">
+               <img src="./images/cat_text_macan.svg" alt="">
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+         <div class="cat" title="cayenne">
+            <div class="content">
+               <img src="./images/cat_text_cayenne.svg" alt="">
+               <div class="note">Gasoline/Hybrid</div>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+      </div>
+   </div>
+
+   <!--------------------------------------------------------------
+   | component: menu models
+   --------------------------------------------------------------->
+   <div class="component-header">menu models</div>
+   <div class="c-models">
+      <div class="buttons">
+         <button>
+            <i class="fa-solid fa-gear"></i>
+            <div class="text">Build Your Porsche</div>
+         </button>
+         <button>
+            <i class="fa-solid fa-arrow-right-arrow-left"></i>
+            <div class="text">Compare</div>
+         </button>
+         <button>
+            <i class="fa-solid fa-magnifying-glass-location"></i>
+            <div class="text">New & Used Inventory</div>
+         </button>
+      </div>
+
+      <div class="models p-t-2">
+         <div class="model">
+            <img src="./images/718-cayman-models.webp" alt="">
+            <div class="text">718 Cayman Models</div>
+         </div>
+         <div class="model">
+            <img src="./images/718-boxster-models.webp" alt="">
+            <div class="text">718 Boxster Models</div>
+         </div>
+         <div class="model">
+            <img src="./images/718-cayman-gt4-rs.webp" alt="">
+            <div class="text">718 Cayman GT4 RS</div>
+         </div>
+         <div class="model">
+            <img src="./images/718-spyder-rs.webp" alt="">
+            <div class="text">718 Spyder RS</div>
+         </div>
+      </div>
+      <div class="buttons p-t-5">
+         <button>
+            <div class="text">718 Models</div>
+         </button>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+
+   <!-- code -->
+   <script src="./script.js"></script>
+</body>
+</html>

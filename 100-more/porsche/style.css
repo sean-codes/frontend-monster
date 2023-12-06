@@ -1,0 +1,454 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;900&display=swap');
+:root {
+   --font: 'Raleway', sans-serif; 
+   --color-white: #FFF;
+   --color-white2: #EEEFF2;
+   --color-black: #111;
+   --color-black2: #222;
+   --color-black3: #444;
+   --shade-black: rgba(0, 0, 0, 0.1);
+   --shade-black2: rgba(0, 0, 0, 0.05);
+   --shade-black3: rgba(0, 0, 0, 0.45);
+
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+   --space-6: 6rem;
+
+   --fsize-1: 1rem;
+   --fsize-2: 1.25rem;
+   --fsize-3: 1.5rem;
+   --fsize-4: 2rem;
+   --fsize-icon: 1.25rem;
+   --fsize-icon2: 1.5rem;
+
+   --border-radius: 0.25rem;
+}
+
+
+html, body {
+   font-family: var(--font);
+   background: #333;
+   color: #FFF;
+   padding: 0;
+   margin: 0;
+   padding-bottom: 500px;
+}
+
+body.lock {
+   overflow: hidden;
+}
+* {
+   box-sizing: border-box;
+}
+.component-header {
+   font-weight: 500;
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   margin: 2rem 0 1rem 0;
+   padding: 0.5rem;
+}
+
+
+/* App */
+.app {
+   min-height: 100vh;
+   min-width:1200px; /* desktop only */
+}
+
+.app > .menu {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   opacity: 1;
+   transition: all 0.25s;
+}
+.app > .menu.hide {
+   opacity: 0;
+   pointer-events: none;
+}
+.app > .menu.hide > .content { 
+   transform: translateX(-100%);
+}
+.app > .menu .overlay {
+   position: fixed;
+   width: 100%;
+   height: 100%;
+   background: var(--shade-black3);
+   backdrop-filter: blur(6px);
+   filter: blur(10px);
+}
+.app > .menu > .content {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 80%;
+   min-width: 800px;
+   max-width: 1000px;
+   height: 100vh;
+   display: flex;
+   transition: all 0.5s;
+}
+.app > .menu > .content > .close {
+   position: absolute;  
+   top: 0;
+   right: calc(-1 * var(--space-5));
+   top: var(--space-2);
+   font-size: var(--fsize-icon2);
+   z-index: 1000;
+   color: var(--color-white);
+   border-radius: var(--border-radius);
+   border: 2px solid var(--color-white);
+   width: 50px;
+   height: 50px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   transition: all 0.2s;
+}
+.app > .menu > .content > .close i{
+   transition: all 0.2s;
+}
+.app > .menu > .content > .close:hover {
+   opacity: 0.7;
+}
+.app > .menu > .content > .close:hover i{
+   transform: scale(1.2);
+}
+.app > .menu > .content > .left,
+.app > .menu > .content > .right {
+   height: 100%;
+   max-height: 100%;
+   overflow: auto;
+   flex: 1;
+}
+.app > .menu > .content > .left {
+   background: var(--color-white);
+}
+.app > .menu > .content > .right {
+   border-radius: 0 var(--border-radius) var(--border-radius) 0;
+   background: var(--color-white2);
+}
+/*---------------------------------------------------------
+| shared
+---------------------------------------------------------*/
+.p-t-1 { padding-top: var(--space-1); }
+.p-t-2 { padding-top: var(--space-2); }
+.p-t-3 { padding-top: var(--space-3); }
+.p-t-4 { padding-top: var(--space-4); }
+.p-t-5 { padding-top: var(--space-5); }
+
+button {
+   display: flex;
+   width: 100%;
+   font-size: var(--fsize-1);
+   padding: var(--space-1);
+   gap: var(--space-1);
+   justify-content: center;
+   background: none;
+   border: 2.5px solid var(--color-black);
+   border-radius: var(--border-radius);
+   cursor: pointer;
+   color: var(--color-black);
+   font-weight: 400;
+   text-transform: capitalize;
+}
+button i {
+   opacity: 0.8;
+}
+button:hover {
+   background: var(--shade-black);
+}
+/*---------------------------------------------------------
+| component: toolbar
+---------------------------------------------------------*/
+.c-toolbar {
+   display: flex;
+   align-items: center;
+   background: var(--color-white);
+   color: var(--color-black);
+   height: 50px;
+   padding: 0 var(--space-4);
+}
+.c-toolbar .link {
+   display: flex;
+   font-weight: 600;
+   gap: var(--space-0_5);
+   align-items: center;
+   cursor: pointer;
+   padding: var(--space-0_5);
+   margin-left: calc(-1 * var(--space-0_5));
+   margin-right: calc(-1 * var(--space-0_5));
+   border-radius: var(--border-radius);
+   user-select: none;
+}
+.c-toolbar .link:hover {
+   background: var(--shade-black);
+}
+.c-toolbar .logo {
+   flex: 1;
+   text-align: center;
+}
+.c-toolbar .logo img {
+   height: 25%;
+}
+
+/*---------------------------------------------------------
+| component: menu-start
+---------------------------------------------------------*/
+.c-menu-start {
+   color: var(--color-black3);
+   font-size: var(--fsize-3);
+   padding: var(--space-6) var(--space-4);
+   max-width: 600px;
+   display: none;
+}
+.c-menu-start.active {
+   display: block;
+}
+
+.c-menu-start .link {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: var(--space-1);
+   border-radius: var(--border-radius);
+   margin-top: var(--space-0_5);
+   transition: all 0.2s;
+   cursor: pointer;
+}
+
+.c-menu-start .link .text {
+   text-transform: capitalize;
+   font-weight: 500;
+}
+.c-menu-start .link i {
+   opacity: 0.9;
+   font-size: var(--fsize-icon);
+   transition: all 0.2s;
+}
+.c-menu-start .link.active,
+.c-menu-start .link:hover {
+   background: var(--shade-black);
+}
+.c-menu-start .link:hover i {
+   transform: scale(1.2);
+}
+
+/*---------------------------------------------------------
+| component: menu-links
+---------------------------------------------------------*/
+.c-menu-links {
+   background: var(--color-white2);
+   max-width: 600px;
+   padding: var(--space-4);
+   color: var(--color-black);
+   display: none;
+}
+.c-menu-links.active {
+   display: block;
+}
+.c-menu-links .link {
+   font-weight: 500;
+   font-size: var(--fsize-2);
+   padding: var(--space-1);
+   cursor: pointer;
+   border-radius: var(--border-radius);
+   transition: all 0.2s;
+}
+.c-menu-links .link:hover {
+   background: var(--shade-black);
+}
+/*---------------------------------------------------------
+| component: menu-categories
+---------------------------------------------------------*/
+.c-menu-cats {
+   background: var(--color-white2);
+   max-width: 600px;
+   padding: var(--space-5) 0;
+   display: none;
+}
+.c-menu-cats.active {
+   display: block;
+}
+.c-menu-cats .cat {
+   padding: var(--space-1);
+   text-align: center;
+   cursor: pointer;
+   transition: all 0.2s;
+}
+.c-menu-cats .cat:hover {
+   background: var(--shade-black2);
+}
+.c-menu-cats .cat:hover .image img {
+   transform: scale(1.15);
+}
+.c-menu-cats .cat .image {
+   height: 125px;
+   position:relative;
+}
+.c-menu-cats .cat .image img{
+   transition: all 0.2s;
+   height: 100%;
+   width: auto;
+}
+
+/*---------------------------------------------------------
+| component: menu-categories-2
+---------------------------------------------------------*/
+.c-menu-cats-2 {
+   background: var(--color-white);
+   color: var(--color-black);
+   padding: var(--space-5);
+   max-width: 500px;
+   display: none;
+}
+.c-menu-cats-2.active {
+   display: block;
+}
+.c-menu-cats-2 .back {
+   display: flex;
+   gap: var(--space-1);
+   font-size: var(--fsize-2);
+   padding: var(--space-2);
+   padding-top: 0;
+   cursor: pointer;
+}
+.c-menu-cats-2 .back i {
+   font-size: var(--fsize-icon);
+   transition: all 0.25s;
+   color: var(--color-black3);
+}
+.c-menu-cats-2 .back:hover {
+   font-weight: 600;
+}
+.c-menu-cats-2 .back:hover i {
+   transform: translateX(-10px);
+}
+.c-menu-cats-2 .cats .cat {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: var(--space-2);
+   cursor: pointer;
+   transition: all 0.2s;
+   border-radius: var(--border-radius);
+}
+.c-menu-cats-2 .cats .cat:hover,
+.c-menu-cats-2 .cats .cat.active {
+   background: var(--shade-black);
+}
+.c-menu-cats-2 .cats .cat .content{
+   flex: 1;
+}
+.c-menu-cats-2 .cats .cat .content .note:not(:empty){
+   margin-top: var(--space-0_5);
+}
+.c-menu-cats-2 .cats .cat .content img {
+   ccdisplay: block;
+   height: 35px;
+   margin-bottom: -1%;
+}
+.c-menu-cats-2 .cats .cat i {
+   font-size: var(--fsize-icon2);
+}
+
+/*---------------------------------------------------------
+| component: menu-models
+---------------------------------------------------------*/
+.c-models {
+   background: var(--color-white2);
+   padding: var(--space-4);
+   max-width: 600px;
+   color: var(--color-black);
+   display: none;
+}
+.c-models.active {
+   display: block;
+}
+.c-models .buttons {
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-1);
+   opacity: 0;
+   animation: fadeIn 1s forwards;
+   anmimation-delay: 0.2s;
+}
+.c-models .models {
+   margin-top: var(--space-3);
+}
+.c-models .models .model {
+   text-align:center;
+   padding: var(--space-2) 0;
+   cursor: pointer;
+   transition: all 0.2s;
+   opacity: 0;
+   animation: fadeIn 1s forwards;
+   animation-delay: calc(var(--index) * 0.2s + 0.3s);
+}
+.c-models .models .model:hover {
+   transform: scale(1.1);
+   background: var(--shade-black2);
+}
+.c-models .models .model .text {
+   font-weight: 500;
+   padding-top: var(--space-0_5);
+}
+.c-models .models .model img{
+   height: 150px;
+   margin-top: -50px;
+}
+
+/* animtion */
+.inner {
+   position: relative;
+}
+.in {
+   --istart: 1000px;
+   animation: in 0.5s forwards;
+}
+.out{
+   --ostart: -500px;
+   animation: out 0.5s forwards;
+}
+.in.forwards {
+   --istart: -1000px;
+}
+.out.forwards {
+   --ostart: 500px;
+}
+
+@keyframes out {
+   0% {
+      opacity: 1;
+      transform: translateX(0px);
+   }
+   100% {
+      opacity: 0;
+      transform: translateX(var(--ostart));
+   }
+}
+
+@keyframes in {
+   0% {
+      opacity: 0;
+      transform: translateX(var(--istart));
+   }
+   100% {
+      opacity: 1;
+      transform: translateX(0px);
+   }
+}
+
+@keyframes fadeIn {
+   0% { opacity: 0; }
+   100% { opacity: 1; }
+}
