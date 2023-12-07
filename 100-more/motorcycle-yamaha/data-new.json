@@ -1,0 +1,689 @@
+[
+   {
+      "name": "ROAD",
+      "img": "./images/motorcycles-_-road.jpg",
+      "navTo": "nav-models-motorcycle",
+      "items": [
+         {
+            "name": "SUPERSPORT",
+            "img": "./images/supersport.png",
+            "navTo": "nav-models-supersport",
+            "items": [
+               {
+                  "name": "YZF-R1M",
+                  "img": "./images/yzf_r1m.png",
+                  "price": "$27,399"
+               },
+               {
+                  "name": "YZF-R1",
+                  "img": "./images/yzf_r1.png",
+                  "price": "$18,399"
+               },
+               {
+                  "name": "YZF-R7",
+                  "img": "./images/yzf_r7.png",
+                  "price": "$9,199"
+               },
+               {
+                  "name": "YZF-R3",
+                  "img": "./images/yzf_r3.png",
+                  "price": "$5,499"
+               }
+            ]
+         },
+         {
+            "name": "HYPER NAKED",
+            "img": "./images/hyper-naked.png",
+            "navTo": "nav-models-hypernaked",
+            "items": [
+               {
+                  "name": "MT-10 SP",
+                  "img": "./images/mt_10-sp.png",
+                  "price": "$16,999"
+               },
+               {
+                  "name": "MT-10",
+                  "img": "./images/mt_10.png",
+                  "price": "$14,499"
+               },
+               {
+                  "name": "MT-09 SP",
+                  "img": "./images/mt_09-sp.png",
+                  "note": "new",
+                  "price": "$12,299"
+               },
+               {
+                  "name": "MT-09",
+                  "img": "./images/mt_09.png",
+                  "note": "new",
+                  "price": "$10,599"
+               },
+               {
+                  "name": "MT-07",
+                  "img": "./images/mt_07.png",
+                  "price": "$8,199"
+               },
+               {
+                  "name": "MT-03",
+                  "img": "./images/mt_03.png",
+                  "price": "$4,999"
+               }
+            ]
+         },
+         {
+            "name": "SPORT HERITAGE",
+            "img": "./images/sport-heritage.png",
+            "navTo": "nav-models-sportheritage",
+            "items": [
+               {
+                  "name": "BOLT R-SPEC",
+                  "img": "./images/bolt-r_spec.png",
+                  "price": "$8,899"
+               },
+               {
+                  "name": "XSR900",
+                  "img": "./images/xsr900.png",
+                  "price": "$10,299"
+               },
+               {
+                  "name": "XSR700",
+                  "img": "./images/xsr700.png",
+                  "price": "$8,899"
+               },
+               {
+                  "name": "V STAR 250",
+                  "img": "./images/v-star-250.png",
+                  "price": "$4,699"
+               }
+            ]
+         },
+         {
+            "name": "ADVENTURE TOURING",
+            "img": "./images/adventure-touring.png",
+            "navTo": "nav-models-adventuretouring",
+            "items": [
+               {
+                  "name": "SUPER TÉNÉRÉ ES",
+                  "img": "./images/super-t_n_r_-es.png",
+                  "price": "$16,299"
+               },
+               {
+                  "name": "TÉNÉRÉ 700",
+                  "img": "./images/t_n_r_-700.png",
+                  "price": "$10,799"
+               }
+            ]
+         },
+         {
+            "name": "SPORT TOURING",
+            "img": "./images/sport-touring.png",
+            "navTo": "nav-models-sporttouring",
+            "items": [
+               {
+                  "name": "FJR1300ES",
+                  "img": "./images/fjr1300es.png",
+                  "price": "$18,299"
+               },
+               {
+                  "name": "TRACER 9 GT+",
+                  "img": "./images/tracer-9-gt_.png",
+                  "note": "new",
+                  "price": "$16,499"
+               }
+            ]
+         },
+         {
+            "name": "DUAL SPORT",
+            "img": "./images/dual-sport.png",
+            "navTo": "nav-models-dualsport",
+            "items": [
+               {
+                  "name": "XT250",
+                  "img": "./images/xt250.png",
+                  "price": "$5,399"
+               },
+               {
+                  "name": "TW200",
+                  "img": "./images/tw200.png",
+                  "price": "$4,999"
+               }
+            ]
+         },
+         {
+            "name": "SCOOTER",
+            "img": "./images/scooter.png",
+            "navTo": "nav-models-scooter",
+            "items": [
+               {
+                  "name": "XMAX",
+                  "img": "./images/xmax.png",
+                  "price": "$6,199"
+               },
+               {
+                  "name": "ZUMA 125",
+                  "img": "./images/zuma-125.png",
+                  "price": "$3,799"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "OFF ROAD",
+      "img": "./images/motorcycles-_-off-road.jpg",
+      "navTo": "nav-models-motorcycle-off-road",
+      "items": [
+         {
+            "name": "MOTOCROSS",
+            "img": "./images/motocross.png",
+            "navTo": "nav-models-motocross",
+            "items": [
+               {
+                  "name": "YZ450F",
+                  "img": "./images/yz450f.png",
+                  "price": "$10,199"
+               },
+               {
+                  "name": "YZ450F",
+                  "img": "./images/yz450f.png",
+                  "price": "$9,999"
+               },
+               {
+                  "name": "YZ250F",
+                  "img": "./images/yz250f.png",
+                  "note": "new",
+                  "price": "$9,099"
+               },
+               {
+                  "name": "YZ250F",
+                  "img": "./images/yz250f.png",
+                  "note": "new",
+                  "price": "$8,899"
+               },
+               {
+                  "name": "YZ250",
+                  "img": "./images/yz250.png",
+                  "price": "$8,199"
+               },
+               {
+                  "name": "YZ250",
+                  "img": "./images/yz250.png",
+                  "price": "$7,999"
+               },
+               {
+                  "name": "YZ125",
+                  "img": "./images/yz125.png",
+                  "price": "$7,299"
+               },
+               {
+                  "name": "YZ125",
+                  "img": "./images/yz125.png",
+                  "price": "$7,099"
+               },
+               {
+                  "name": "YZ85LW",
+                  "img": "./images/yz85lw.png",
+                  "price": "$5,199"
+               },
+               {
+                  "name": "YZ85",
+                  "img": "./images/yz85.png",
+                  "price": "$4,999"
+               },
+               {
+                  "name": "YZ65",
+                  "img": "./images/yz65.png",
+                  "price": "$4,899"
+               }
+            ]
+         },
+         {
+            "name": "CROSS COUNTRY",
+            "img": "./images/cross-country.png",
+            "navTo": "nav-models-crosscountry",
+            "items": [
+               {
+                  "name": "YZ450FX",
+                  "img": "./images/yz450fx.png",
+                  "note": "new",
+                  "price": "$10,199"
+               },
+               {
+                  "name": "YZ250FX",
+                  "img": "./images/yz250fx.png",
+                  "price": "$8,999"
+               },
+               {
+                  "name": "YZ250X",
+                  "img": "./images/yz250x.png",
+                  "price": "$8,099"
+               },
+               {
+                  "name": "YZ125X",
+                  "img": "./images/yz125x.png",
+                  "price": "$7,199"
+               },
+               {
+                  "name": "WR450F",
+                  "img": "./images/wr450f.png",
+                  "note": "new",
+                  "price": "$10,199"
+               },
+               {
+                  "name": "WR250F",
+                  "img": "./images/wr250f.png",
+                  "price": "$8,999"
+               }
+            ]
+         },
+         {
+            "name": "TRAIL",
+            "img": "./images/trail.png",
+            "navTo": "nav-models-trail",
+            "items": [
+               {
+                  "name": "TT-R230",
+                  "img": "./images/tt_r230.png",
+                  "price": "$4,699"
+               },
+               {
+                  "name": "TT-R125LE",
+                  "img": "./images/tt_r125le.png",
+                  "price": "$3,599"
+               },
+               {
+                  "name": "TT-R110E",
+                  "img": "./images/tt_r110e.png",
+                  "price": "$2,449"
+               },
+               {
+                  "name": "TT-R50E",
+                  "img": "./images/tt_r50e.png",
+                  "price": "$1,899"
+               },
+               {
+                  "name": "PW50",
+                  "img": "./images/pw50.png",
+                  "price": "$1,849"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "SIDE-BY-SIDE",
+      "img": "./images/side_by_side.jpg",
+      "navTo": "nav-models-side-by-side",
+      "items": [
+         {
+            "name": "PURE SPORT",
+            "img": "./images/pure-sport.png",
+            "navTo": "nav-models-pure-sport",
+            "items": [
+               {
+                  "name": "YXZ1000R SS XT-R",
+                  "img": "./images/yxz1000r-ss-xt_r.png",
+                  "note": "new",
+                  "price": "$23,699"
+               },
+               {
+                  "name": "YXZ1000R SS",
+                  "img": "./images/yxz1000r-ss.png",
+                  "note": "new",
+                  "price": "$20,899"
+               },
+               {
+                  "name": "YXZ1000R",
+                  "img": "./images/yxz1000r.png",
+                  "note": "new",
+                  "price": "$20,899"
+               }
+            ]
+         },
+         {
+            "name": "RECREATION",
+            "img": "./images/recreation.png",
+            "navTo": "nav-models-recreation",
+            "items": [
+               {
+                  "name": "WOLVERINE X2 1000",
+                  "img": "./images/wolverine-x2-1000.png",
+                  "note": "new",
+                  "price": "$17,999"
+               },
+               {
+                  "name": "WOLVERINE X2 1000",
+                  "img": "./images/wolverine-x2-1000.png",
+                  "note": "new",
+                  "price": "$19,999"
+               },
+               {
+                  "name": "WOLVERINE RMAX4 1000",
+                  "img": "./images/wolverine-rmax4-1000.png",
+                  "price": "$29,399"
+               },
+               {
+                  "name": "WOLVERINE RMAX4 1000",
+                  "img": "./images/wolverine-rmax4-1000.png",
+                  "price": "$28,199"
+               },
+               {
+                  "name": "WOLVERINE RMAX4 1000",
+                  "img": "./images/wolverine-rmax4-1000.png",
+                  "price": "$25,399"
+               },
+               {
+                  "name": "WOLVERINE RMAX2 1000",
+                  "img": "./images/wolverine-rmax2-1000.png",
+                  "price": "$26,699"
+               },
+               {
+                  "name": "WOLVERINE RMAX2 1000",
+                  "img": "./images/wolverine-rmax2-1000.png",
+                  "price": "$26,199"
+               },
+               {
+                  "name": "WOLVERINE RMAX2 1000",
+                  "img": "./images/wolverine-rmax2-1000.png",
+                  "price": "$24,899"
+               },
+               {
+                  "name": "WOLVERINE RMAX2 1000",
+                  "img": "./images/wolverine-rmax2-1000.png",
+                  "price": "$22,999"
+               },
+               {
+                  "name": "WOLVERINE X4 850",
+                  "img": "./images/wolverine-x4-850.png",
+                  "price": "$19,999"
+               },
+               {
+                  "name": "WOLVERINE X4 850",
+                  "img": "./images/wolverine-x4-850.png",
+                  "price": "$18,399"
+               },
+               {
+                  "name": "WOLVERINE X2 850",
+                  "img": "./images/wolverine-x2-850.png",
+                  "price": "$15,799"
+               },
+               {
+                  "name": "WOLVERINE X2 850",
+                  "img": "./images/wolverine-x2-850.png",
+                  "price": "$17,399"
+               }
+            ]
+         },
+         {
+            "name": "UTILITY",
+            "img": "./images/utility.png",
+            "navTo": "nav-models-utility",
+            "items": [
+               {
+                  "name": "VIKING VI EPS",
+                  "img": "./images/viking-vi-eps.png",
+                  "price": "$17,899"
+               },
+               {
+                  "name": "VIKING VI EPS",
+                  "img": "./images/viking-vi-eps.png",
+                  "price": "$16,599"
+               },
+               {
+                  "name": "VIKING EPS",
+                  "img": "./images/viking-eps.png",
+                  "price": "$16,499"
+               },
+               {
+                  "name": "VIKING EPS",
+                  "img": "./images/viking-eps.png",
+                  "price": "$15,799"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "ATV",
+      "img": "./images/atv.jpg",
+      "navTo": "nav-models-atv",
+      "items": [
+         {
+            "name": "SPORT ATV",
+            "img": "./images/sport-atv.png",
+            "navTo": "nav-models-sport-atv",
+            "items": [
+               {
+                  "name": "RAPTOR 700R SE",
+                  "img": "./images/raptor-700r-se.png",
+                  "price": "$10,899"
+               },
+               {
+                  "name": "RAPTOR 700R",
+                  "img": "./images/raptor-700r.png",
+                  "price": "$10,299"
+               },
+               {
+                  "name": "RAPTOR 700",
+                  "img": "./images/raptor-700.png",
+                  "price": "$9,699"
+               },
+               {
+                  "name": "RAPTOR 110",
+                  "img": "./images/raptor-110.png",
+                  "price": "$3,599"
+               },
+               {
+                  "name": "YFZ450R SE",
+                  "img": "./images/yfz450r-se.png",
+                  "price": "$10,999"
+               },
+               {
+                  "name": "YFZ450R",
+                  "img": "./images/yfz450r.png",
+                  "price": "$10,599"
+               },
+               {
+                  "name": "YFZ50",
+                  "img": "./images/yfz50.png",
+                  "price": "$2,349"
+               }
+            ]
+         },
+         {
+            "name": "UTILITY ATV",
+            "img": "./images/utility-atv.png",
+            "navTo": "nav-models-utility-atv",
+            "items": [
+               {
+                  "name": "GRIZZLY EPS XT-R",
+                  "img": "./images/grizzly-eps-xt_r.png",
+                  "price": "$12,399"
+               },
+               {
+                  "name": "GRIZZLY EPS SE",
+                  "img": "./images/grizzly-eps-se.png",
+                  "price": "$11,999"
+               },
+               {
+                  "name": "GRIZZLY EPS",
+                  "img": "./images/grizzly-eps.png",
+                  "price": "$11,399"
+               },
+               {
+                  "name": "GRIZZLY EPS CAMO",
+                  "img": "./images/grizzly-eps-camo.png",
+                  "price": "$12,499"
+               },
+               {
+                  "name": "GRIZZLY 90",
+                  "img": "./images/grizzly-90.png",
+                  "price": "$3,399"
+               },
+               {
+                  "name": "KODIAK 700 EPS SE",
+                  "img": "./images/kodiak-700-eps-se.png",
+                  "price": "$11,099"
+               },
+               {
+                  "name": "KODIAK 700 EPS",
+                  "img": "./images/kodiak-700-eps.png",
+                  "price": "$10,099"
+               },
+               {
+                  "name": "KODIAK 700",
+                  "img": "./images/kodiak-700.png",
+                  "price": "$8,499"
+               },
+               {
+                  "name": "KODIAK 450 EPS SE",
+                  "img": "./images/kodiak-450-eps-se.png",
+                  "price": "$8,399"
+               },
+               {
+                  "name": "KODIAK 450 EPS",
+                  "img": "./images/kodiak-450-eps.png",
+                  "price": "$8,099"
+               },
+               {
+                  "name": "KODIAK 450",
+                  "img": "./images/kodiak-450.png",
+                  "price": "$6,999"
+               }
+            ]
+         }
+      ]
+   },
+   {
+      "name": "SNOWMOBILE",
+      "img": "./images/snowmobile.jpg",
+      "navTo": "nav-models-snowmobile",
+      "items": [
+         {
+            "name": "TRAIL",
+            "img": "./images/trail.png",
+            "navTo": "nav-models-snow-trail",
+            "items": [
+               {
+                  "name": "SIDEWINDER SRX LE EPS",
+                  "img": "./images/sidewinder-srx-le-eps.png",
+                  "price": "$20,999"
+               },
+               {
+                  "name": "SIDEWINDER L-TX LE EPS",
+                  "img": "./images/sidewinder-l_tx-le-eps.png",
+                  "price": "$19,999"
+               },
+               {
+                  "name": "SIDEWINDER L-TX SE",
+                  "img": "./images/sidewinder-l_tx-se.png",
+                  "price": "$17,999"
+               },
+               {
+                  "name": "SIDEWINDER L-TX GT EPS",
+                  "img": "./images/sidewinder-l_tx-gt-eps.png",
+                  "price": "$18,999"
+               },
+               {
+                  "name": "SRViper L-TX GT",
+                  "img": "./images/srviper-l_tx-gt.png",
+                  "price": "$16,199"
+               },
+               {
+                  "name": "SXVenom",
+                  "img": "./images/sxvenom.png",
+                  "price": "$9,499"
+               }
+            ]
+         },
+         {
+            "name": "CROSSOVER",
+            "img": "./images/crossover.png",
+            "navTo": "nav-models-snow-crossover",
+            "items": [
+               {
+                  "name": "SIDEWINDER X-TX LE 146",
+                  "img": "./images/sidewinder-x_tx-le-146.png",
+                  "price": "$19,899"
+               },
+               {
+                  "name": "SIDEWINDER X-TX SE 146",
+                  "img": "./images/sidewinder-x_tx-se-146.png",
+                  "price": "$18,599"
+               }
+            ]
+         },
+         {
+            "name": "MOUNTAIN",
+            "img": "./images/mountain.png",
+            "navTo": "nav-models-snow-mountain",
+            "items": [
+               {
+                  "name": "MOUNTAIN MAX LE 165",
+                  "img": "./images/mountain-max-le-165.png",
+                  "price": "$16,299"
+               },
+               {
+                  "name": "MOUNTAIN MAX LE 154",
+                  "img": "./images/mountain-max-le-154.png",
+                  "price": "$15,999"
+               },
+               {
+                  "name": "MOUNTAIN MAX LE 154 SL",
+                  "img": "./images/mountain-max-le-154-sl.png",
+                  "price": "$15,699"
+               },
+               {
+                  "name": "SXVenom Mountain",
+                  "img": "./images/sxvenom-mountain.png",
+                  "price": "$9,999"
+               }
+            ]
+         },
+         {
+            "name": "2-UP TOURING &amp; UTILITY",
+            "img": "./images/2_up-touring-_amp_-utility.png",
+            "navTo": "nav-models-snow-2up",
+            "items": [
+               {
+                  "name": "SIDEWINDER S-TX GT EPS",
+                  "img": "./images/sidewinder-s_tx-gt-eps.png",
+                  "price": "$20,699"
+               },
+               {
+                  "name": "TRANSPORTER 800",
+                  "img": "./images/transporter-800.png",
+                  "price": "$15,599"
+               },
+               {
+                  "name": "TRANSPORTER LITE 2-UP",
+                  "img": "./images/transporter-lite-2_up.png",
+                  "price": "$10,599"
+               },
+               {
+                  "name": "TRANSPORTER LITE",
+                  "img": "./images/transporter-lite.png",
+                  "price": "$9,999"
+               }
+            ]
+         },
+         {
+            "name": "YOUTH",
+            "img": "./images/youth.png",
+            "navTo": "nav-models-snow-youth",
+            "items": [
+               {
+                  "name": "SNOSCOOT ES",
+                  "img": "./images/snoscoot-es.png",
+                  "price": "$5,399"
+               },
+               {
+                  "name": "SRX120R",
+                  "img": "./images/srx120r.png",
+                  "price": "$4,049"
+               }
+            ]
+         }
+      ]
+   }
+]

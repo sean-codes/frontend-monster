@@ -1,0 +1,162 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css">
+</head>
+<body>
+   <div class="app">
+      <template id="template-group">            
+         <div class="c-item-grid hide"></div>
+      </template>
+
+      <template id="template-item">
+         <div class="grid-item">
+            <div class="c-item">
+               <div class="image">
+                  <img src="./images/yzf_r1m.png" alt="">
+               </div>
+               <div class="text">yzf-r1m</div>
+               <div class="price"></div>
+            </div>
+         </div>
+      </template>
+
+
+      <div class="c-toolbar">
+         <div class="bar">
+            <div class="logo">
+               <img class="img" src="../_assets/images/logo_yamaha.png" alt="">
+            </div>
+            <div class="links">
+               <div class="link" id="menu-btn">products</div>
+               <div class="link">experience</div>
+               <div class="link">racing</div>
+               <div class="link">parts & accessories</div>
+               <div class="link">find a dealer</div>
+            </div>
+         </div>
+
+         <div class="dropdown close">
+            <div class="background"></div>
+            <div class="top">
+               <div class="c-menu">
+                  <div class="back">
+                     <i class="fa-solid fa-chevron-left"></i>  
+                     <div class="text">back</div>
+                  </div>
+                  <div class="content"></div>
+                  <div class="exit">
+                     <i class="fa-solid fa-xmark"></i>
+                     <div class="text"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <!----------------------------------------------------------
+   | Component: Toolbar
+   ----------------------------------------------------------->
+   <div class="component">toolbar</div>
+   <div class="c-toolbar">
+      <div class="logo">
+         <img class="img" src="../_assets/images/logo_yamaha.png" alt="">
+      </div>
+      <div class="links">
+         <div class="link active">products</div>
+         <div class="link">experience</div>
+         <div class="link">racing</div>
+         <div class="link">parts & accessories</div>
+         <div class="link">find a dealer</div>
+      </div>
+
+      <div class="dropdown hide">
+         content
+      </div>
+   </div>
+
+
+   <!----------------------------------------------------------
+   | Component: Item
+   ----------------------------------------------------------->
+   <div class="component">item</div>
+   <div class="c-item">
+      <div class="image">
+         <img src="./images/motorcycles-_-road.jpg" alt="">
+      </div>
+      <div class="text">motorcycles - road</div>
+   </div>
+
+   <div class="c-item model m-t-2">
+      <div class="image">
+         <img src="./images/yzf_r1m.png" alt="">
+      </div>
+      <div class="text">yzf-r1m</div>
+      <div class="price">$18,388* <span>(MSRP)</span></div>
+   </div>
+
+
+   <!----------------------------------------------------------
+   | Component: Item Grid
+   ----------------------------------------------------------->
+   <div class="c-item-grid">
+      <div class="grid-item">item 1</div>
+      <div class="grid-item">item 2</div>
+      <div class="grid-item">item 3</div>
+      <div class="grid-item">item 4</div>
+      <div class="grid-item">item 5</div>
+   </div>
+   <div class="component">item grid</div>
+
+   <div class="c-item-grid m-t-4">
+      <div class="grid-item">item 1</div>
+      <div class="grid-item">item 2</div>
+      <div class="grid-item">item 3</div>
+      <div class="grid-item">item 4</div>
+      <div class="grid-item">item 5</div>
+      <div class="grid-item">item 6</div>
+      <div class="grid-item">item 7</div>
+      <div class="grid-item">item 8</div>
+   </div>
+
+   <!----------------------------------------------------------
+   | Component: Menu
+   ----------------------------------------------------------->
+   <div class="component">menu</div>
+   <div class="c-menu">
+      <div class="back">
+         <i class="fa-solid fa-chevron-left"></i>  
+         <div class="text">back</div>
+      </div>
+      <div class="content">
+         content
+      </div>
+      <div class="exit">
+         <i class="fa-solid fa-xmark"></i>
+         <div class="text">exit</div>
+      </div>
+   </div>
+
+   <div class="c-menu m-t-2">
+      <div class="back hide">
+         <i class="fa-solid fa-chevron-left"></i>  
+         <div class="text">back</div>
+      </div>
+      <div class="content">
+         content
+      </div>
+      <div class="exit">
+         <i class="fa-solid fa-xmark"></i>
+         <div class="text">exit</div>
+      </div>
+   </div>
+
+
+
+   <script src="./script.js"></script>
+</body>
+</html>

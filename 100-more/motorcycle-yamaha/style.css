@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+:root {
+   --font: 'Roboto', sans-serif; 
+   --color-black: #333345;
+   --color-black-light: #555559;
+   --color-white: #FFF;
+   --color-blue-light: hsl(222, 68%, 54%);
+   --color-blue: #1b3e90;
+
+   --shade-1: rgba(0, 0, 0, 0.1);
+
+   --borde-radius: 0.25rem;
+
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-1_5: 1.5rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+   --fsize-smaller: 0.8rem;
+   --fsize-small: 0.9rem;
+   --fsize-1: 1rem;
+   --fsize-2: 1.1rem;
+   --fsize-3: 1.25rem;
+   --fsize-4: 1.5rem;
+   --fsize-icon-small: 0.85rem;
+
+
+
+   --speed: 1;
+}
+
+body {
+   font-family: var(--font);
+   background: var(--color-white);
+   padding-bottom: 100vh;
+   margin: 0;
+   background: var(--color-black);
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.component {
+   border-bottom: 2px solid #FFF;
+   border-left: 2px solid #FFF;
+   padding: 1rem;
+   font-weight: bold;
+   color: #FFF;
+   margin: 2rem 0 1rem 0;
+}
+
+.app {
+   min-height: 100vh;
+   margin: 20vh auto;
+   overflow: hidden;
+   max-width: 1200px;
+}
+
+
+/* Utility  */
+.m-t-1 { margin-top: var(--space-1) }
+.m-t-2 { margin-top: var(--space-2) }
+.m-t-3 { margin-top: var(--space-3) }
+.m-t-4 { margin-top: var(--space-4) }
+.m-t-5 { margin-top: var(--space-5) }
+.hide { display: none !important }
+/*-----------------------------------------------
+| component: toolbar
+-----------------------------------------------*/
+.c-toolbar {
+   position: relative;
+   .bar {
+      height: 100px;
+      position: relative;
+      z-index: 9999;
+      background: var(--color-black);
+      display: flex;
+      justify-content: center;
+      margin: auto;
+   }
+   .logo img {
+      height: 100%;
+      filter: brightness(1.5);
+   }
+
+   .links {
+      display: flex;
+      align-self: center;
+      padding-top: var(--space-2);
+      justify-content: space-evenly;
+      color: var(--color-white); 
+      z-index: 9999;
+
+      .link {
+         text-transform: uppercase;
+         padding: var(--space-1);
+         cursor: pointer;
+         transition: all 0.2s;
+         border-bottom: 2px solid transparent;
+         padding-bottom: var(--space-0_25);
+         user-select: none;
+
+         &:hover,
+         &.active {
+            border-bottom: 2px solid var(--color-blue-light);
+         }
+      }
+   }
+
+   .dropdown {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      ccbackground: var(--color-white);
+      color: var(--color-black);
+      min-height: 200px;
+      transition: all 0.5s;
+      transform-origin: 0 0;
+      transform: translateY(100%);
+
+      .top {
+         position: relative;
+         z-index: 1000;
+      }
+
+      .background {
+         background: var(--color-white);
+         height: 100px;
+         position: fixed;
+         top: 0;
+         left: 0;
+         pointer-events: none;
+         width: 100%;
+         transition: all calc(var(--speed) * 0.5s);
+         z-index: 10;
+         box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.25);
+         border-radius: 10px;
+      }
+
+      &.close {
+         opacity: 0;
+         pointer-events: none;
+         transform: translateY(-0%);
+      }
+   }
+}
+
+/*-----------------------------------------------
+| component: item
+-----------------------------------------------*/
+.c-item {
+   max-width: 300px;
+   background: var(--color-white);
+   cursor: pointer;
+   user-select: none;
+   position: relative;
+
+   .image {
+      width: 100%;
+   }
+
+   .image img {
+      width: 100%;
+      max-width: 145px;
+      height: auto;
+      transition: all 0.2s;
+      opacity: 0.75;
+   }   
+
+   .text {
+      text-align: center;
+      color: var(--color-blue);
+      text-transform: uppercase;
+      font-size: var(--fsize-small);
+      white-space: nowrap;
+   }
+
+   .price {
+      color: var(--color-blue);
+      padding-top: var(--space-1);
+      text-align: center;
+   }
+
+
+   &:hover {
+      & img {
+         transform: translateY(-10px);
+         opacity: 1;
+      }
+   }
+
+   &.model {
+      .text {
+         font-weight: 600;
+         font-size: var(--fsize-2);
+      }
+
+      .price {
+         font-weight: 600;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         gap: var(--space-0_5);
+
+         & span {
+            font-size: var(--fsize-smaller);
+            color: var(--color-black-light);
+         }
+      }
+   }
+}
+
+/*-----------------------------------------------
+| component: item grid
+-----------------------------------------------*/
+.c-item-grid {
+   --item-per: 5;
+
+   display: flex;   
+   color: var(--color-white);
+   ccgap: var(--space-2);
+   justify-content: center;
+   flex-wrap: wrap;
+   max-width: calc((175px + var(--space-2)) * var(--item-per));
+   margin: auto;
+   padding-bottom: var(--space-1);
+   .grid-item {
+      padding: var(--space-0) var(--space-1);
+      max-width: calc(175px + var(--space-2));
+      width: calc((100% / var(--item-per)) - var(--space-2));
+   }
+}
+
+@media (max-width: 1400px) { .c-item-grid { --item-per: 4; } }
+@media (max-width: 1200px) { .c-item-grid { --item-per: 3; } }
+@media (max-width: 1000px) { .c-item-grid { --item-per: 2; } }
+@media (max-width: 800px) { .c-item-grid { --item-per: 1; } }
+
+/*-----------------------------------------------
+| component: menu
+-----------------------------------------------*/
+.c-menu {
+   display: flex;
+   justify-content: space-between;
+   ccbackground: var(--color-white);
+   min-height: 200px;
+   overflow: hidden;
+   position: relative;
+
+   .back, .exit {
+      display: flex;
+      height: 75px;
+      padding: var(--space-2);
+      align-items: flex-start;
+      cursor: pointer;
+      gap: var(--space-0_5);
+      text-transform: uppercase;
+      line-height: 1rem;
+      color:var(--color-black-light);
+      font-size: var(--fsize-small);
+      transition: all 0.25s;
+      user-select: none;
+      z-index: 10000;
+      position: absolute;
+      
+
+      & i {
+         font-size: var(--fsize-icon-small);
+      }
+
+      &.hide {
+         display: flex !important;
+         opacity: 0;
+         pointer-events: none;
+      }
+
+      &:hover {
+         background: var(--shade-1);
+      }
+   }
+   .back {
+      left: 0;
+   }
+   .exit {
+      right: 0;
+   }
+
+   .content {
+      flex: 1;
+      padding: var(--space-2);
+      max-height: 500px;
+      overflow: auto;
+   }
+}
+
+
+/* animations */
+.in {  
+   opacity: 0;
+   transform: translateY(-50px);
+   animation: fadeIn calc(var(--speed) * 0.5s) forwards;
+   animation-delay: calc(var(--speed) * 0.5s);
+   --fadeUp: 50px;
+}
+
+.in.forward {
+   --fadeUp: -50px;
+}
+
+.out {
+   animation: fadeOut calc(var(--speed) * 0.5s) forwards;
+   --fadeUp: 50px;
+}
+.out.forward {
+   --fadeUp: -50px;
+}
+
+@keyframes fadeIn {
+   0% {
+      opacity: 0;
+      transform: translateY(var(--fadeUp));
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0px);
+   }
+}
+
+@keyframes fadeOut {
+   0% {
+      opacity: 1;
+      transform: translateY(0px);
+   }
+
+   100% {
+      opacity: 0;
+      transform: translateY(var(--fadeUp));
+   }
+}
