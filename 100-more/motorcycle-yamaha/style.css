@@ -60,6 +60,8 @@ body {
    margin: 20vh auto;
    overflow: hidden;
    max-width: 1200px;
+   min-width: 1000px;
+   padding: 0 var(--space-2);
 }
 
 
@@ -239,8 +241,8 @@ body {
 
 @media (max-width: 1400px) { .c-item-grid { --item-per: 4; } }
 @media (max-width: 1200px) { .c-item-grid { --item-per: 3; } }
-@media (max-width: 1000px) { .c-item-grid { --item-per: 2; } }
-@media (max-width: 800px) { .c-item-grid { --item-per: 1; } }
+/*@media (max-width: 1000px) { .c-item-grid { --item-per: 2; } }
+@media (max-width: 800px) { .c-item-grid { --item-per: 1; } }*/
 
 /*-----------------------------------------------
 | component: menu
