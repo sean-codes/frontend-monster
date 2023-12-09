@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+   <link rel="stylesheet" href="../_assets/fontawesome/css/all.min.css">
+</head>
+
+<body>
+   <div class="app">
+      <div class="nav">
+         <div class="link active" data-to="group-1"><i class="fa-solid fa-circle"></i> About</div>
+         <div class="link" data-to="group-2"><i class="fa-solid fa-circle"></i> media</div>
+         <div class="link" data-to="group-3"><i class="fa-solid fa-circle"></i> shop</div>
+      </div>
+      <div class="contents">
+         <div class="content about" id="group-1">
+            <div class="text">
+
+               <h2>The Golden Order has been broken.</h2>
+               <p>
+                  Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden
+                  Lord in the Lands Between.
+               </p>
+
+               <p>
+                  In the Lands Between ruled by Queen Marika the Eternal, the Elden Ring, the source of the Erdtree, has
+                  been shattered.
+               </p>
+
+               <p>
+                  Marika's offspring, demigods all, claimed the shards of the Elden Ring known as the Great Runes, and
+                  the mad taint of their newfound strength triggered a war: The Shattering. A war that meant abandonment
+                  by the Greater Will.
+               </p>
+
+               <p>
+                  And now the guidance of grace will be brought to the Tarnished who were spurned by the grace of gold
+                  and exiled from the Lands Between. Ye dead who yet live, your grace long lost, follow the path to the
+                  Lands Between beyond the foggy sea to stand before the Elden Ring.
+               </p>
+
+               <p>
+                  And become the Elden Lord
+               </p>
+            </div>
+
+            <video src="../_assets/images/elden-ring-header-animated.webm" type="video/webm"></video>
+            <script>
+               var video = document.querySelector('video')
+               console.log(video)
+               video.play()
+               video.loop = true
+            </script>
+            </p>
+         </div>
+         <div class="content media" id="group-2">
+            <h2>Media</h2>
+            <div class="grid">
+               <div class="row">
+                  <div class="item wide">
+                     <img src="../_assets/images/er_1.jpeg" />
+                     <div class="overlay">Rise Tarnished</div>
+                  </div>
+                  <div class="item stack">
+                     <div class="item">
+                        <img src="../_assets/images/er_2.jpeg" />
+                        <div class="overlay">Close Network Test</div>
+                     </div>
+                     <div class="item">
+                        <img src="../_assets/images/er_3.jpeg" />
+                        <div class="overlay">Overview Trailers</div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row short">
+                  <div class="item">
+                     <img src="../_assets/images/er_4.jpeg" />
+                     <div class="overlay">Official Gameplay Trailer</div>
+                  </div>
+                  <div class="item">
+                     <img src="../_assets/images/er_5.jpeg" />
+                     <div class="overlay">Gameplay Preview</div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="content" id="group-3">
+            <h2>Shop</h2>
+         </div>
+      </div>
+   </div>
+
+   <script src="./script.js"></script>
+</body>
+
+</html>
