@@ -1,0 +1,37 @@
+body {
+   margin: 0;
+   background: #000;
+ 
+}
+
+canvas {
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%) rotate(45deg);
+   background: #000;
+   border: 2px solid rgba(255, 255, 255, 0.1);
+   border-radius: 1px;
+   border-radius:100%;
+   
+   box-shadow: 
+      inset 0px 0px 40px rgba(255,255,255,.5),
+      0px 0px 15px rgba(255, 255, 255, 0.15);
+
+}
+canvas:after {
+   content: '';
+   position: fixed;
+   width: 50px;
+   height: 50px;
+   background: red;
+   top: 0;
+   left: 0;
+}
+
+.fps {
+   position: fixed;
+   top: 0;
+   right: 0;
+   color: #000;
+}
