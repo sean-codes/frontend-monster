@@ -14,11 +14,52 @@ window.onresize = resize
 resize()
 
 
+// setup noise
+var noise = new SimplexNoise()
+var spaces = 75
+var space = width/spaces
+var scale = 0.0025
+var time = 0
+var timeScale = 0.0001
+var field = genField()
+
+function genField() {
+   time += timeScale
+   var fieldArr = []
+   for (var x = 0; x < width; x += space) {
+      var row = []
+      fieldArr.push(row)
+      for (var y = 0; y < height; y += space) {
+         var a = 0
+         // from center adjustment
+         // var xdiff = width/2 - (x + space/2)
+         // var ydiff = height/2 - (y + space/2)
+         // var angleToCenter = Math.atan2(-xdiff, -ydiff)
+         // var noiseGen = noise.noise3D(x*scale, y*scale, time)*2
+         // angleToCenter += (noiseGen)
+         // row.push(angleToCenter)
+
+         // original
+         var noiseGen = (noise.noise3D(x*scale, y*scale, time) + 1) / 2
+         var angle = noiseGen * Math.PI*10
+         row.push(angle)
+      }
+   }
+
+   return fieldArr
+}
+
+
 // particles
 var sides = 3
-var emitterSize = 150
-
-var particleCount = 1000
+var emitterSize = 100
+var particleSize = 2
+var particlePull = 0.275
+var particleSpeed = 4
+var particleOpacity = 0.155
+var particleStartSpeed = 0.5
+var particleCount = 1500
+var particlePerLine = 150
 var lines = genEmitter()
 var particles = genParticles()
 
@@ -41,12 +82,13 @@ function genEmitter() {
       var ry = Math.cos(rot*i)
       var nx = cx + rx*emitterSize
       var ny = cy + ry*emitterSize
-
-      ctx.strokeStyle = '#FFFFFF05'
+      ctx.strokeStyle = '#FFFFFF40'
+      ctx.lineWidth = 2
       ctx.beginPath()
       ctx.moveTo(lx, ly)
       ctx.lineTo(nx, ny)
       ctx.stroke()
+      ctx.lineWidth = 1
 
       // c2 = a2 + b2
       var dx = nx-lx
@@ -68,53 +110,44 @@ function genEmitter() {
 function genParticles() {
    var newParticles = []
 
+   for (var s = 0; s < sides; s++) {
+      var line = lines[s]
+      var lineParticleSpace = line.len/particlePerLine
+      console.log(line)
+      for (var i = 0; i < particlePerLine; i++) {
+         var linePos = i * lineParticleSpace//line.len
 
-   for (var i = 0; i < particleCount; i++) {
-      // pick a point on emitter line
-      var line = lines[Math.floor(Math.random()*lines.length)]
-      var linePos = line.len * Math.random()
-      var lx = line.start[0] + Math.sin(line.dir)*linePos
-      var ly = line.start[1] + Math.cos(line.dir)*linePos
+         // pick a point on emitter line
+         var lx = line.start[0] + Math.sin(line.dir)*linePos
+         var ly = line.start[1] + Math.cos(line.dir)*linePos
 
 
-      var particle = {
-         x: lx,
-         y: ly,
-         vx: 0,
-         vy: 0,
-         size: 1,
-         maxSpeed: 1 + Math.random(),
+         // start outward
+         var xdiff = width/2 - (lx + space/2)
+         var ydiff = height/2 - (ly + space/2)
+         // var angleToCenter = Math.atan2(-xdiff, -ydiff)
+         // var noiseGen = noise.noise3D(x*scale, y*scale, time)*2
+         // angleToCenter += (noiseGen)
+         // row.push(angleToCenter)
+         // console.log(xdiff, ydiff)
+         var startSpeedRan = Math.random()*4
+         var ivx = -xdiff*(particleStartSpeed*startSpeedRan)
+         var ivy = -ydiff*(particleStartSpeed*startSpeedRan)
+         var particle = {
+            x: lx,
+            y: ly,
+            vx: ivx,
+            vy: ivy,
+            size: particleSize,
+            maxSpeed: particleSpeed// + Math.random(),
+         }
+         newParticles.push(particle)
       }
-      newParticles.push(particle)
    }
 
    return newParticles
 }
 
-// setup noise
-var noise = new SimplexNoise()
-var space = 8
-var scale = 0.0025
-var time = 0
-var timeScale = 0.0001
-var field = genField()
-// console.log(field)
-
-function genField() {
-   time += timeScale
-   var fieldArr = []
-   for (var x = 0; x < width; x += space) {
-      var row = []
-      fieldArr.push(row)
-      for (var y = 0; y < height; y += space) {
-         var noiseGen = noise.noise3D(x*scale, y*scale, time)
-         var a = (noiseGen + 1) 
-         row.push(a)
-      }
-   }
-
-   return fieldArr
-}
 
 
 // generate flow field
@@ -123,49 +156,60 @@ function draw() {
    for (var x = 0; x < width/space; x += 1) {
       for (var y = 0; y < height/space; y += 1) {
          var half = space/2
-         var angle = field[x][y] * (Math.PI*2)
+         var angle = field[x][y] //* (Math.PI*2)
          var ax = Math.sin(angle)
          var ay = Math.cos(angle)
 
          ctx.strokeStyle = `rgba(255, 255, 255, 0.1)`
-         var cx = x*space+half
-         var cy = y*space+half
+         var cx = x*space + half
+         var cy = y*space + half
          var lx = cx + (ax*half)
          var ly = cy + (ay*half)
-         ctx.beginPath()
-         ctx.moveTo(cx, cy)
-         ctx.lineTo(lx, ly)
+         // ctx.beginPath()
+         // ctx.moveTo(cx, cy)
+         // ctx.lineTo(lx, ly)
          // ctx.stroke()
-         ctx.strokeStyle = 1
+         // ctx.fillStyle = 'green'
+         // ctx.fillRect(cx, cy, 2, 2)
+         // ctx.fillStyle = 'red'
+         // ctx.fillRect(lx, ly, 2, 2)
       }
    }
 
+   // return
    // particles
    ctx.fillStyle = 'rgba(255, 255, 255)'
 
    for (var particle of particles) {
       // move
       // console.log(field)
-      var gridX = Math.round(particle.x/space)
-      var gridY = Math.round(particle.y/space)
+      var gridX = Math.floor(particle.x/space)
+      var gridY = Math.floor(particle.y/space)
       // console.log(gridX, gridY)
       var grid = field[gridX]?.[gridY]
       if (!grid) {
          continue
       }
-      var angle =  grid * (Math.PI*2)
+      var angle =  grid //* (Math.PI*2)
       // console.log(angle)
       var ax = Math.sin(angle)
       var ay = Math.cos(angle)
-      particle.vx += ax*0.1
-      particle.vy += ay*0.1
+      // auto
+      // particle.x += ax
+      // particle.y += ay
+      // momentum
+      particle.vx += ax*particlePull
+      particle.vy += ay*particlePull
       // limit speed
       particleAngle = Math.atan2(particle.vx, particle.vy)
       //a2 + b2 = c2
       particleSpeed = Math.min(particle.maxSpeed, Math.sqrt(particle.vx*particle.vx + particle.vy*particle.vy))
+
       particle.vx = Math.sin(particleAngle) * particle.maxSpeed
       particle.vy = Math.cos(particleAngle) * particle.maxSpeed
       particle.maxSpeed = Math.max(0, particle.maxSpeed - 0.0025)
+      var ox = particle.x
+      var oy = particle.y
       particle.x += particle.vx
       particle.y += particle.vy
       
@@ -173,8 +217,15 @@ function draw() {
       // ctx.beginPath()
       // ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI*2)
       // ctx.fill()
-      ctx.fillStyle = `rgba(255, 255, 255, 0.025)`
-      ctx.fillRect(particle.x, particle.y, 2, 2)
+
+      ctx.strokeStyle = `rgba(255, 255, 255, ${particleOpacity})`
+      ctx.lineWidth = particle.size
+      ctx.beginPath()
+      ctx.moveTo(ox, oy)
+      ctx.lineTo(particle.x, particle.y)
+      ctx.stroke()
+      // ctx.fillStyle = `rgba(255, 255, 255, ${particleOpacity})`
+      // ctx.fillRect(particle.x-particle.size/2, particle.y-particle.size/2, particle.size, particle.size)
    }
 }
 
@@ -187,7 +238,7 @@ function render() {
    // ctx.fillRect(0, 0, width, height)
    // ctx.globalAlpha = 1
    draw()
-   genEmitter()
+   // genEmitter()
 }
 
 setInterval(render, 1000/60)
