@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+   <div class="grid">
+      <script>
+         // miss sass T.T
+         var html = ''
+         for (var items of [1, 2, 3, 4, 5, 4, 5, 4, 5, 4, 5, 4, 5, 4, 3, 2, 1]) {
+            html += `
+               <div class="row">
+                  ${[...Array(items)].map(s => `<div class="hex"><span></span></div>`).join('')}
+               </div>`
+         }
+
+         document.write(html)
+      </script>
+   </div>
+
+   <script src="./script.js"></script>
+</body>
+</html>
