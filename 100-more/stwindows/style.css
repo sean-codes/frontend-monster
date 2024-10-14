@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee&display=swap');
+
+:root {
+   --color-bg: #7BB5A3;
+   --color-cta: #b57a8d;
+   --color-white: #FFF;
+   --border-radius: 0.25rem;
+   --space-0_25: 0.25rem;
+   --space-0_5: 0.5rem;
+   --space-1: 1rem;
+   --space-2: 2rem;
+   --space-3: 3rem;
+   --space-4: 4rem;
+   --space-5: 5rem;
+
+}
+html, body {
+   font-family: "Lato", sans-serif;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+.dev-header {
+   font-weight: bolder;
+   padding: 0.5rem;
+   border-left: 3px solid #000;
+   border-bottom: 3px solid #000;
+   margin-top: 2rem;
+   margin-bottom: 1rem;
+}
+
+/*------------------------------------------------------------
+| Component - Toolbar
+------------------------------------------------------------*/ 
+.component-toolbar {
+   background: var(--color-bg);
+   color: var(--color-white);
+   padding: var(--space-4) var(--space-2);
+/*   display: flex;*/
+   justify-content: space-between;
+   align-items: center;
+}
+.component-toolbar .title {
+   font-size: 2.5rem;
+   font-weight: 400;
+   letter-spacing: 0.5px;
+   font-family: "Bungee", sans-serif;
+   text-transform: uppercase;
+   padding-bottom: 2rem;
+}
+
+.component-toolbar .nav {
+   display: flex;
+   gap: var(--space-2);
+   align-items: center;
+}
+.component-toolbar .nav .link {
+   cursor: pointer;
+   border-bottom: 2px solid transparent;
+   font-weight: bold;
+}
+
+.component-toolbar .nav .link:hover,
+.component-toolbar .nav .link.active {
+   border-bottom: 2px solid var(--color-white);
+}
+.component-toolbar .nav .link.cta {
+   background: var(--color-cta);
+   color: var(--color-white);
+   padding: var(--space-1);
+   font-weight: bolder;
+   border-radius: var(--border-radius);
+}
+
+/*------------------------------------------------------------
+| Component - Call
+------------------------------------------------------------*/ 
+.component-call {
+   text-align: right;
+}
+
