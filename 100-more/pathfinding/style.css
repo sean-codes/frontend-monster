@@ -1,0 +1,15 @@
+html {
+   background: #111115;
+}
+
+canvas {
+   background: #222223;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+   border-radius: 4px;
+   width: 400px;
+   height: 400px;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
