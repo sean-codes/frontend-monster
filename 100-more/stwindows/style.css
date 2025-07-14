@@ -6,7 +6,11 @@
    --color-bg: #7BB5A3;
    --color-cta: #b57a8d;
    --color-white: #FFF;
+   --color-black: #222;
+   --color-grey: #99999;
    --border-radius: 0.25rem;
+   --border-radius-2: 0.5rem;
+   --border-radius-3: 1rem;
    --space-0_25: 0.25rem;
    --space-0_5: 0.5rem;
    --space-1: 1rem;
@@ -14,14 +18,24 @@
    --space-3: 3rem;
    --space-4: 4rem;
    --space-5: 5rem;
+   --fs-1: 1rem;
+   --fs-2: 1.25rem;
+   --fs-3: 1.5rem;
+   --fs-4: 1.75rem;
+   --fs-5: 2rem;
 
 }
 html, body {
    font-family: "Lato", sans-serif;
+   max-width: 1200px;
+   margin: auto;
+   margin-bottom: 50rem;
 }
 
 * {
    box-sizing: border-box;
+   padding: 0;
+   margin: 0;
 }
 
 .dev-header {
@@ -29,8 +43,75 @@ html, body {
    padding: 0.5rem;
    border-left: 3px solid #000;
    border-bottom: 3px solid #000;
-   margin-top: 2rem;
+   margin-top: 3rem;
    margin-bottom: 1rem;
+}
+
+
+/*------------------------------------------------------------
+| Utilities
+------------------------------------------------------------*/ 
+h1 {
+   font-size: var(--fs-5);
+   font-weight: 800;
+}
+h2 {
+   font-size: var(--fs-4);
+   font-weight: 800;
+}
+h3 {
+   font-size: var(--fs-3);
+   font-weight: 800;
+}
+
+button {
+   color: var(--color-white);
+   background: #9a9a9a;
+   padding: var(--space-1) var(--space-2);
+   font-weight: bold;
+   border-radius: var(--border-radius);
+   font-family: "Lato", sans-serif;
+   border: none;
+   font-size: 1rem;
+   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+button.cta {
+   border: none;
+   color: var(--color-white);
+   background: var(--color-cta);
+}
+
+button.link {
+   border: none;
+   background: none;
+   border-radius: 0;
+   box-shadow: none;
+}
+
+.mt-half { margin-top: var(--space-0_5); }
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+
+ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-0_5);
+}
+ul li i {
+   display: inline-block!important;
+   padding-right: var(--space-0_25);
+}
+
+.tag {
+   background: var(--color-bg);
+   color: var(--color-white);
+   font-weight: bold;
+   border-radius: var(--border-radius-3);
+   display: inline-block;
+   padding: var(--space-0_25) var(--space-0_5);
 }
 
 /*------------------------------------------------------------
@@ -40,9 +121,22 @@ html, body {
    background: var(--color-bg);
    color: var(--color-white);
    padding: var(--space-4) var(--space-2);
-/*   display: flex;*/
    justify-content: space-between;
    align-items: center;
+   padding-top: var(--space-2);
+}
+.component-toolbar .sites{
+   display: flex;
+   justify-content: end;
+   gap: var(--space-1);
+}
+.component-toolbar .sites .site {
+   display: flex;
+   align-items: center;
+   gap: var(--space-0_5);
+}
+.component-toolbar .sites .site i {
+   font-size: 2.5rem;
 }
 .component-toolbar .title {
    font-size: 2.5rem;
@@ -60,13 +154,14 @@ html, body {
 }
 .component-toolbar .nav .link {
    cursor: pointer;
-   border-bottom: 2px solid transparent;
+   border-bottom: 3px solid transparent;
+   color: var(--color-white);
    font-weight: bold;
 }
 
 .component-toolbar .nav .link:hover,
 .component-toolbar .nav .link.active {
-   border-bottom: 2px solid var(--color-white);
+   border-bottom: 3px solid var(--color-white);
 }
 .component-toolbar .nav .link.cta {
    background: var(--color-cta);
@@ -76,6 +171,7 @@ html, body {
    border-radius: var(--border-radius);
 }
 
+
 /*------------------------------------------------------------
 | Component - Call
 ------------------------------------------------------------*/ 
@@ -83,3 +179,150 @@ html, body {
    text-align: right;
 }
 
+
+/*------------------------------------------------------------
+| Component - Banner
+------------------------------------------------------------*/ 
+.component-banner {
+   background: url('../_assets/images/window_example.jpg');
+   background-size: cover;
+   height: 40rem;
+   position: relative;
+}
+.component-banner .inner {
+   background: rgba(255, 255, 255, 0.8);
+   position: absolute;
+   padding: 2.5rem;
+   border-radius: var(--border-radius-2);
+   max-width: 45rem;
+   top: 4rem;
+   left: 4rem;
+   backdrop-filter: blur(3px);
+   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+}
+.component-banner .inner .tag {
+   margin-top: var(--space-1);
+}
+
+.component-banner .inner .actions {
+   display: flex;
+   gap: var(--space-1);
+}
+
+
+/*------------------------------------------------------------
+| Component - Services
+------------------------------------------------------------*/
+.component-services {
+   display: flex;
+   gap: var(--space-1);
+   flex-wrap: wrap;
+}
+.component-services .card {
+   position: relative;
+   border-radius: var(--border-radius-2);
+   overflow: hidden;
+   max-width: calc(50% - var(--space-0_5));
+   height: 30rem;
+   display: flex;
+   align-items: flex-end;
+}
+.component-services .card .bg {
+   position: absolute;
+   background: red;
+   height: 100%;
+   width: 100%;
+   z-index: 0;
+}
+.component-services .card .bg img {
+   z-index: 0;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   object-fit: cover;
+}
+.component-services .card .text {
+   position: relative;
+   z-index: 1;
+   padding: var(--space-2) var(--space-2);
+   background: rgba(255, 255, 255, 0.75);
+   color: var(--color-black);
+}
+.component-services .card .text .title {
+   text-transform: uppercase;
+}
+.component-services .card .text .desc {
+   margin-top: var(--space-0_5);
+}
+.component-services .card .text button {
+   margin-top: var(--space-1);
+}
+
+
+/*------------------------------------------------------------
+| Component - Reviews
+------------------------------------------------------------*/
+.component-reviews {
+   text-align: center;
+}
+.component-reviews i {
+   font-size: 2rem;
+}
+.component-reviews p {
+   margin-top: var(--space-1);
+}
+.component-reviews .reviews {
+   margin-top: var(--space-2);
+   display: flex;
+   gap: var(--space-2);
+}
+.component-reviews .reviews .review {
+   text-align: left;
+   padding: var(--space-2);
+   display: flex;
+   flex-direction: column;
+   min-height: 20rem;
+   justify-content: center;
+   border-radius: var(--border-radius-2);
+}
+.component-reviews .reviews .review:nth-of-type(odd) {
+   background: #cee4d6;
+}
+.component-reviews .reviews .review p{
+   line-height: 1.5rem;
+}
+
+/*------------------------------------------------------------
+| Component - Rain
+------------------------------------------------------------*/
+.component-rain .types {
+   display: flex;
+   gap: var(--space-1);
+   margin-top: var(--space-2);
+}
+
+.component-rain .types .type {
+   width: calc(50% - var(--space-1));
+   background: #cee4d6;
+   border-radius: var(--border-radius-2);
+   padding: var(--space-3);
+   display: flex;
+   flex-direction: column;
+   gap: var(--space-2);
+   text-align: center;
+}
+.component-rain .types .type i {
+   font-size: 5rem;
+}
+.component-rain .types .type p {
+   text-align: left;
+}
+/*------------------------------------------------------------
+| Component - Heavy CTA
+------------------------------------------------------------*/
+.component-heavycta {
+   background: var(--color-bg);
+   color: var(--color-white);
+   padding: var(--space-3) var(--space-1);
+   text-align: center;
+}

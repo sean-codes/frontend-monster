@@ -1,7 +1,6 @@
 Stolen.
 
-https://fontawesome.com/search?o=r&m=free
-
+https://fontawesome.com/search?ic=free
 <link rel='stylesheet' href="./css/all.min.css" />
 
 
