@@ -101,3 +101,7 @@ body {
 #timers .timer .time.small .top {
    font-size: 1rem;
 }
+h1 {
+   font-family: "Amarante", serif;
+   text-align: center;
+}
