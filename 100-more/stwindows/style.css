@@ -23,11 +23,12 @@
    --fs-3: 1.5rem;
    --fs-4: 1.75rem;
    --fs-5: 2rem;
+   --shadow-1: 0px 2px 4px rgba(0, 0, 0, 0.25);
 
 }
 html, body {
    font-family: "Lato", sans-serif;
-   max-width: 1200px;
+   max-width: 1500px;
    margin: auto;
    margin-bottom: 50rem;
 }
@@ -73,7 +74,7 @@ button {
    font-family: "Lato", sans-serif;
    border: none;
    font-size: 1rem;
-   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+   box-shadow: var(--shadow-1);
 }
 
 button.cta {
@@ -112,6 +113,7 @@ ul li i {
    border-radius: var(--border-radius-3);
    display: inline-block;
    padding: var(--space-0_25) var(--space-0_5);
+   box-shadow: var(--shadow-1);
 }
 
 /*------------------------------------------------------------
@@ -198,7 +200,7 @@ ul li i {
    top: 4rem;
    left: 4rem;
    backdrop-filter: blur(3px);
-   box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+   box-shadow: var(--shadow-1);
 }
 .component-banner .inner .tag {
    margin-top: var(--space-1);
@@ -226,6 +228,7 @@ ul li i {
    height: 30rem;
    display: flex;
    align-items: flex-end;
+   box-shadow: var(--shadow-1);
 }
 .component-services .card .bg {
    position: absolute;
@@ -287,6 +290,7 @@ ul li i {
 }
 .component-reviews .reviews .review:nth-of-type(odd) {
    background: #cee4d6;
+   box-shadow: var(--shadow-1);
 }
 .component-reviews .reviews .review p{
    line-height: 1.5rem;
@@ -310,6 +314,7 @@ ul li i {
    flex-direction: column;
    gap: var(--space-2);
    text-align: center;
+   box-shadow: var(--shadow-1);
 }
 .component-rain .types .type i {
    font-size: 5rem;

@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Amarante&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+ /*
+ font-family: "Amarante", serif;
+font-family: "Roboto", sans-serif;
+*/
+html, body {
+   background: #222229;
+   color: #fff;
+   padding: 0;
+   margin: 0;
+   font-family: "Roboto", sans-serif;\
+}
+
+body {
+   padding: 2rem;
+   max-width: 75rem;
+   margin: auto;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+
+#timers {
+   display: flex;
+   gap: 1rem;
+   flex-wrap: wrap;
+}
+
+#timers .timer {
+   min-width: calc(50% - 0.5rem);
+   background: rgba(0, 0, 0, 0.25);
+   border-radius: 1rem;
+   position: relative;
+   overflow: hidden;
+   padding: 5rem 1rem;
+   text-align: center;
+}
+@media screen and (max-width: 800px) {
+   #timers .timer {
+      min-width: 100%;
+   }
+}
+
+#timers .timer * {
+   position: relative;
+   z-index: 10;
+}
+
+#timers .timer img {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   filter: brightness(0.25);
+   object-fit: cover;
+}
+#timers .timer .title {
+   font-size: 2.5rem;
+   font-family: "Amarante", serif;
+   font-weight: bolder;
+  text-shadow: 
+    -3px -3px 0 #000,
+     3px -3px 0 #000,
+    -3px  3px 0 #000,
+     3px  3px 0 #000,
+     0px  3px 0 #000,
+     3px  0px 0 #000,
+    -3px  0px 0 #000,
+     0px -3px 0 #000;
+
+}
+#timers .timer .raids {
+   margin-top: 0.5rem;
+   font-size: 1.25rem;
+}
+#timers .timer .reset {
+   margin-top: 0.5rem;
+   font-size: 1rem;
+   color: rgba(255, 255, 255, 0.65);
+}
+#timers .timer .when {
+   margin-top: 1rem;
+   display: flex;
+   justify-content: center;
+   gap: 2rem;
+   align-items: flex-end;
+}
+
+#timers .timer .time .top {
+   font-size: 2rem;
+}
+#timers .timer .time .bottom {
+   margin-top: 0.5rem;
+   font-size: 0.85rem;
+}
+#timers .timer .time.small .top {
+   font-size: 1rem;
+}
